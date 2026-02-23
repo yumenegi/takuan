@@ -1,0 +1,21 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../../../../../../../AMDDesignTools/2025.2/Vivado/data/rsb/busdef" \
+"../../../../umeboshiTB.gen/sources_1/ip/umeboshi_0/src/osc_a_bram/sim/osc_a_bram.v" \
+"../../../../umeboshiTB.gen/sources_1/ip/umeboshi_0/src/osc_b_bram/sim/osc_b_bram.v" \
+"../../../../umeboshiTB.gen/sources_1/ip/umeboshi_0/hdl/umeboshi_slave_lite_v1_0_axi_synth_engine.v" \
+
+sv xil_defaultlib  --include "../../../../../../../../../../AMDDesignTools/2025.2/Vivado/data/rsb/busdef" \
+"../../../../umeboshiTB.gen/sources_1/ip/umeboshi_0/hdl/synth_256.sv" \
+
+verilog xil_defaultlib  --include "../../../../../../../../../../AMDDesignTools/2025.2/Vivado/data/rsb/busdef" \
+"../../../../umeboshiTB.gen/sources_1/ip/umeboshi_0/hdl/umeboshi.v" \
+"../../../../umeboshiTB.gen/sources_1/ip/umeboshi_0/sim/umeboshi_0.v" \
+
+sv xil_defaultlib  --include "../../../../../../../../../../AMDDesignTools/2025.2/Vivado/data/rsb/busdef" \
+"../../../../umeboshiTB.srcs/sim_1/new/tb_umeboshi.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

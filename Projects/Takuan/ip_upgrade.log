@@ -1,6 +1,166 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
+| Date         : Thu Feb 19 19:19:24 2026
+| Host         : ponco2 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'mb_block_umeboshi_0_2'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of mb_block_umeboshi_0_2 (xilinx.com:user:umeboshi:1.0) from (Rev. 4) to (Rev. 5)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'mb_block_umeboshi_0_2'. These changes may impact your design.
+
+
+-Upgrade has added port 'audio_tick'
+
+-Upgrade has added port 'bram0_data_b'
+
+-Upgrade has added port 'bram1_data_b'
+
+-Upgrade has added port 'bram_addr_b'
+
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
+| Date         : Thu Feb 19 19:17:52 2026
+| Host         : ponco2 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'mb_block_umeboshi_0_2'
+
+1. Summary
+----------
+
+SUCCESS in the update of mb_block_umeboshi_0_2 (xilinx.com:user:umeboshi:1.0 (Rev. 4)) to current project options.
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
+| Date         : Wed Feb 18 19:09:13 2026
+| Host         : ponco2 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'mb_block_umeboshi_0_2'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of mb_block_umeboshi_0_2 (xilinx.com:user:umeboshi:1.0) from (Rev. 3) to (Rev. 4)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'mb_block_umeboshi_0_2'. These changes may impact your design.
+
+
+-Upgraded port 'axi_synth_engine_araddr' width 13 differs from original width 8
+
+-Upgraded port 'axi_synth_engine_awaddr' width 13 differs from original width 8
+
+
+3. Customization warnings
+-------------------------
+
+An attempt to modify the value of disabled parameter 'C_axi_synth_engine_ADDR_WIDTH' from '13' to '8' has been ignored for IP 'mb_block_umeboshi_0_2'
+
+
+4. Debug Commands
+-----------------
+
+  The following debug information can be passed to Vivado as Tcl commands,
+in order to validate or debug the output of the upgrade flow.
+  You may consult any warnings from within this upgrade, and alter or remove
+the configuration parameter(s) which caused the warning; then execute the Tcl
+commands, and use the IP Customization GUI to verify the IP configuration.
+
+create_ip -vlnv xilinx.com:user:umeboshi:1.0 -user_name mb_block_umeboshi_0_2
+set_property -dict "\
+  CONFIG.C_axi_synth_engine_ADDR_WIDTH {8} \
+  CONFIG.C_axi_synth_engine_BASEADDR {0xFFFFFFFF} \
+  CONFIG.C_axi_synth_engine_DATA_WIDTH {32} \
+  CONFIG.C_axi_synth_engine_HIGHADDR {0x00000000} \
+  CONFIG.Component_Name {mb_block_umeboshi_0_2} \
+  CONFIG.axi_synth_engine.ADDR_WIDTH {8} \
+  CONFIG.axi_synth_engine.ARUSER_WIDTH {0} \
+  CONFIG.axi_synth_engine.AWUSER_WIDTH {0} \
+  CONFIG.axi_synth_engine.BUSER_WIDTH {0} \
+  CONFIG.axi_synth_engine.CLK_DOMAIN {mb_block_processing_system7_0_3_FCLK_CLK0} \
+  CONFIG.axi_synth_engine.DATA_WIDTH {32} \
+  CONFIG.axi_synth_engine.FREQ_HZ {100000000} \
+  CONFIG.axi_synth_engine.HAS_BRESP {1} \
+  CONFIG.axi_synth_engine.HAS_BURST {0} \
+  CONFIG.axi_synth_engine.HAS_CACHE {0} \
+  CONFIG.axi_synth_engine.HAS_LOCK {0} \
+  CONFIG.axi_synth_engine.HAS_PROT {1} \
+  CONFIG.axi_synth_engine.HAS_QOS {0} \
+  CONFIG.axi_synth_engine.HAS_REGION {0} \
+  CONFIG.axi_synth_engine.HAS_RRESP {1} \
+  CONFIG.axi_synth_engine.HAS_WSTRB {1} \
+  CONFIG.axi_synth_engine.ID_WIDTH {0} \
+  CONFIG.axi_synth_engine.INSERT_VIP {0} \
+  CONFIG.axi_synth_engine.MAX_BURST_LENGTH {1} \
+  CONFIG.axi_synth_engine.NUM_READ_OUTSTANDING {8} \
+  CONFIG.axi_synth_engine.NUM_READ_THREADS {1} \
+  CONFIG.axi_synth_engine.NUM_WRITE_OUTSTANDING {8} \
+  CONFIG.axi_synth_engine.NUM_WRITE_THREADS {1} \
+  CONFIG.axi_synth_engine.PHASE {0.0} \
+  CONFIG.axi_synth_engine.PROTOCOL {AXI4LITE} \
+  CONFIG.axi_synth_engine.READ_WRITE_MODE {READ_WRITE} \
+  CONFIG.axi_synth_engine.RUSER_BITS_PER_BYTE {0} \
+  CONFIG.axi_synth_engine.RUSER_WIDTH {0} \
+  CONFIG.axi_synth_engine.SUPPORTS_NARROW_BURST {0} \
+  CONFIG.axi_synth_engine.WIZ_DATA_WIDTH {32} \
+  CONFIG.axi_synth_engine.WIZ_NUM_REG {64} \
+  CONFIG.axi_synth_engine.WUSER_BITS_PER_BYTE {0} \
+  CONFIG.axi_synth_engine.WUSER_WIDTH {0} \
+  CONFIG.axi_synth_engine_CLK.ASSOCIATED_BUSIF {axi_synth_engine} \
+  CONFIG.axi_synth_engine_CLK.ASSOCIATED_PORT {} \
+  CONFIG.axi_synth_engine_CLK.ASSOCIATED_RESET {axi_synth_engine_aresetn:axi_synth_engine_RST} \
+  CONFIG.axi_synth_engine_CLK.CLK_DOMAIN {mb_block_processing_system7_0_3_FCLK_CLK0} \
+  CONFIG.axi_synth_engine_CLK.FREQ_HZ {100000000} \
+  CONFIG.axi_synth_engine_CLK.FREQ_TOLERANCE_HZ {0} \
+  CONFIG.axi_synth_engine_CLK.INSERT_VIP {0} \
+  CONFIG.axi_synth_engine_CLK.PHASE {0.0} \
+  CONFIG.axi_synth_engine_RST.INSERT_VIP {0} \
+  CONFIG.axi_synth_engine_RST.POLARITY {ACTIVE_LOW} " [get_ips mb_block_umeboshi_0_2]
+
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
 | Date         : Fri Feb  6 19:05:05 2026
 | Host         : ponco2 running 64-bit major release  (build 9200)
 | Command      : upgrade_ip

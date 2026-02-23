@@ -1,0 +1,10 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hause/Documents/Vivado/Projects/umeboshiTB/umeboshiTB.gen/sources_1/ip/umeboshi_0/src/osc_a_bram/sim/osc_a_bram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module osc_a_bram
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hause/Documents/Vivado/Projects/umeboshiTB/umeboshiTB.gen/sources_1/ip/umeboshi_0/src/osc_b_bram/sim/osc_b_bram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module osc_b_bram
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hause/Documents/Vivado/Projects/umeboshiTB/umeboshiTB.gen/sources_1/ip/umeboshi_0/hdl/umeboshi_slave_lite_v1_0_axi_synth_engine.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module umeboshi_slave_lite_v1_0_axi_synth_engine
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hause/Documents/Vivado/Projects/umeboshiTB/umeboshiTB.gen/sources_1/ip/umeboshi_0/hdl/umeboshi.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module umeboshi
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hause/Documents/Vivado/Projects/umeboshiTB/umeboshiTB.gen/sources_1/ip/umeboshi_0/sim/umeboshi_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module umeboshi_0

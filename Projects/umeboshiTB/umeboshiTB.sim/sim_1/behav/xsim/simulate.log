@@ -1,0 +1,9 @@
+Time resolution is 1 ps
+ Block Memory Generator module loading initial data...
+ Block Memory Generator data initialization complete.
+Block Memory Generator module tb_axi_synth.dut.inst.insta.inst.native_mem_module.blk_mem_gen_v8_4_12_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
+Block Memory Generator module tb_axi_synth.dut.inst.instb.inst.native_mem_module.blk_mem_gen_v8_4_12_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
+Starting Tests...
+Note Triggered. Running simulation for audio output...
+Tests Completed.
+$finish called at time : 2083475 ns : File "C:/Users/hause/Documents/Vivado/Projects/umeboshiTB/umeboshiTB.srcs/sim_1/new/tb_umeboshi.sv" Line 167
