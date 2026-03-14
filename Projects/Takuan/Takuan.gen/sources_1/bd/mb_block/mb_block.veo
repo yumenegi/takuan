@@ -76,7 +76,9 @@ mb_block your_instance_name (
   .FIXED_IO_ps_clk(FIXED_IO_ps_clk), // inout wire FIXED_IO_ps_clk
   .FIXED_IO_ps_porb(FIXED_IO_ps_porb), // inout wire FIXED_IO_ps_porb
   .audio_out(audio_out), // output wire [15:0] audio_out
-  .audio_valid(audio_valid) // output wire audio_valid
+  .audio_valid(audio_valid), // output wire audio_valid
+  .audio_tick_0(audio_tick_0), // input wire audio_tick_0
+  .FCLK_CLK1_0(FCLK_CLK1_0) // output wire FCLK_CLK1_0
 );
 // INST_TAG_END ------  End cut for INSTANTIATION Template  ------
 

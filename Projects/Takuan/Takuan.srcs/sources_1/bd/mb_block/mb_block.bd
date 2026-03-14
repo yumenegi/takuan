@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0xFDFD9B9B390D4608",
+      "boundary_crc": "0x8FA733AC2B108350",
       "device": "xc7z020clg400-1",
       "gen_directory": "../../../../Takuan.gen/sources_1/bd/mb_block",
       "name": "mb_block",
@@ -217,6 +217,35 @@
       },
       "audio_valid": {
         "direction": "O"
+      },
+      "audio_tick_0": {
+        "direction": "I"
+      },
+      "FCLK_CLK1_0": {
+        "type": "clk",
+        "direction": "O",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "mb_block_processing_system7_0_3_FCLK_CLK1",
+            "value_src": "default_prop"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "user_prop"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          }
+        }
       }
     },
     "components": {
@@ -253,7 +282,7 @@
             "value": "100.000000"
           },
           "PCW_ACT_FPGA1_PERIPHERAL_FREQMHZ": {
-            "value": "10.000000"
+            "value": "100.000000"
           },
           "PCW_ACT_FPGA2_PERIPHERAL_FREQMHZ": {
             "value": "10.000000"
@@ -337,7 +366,7 @@
             "value": "100000000"
           },
           "PCW_CLK1_FREQ": {
-            "value": "10000000"
+            "value": "100000000"
           },
           "PCW_CLK2_FREQ": {
             "value": "10000000"
@@ -436,7 +465,7 @@
             "value": "1"
           },
           "PCW_EN_CLK1_PORT": {
-            "value": "0"
+            "value": "1"
           },
           "PCW_EN_CLK2_PORT": {
             "value": "0"
@@ -633,11 +662,14 @@
           "PCW_FCLK_CLK0_BUF": {
             "value": "TRUE"
           },
+          "PCW_FCLK_CLK1_BUF": {
+            "value": "TRUE"
+          },
           "PCW_FPGA0_PERIPHERAL_FREQMHZ": {
             "value": "100"
           },
           "PCW_FPGA1_PERIPHERAL_FREQMHZ": {
-            "value": "50"
+            "value": "100"
           },
           "PCW_FPGA2_PERIPHERAL_FREQMHZ": {
             "value": "50"
@@ -646,6 +678,9 @@
             "value": "50"
           },
           "PCW_FPGA_FCLK0_ENABLE": {
+            "value": "1"
+          },
+          "PCW_FPGA_FCLK1_ENABLE": {
             "value": "1"
           },
           "PCW_GPIO_BASEADDR": {
@@ -1312,7 +1347,7 @@
             "value": "200"
           },
           "PCW_PERIPHERAL_BOARD_PRESET": {
-            "value": "None"
+            "value": "part0"
           },
           "PCW_PLL_BYPASSMODE_ENABLE": {
             "value": "0"
@@ -1956,7 +1991,7 @@
       },
       "umeboshi_0": {
         "vlnv": "xilinx.com:user:umeboshi:1.0",
-        "ip_revision": "5",
+        "ip_revision": "17",
         "xci_name": "mb_block_umeboshi_0_2",
         "xci_path": "ip\\mb_block_umeboshi_0_2\\mb_block_umeboshi_0_2.xci",
         "inst_hier_path": "umeboshi_0",
@@ -2274,9 +2309,27 @@
           "processing_system7_0/M_AXI_GP0",
           "axi_smc/S00_AXI"
         ]
+      },
+      "umeboshi_0_BRAM0": {
+        "interface_ports": [
+          "umeboshi_0/BRAM0",
+          "axi_bram_ctrl_0_bram_osc_a/BRAM_PORTB"
+        ]
+      },
+      "umeboshi_0_BRAM1": {
+        "interface_ports": [
+          "axi_bram_ctrl_1_bram_osc_b/BRAM_PORTB",
+          "umeboshi_0/BRAM1"
+        ]
       }
     },
     "nets": {
+      "audio_tick_0_1": {
+        "ports": [
+          "audio_tick_0",
+          "umeboshi_0/audio_tick"
+        ]
+      },
       "processing_system7_0_FCLK_CLK0": {
         "ports": [
           "processing_system7_0/FCLK_CLK0",
@@ -2286,6 +2339,12 @@
           "axi_bram_ctrl_0/s_axi_aclk",
           "axi_bram_ctrl_1/s_axi_aclk",
           "umeboshi_0/axi_synth_engine_aclk"
+        ]
+      },
+      "processing_system7_0_FCLK_CLK1": {
+        "ports": [
+          "processing_system7_0/FCLK_CLK1",
+          "FCLK_CLK1_0"
         ]
       },
       "processing_system7_0_FCLK_RESET0_N": {

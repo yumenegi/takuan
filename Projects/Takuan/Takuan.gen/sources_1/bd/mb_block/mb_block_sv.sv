@@ -98,7 +98,11 @@ module mb_block_sv (
   (* X_INTERFACE_IGNORE = "true" *)
   output wire [15:0] audio_out,
   (* X_INTERFACE_IGNORE = "true" *)
-  output wire audio_valid
+  output wire audio_valid,
+  (* X_INTERFACE_IGNORE = "true" *)
+  input wire audio_tick_0,
+  (* X_INTERFACE_IGNORE = "true" *)
+  output wire FCLK_CLK1_0
 );
 
   mb_block inst (
@@ -124,7 +128,9 @@ module mb_block_sv (
     .FIXED_IO_ps_clk(FIXED_IO_ps_clk),
     .FIXED_IO_ps_porb(FIXED_IO_ps_porb),
     .audio_out(audio_out),
-    .audio_valid(audio_valid)
+    .audio_valid(audio_valid),
+    .audio_tick_0(audio_tick_0),
+    .FCLK_CLK1_0(FCLK_CLK1_0)
   );
 
 endmodule

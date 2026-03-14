@@ -2,7 +2,7 @@
 //Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
-//Date        : Fri Feb  6 19:05:16 2026
+//Date        : Sat Mar 14 18:51:39 2026
 //Host        : ponco2 running 64-bit major release  (build 9200)
 //Command     : generate_target mb_block_wrapper.bd
 //Design      : mb_block_wrapper
@@ -26,6 +26,7 @@ module mb_block_wrapper
     DDR_ras_n,
     DDR_reset_n,
     DDR_we_n,
+    FCLK_CLK1_0,
     FIXED_IO_ddr_vrn,
     FIXED_IO_ddr_vrp,
     FIXED_IO_mio,
@@ -33,6 +34,7 @@ module mb_block_wrapper
     FIXED_IO_ps_porb,
     FIXED_IO_ps_srstb,
     audio_out,
+    audio_tick_0,
     audio_valid);
   inout [14:0]DDR_addr;
   inout [2:0]DDR_ba;
@@ -49,6 +51,7 @@ module mb_block_wrapper
   inout DDR_ras_n;
   inout DDR_reset_n;
   inout DDR_we_n;
+  output FCLK_CLK1_0;
   inout FIXED_IO_ddr_vrn;
   inout FIXED_IO_ddr_vrp;
   inout [53:0]FIXED_IO_mio;
@@ -56,6 +59,7 @@ module mb_block_wrapper
   inout FIXED_IO_ps_porb;
   inout FIXED_IO_ps_srstb;
   output [15:0]audio_out;
+  input audio_tick_0;
   output audio_valid;
 
   wire [14:0]DDR_addr;
@@ -73,6 +77,7 @@ module mb_block_wrapper
   wire DDR_ras_n;
   wire DDR_reset_n;
   wire DDR_we_n;
+  wire FCLK_CLK1_0;
   wire FIXED_IO_ddr_vrn;
   wire FIXED_IO_ddr_vrp;
   wire [53:0]FIXED_IO_mio;
@@ -80,6 +85,7 @@ module mb_block_wrapper
   wire FIXED_IO_ps_porb;
   wire FIXED_IO_ps_srstb;
   wire [15:0]audio_out;
+  wire audio_tick_0;
   wire audio_valid;
 
   mb_block mb_block_i
@@ -98,6 +104,7 @@ module mb_block_wrapper
         .DDR_ras_n(DDR_ras_n),
         .DDR_reset_n(DDR_reset_n),
         .DDR_we_n(DDR_we_n),
+        .FCLK_CLK1_0(FCLK_CLK1_0),
         .FIXED_IO_ddr_vrn(FIXED_IO_ddr_vrn),
         .FIXED_IO_ddr_vrp(FIXED_IO_ddr_vrp),
         .FIXED_IO_mio(FIXED_IO_mio),
@@ -105,5 +112,6 @@ module mb_block_wrapper
         .FIXED_IO_ps_porb(FIXED_IO_ps_porb),
         .FIXED_IO_ps_srstb(FIXED_IO_ps_srstb),
         .audio_out(audio_out),
+        .audio_tick_0(audio_tick_0),
         .audio_valid(audio_valid));
 endmodule

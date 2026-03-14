@@ -1,6 +1,242 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
+| Date         : Sat Mar 14 18:44:23 2026
+| Host         : ponco2 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'mb_block_umeboshi_0_2'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of mb_block_umeboshi_0_2 (xilinx.com:user:umeboshi:1.0) from (Rev. 16) to (Rev. 17)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
+| Date         : Sat Mar 14 18:44:07 2026
+| Host         : ponco2 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'mb_block_umeboshi_0_2'
+
+1. Summary
+----------
+
+SUCCESS in the update of mb_block_umeboshi_0_2 (xilinx.com:user:umeboshi:1.0 (Rev. 16)) to current project options.
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
+| Date         : Sat Mar 14 18:33:19 2026
+| Host         : ponco2 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'mb_block_umeboshi_0_2'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of mb_block_umeboshi_0_2 (xilinx.com:user:umeboshi:1.0) from (Rev. 15) to (Rev. 16)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
+| Date         : Sat Mar 14 18:29:17 2026
+| Host         : ponco2 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'mb_block_umeboshi_0_2'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of mb_block_umeboshi_0_2 (xilinx.com:user:umeboshi:1.0) from (Rev. 14) to (Rev. 15)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
+| Date         : Sat Mar 14 17:40:23 2026
+| Host         : ponco2 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'mb_block_umeboshi_0_2'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of mb_block_umeboshi_0_2 (xilinx.com:user:umeboshi:1.0) from (Rev. 13) to (Rev. 14)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Interface Information
+------------------------
+
+Detected external interface differences while upgrading 'mb_block_umeboshi_0_2'.
+
+
+-Upgrade has added interface 'BRAM0' (xilinx.com:interface:bram:1.0)
+
+-Upgrade has added interface 'BRAM1' (xilinx.com:interface:bram:1.0)
+
+
+3. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'mb_block_umeboshi_0_2'. These changes may impact your design.
+
+
+-Upgrade has added port 'bram0_din_b'
+
+-Upgrade has added port 'bram0_rstb'
+
+-Upgrade has added port 'bram1_din_b'
+
+-Upgrade has added port 'bram1_rstb'
+
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
+| Date         : Sat Mar 14 17:40:10 2026
+| Host         : ponco2 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'mb_block_umeboshi_0_2'
+
+1. Summary
+----------
+
+SUCCESS in the update of mb_block_umeboshi_0_2 (xilinx.com:user:umeboshi:1.0 (Rev. 13)) to current project options.
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
+| Date         : Sat Mar 14 16:58:59 2026
+| Host         : ponco2 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'mb_block_umeboshi_0_2'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of mb_block_umeboshi_0_2 (xilinx.com:user:umeboshi:1.0) from (Rev. 12) to (Rev. 13)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'mb_block_umeboshi_0_2'. These changes may impact your design.
+
+
+-Upgrade has removed port 'bram_addr_b'
+
+-Upgrade has added port 'bram0_addr_b'
+
+-Upgrade has added port 'bram0_clkb'
+
+-Upgrade has added port 'bram0_enb'
+
+-Upgrade has added port 'bram0_web'
+
+-Upgrade has added port 'bram1_addr_b'
+
+-Upgrade has added port 'bram1_clkb'
+
+-Upgrade has added port 'bram1_enb'
+
+-Upgrade has added port 'bram1_web'
+
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
+| Date         : Sat Mar 14 16:58:20 2026
+| Host         : ponco2 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'mb_block_umeboshi_0_2'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of mb_block_umeboshi_0_2 (xilinx.com:user:umeboshi:1.0) from (Rev. 5) to (Rev. 12)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'mb_block_umeboshi_0_2'. These changes may impact your design.
+
+
+-Upgraded port 'bram0_data_b' width 32 differs from original width 16
+
+-Upgraded port 'bram1_data_b' width 32 differs from original width 16
+
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
 | Date         : Thu Feb 19 19:19:24 2026
 | Host         : ponco2 running 64-bit major release  (build 9200)
 | Command      : upgrade_ip

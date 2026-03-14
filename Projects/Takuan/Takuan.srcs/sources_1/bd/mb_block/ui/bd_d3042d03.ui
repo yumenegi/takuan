@@ -1,37 +1,43 @@
 {
    "ActiveEmotionalView":"Default View",
    "Default View_ScaleFactor":"1.16629",
-   "Default View_TopLeft":"1062,58",
+   "Default View_TopLeft":"-251,233",
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.8.0 2024-04-26 e1825d835c VDI=44 GEI=38 GUI=JA:21.0
 #  -string -flagsOSRD
-preplace port DDR -pg 1 -lvl 5 -x 1720 -y 60 -defaultsOSRD
-preplace port FIXED_IO -pg 1 -lvl 5 -x 1720 -y 80 -defaultsOSRD
-preplace port port-id_audio_valid -pg 1 -lvl 5 -x 1720 -y 190 -defaultsOSRD
-preplace portBus audio_out -pg 1 -lvl 5 -x 1720 -y 170 -defaultsOSRD
+preplace port DDR -pg 1 -lvl 5 -x 1810 -y 50 -defaultsOSRD
+preplace port FIXED_IO -pg 1 -lvl 5 -x 1810 -y 80 -defaultsOSRD
+preplace port port-id_audio_valid -pg 1 -lvl 5 -x 1810 -y 190 -defaultsOSRD
+preplace port port-id_audio_tick_0 -pg 1 -lvl 0 -x 0 -y 550 -defaultsOSRD
+preplace port port-id_FCLK_CLK1_0 -pg 1 -lvl 5 -x 1810 -y 250 -defaultsOSRD
+preplace portBus audio_out -pg 1 -lvl 5 -x 1810 -y 160 -defaultsOSRD
 preplace inst processing_system7_0 -pg 1 -lvl 1 -x 230 -y 210 -defaultsOSRD
-preplace inst umeboshi_0 -pg 1 -lvl 3 -x 1250 -y 180 -defaultsOSRD
+preplace inst umeboshi_0 -pg 1 -lvl 3 -x 1300 -y 370 -defaultsOSRD
 preplace inst axi_smc -pg 1 -lvl 2 -x 910 -y 170 -defaultsOSRD
-preplace inst rst_ps7_0_100M -pg 1 -lvl 1 -x 230 -y 400 -defaultsOSRD
-preplace inst axi_bram_ctrl_0 -pg 1 -lvl 3 -x 1250 -y 350 -defaultsOSRD
-preplace inst axi_bram_ctrl_0_bram_osc_a -pg 1 -lvl 4 -x 1570 -y 400 -defaultsOSRD
-preplace inst axi_bram_ctrl_1 -pg 1 -lvl 3 -x 1250 -y 490 -defaultsOSRD
-preplace inst axi_bram_ctrl_1_bram_osc_b -pg 1 -lvl 4 -x 1570 -y 680 -defaultsOSRD
-preplace netloc processing_system7_0_FCLK_CLK0 1 0 3 20 90 460 250 1070
-preplace netloc processing_system7_0_FCLK_RESET0_N 1 0 2 30 100 430
-preplace netloc rst_ps7_0_100M_peripheral_aresetn 1 1 2 770 260 1080
-preplace netloc umeboshi_0_audio_out 1 3 2 NJ 160 1700J
-preplace netloc umeboshi_0_audio_valid 1 3 2 1420J 190 NJ
-preplace netloc axi_bram_ctrl_0_BRAM_PORTA 1 3 1 1420J 320n
-preplace netloc axi_smc_M00_AXI 1 2 1 1050 130n
-preplace netloc axi_smc_M01_AXI 1 2 1 1060 170n
-preplace netloc processing_system7_0_DDR 1 1 4 440J 60 NJ 60 NJ 60 NJ
-preplace netloc processing_system7_0_FIXED_IO 1 1 4 450J 70 NJ 70 NJ 70 1700J
-preplace netloc processing_system7_0_M_AXI_GP0 1 1 1 470 150n
-preplace netloc axi_smc_M02_AXI 1 2 1 1050 190n
-preplace netloc axi_bram_ctrl_1_BRAM_PORTA 1 3 1 1420 490n
-levelinfo -pg 1 0 230 910 1250 1570 1720
-pagesize -pg 1 -db -bbox -sgen 0 -100 1930 920
+preplace inst rst_ps7_0_100M -pg 1 -lvl 1 -x 230 -y 410 -defaultsOSRD
+preplace inst axi_bram_ctrl_0 -pg 1 -lvl 3 -x 1300 -y 770 -defaultsOSRD
+preplace inst axi_bram_ctrl_0_bram_osc_a -pg 1 -lvl 4 -x 1670 -y 470 -defaultsOSRD
+preplace inst axi_bram_ctrl_1 -pg 1 -lvl 3 -x 1300 -y 910 -defaultsOSRD
+preplace inst axi_bram_ctrl_1_bram_osc_b -pg 1 -lvl 4 -x 1670 -y 890 -defaultsOSRD
+preplace netloc processing_system7_0_FCLK_CLK0 1 0 3 40 90 450 250 1070
+preplace netloc processing_system7_0_FCLK_RESET0_N 1 0 2 40 510 420
+preplace netloc rst_ps7_0_100M_peripheral_aresetn 1 1 2 780 450 1060
+preplace netloc umeboshi_0_audio_out 1 3 2 1510J 160 NJ
+preplace netloc umeboshi_0_audio_valid 1 3 2 1530J 190 NJ
+preplace netloc audio_tick_0_1 1 0 3 NJ 550 NJ 550 NJ
+preplace netloc processing_system7_0_FCLK_CLK1 1 1 4 440J 70 NJ 70 NJ 70 1790J
+preplace netloc axi_bram_ctrl_0_BRAM_PORTA 1 3 1 1550J 390n
+preplace netloc axi_bram_ctrl_1_BRAM_PORTA 1 3 1 1550 810n
+preplace netloc axi_smc_M00_AXI 1 2 1 N 150
+preplace netloc axi_smc_M01_AXI 1 2 1 1090 170n
+preplace netloc axi_smc_M02_AXI 1 2 1 1080 190n
+preplace netloc processing_system7_0_DDR 1 1 4 420J 50 NJ 50 NJ 50 NJ
+preplace netloc processing_system7_0_FIXED_IO 1 1 4 430J 80 NJ 80 NJ 80 NJ
+preplace netloc processing_system7_0_M_AXI_GP0 1 1 1 460 150n
+preplace netloc umeboshi_0_BRAM0 1 3 1 1540 200n
+preplace netloc umeboshi_0_BRAM1 1 3 1 1520 360n
+levelinfo -pg 1 0 230 910 1300 1670 1810
+pagesize -pg 1 -db -bbox -sgen -130 -100 1960 1170
 "
 }
 {

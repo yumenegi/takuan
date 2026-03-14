@@ -57,6 +57,7 @@ if {$::dispatch::connected} {
 
 OPTRACE "mb_block_processing_system7_0_3_synth_1" START { ROLLUP_AUTO }
 set_param general.usePosixSpawnForFork 1
+set_param bd.open.in_stealth_mode 1
 set_msg_config -id {HDL-1065} -limit 10000
 set_param project.vivado.isBlockSynthRun true
 set_msg_config -msgmgr_mode ooc_run
@@ -79,7 +80,7 @@ set_property ip_output_repo c:/Users/hause/Documents/Vivado/Projects/Takuan/Taku
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_ip -quiet c:/Users/hause/Documents/Vivado/Projects/Takuan/Takuan.srcs/sources_1/bd/mb_block/ip/mb_block_processing_system7_0_3/mb_block_processing_system7_0_3.xci
+read_ip -quiet C:/Users/hause/Documents/Vivado/Projects/Takuan/Takuan.srcs/sources_1/bd/mb_block/ip/mb_block_processing_system7_0_3/mb_block_processing_system7_0_3.xci
 set_property used_in_implementation false [get_files -all c:/Users/hause/Documents/Vivado/Projects/Takuan/Takuan.gen/sources_1/bd/mb_block/ip/mb_block_processing_system7_0_3/mb_block_processing_system7_0_3.xdc]
 
 OPTRACE "Adding files" END { }
