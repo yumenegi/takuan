@@ -58,6 +58,12 @@ _M_AXI_GP1_THREAD_ID_WIDTH=12,C_NUM_F2P_INTR_INPUTS=1,C_IRQ_F2P_MODE=DIRECT,C_DQ
 =1,C_GP1_EN_MODIFIABLE_TXN=1}" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module mb_block_processing_system7_0_3 (
+  I2C0_SDA_I,
+  I2C0_SDA_O,
+  I2C0_SDA_T,
+  I2C0_SCL_I,
+  I2C0_SCL_O,
+  I2C0_SCL_T,
   USB0_PORT_INDCTL,
   USB0_VBUS_PWRSELECT,
   USB0_VBUS_PWRFAULT,
@@ -126,6 +132,19 @@ module mb_block_processing_system7_0_3 (
   PS_PORB
 );
 
+(* X_INTERFACE_INFO = "xilinx.com:interface:iic:1.0 IIC_0 SDA_I" *)
+(* X_INTERFACE_MODE = "master" *)
+input wire I2C0_SDA_I;
+(* X_INTERFACE_INFO = "xilinx.com:interface:iic:1.0 IIC_0 SDA_O" *)
+output wire I2C0_SDA_O;
+(* X_INTERFACE_INFO = "xilinx.com:interface:iic:1.0 IIC_0 SDA_T" *)
+output wire I2C0_SDA_T;
+(* X_INTERFACE_INFO = "xilinx.com:interface:iic:1.0 IIC_0 SCL_I" *)
+input wire I2C0_SCL_I;
+(* X_INTERFACE_INFO = "xilinx.com:interface:iic:1.0 IIC_0 SCL_O" *)
+output wire I2C0_SCL_O;
+(* X_INTERFACE_INFO = "xilinx.com:interface:iic:1.0 IIC_0 SCL_T" *)
+output wire I2C0_SCL_T;
 (* X_INTERFACE_INFO = "xilinx.com:display_processing_system7:usbctrl:1.0 USBIND_0 PORT_INDCTL" *)
 (* X_INTERFACE_MODE = "master" *)
 output wire [1 : 0] USB0_PORT_INDCTL;
@@ -222,7 +241,7 @@ input wire [31 : 0] M_AXI_GP0_RDATA;
 output wire FCLK_CLK0;
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 FCLK_CLK1 CLK" *)
 (* X_INTERFACE_MODE = "master" *)
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME FCLK_CLK1, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN mb_block_processing_system7_0_3_FCLK_CLK1, INSERT_VIP 0" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME FCLK_CLK1, FREQ_HZ 24390244, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN mb_block_processing_system7_0_3_FCLK_CLK1, INSERT_VIP 0" *)
 output wire FCLK_CLK1;
 (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 FCLK_RESET0_N RST" *)
 (* X_INTERFACE_MODE = "master" *)
@@ -390,12 +409,12 @@ inout wire PS_PORB;
     .GPIO_I(64'B0),
     .GPIO_O(),
     .GPIO_T(),
-    .I2C0_SDA_I(1'B0),
-    .I2C0_SDA_O(),
-    .I2C0_SDA_T(),
-    .I2C0_SCL_I(1'B0),
-    .I2C0_SCL_O(),
-    .I2C0_SCL_T(),
+    .I2C0_SDA_I(I2C0_SDA_I),
+    .I2C0_SDA_O(I2C0_SDA_O),
+    .I2C0_SDA_T(I2C0_SDA_T),
+    .I2C0_SCL_I(I2C0_SCL_I),
+    .I2C0_SCL_O(I2C0_SCL_O),
+    .I2C0_SCL_T(I2C0_SCL_T),
     .I2C1_SDA_I(1'B0),
     .I2C1_SDA_O(),
     .I2C1_SDA_T(),

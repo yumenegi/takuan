@@ -677,6 +677,12 @@
 
 //MODULE DECLARATION
  module mb_block_processing_system7_0_3 (
+  I2C0_SDA_I,
+  I2C0_SDA_O,
+  I2C0_SDA_T,
+  I2C0_SCL_I,
+  I2C0_SCL_O,
+  I2C0_SCL_T,
   USB0_PORT_INDCTL,
   USB0_VBUS_PWRSELECT,
   USB0_VBUS_PWRFAULT,
@@ -806,6 +812,12 @@
 
 //INPUT AND OUTPUT PORTS
 
+      input  I2C0_SDA_I;
+      output  I2C0_SDA_O;
+      output  I2C0_SDA_T;
+      input  I2C0_SCL_I;
+      output  I2C0_SCL_O;
+      output  I2C0_SCL_T;
       output  [1 : 0] USB0_PORT_INDCTL;
       output  USB0_VBUS_PWRSELECT;
       input  USB0_VBUS_PWRFAULT;
@@ -875,6 +887,10 @@
 
 //REG DECLARATIONS
 
+      reg I2C0_SDA_O;
+      reg I2C0_SDA_T;
+      reg I2C0_SCL_O;
+      reg I2C0_SCL_T;
       reg [1 : 0] USB0_PORT_INDCTL;
       reg USB0_VBUS_PWRSELECT;
       reg M_AXI_GP0_ARVALID;
@@ -1077,7 +1093,7 @@ output bit M_AXI_GP0_RREADY
      FCLK_CLK1 = 1'b0;
   end
 
-  always #(5.0) FCLK_CLK1 <= ~FCLK_CLK1;
+  always #(20.345052083333332) FCLK_CLK1 <= ~FCLK_CLK1;
 
   always@(posedge FCLK_CLK1)
   begin
