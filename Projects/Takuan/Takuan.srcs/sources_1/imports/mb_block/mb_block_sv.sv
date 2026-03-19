@@ -96,7 +96,7 @@ module mb_block_sv (
   (* X_INTERFACE_IGNORE = "true" *)
   inout wire FIXED_IO_ps_porb,
   (* X_INTERFACE_IGNORE = "true" *)
-  output wire [15:0] audio_out,
+  output wire [23:0] audio_out,
   (* X_INTERFACE_IGNORE = "true" *)
   output wire audio_valid,
   (* X_INTERFACE_IGNORE = "true" *)

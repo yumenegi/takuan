@@ -2,7 +2,7 @@
 -- Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
--- Date        : Sat Mar 14 18:52:28 2026
+-- Date        : Wed Mar 18 17:36:13 2026
 -- Host        : ponco2 running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
 --               c:/Users/hause/Documents/Vivado/Projects/Takuan/Takuan.gen/sources_1/bd/mb_block/ip/mb_block_umeboshi_0_2/mb_block_umeboshi_0_2_sim_netlist.vhdl
@@ -19,7 +19,7 @@ entity mb_block_umeboshi_0_2_synth_256 is
   port (
     axi_synth_engine_aresetn_0 : out STD_LOGIC;
     bram0_addr_b : out STD_LOGIC_VECTOR ( 16 downto 0 );
-    audio_out : out STD_LOGIC_VECTOR ( 15 downto 0 );
+    audio_out : out STD_LOGIC_VECTOR ( 23 downto 0 );
     axi_synth_engine_aclk : in STD_LOGIC;
     axi_synth_engine_awaddr : in STD_LOGIC_VECTOR ( 10 downto 0 );
     axi_synth_engine_awvalid : in STD_LOGIC;
@@ -40,19 +40,7 @@ architecture STRUCTURE of mb_block_umeboshi_0_2_synth_256 is
   signal B : STD_LOGIC_VECTOR ( 15 downto 0 );
   signal \audio_out0_carry__0_i_1_n_0\ : STD_LOGIC;
   signal \audio_out0_carry__0_i_2_n_0\ : STD_LOGIC;
-  signal \audio_out0_carry__0_i_3_n_0\ : STD_LOGIC;
-  signal \audio_out0_carry__0_i_4_n_0\ : STD_LOGIC;
-  signal \audio_out0_carry__0_i_5_n_0\ : STD_LOGIC;
-  signal \audio_out0_carry__0_i_6_n_0\ : STD_LOGIC;
-  signal \audio_out0_carry__0_i_7_n_0\ : STD_LOGIC;
-  signal \audio_out0_carry__0_i_8_n_0\ : STD_LOGIC;
-  signal \audio_out0_carry__0_n_0\ : STD_LOGIC;
-  signal \audio_out0_carry__0_n_1\ : STD_LOGIC;
-  signal \audio_out0_carry__0_n_2\ : STD_LOGIC;
   signal \audio_out0_carry__0_n_3\ : STD_LOGIC;
-  signal \audio_out0_carry__1_i_1_n_0\ : STD_LOGIC;
-  signal \audio_out0_carry__1_i_2_n_0\ : STD_LOGIC;
-  signal \audio_out0_carry__1_n_3\ : STD_LOGIC;
   signal audio_out0_carry_i_1_n_0 : STD_LOGIC;
   signal audio_out0_carry_i_2_n_0 : STD_LOGIC;
   signal audio_out0_carry_i_3_n_0 : STD_LOGIC;
@@ -65,11 +53,7 @@ architecture STRUCTURE of mb_block_umeboshi_0_2_synth_256 is
   signal audio_out0_carry_n_1 : STD_LOGIC;
   signal audio_out0_carry_n_2 : STD_LOGIC;
   signal audio_out0_carry_n_3 : STD_LOGIC;
-  signal \audio_out0_inferred__1/i__carry__0_n_0\ : STD_LOGIC;
-  signal \audio_out0_inferred__1/i__carry__0_n_1\ : STD_LOGIC;
-  signal \audio_out0_inferred__1/i__carry__0_n_2\ : STD_LOGIC;
   signal \audio_out0_inferred__1/i__carry__0_n_3\ : STD_LOGIC;
-  signal \audio_out0_inferred__1/i__carry__1_n_3\ : STD_LOGIC;
   signal \audio_out0_inferred__1/i__carry_n_0\ : STD_LOGIC;
   signal \audio_out0_inferred__1/i__carry_n_1\ : STD_LOGIC;
   signal \audio_out0_inferred__1/i__carry_n_2\ : STD_LOGIC;
@@ -81,9 +65,17 @@ architecture STRUCTURE of mb_block_umeboshi_0_2_synth_256 is
   signal \audio_out[13]_i_1_n_0\ : STD_LOGIC;
   signal \audio_out[14]_i_1_n_0\ : STD_LOGIC;
   signal \audio_out[15]_i_1_n_0\ : STD_LOGIC;
-  signal \audio_out[15]_i_2_n_0\ : STD_LOGIC;
-  signal \audio_out[15]_i_3_n_0\ : STD_LOGIC;
+  signal \audio_out[16]_i_1_n_0\ : STD_LOGIC;
+  signal \audio_out[17]_i_1_n_0\ : STD_LOGIC;
+  signal \audio_out[18]_i_1_n_0\ : STD_LOGIC;
+  signal \audio_out[19]_i_1_n_0\ : STD_LOGIC;
   signal \audio_out[1]_i_1_n_0\ : STD_LOGIC;
+  signal \audio_out[20]_i_1_n_0\ : STD_LOGIC;
+  signal \audio_out[21]_i_1_n_0\ : STD_LOGIC;
+  signal \audio_out[22]_i_1_n_0\ : STD_LOGIC;
+  signal \audio_out[23]_i_1_n_0\ : STD_LOGIC;
+  signal \audio_out[23]_i_2_n_0\ : STD_LOGIC;
+  signal \audio_out[23]_i_3_n_0\ : STD_LOGIC;
   signal \audio_out[2]_i_1_n_0\ : STD_LOGIC;
   signal \audio_out[3]_i_1_n_0\ : STD_LOGIC;
   signal \audio_out[4]_i_1_n_0\ : STD_LOGIC;
@@ -146,24 +138,18 @@ architecture STRUCTURE of mb_block_umeboshi_0_2_synth_256 is
   signal \i__carry__0_i_3__0_n_0\ : STD_LOGIC;
   signal \i__carry__0_i_3__1_n_0\ : STD_LOGIC;
   signal \i__carry__0_i_3__2_n_0\ : STD_LOGIC;
-  signal \i__carry__0_i_3__3_n_0\ : STD_LOGIC;
   signal \i__carry__0_i_3_n_0\ : STD_LOGIC;
   signal \i__carry__0_i_4__0_n_0\ : STD_LOGIC;
   signal \i__carry__0_i_4__1_n_0\ : STD_LOGIC;
   signal \i__carry__0_i_4__2_n_0\ : STD_LOGIC;
-  signal \i__carry__0_i_4__3_n_0\ : STD_LOGIC;
   signal \i__carry__0_i_4_n_0\ : STD_LOGIC;
   signal \i__carry__0_i_5__0_n_0\ : STD_LOGIC;
-  signal \i__carry__0_i_5__1_n_0\ : STD_LOGIC;
   signal \i__carry__0_i_5_n_0\ : STD_LOGIC;
   signal \i__carry__0_i_6__0_n_0\ : STD_LOGIC;
-  signal \i__carry__0_i_6__1_n_0\ : STD_LOGIC;
   signal \i__carry__0_i_6_n_0\ : STD_LOGIC;
   signal \i__carry__0_i_7__0_n_0\ : STD_LOGIC;
-  signal \i__carry__0_i_7__1_n_0\ : STD_LOGIC;
   signal \i__carry__0_i_7_n_0\ : STD_LOGIC;
   signal \i__carry__0_i_8__0_n_0\ : STD_LOGIC;
-  signal \i__carry__0_i_8__1_n_0\ : STD_LOGIC;
   signal \i__carry__0_i_8_n_0\ : STD_LOGIC;
   signal \i__carry__1_i_10_n_0\ : STD_LOGIC;
   signal \i__carry__1_i_11_n_0\ : STD_LOGIC;
@@ -178,7 +164,6 @@ architecture STRUCTURE of mb_block_umeboshi_0_2_synth_256 is
   signal \i__carry__1_i_1__0_n_0\ : STD_LOGIC;
   signal \i__carry__1_i_1__1_n_0\ : STD_LOGIC;
   signal \i__carry__1_i_1__2_n_0\ : STD_LOGIC;
-  signal \i__carry__1_i_1__3_n_0\ : STD_LOGIC;
   signal \i__carry__1_i_1_n_0\ : STD_LOGIC;
   signal \i__carry__1_i_20_n_0\ : STD_LOGIC;
   signal \i__carry__1_i_21_n_0\ : STD_LOGIC;
@@ -193,7 +178,6 @@ architecture STRUCTURE of mb_block_umeboshi_0_2_synth_256 is
   signal \i__carry__1_i_2__0_n_0\ : STD_LOGIC;
   signal \i__carry__1_i_2__1_n_0\ : STD_LOGIC;
   signal \i__carry__1_i_2__2_n_0\ : STD_LOGIC;
-  signal \i__carry__1_i_2__3_n_0\ : STD_LOGIC;
   signal \i__carry__1_i_2_n_0\ : STD_LOGIC;
   signal \i__carry__1_i_30_n_0\ : STD_LOGIC;
   signal \i__carry__1_i_3__0_n_0\ : STD_LOGIC;
@@ -337,7 +321,7 @@ architecture STRUCTURE of mb_block_umeboshi_0_2_synth_256 is
   signal \mixer_acc[8]_i_3_n_0\ : STD_LOGIC;
   signal \mixer_acc[8]_i_4_n_0\ : STD_LOGIC;
   signal \mixer_acc[8]_i_5_n_0\ : STD_LOGIC;
-  signal mixer_acc_reg : STD_LOGIC_VECTOR ( 31 downto 16 );
+  signal mixer_acc_reg : STD_LOGIC_VECTOR ( 31 downto 24 );
   signal \mixer_acc_reg[0]_i_2_n_0\ : STD_LOGIC;
   signal \mixer_acc_reg[0]_i_2_n_1\ : STD_LOGIC;
   signal \mixer_acc_reg[0]_i_2_n_2\ : STD_LOGIC;
@@ -401,7 +385,7 @@ architecture STRUCTURE of mb_block_umeboshi_0_2_synth_256 is
   signal \mixer_acc_reg[8]_i_1_n_5\ : STD_LOGIC;
   signal \mixer_acc_reg[8]_i_1_n_6\ : STD_LOGIC;
   signal \mixer_acc_reg[8]_i_1_n_7\ : STD_LOGIC;
-  signal \mixer_acc_reg__0\ : STD_LOGIC_VECTOR ( 15 downto 0 );
+  signal \mixer_acc_reg__0\ : STD_LOGIC_VECTOR ( 23 downto 0 );
   signal \next_env_vol0_inferred__0/i__carry__0_n_0\ : STD_LOGIC;
   signal \next_env_vol0_inferred__0/i__carry__0_n_1\ : STD_LOGIC;
   signal \next_env_vol0_inferred__0/i__carry__0_n_2\ : STD_LOGIC;
@@ -1066,13 +1050,11 @@ architecture STRUCTURE of mb_block_umeboshi_0_2_synth_256 is
   signal synth_wr_adsr1 : STD_LOGIC;
   signal synth_wr_adsr2 : STD_LOGIC;
   signal NLW_audio_out0_carry_O_UNCONNECTED : STD_LOGIC_VECTOR ( 3 downto 0 );
+  signal \NLW_audio_out0_carry__0_CO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 1 );
   signal \NLW_audio_out0_carry__0_O_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 0 );
-  signal \NLW_audio_out0_carry__1_CO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 1 );
-  signal \NLW_audio_out0_carry__1_O_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal \NLW_audio_out0_inferred__1/i__carry_O_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 0 );
+  signal \NLW_audio_out0_inferred__1/i__carry__0_CO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 1 );
   signal \NLW_audio_out0_inferred__1/i__carry__0_O_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 0 );
-  signal \NLW_audio_out0_inferred__1/i__carry__1_CO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 1 );
-  signal \NLW_audio_out0_inferred__1/i__carry__1_O_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal \NLW_bram1_addr_b[8]_INST_0_CO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 to 3 );
   signal NLW_env_ar_mem_reg_0_7_0_5_DOD_UNCONNECTED : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal NLW_env_ar_mem_reg_0_7_6_7_DOD_UNCONNECTED : STD_LOGIC_VECTOR ( 1 downto 0 );
@@ -1183,25 +1165,31 @@ architecture STRUCTURE of mb_block_umeboshi_0_2_synth_256 is
   attribute COMPARATOR_THRESHOLD : integer;
   attribute COMPARATOR_THRESHOLD of audio_out0_carry : label is 11;
   attribute COMPARATOR_THRESHOLD of \audio_out0_carry__0\ : label is 11;
-  attribute COMPARATOR_THRESHOLD of \audio_out0_carry__1\ : label is 11;
   attribute COMPARATOR_THRESHOLD of \audio_out0_inferred__1/i__carry\ : label is 11;
   attribute COMPARATOR_THRESHOLD of \audio_out0_inferred__1/i__carry__0\ : label is 11;
-  attribute COMPARATOR_THRESHOLD of \audio_out0_inferred__1/i__carry__1\ : label is 11;
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \audio_out[10]_i_1\ : label is "soft_lutpair32";
-  attribute SOFT_HLUTNM of \audio_out[11]_i_1\ : label is "soft_lutpair31";
-  attribute SOFT_HLUTNM of \audio_out[12]_i_1\ : label is "soft_lutpair31";
-  attribute SOFT_HLUTNM of \audio_out[13]_i_1\ : label is "soft_lutpair30";
-  attribute SOFT_HLUTNM of \audio_out[14]_i_1\ : label is "soft_lutpair30";
-  attribute SOFT_HLUTNM of \audio_out[1]_i_1\ : label is "soft_lutpair36";
-  attribute SOFT_HLUTNM of \audio_out[2]_i_1\ : label is "soft_lutpair36";
-  attribute SOFT_HLUTNM of \audio_out[3]_i_1\ : label is "soft_lutpair35";
-  attribute SOFT_HLUTNM of \audio_out[4]_i_1\ : label is "soft_lutpair35";
-  attribute SOFT_HLUTNM of \audio_out[5]_i_1\ : label is "soft_lutpair34";
-  attribute SOFT_HLUTNM of \audio_out[6]_i_1\ : label is "soft_lutpair34";
-  attribute SOFT_HLUTNM of \audio_out[7]_i_1\ : label is "soft_lutpair33";
-  attribute SOFT_HLUTNM of \audio_out[8]_i_1\ : label is "soft_lutpair33";
-  attribute SOFT_HLUTNM of \audio_out[9]_i_1\ : label is "soft_lutpair32";
+  attribute SOFT_HLUTNM of \audio_out[10]_i_1\ : label is "soft_lutpair36";
+  attribute SOFT_HLUTNM of \audio_out[11]_i_1\ : label is "soft_lutpair35";
+  attribute SOFT_HLUTNM of \audio_out[12]_i_1\ : label is "soft_lutpair35";
+  attribute SOFT_HLUTNM of \audio_out[13]_i_1\ : label is "soft_lutpair34";
+  attribute SOFT_HLUTNM of \audio_out[14]_i_1\ : label is "soft_lutpair34";
+  attribute SOFT_HLUTNM of \audio_out[15]_i_1\ : label is "soft_lutpair33";
+  attribute SOFT_HLUTNM of \audio_out[16]_i_1\ : label is "soft_lutpair33";
+  attribute SOFT_HLUTNM of \audio_out[17]_i_1\ : label is "soft_lutpair32";
+  attribute SOFT_HLUTNM of \audio_out[18]_i_1\ : label is "soft_lutpair32";
+  attribute SOFT_HLUTNM of \audio_out[19]_i_1\ : label is "soft_lutpair31";
+  attribute SOFT_HLUTNM of \audio_out[1]_i_1\ : label is "soft_lutpair40";
+  attribute SOFT_HLUTNM of \audio_out[20]_i_1\ : label is "soft_lutpair31";
+  attribute SOFT_HLUTNM of \audio_out[21]_i_1\ : label is "soft_lutpair30";
+  attribute SOFT_HLUTNM of \audio_out[22]_i_1\ : label is "soft_lutpair30";
+  attribute SOFT_HLUTNM of \audio_out[2]_i_1\ : label is "soft_lutpair40";
+  attribute SOFT_HLUTNM of \audio_out[3]_i_1\ : label is "soft_lutpair39";
+  attribute SOFT_HLUTNM of \audio_out[4]_i_1\ : label is "soft_lutpair39";
+  attribute SOFT_HLUTNM of \audio_out[5]_i_1\ : label is "soft_lutpair38";
+  attribute SOFT_HLUTNM of \audio_out[6]_i_1\ : label is "soft_lutpair38";
+  attribute SOFT_HLUTNM of \audio_out[7]_i_1\ : label is "soft_lutpair37";
+  attribute SOFT_HLUTNM of \audio_out[8]_i_1\ : label is "soft_lutpair37";
+  attribute SOFT_HLUTNM of \audio_out[9]_i_1\ : label is "soft_lutpair36";
   attribute ADDER_THRESHOLD : integer;
   attribute ADDER_THRESHOLD of \bram1_addr_b[2]_INST_0\ : label is 35;
   attribute ADDER_THRESHOLD of \bram1_addr_b[2]_INST_0_i_1\ : label is 35;
@@ -2618,130 +2606,40 @@ audio_out0_carry: unisim.vcomponents.CARRY4
 \audio_out0_carry__0\: unisim.vcomponents.CARRY4
      port map (
       CI => audio_out0_carry_n_0,
-      CO(3) => \audio_out0_carry__0_n_0\,
-      CO(2) => \audio_out0_carry__0_n_1\,
-      CO(1) => \audio_out0_carry__0_n_2\,
+      CO(3 downto 1) => \NLW_audio_out0_carry__0_CO_UNCONNECTED\(3 downto 1),
       CO(0) => \audio_out0_carry__0_n_3\,
       CYINIT => '0',
-      DI(3) => \audio_out0_carry__0_i_1_n_0\,
-      DI(2) => \audio_out0_carry__0_i_2_n_0\,
-      DI(1) => \audio_out0_carry__0_i_3_n_0\,
-      DI(0) => \audio_out0_carry__0_i_4_n_0\,
+      DI(3 downto 1) => B"000",
+      DI(0) => \audio_out0_carry__0_i_1_n_0\,
       O(3 downto 0) => \NLW_audio_out0_carry__0_O_UNCONNECTED\(3 downto 0),
-      S(3) => \audio_out0_carry__0_i_5_n_0\,
-      S(2) => \audio_out0_carry__0_i_6_n_0\,
-      S(1) => \audio_out0_carry__0_i_7_n_0\,
-      S(0) => \audio_out0_carry__0_i_8_n_0\
+      S(3 downto 1) => B"000",
+      S(0) => \audio_out0_carry__0_i_2_n_0\
     );
 \audio_out0_carry__0_i_1\: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"7"
-    )
-        port map (
-      I0 => mixer_acc_reg(28),
-      I1 => mixer_acc_reg(29),
-      O => \audio_out0_carry__0_i_1_n_0\
-    );
-\audio_out0_carry__0_i_2\: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"7"
-    )
-        port map (
-      I0 => mixer_acc_reg(26),
-      I1 => mixer_acc_reg(27),
-      O => \audio_out0_carry__0_i_2_n_0\
-    );
-\audio_out0_carry__0_i_3\: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"7"
-    )
-        port map (
-      I0 => mixer_acc_reg(24),
-      I1 => mixer_acc_reg(25),
-      O => \audio_out0_carry__0_i_3_n_0\
-    );
-\audio_out0_carry__0_i_4\: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"7"
-    )
-        port map (
-      I0 => mixer_acc_reg(22),
-      I1 => mixer_acc_reg(23),
-      O => \audio_out0_carry__0_i_4_n_0\
-    );
-\audio_out0_carry__0_i_5\: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"8"
-    )
-        port map (
-      I0 => mixer_acc_reg(29),
-      I1 => mixer_acc_reg(28),
-      O => \audio_out0_carry__0_i_5_n_0\
-    );
-\audio_out0_carry__0_i_6\: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"8"
-    )
-        port map (
-      I0 => mixer_acc_reg(27),
-      I1 => mixer_acc_reg(26),
-      O => \audio_out0_carry__0_i_6_n_0\
-    );
-\audio_out0_carry__0_i_7\: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"8"
-    )
-        port map (
-      I0 => mixer_acc_reg(25),
-      I1 => mixer_acc_reg(24),
-      O => \audio_out0_carry__0_i_7_n_0\
-    );
-\audio_out0_carry__0_i_8\: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"8"
-    )
-        port map (
-      I0 => mixer_acc_reg(23),
-      I1 => mixer_acc_reg(22),
-      O => \audio_out0_carry__0_i_8_n_0\
-    );
-\audio_out0_carry__1\: unisim.vcomponents.CARRY4
-     port map (
-      CI => \audio_out0_carry__0_n_0\,
-      CO(3 downto 1) => \NLW_audio_out0_carry__1_CO_UNCONNECTED\(3 downto 1),
-      CO(0) => \audio_out0_carry__1_n_3\,
-      CYINIT => '0',
-      DI(3 downto 1) => B"000",
-      DI(0) => \audio_out0_carry__1_i_1_n_0\,
-      O(3 downto 0) => \NLW_audio_out0_carry__1_O_UNCONNECTED\(3 downto 0),
-      S(3 downto 1) => B"000",
-      S(0) => \audio_out0_carry__1_i_2_n_0\
-    );
-\audio_out0_carry__1_i_1\: unisim.vcomponents.LUT2
     generic map(
       INIT => X"2"
     )
         port map (
       I0 => mixer_acc_reg(31),
       I1 => mixer_acc_reg(30),
-      O => \audio_out0_carry__1_i_1_n_0\
+      O => \audio_out0_carry__0_i_1_n_0\
     );
-\audio_out0_carry__1_i_2\: unisim.vcomponents.LUT2
+\audio_out0_carry__0_i_2\: unisim.vcomponents.LUT2
     generic map(
       INIT => X"8"
     )
         port map (
       I0 => mixer_acc_reg(30),
       I1 => mixer_acc_reg(31),
-      O => \audio_out0_carry__1_i_2_n_0\
+      O => \audio_out0_carry__0_i_2_n_0\
     );
 audio_out0_carry_i_1: unisim.vcomponents.LUT2
     generic map(
       INIT => X"7"
     )
         port map (
-      I0 => mixer_acc_reg(20),
-      I1 => mixer_acc_reg(21),
+      I0 => mixer_acc_reg(28),
+      I1 => mixer_acc_reg(29),
       O => audio_out0_carry_i_1_n_0
     );
 audio_out0_carry_i_2: unisim.vcomponents.LUT2
@@ -2749,8 +2647,8 @@ audio_out0_carry_i_2: unisim.vcomponents.LUT2
       INIT => X"7"
     )
         port map (
-      I0 => mixer_acc_reg(18),
-      I1 => mixer_acc_reg(19),
+      I0 => mixer_acc_reg(26),
+      I1 => mixer_acc_reg(27),
       O => audio_out0_carry_i_2_n_0
     );
 audio_out0_carry_i_3: unisim.vcomponents.LUT2
@@ -2758,8 +2656,8 @@ audio_out0_carry_i_3: unisim.vcomponents.LUT2
       INIT => X"7"
     )
         port map (
-      I0 => mixer_acc_reg(17),
-      I1 => mixer_acc_reg(16),
+      I0 => mixer_acc_reg(24),
+      I1 => mixer_acc_reg(25),
       O => audio_out0_carry_i_3_n_0
     );
 audio_out0_carry_i_4: unisim.vcomponents.LUT1
@@ -2767,7 +2665,7 @@ audio_out0_carry_i_4: unisim.vcomponents.LUT1
       INIT => X"1"
     )
         port map (
-      I0 => \mixer_acc_reg__0\(15),
+      I0 => \mixer_acc_reg__0\(23),
       O => audio_out0_carry_i_4_n_0
     );
 audio_out0_carry_i_5: unisim.vcomponents.LUT2
@@ -2775,8 +2673,8 @@ audio_out0_carry_i_5: unisim.vcomponents.LUT2
       INIT => X"8"
     )
         port map (
-      I0 => mixer_acc_reg(21),
-      I1 => mixer_acc_reg(20),
+      I0 => mixer_acc_reg(29),
+      I1 => mixer_acc_reg(28),
       O => audio_out0_carry_i_5_n_0
     );
 audio_out0_carry_i_6: unisim.vcomponents.LUT2
@@ -2784,8 +2682,8 @@ audio_out0_carry_i_6: unisim.vcomponents.LUT2
       INIT => X"8"
     )
         port map (
-      I0 => mixer_acc_reg(19),
-      I1 => mixer_acc_reg(18),
+      I0 => mixer_acc_reg(27),
+      I1 => mixer_acc_reg(26),
       O => audio_out0_carry_i_6_n_0
     );
 audio_out0_carry_i_7: unisim.vcomponents.LUT2
@@ -2793,8 +2691,8 @@ audio_out0_carry_i_7: unisim.vcomponents.LUT2
       INIT => X"8"
     )
         port map (
-      I0 => mixer_acc_reg(16),
-      I1 => mixer_acc_reg(17),
+      I0 => mixer_acc_reg(25),
+      I1 => mixer_acc_reg(24),
       O => audio_out0_carry_i_7_n_0
     );
 audio_out0_carry_i_8: unisim.vcomponents.LUT2
@@ -2802,8 +2700,8 @@ audio_out0_carry_i_8: unisim.vcomponents.LUT2
       INIT => X"2"
     )
         port map (
-      I0 => \mixer_acc_reg__0\(15),
-      I1 => \mixer_acc_reg__0\(14),
+      I0 => \mixer_acc_reg__0\(23),
+      I1 => \mixer_acc_reg__0\(22),
       O => audio_out0_carry_i_8_n_0
     );
 \audio_out0_inferred__1/i__carry\: unisim.vcomponents.CARRY4
@@ -2817,7 +2715,7 @@ audio_out0_carry_i_8: unisim.vcomponents.LUT2
       DI(3) => \i__carry_i_1_n_0\,
       DI(2) => \i__carry_i_2_n_0\,
       DI(1) => \i__carry_i_3_n_0\,
-      DI(0) => \mixer_acc_reg__0\(15),
+      DI(0) => \mixer_acc_reg__0\(23),
       O(3 downto 0) => \NLW_audio_out0_inferred__1/i__carry_O_UNCONNECTED\(3 downto 0),
       S(3) => \i__carry_i_4__3_n_0\,
       S(2) => \i__carry_i_5__1_n_0\,
@@ -2827,32 +2725,14 @@ audio_out0_carry_i_8: unisim.vcomponents.LUT2
 \audio_out0_inferred__1/i__carry__0\: unisim.vcomponents.CARRY4
      port map (
       CI => \audio_out0_inferred__1/i__carry_n_0\,
-      CO(3) => \audio_out0_inferred__1/i__carry__0_n_0\,
-      CO(2) => \audio_out0_inferred__1/i__carry__0_n_1\,
-      CO(1) => \audio_out0_inferred__1/i__carry__0_n_2\,
+      CO(3 downto 1) => \NLW_audio_out0_inferred__1/i__carry__0_CO_UNCONNECTED\(3 downto 1),
       CO(0) => \audio_out0_inferred__1/i__carry__0_n_3\,
       CYINIT => '0',
-      DI(3) => \i__carry__0_i_1_n_0\,
-      DI(2) => \i__carry__0_i_2_n_0\,
-      DI(1) => \i__carry__0_i_3_n_0\,
-      DI(0) => \i__carry__0_i_4_n_0\,
-      O(3 downto 0) => \NLW_audio_out0_inferred__1/i__carry__0_O_UNCONNECTED\(3 downto 0),
-      S(3) => \i__carry__0_i_5__1_n_0\,
-      S(2) => \i__carry__0_i_6__1_n_0\,
-      S(1) => \i__carry__0_i_7__1_n_0\,
-      S(0) => \i__carry__0_i_8__1_n_0\
-    );
-\audio_out0_inferred__1/i__carry__1\: unisim.vcomponents.CARRY4
-     port map (
-      CI => \audio_out0_inferred__1/i__carry__0_n_0\,
-      CO(3 downto 1) => \NLW_audio_out0_inferred__1/i__carry__1_CO_UNCONNECTED\(3 downto 1),
-      CO(0) => \audio_out0_inferred__1/i__carry__1_n_3\,
-      CYINIT => '0',
       DI(3 downto 1) => B"000",
-      DI(0) => \i__carry__1_i_1_n_0\,
-      O(3 downto 0) => \NLW_audio_out0_inferred__1/i__carry__1_O_UNCONNECTED\(3 downto 0),
+      DI(0) => \i__carry__0_i_1_n_0\,
+      O(3 downto 0) => \NLW_audio_out0_inferred__1/i__carry__0_O_UNCONNECTED\(3 downto 0),
       S(3 downto 1) => B"000",
-      S(0) => \i__carry__1_i_2__3_n_0\
+      S(0) => \i__carry__0_i_2__3_n_0\
     );
 \audio_out[0]_i_1\: unisim.vcomponents.LUT2
     generic map(
@@ -2860,7 +2740,7 @@ audio_out0_carry_i_8: unisim.vcomponents.LUT2
     )
         port map (
       I0 => \mixer_acc_reg__0\(0),
-      I1 => \audio_out0_carry__1_n_3\,
+      I1 => \audio_out0_carry__0_n_3\,
       O => \audio_out[0]_i_1_n_0\
     );
 \audio_out[10]_i_1\: unisim.vcomponents.LUT2
@@ -2869,7 +2749,7 @@ audio_out0_carry_i_8: unisim.vcomponents.LUT2
     )
         port map (
       I0 => \mixer_acc_reg__0\(10),
-      I1 => \audio_out0_carry__1_n_3\,
+      I1 => \audio_out0_carry__0_n_3\,
       O => \audio_out[10]_i_1_n_0\
     );
 \audio_out[11]_i_1\: unisim.vcomponents.LUT2
@@ -2878,7 +2758,7 @@ audio_out0_carry_i_8: unisim.vcomponents.LUT2
     )
         port map (
       I0 => \mixer_acc_reg__0\(11),
-      I1 => \audio_out0_carry__1_n_3\,
+      I1 => \audio_out0_carry__0_n_3\,
       O => \audio_out[11]_i_1_n_0\
     );
 \audio_out[12]_i_1\: unisim.vcomponents.LUT2
@@ -2887,7 +2767,7 @@ audio_out0_carry_i_8: unisim.vcomponents.LUT2
     )
         port map (
       I0 => \mixer_acc_reg__0\(12),
-      I1 => \audio_out0_carry__1_n_3\,
+      I1 => \audio_out0_carry__0_n_3\,
       O => \audio_out[12]_i_1_n_0\
     );
 \audio_out[13]_i_1\: unisim.vcomponents.LUT2
@@ -2896,7 +2776,7 @@ audio_out0_carry_i_8: unisim.vcomponents.LUT2
     )
         port map (
       I0 => \mixer_acc_reg__0\(13),
-      I1 => \audio_out0_carry__1_n_3\,
+      I1 => \audio_out0_carry__0_n_3\,
       O => \audio_out[13]_i_1_n_0\
     );
 \audio_out[14]_i_1\: unisim.vcomponents.LUT2
@@ -2905,38 +2785,53 @@ audio_out0_carry_i_8: unisim.vcomponents.LUT2
     )
         port map (
       I0 => \mixer_acc_reg__0\(14),
-      I1 => \audio_out0_carry__1_n_3\,
+      I1 => \audio_out0_carry__0_n_3\,
       O => \audio_out[14]_i_1_n_0\
     );
-\audio_out[15]_i_1\: unisim.vcomponents.LUT4
+\audio_out[15]_i_1\: unisim.vcomponents.LUT2
     generic map(
-      INIT => X"0800"
-    )
-        port map (
-      I0 => axi_synth_engine_aresetn,
-      I1 => \pipe_valid_reg_n_0_[4]\,
-      I2 => \pipe_valid_reg_n_0_[3]\,
-      I3 => \audio_out0_inferred__1/i__carry__1_n_3\,
-      O => \audio_out[15]_i_1_n_0\
-    );
-\audio_out[15]_i_2\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"40"
-    )
-        port map (
-      I0 => \pipe_valid_reg_n_0_[3]\,
-      I1 => \pipe_valid_reg_n_0_[4]\,
-      I2 => axi_synth_engine_aresetn,
-      O => \audio_out[15]_i_2_n_0\
-    );
-\audio_out[15]_i_3\: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"E"
+      INIT => X"2"
     )
         port map (
       I0 => \mixer_acc_reg__0\(15),
-      I1 => \audio_out0_carry__1_n_3\,
-      O => \audio_out[15]_i_3_n_0\
+      I1 => \audio_out0_carry__0_n_3\,
+      O => \audio_out[15]_i_1_n_0\
+    );
+\audio_out[16]_i_1\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"2"
+    )
+        port map (
+      I0 => \mixer_acc_reg__0\(16),
+      I1 => \audio_out0_carry__0_n_3\,
+      O => \audio_out[16]_i_1_n_0\
+    );
+\audio_out[17]_i_1\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"2"
+    )
+        port map (
+      I0 => \mixer_acc_reg__0\(17),
+      I1 => \audio_out0_carry__0_n_3\,
+      O => \audio_out[17]_i_1_n_0\
+    );
+\audio_out[18]_i_1\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"2"
+    )
+        port map (
+      I0 => \mixer_acc_reg__0\(18),
+      I1 => \audio_out0_carry__0_n_3\,
+      O => \audio_out[18]_i_1_n_0\
+    );
+\audio_out[19]_i_1\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"2"
+    )
+        port map (
+      I0 => \mixer_acc_reg__0\(19),
+      I1 => \audio_out0_carry__0_n_3\,
+      O => \audio_out[19]_i_1_n_0\
     );
 \audio_out[1]_i_1\: unisim.vcomponents.LUT2
     generic map(
@@ -2944,8 +2839,65 @@ audio_out0_carry_i_8: unisim.vcomponents.LUT2
     )
         port map (
       I0 => \mixer_acc_reg__0\(1),
-      I1 => \audio_out0_carry__1_n_3\,
+      I1 => \audio_out0_carry__0_n_3\,
       O => \audio_out[1]_i_1_n_0\
+    );
+\audio_out[20]_i_1\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"2"
+    )
+        port map (
+      I0 => \mixer_acc_reg__0\(20),
+      I1 => \audio_out0_carry__0_n_3\,
+      O => \audio_out[20]_i_1_n_0\
+    );
+\audio_out[21]_i_1\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"2"
+    )
+        port map (
+      I0 => \mixer_acc_reg__0\(21),
+      I1 => \audio_out0_carry__0_n_3\,
+      O => \audio_out[21]_i_1_n_0\
+    );
+\audio_out[22]_i_1\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"2"
+    )
+        port map (
+      I0 => \mixer_acc_reg__0\(22),
+      I1 => \audio_out0_carry__0_n_3\,
+      O => \audio_out[22]_i_1_n_0\
+    );
+\audio_out[23]_i_1\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"0800"
+    )
+        port map (
+      I0 => axi_synth_engine_aresetn,
+      I1 => \pipe_valid_reg_n_0_[4]\,
+      I2 => \pipe_valid_reg_n_0_[3]\,
+      I3 => \audio_out0_inferred__1/i__carry__0_n_3\,
+      O => \audio_out[23]_i_1_n_0\
+    );
+\audio_out[23]_i_2\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"40"
+    )
+        port map (
+      I0 => \pipe_valid_reg_n_0_[3]\,
+      I1 => \pipe_valid_reg_n_0_[4]\,
+      I2 => axi_synth_engine_aresetn,
+      O => \audio_out[23]_i_2_n_0\
+    );
+\audio_out[23]_i_3\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"E"
+    )
+        port map (
+      I0 => \mixer_acc_reg__0\(23),
+      I1 => \audio_out0_carry__0_n_3\,
+      O => \audio_out[23]_i_3_n_0\
     );
 \audio_out[2]_i_1\: unisim.vcomponents.LUT2
     generic map(
@@ -2953,7 +2905,7 @@ audio_out0_carry_i_8: unisim.vcomponents.LUT2
     )
         port map (
       I0 => \mixer_acc_reg__0\(2),
-      I1 => \audio_out0_carry__1_n_3\,
+      I1 => \audio_out0_carry__0_n_3\,
       O => \audio_out[2]_i_1_n_0\
     );
 \audio_out[3]_i_1\: unisim.vcomponents.LUT2
@@ -2962,7 +2914,7 @@ audio_out0_carry_i_8: unisim.vcomponents.LUT2
     )
         port map (
       I0 => \mixer_acc_reg__0\(3),
-      I1 => \audio_out0_carry__1_n_3\,
+      I1 => \audio_out0_carry__0_n_3\,
       O => \audio_out[3]_i_1_n_0\
     );
 \audio_out[4]_i_1\: unisim.vcomponents.LUT2
@@ -2971,7 +2923,7 @@ audio_out0_carry_i_8: unisim.vcomponents.LUT2
     )
         port map (
       I0 => \mixer_acc_reg__0\(4),
-      I1 => \audio_out0_carry__1_n_3\,
+      I1 => \audio_out0_carry__0_n_3\,
       O => \audio_out[4]_i_1_n_0\
     );
 \audio_out[5]_i_1\: unisim.vcomponents.LUT2
@@ -2980,7 +2932,7 @@ audio_out0_carry_i_8: unisim.vcomponents.LUT2
     )
         port map (
       I0 => \mixer_acc_reg__0\(5),
-      I1 => \audio_out0_carry__1_n_3\,
+      I1 => \audio_out0_carry__0_n_3\,
       O => \audio_out[5]_i_1_n_0\
     );
 \audio_out[6]_i_1\: unisim.vcomponents.LUT2
@@ -2989,7 +2941,7 @@ audio_out0_carry_i_8: unisim.vcomponents.LUT2
     )
         port map (
       I0 => \mixer_acc_reg__0\(6),
-      I1 => \audio_out0_carry__1_n_3\,
+      I1 => \audio_out0_carry__0_n_3\,
       O => \audio_out[6]_i_1_n_0\
     );
 \audio_out[7]_i_1\: unisim.vcomponents.LUT2
@@ -2998,7 +2950,7 @@ audio_out0_carry_i_8: unisim.vcomponents.LUT2
     )
         port map (
       I0 => \mixer_acc_reg__0\(7),
-      I1 => \audio_out0_carry__1_n_3\,
+      I1 => \audio_out0_carry__0_n_3\,
       O => \audio_out[7]_i_1_n_0\
     );
 \audio_out[8]_i_1\: unisim.vcomponents.LUT2
@@ -3007,7 +2959,7 @@ audio_out0_carry_i_8: unisim.vcomponents.LUT2
     )
         port map (
       I0 => \mixer_acc_reg__0\(8),
-      I1 => \audio_out0_carry__1_n_3\,
+      I1 => \audio_out0_carry__0_n_3\,
       O => \audio_out[8]_i_1_n_0\
     );
 \audio_out[9]_i_1\: unisim.vcomponents.LUT2
@@ -3016,136 +2968,200 @@ audio_out0_carry_i_8: unisim.vcomponents.LUT2
     )
         port map (
       I0 => \mixer_acc_reg__0\(9),
-      I1 => \audio_out0_carry__1_n_3\,
+      I1 => \audio_out0_carry__0_n_3\,
       O => \audio_out[9]_i_1_n_0\
     );
 \audio_out_reg[0]\: unisim.vcomponents.FDSE
      port map (
       C => axi_synth_engine_aclk,
-      CE => \audio_out[15]_i_2_n_0\,
+      CE => \audio_out[23]_i_2_n_0\,
       D => \audio_out[0]_i_1_n_0\,
       Q => audio_out(0),
-      S => \audio_out[15]_i_1_n_0\
+      S => \audio_out[23]_i_1_n_0\
     );
 \audio_out_reg[10]\: unisim.vcomponents.FDSE
      port map (
       C => axi_synth_engine_aclk,
-      CE => \audio_out[15]_i_2_n_0\,
+      CE => \audio_out[23]_i_2_n_0\,
       D => \audio_out[10]_i_1_n_0\,
       Q => audio_out(10),
-      S => \audio_out[15]_i_1_n_0\
+      S => \audio_out[23]_i_1_n_0\
     );
 \audio_out_reg[11]\: unisim.vcomponents.FDSE
      port map (
       C => axi_synth_engine_aclk,
-      CE => \audio_out[15]_i_2_n_0\,
+      CE => \audio_out[23]_i_2_n_0\,
       D => \audio_out[11]_i_1_n_0\,
       Q => audio_out(11),
-      S => \audio_out[15]_i_1_n_0\
+      S => \audio_out[23]_i_1_n_0\
     );
 \audio_out_reg[12]\: unisim.vcomponents.FDSE
      port map (
       C => axi_synth_engine_aclk,
-      CE => \audio_out[15]_i_2_n_0\,
+      CE => \audio_out[23]_i_2_n_0\,
       D => \audio_out[12]_i_1_n_0\,
       Q => audio_out(12),
-      S => \audio_out[15]_i_1_n_0\
+      S => \audio_out[23]_i_1_n_0\
     );
 \audio_out_reg[13]\: unisim.vcomponents.FDSE
      port map (
       C => axi_synth_engine_aclk,
-      CE => \audio_out[15]_i_2_n_0\,
+      CE => \audio_out[23]_i_2_n_0\,
       D => \audio_out[13]_i_1_n_0\,
       Q => audio_out(13),
-      S => \audio_out[15]_i_1_n_0\
+      S => \audio_out[23]_i_1_n_0\
     );
 \audio_out_reg[14]\: unisim.vcomponents.FDSE
      port map (
       C => axi_synth_engine_aclk,
-      CE => \audio_out[15]_i_2_n_0\,
+      CE => \audio_out[23]_i_2_n_0\,
       D => \audio_out[14]_i_1_n_0\,
       Q => audio_out(14),
-      S => \audio_out[15]_i_1_n_0\
+      S => \audio_out[23]_i_1_n_0\
     );
-\audio_out_reg[15]\: unisim.vcomponents.FDRE
+\audio_out_reg[15]\: unisim.vcomponents.FDSE
      port map (
       C => axi_synth_engine_aclk,
-      CE => \audio_out[15]_i_2_n_0\,
-      D => \audio_out[15]_i_3_n_0\,
+      CE => \audio_out[23]_i_2_n_0\,
+      D => \audio_out[15]_i_1_n_0\,
       Q => audio_out(15),
-      R => \audio_out[15]_i_1_n_0\
+      S => \audio_out[23]_i_1_n_0\
+    );
+\audio_out_reg[16]\: unisim.vcomponents.FDSE
+     port map (
+      C => axi_synth_engine_aclk,
+      CE => \audio_out[23]_i_2_n_0\,
+      D => \audio_out[16]_i_1_n_0\,
+      Q => audio_out(16),
+      S => \audio_out[23]_i_1_n_0\
+    );
+\audio_out_reg[17]\: unisim.vcomponents.FDSE
+     port map (
+      C => axi_synth_engine_aclk,
+      CE => \audio_out[23]_i_2_n_0\,
+      D => \audio_out[17]_i_1_n_0\,
+      Q => audio_out(17),
+      S => \audio_out[23]_i_1_n_0\
+    );
+\audio_out_reg[18]\: unisim.vcomponents.FDSE
+     port map (
+      C => axi_synth_engine_aclk,
+      CE => \audio_out[23]_i_2_n_0\,
+      D => \audio_out[18]_i_1_n_0\,
+      Q => audio_out(18),
+      S => \audio_out[23]_i_1_n_0\
+    );
+\audio_out_reg[19]\: unisim.vcomponents.FDSE
+     port map (
+      C => axi_synth_engine_aclk,
+      CE => \audio_out[23]_i_2_n_0\,
+      D => \audio_out[19]_i_1_n_0\,
+      Q => audio_out(19),
+      S => \audio_out[23]_i_1_n_0\
     );
 \audio_out_reg[1]\: unisim.vcomponents.FDSE
      port map (
       C => axi_synth_engine_aclk,
-      CE => \audio_out[15]_i_2_n_0\,
+      CE => \audio_out[23]_i_2_n_0\,
       D => \audio_out[1]_i_1_n_0\,
       Q => audio_out(1),
-      S => \audio_out[15]_i_1_n_0\
+      S => \audio_out[23]_i_1_n_0\
+    );
+\audio_out_reg[20]\: unisim.vcomponents.FDSE
+     port map (
+      C => axi_synth_engine_aclk,
+      CE => \audio_out[23]_i_2_n_0\,
+      D => \audio_out[20]_i_1_n_0\,
+      Q => audio_out(20),
+      S => \audio_out[23]_i_1_n_0\
+    );
+\audio_out_reg[21]\: unisim.vcomponents.FDSE
+     port map (
+      C => axi_synth_engine_aclk,
+      CE => \audio_out[23]_i_2_n_0\,
+      D => \audio_out[21]_i_1_n_0\,
+      Q => audio_out(21),
+      S => \audio_out[23]_i_1_n_0\
+    );
+\audio_out_reg[22]\: unisim.vcomponents.FDSE
+     port map (
+      C => axi_synth_engine_aclk,
+      CE => \audio_out[23]_i_2_n_0\,
+      D => \audio_out[22]_i_1_n_0\,
+      Q => audio_out(22),
+      S => \audio_out[23]_i_1_n_0\
+    );
+\audio_out_reg[23]\: unisim.vcomponents.FDRE
+     port map (
+      C => axi_synth_engine_aclk,
+      CE => \audio_out[23]_i_2_n_0\,
+      D => \audio_out[23]_i_3_n_0\,
+      Q => audio_out(23),
+      R => \audio_out[23]_i_1_n_0\
     );
 \audio_out_reg[2]\: unisim.vcomponents.FDSE
      port map (
       C => axi_synth_engine_aclk,
-      CE => \audio_out[15]_i_2_n_0\,
+      CE => \audio_out[23]_i_2_n_0\,
       D => \audio_out[2]_i_1_n_0\,
       Q => audio_out(2),
-      S => \audio_out[15]_i_1_n_0\
+      S => \audio_out[23]_i_1_n_0\
     );
 \audio_out_reg[3]\: unisim.vcomponents.FDSE
      port map (
       C => axi_synth_engine_aclk,
-      CE => \audio_out[15]_i_2_n_0\,
+      CE => \audio_out[23]_i_2_n_0\,
       D => \audio_out[3]_i_1_n_0\,
       Q => audio_out(3),
-      S => \audio_out[15]_i_1_n_0\
+      S => \audio_out[23]_i_1_n_0\
     );
 \audio_out_reg[4]\: unisim.vcomponents.FDSE
      port map (
       C => axi_synth_engine_aclk,
-      CE => \audio_out[15]_i_2_n_0\,
+      CE => \audio_out[23]_i_2_n_0\,
       D => \audio_out[4]_i_1_n_0\,
       Q => audio_out(4),
-      S => \audio_out[15]_i_1_n_0\
+      S => \audio_out[23]_i_1_n_0\
     );
 \audio_out_reg[5]\: unisim.vcomponents.FDSE
      port map (
       C => axi_synth_engine_aclk,
-      CE => \audio_out[15]_i_2_n_0\,
+      CE => \audio_out[23]_i_2_n_0\,
       D => \audio_out[5]_i_1_n_0\,
       Q => audio_out(5),
-      S => \audio_out[15]_i_1_n_0\
+      S => \audio_out[23]_i_1_n_0\
     );
 \audio_out_reg[6]\: unisim.vcomponents.FDSE
      port map (
       C => axi_synth_engine_aclk,
-      CE => \audio_out[15]_i_2_n_0\,
+      CE => \audio_out[23]_i_2_n_0\,
       D => \audio_out[6]_i_1_n_0\,
       Q => audio_out(6),
-      S => \audio_out[15]_i_1_n_0\
+      S => \audio_out[23]_i_1_n_0\
     );
 \audio_out_reg[7]\: unisim.vcomponents.FDSE
      port map (
       C => axi_synth_engine_aclk,
-      CE => \audio_out[15]_i_2_n_0\,
+      CE => \audio_out[23]_i_2_n_0\,
       D => \audio_out[7]_i_1_n_0\,
       Q => audio_out(7),
-      S => \audio_out[15]_i_1_n_0\
+      S => \audio_out[23]_i_1_n_0\
     );
 \audio_out_reg[8]\: unisim.vcomponents.FDSE
      port map (
       C => axi_synth_engine_aclk,
-      CE => \audio_out[15]_i_2_n_0\,
+      CE => \audio_out[23]_i_2_n_0\,
       D => \audio_out[8]_i_1_n_0\,
       Q => audio_out(8),
-      S => \audio_out[15]_i_1_n_0\
+      S => \audio_out[23]_i_1_n_0\
     );
 \audio_out_reg[9]\: unisim.vcomponents.FDSE
      port map (
       C => axi_synth_engine_aclk,
-      CE => \audio_out[15]_i_2_n_0\,
+      CE => \audio_out[23]_i_2_n_0\,
       D => \audio_out[9]_i_1_n_0\,
       Q => audio_out(9),
-      S => \audio_out[15]_i_1_n_0\
+      S => \audio_out[23]_i_1_n_0\
     );
 \bram0_addr_b[12]_INST_0\: unisim.vcomponents.LUT6
     generic map(
@@ -3942,11 +3958,11 @@ env_sl_mem_reg_0_7_6_11: unisim.vcomponents.RAM32M
     );
 \i__carry__0_i_1\: unisim.vcomponents.LUT2
     generic map(
-      INIT => X"E"
+      INIT => X"2"
     )
         port map (
-      I0 => mixer_acc_reg(28),
-      I1 => mixer_acc_reg(29),
+      I0 => mixer_acc_reg(30),
+      I1 => mixer_acc_reg(31),
       O => \i__carry__0_i_1_n_0\
     );
 \i__carry__0_i_1__0\: unisim.vcomponents.LUT4
@@ -3991,16 +4007,7 @@ env_sl_mem_reg_0_7_6_11: unisim.vcomponents.RAM32M
       I3 => next_env_vol1_carry_i_12_n_0,
       O => \i__carry__0_i_1__3_n_0\
     );
-\i__carry__0_i_2\: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"E"
-    )
-        port map (
-      I0 => mixer_acc_reg(26),
-      I1 => mixer_acc_reg(27),
-      O => \i__carry__0_i_2_n_0\
-    );
-\i__carry__0_i_2__0\: unisim.vcomponents.LUT4
+\i__carry__0_i_2\: unisim.vcomponents.LUT4
     generic map(
       INIT => X"2F02"
     )
@@ -4009,9 +4016,9 @@ env_sl_mem_reg_0_7_6_11: unisim.vcomponents.RAM32M
       I1 => r_env_vol(14),
       I2 => r_env_vol(15),
       I3 => next_env_vol2(15),
-      O => \i__carry__0_i_2__0_n_0\
+      O => \i__carry__0_i_2_n_0\
     );
-\i__carry__0_i_2__1\: unisim.vcomponents.LUT4
+\i__carry__0_i_2__0\: unisim.vcomponents.LUT4
     generic map(
       INIT => X"2F02"
     )
@@ -4020,36 +4027,36 @@ env_sl_mem_reg_0_7_6_11: unisim.vcomponents.RAM32M
       I1 => r_env_vol(14),
       I2 => r_env_vol(15),
       I3 => increment(15),
-      O => \i__carry__0_i_2__1_n_0\
+      O => \i__carry__0_i_2__0_n_0\
     );
-\i__carry__0_i_2__2\: unisim.vcomponents.LUT2
+\i__carry__0_i_2__1\: unisim.vcomponents.LUT2
     generic map(
       INIT => X"6"
     )
         port map (
       I0 => sl_target(13),
       I1 => increment(13),
-      O => \i__carry__0_i_2__2_n_0\
+      O => \i__carry__0_i_2__1_n_0\
     );
-\i__carry__0_i_2__3\: unisim.vcomponents.LUT2
+\i__carry__0_i_2__2\: unisim.vcomponents.LUT2
     generic map(
       INIT => X"9"
     )
         port map (
       I0 => r_env_vol(6),
       I1 => \increment__0\(6),
-      O => \i__carry__0_i_2__3_n_0\
+      O => \i__carry__0_i_2__2_n_0\
     );
-\i__carry__0_i_3\: unisim.vcomponents.LUT2
+\i__carry__0_i_2__3\: unisim.vcomponents.LUT2
     generic map(
-      INIT => X"E"
+      INIT => X"1"
     )
         port map (
-      I0 => mixer_acc_reg(24),
-      I1 => mixer_acc_reg(25),
-      O => \i__carry__0_i_3_n_0\
+      I0 => mixer_acc_reg(30),
+      I1 => mixer_acc_reg(31),
+      O => \i__carry__0_i_2__3_n_0\
     );
-\i__carry__0_i_3__0\: unisim.vcomponents.LUT4
+\i__carry__0_i_3\: unisim.vcomponents.LUT4
     generic map(
       INIT => X"2F02"
     )
@@ -4058,9 +4065,9 @@ env_sl_mem_reg_0_7_6_11: unisim.vcomponents.RAM32M
       I1 => r_env_vol(12),
       I2 => r_env_vol(13),
       I3 => next_env_vol2(13),
-      O => \i__carry__0_i_3__0_n_0\
+      O => \i__carry__0_i_3_n_0\
     );
-\i__carry__0_i_3__1\: unisim.vcomponents.LUT4
+\i__carry__0_i_3__0\: unisim.vcomponents.LUT4
     generic map(
       INIT => X"2F02"
     )
@@ -4069,36 +4076,27 @@ env_sl_mem_reg_0_7_6_11: unisim.vcomponents.RAM32M
       I1 => r_env_vol(12),
       I2 => r_env_vol(13),
       I3 => increment(13),
-      O => \i__carry__0_i_3__1_n_0\
+      O => \i__carry__0_i_3__0_n_0\
     );
-\i__carry__0_i_3__2\: unisim.vcomponents.LUT2
+\i__carry__0_i_3__1\: unisim.vcomponents.LUT2
     generic map(
       INIT => X"6"
     )
         port map (
       I0 => sl_target(12),
       I1 => increment(12),
-      O => \i__carry__0_i_3__2_n_0\
+      O => \i__carry__0_i_3__1_n_0\
     );
-\i__carry__0_i_3__3\: unisim.vcomponents.LUT2
+\i__carry__0_i_3__2\: unisim.vcomponents.LUT2
     generic map(
       INIT => X"9"
     )
         port map (
       I0 => r_env_vol(5),
       I1 => \increment__0\(5),
-      O => \i__carry__0_i_3__3_n_0\
+      O => \i__carry__0_i_3__2_n_0\
     );
-\i__carry__0_i_4\: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"E"
-    )
-        port map (
-      I0 => mixer_acc_reg(22),
-      I1 => mixer_acc_reg(23),
-      O => \i__carry__0_i_4_n_0\
-    );
-\i__carry__0_i_4__0\: unisim.vcomponents.LUT4
+\i__carry__0_i_4\: unisim.vcomponents.LUT4
     generic map(
       INIT => X"2F02"
     )
@@ -4107,9 +4105,9 @@ env_sl_mem_reg_0_7_6_11: unisim.vcomponents.RAM32M
       I1 => r_env_vol(10),
       I2 => r_env_vol(11),
       I3 => next_env_vol2(11),
-      O => \i__carry__0_i_4__0_n_0\
+      O => \i__carry__0_i_4_n_0\
     );
-\i__carry__0_i_4__1\: unisim.vcomponents.LUT4
+\i__carry__0_i_4__0\: unisim.vcomponents.LUT4
     generic map(
       INIT => X"2F02"
     )
@@ -4118,25 +4116,25 @@ env_sl_mem_reg_0_7_6_11: unisim.vcomponents.RAM32M
       I1 => r_env_vol(10),
       I2 => r_env_vol(11),
       I3 => increment(11),
-      O => \i__carry__0_i_4__1_n_0\
+      O => \i__carry__0_i_4__0_n_0\
     );
-\i__carry__0_i_4__2\: unisim.vcomponents.LUT2
+\i__carry__0_i_4__1\: unisim.vcomponents.LUT2
     generic map(
       INIT => X"6"
     )
         port map (
       I0 => sl_target(11),
       I1 => increment(11),
-      O => \i__carry__0_i_4__2_n_0\
+      O => \i__carry__0_i_4__1_n_0\
     );
-\i__carry__0_i_4__3\: unisim.vcomponents.LUT2
+\i__carry__0_i_4__2\: unisim.vcomponents.LUT2
     generic map(
       INIT => X"9"
     )
         port map (
       I0 => r_env_vol(4),
       I1 => \increment__0\(4),
-      O => \i__carry__0_i_4__3_n_0\
+      O => \i__carry__0_i_4__2_n_0\
     );
 \i__carry__0_i_5\: unisim.vcomponents.LUT4
     generic map(
@@ -4160,15 +4158,6 @@ env_sl_mem_reg_0_7_6_11: unisim.vcomponents.RAM32M
       I3 => r_env_vol(17),
       O => \i__carry__0_i_5__0_n_0\
     );
-\i__carry__0_i_5__1\: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"1"
-    )
-        port map (
-      I0 => mixer_acc_reg(29),
-      I1 => mixer_acc_reg(28),
-      O => \i__carry__0_i_5__1_n_0\
-    );
 \i__carry__0_i_6\: unisim.vcomponents.LUT4
     generic map(
       INIT => X"9009"
@@ -4189,15 +4178,6 @@ env_sl_mem_reg_0_7_6_11: unisim.vcomponents.RAM32M
       I1 => r_env_vol(14),
       I2 => \next_env_vol1_carry__0_i_17_n_0\,
       O => \i__carry__0_i_6__0_n_0\
-    );
-\i__carry__0_i_6__1\: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"1"
-    )
-        port map (
-      I0 => mixer_acc_reg(27),
-      I1 => mixer_acc_reg(26),
-      O => \i__carry__0_i_6__1_n_0\
     );
 \i__carry__0_i_7\: unisim.vcomponents.LUT4
     generic map(
@@ -4221,15 +4201,6 @@ env_sl_mem_reg_0_7_6_11: unisim.vcomponents.RAM32M
       I3 => r_env_vol(13),
       O => \i__carry__0_i_7__0_n_0\
     );
-\i__carry__0_i_7__1\: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"1"
-    )
-        port map (
-      I0 => mixer_acc_reg(25),
-      I1 => mixer_acc_reg(24),
-      O => \i__carry__0_i_7__1_n_0\
-    );
 \i__carry__0_i_8\: unisim.vcomponents.LUT4
     generic map(
       INIT => X"9009"
@@ -4251,22 +4222,15 @@ env_sl_mem_reg_0_7_6_11: unisim.vcomponents.RAM32M
       I2 => \next_env_vol1_carry__0_i_18_n_0\,
       O => \i__carry__0_i_8__0_n_0\
     );
-\i__carry__0_i_8__1\: unisim.vcomponents.LUT2
+\i__carry__1_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"1"
+      INIT => X"2F02"
     )
         port map (
-      I0 => mixer_acc_reg(23),
-      I1 => mixer_acc_reg(22),
-      O => \i__carry__0_i_8__1_n_0\
-    );
-\i__carry__1_i_1\: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"2"
-    )
-        port map (
-      I0 => mixer_acc_reg(30),
-      I1 => mixer_acc_reg(31),
+      I0 => next_env_vol2(22),
+      I1 => r_env_vol(22),
+      I2 => r_env_vol(23),
+      I3 => next_env_vol2(23),
       O => \i__carry__1_i_1_n_0\
     );
 \i__carry__1_i_10\: unisim.vcomponents.LUT6
@@ -4401,33 +4365,22 @@ env_sl_mem_reg_0_7_6_11: unisim.vcomponents.RAM32M
       INIT => X"2F02"
     )
         port map (
-      I0 => next_env_vol2(22),
-      I1 => r_env_vol(22),
-      I2 => r_env_vol(23),
-      I3 => next_env_vol2(23),
-      O => \i__carry__1_i_1__0_n_0\
-    );
-\i__carry__1_i_1__1\: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"2F02"
-    )
-        port map (
       I0 => increment(22),
       I1 => r_env_vol(22),
       I2 => r_env_vol(23),
       I3 => \increment__0\(23),
-      O => \i__carry__1_i_1__1_n_0\
+      O => \i__carry__1_i_1__0_n_0\
     );
-\i__carry__1_i_1__2\: unisim.vcomponents.LUT2
+\i__carry__1_i_1__1\: unisim.vcomponents.LUT2
     generic map(
       INIT => X"6"
     )
         port map (
       I0 => sl_target(18),
       I1 => increment(18),
-      O => \i__carry__1_i_1__2_n_0\
+      O => \i__carry__1_i_1__1_n_0\
     );
-\i__carry__1_i_1__3\: unisim.vcomponents.LUT6
+\i__carry__1_i_1__2\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"AAAAA9595555A959"
     )
@@ -4438,7 +4391,7 @@ env_sl_mem_reg_0_7_6_11: unisim.vcomponents.RAM32M
       I3 => \i__carry__1_i_6__1_n_0\,
       I4 => r_env_state(0),
       I5 => \i__carry__1_i_7_n_0\,
-      O => \i__carry__1_i_1__3_n_0\
+      O => \i__carry__1_i_1__2_n_0\
     );
 \i__carry__1_i_2\: unisim.vcomponents.LUT4
     generic map(
@@ -4607,15 +4560,6 @@ env_sl_mem_reg_0_7_6_11: unisim.vcomponents.RAM32M
       I4 => r_env_state(0),
       I5 => \i__carry__1_i_10_n_0\,
       O => \i__carry__1_i_2__2_n_0\
-    );
-\i__carry__1_i_2__3\: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"1"
-    )
-        port map (
-      I0 => mixer_acc_reg(30),
-      I1 => mixer_acc_reg(31),
-      O => \i__carry__1_i_2__3_n_0\
     );
 \i__carry__1_i_3\: unisim.vcomponents.LUT4
     generic map(
@@ -5283,8 +5227,8 @@ env_sl_mem_reg_0_7_6_11: unisim.vcomponents.RAM32M
       INIT => X"E"
     )
         port map (
-      I0 => mixer_acc_reg(20),
-      I1 => mixer_acc_reg(21),
+      I0 => mixer_acc_reg(28),
+      I1 => mixer_acc_reg(29),
       O => \i__carry_i_1_n_0\
     );
 \i__carry_i_1__0\: unisim.vcomponents.LUT4
@@ -5329,8 +5273,8 @@ env_sl_mem_reg_0_7_6_11: unisim.vcomponents.RAM32M
       INIT => X"E"
     )
         port map (
-      I0 => mixer_acc_reg(18),
-      I1 => mixer_acc_reg(19),
+      I0 => mixer_acc_reg(26),
+      I1 => mixer_acc_reg(27),
       O => \i__carry_i_2_n_0\
     );
 \i__carry_i_2__0\: unisim.vcomponents.LUT4
@@ -5379,8 +5323,8 @@ env_sl_mem_reg_0_7_6_11: unisim.vcomponents.RAM32M
       INIT => X"E"
     )
         port map (
-      I0 => mixer_acc_reg(17),
-      I1 => mixer_acc_reg(16),
+      I0 => mixer_acc_reg(24),
+      I1 => mixer_acc_reg(25),
       O => \i__carry_i_3_n_0\
     );
 \i__carry_i_3__0\: unisim.vcomponents.LUT4
@@ -5470,8 +5414,8 @@ env_sl_mem_reg_0_7_6_11: unisim.vcomponents.RAM32M
       INIT => X"1"
     )
         port map (
-      I0 => mixer_acc_reg(21),
-      I1 => mixer_acc_reg(20),
+      I0 => mixer_acc_reg(29),
+      I1 => mixer_acc_reg(28),
       O => \i__carry_i_4__3_n_0\
     );
 \i__carry_i_5\: unisim.vcomponents.LUT4
@@ -5503,8 +5447,8 @@ env_sl_mem_reg_0_7_6_11: unisim.vcomponents.RAM32M
       INIT => X"1"
     )
         port map (
-      I0 => mixer_acc_reg(19),
-      I1 => mixer_acc_reg(18),
+      I0 => mixer_acc_reg(27),
+      I1 => mixer_acc_reg(26),
       O => \i__carry_i_5__1_n_0\
     );
 \i__carry_i_5__2\: unisim.vcomponents.LUT2
@@ -5543,8 +5487,8 @@ env_sl_mem_reg_0_7_6_11: unisim.vcomponents.RAM32M
       INIT => X"1"
     )
         port map (
-      I0 => mixer_acc_reg(16),
-      I1 => mixer_acc_reg(17),
+      I0 => mixer_acc_reg(25),
+      I1 => mixer_acc_reg(24),
       O => \i__carry_i_6__1_n_0\
     );
 \i__carry_i_7\: unisim.vcomponents.LUT4
@@ -5563,8 +5507,8 @@ env_sl_mem_reg_0_7_6_11: unisim.vcomponents.RAM32M
       INIT => X"2"
     )
         port map (
-      I0 => \mixer_acc_reg__0\(14),
-      I1 => \mixer_acc_reg__0\(15),
+      I0 => \mixer_acc_reg__0\(22),
+      I1 => \mixer_acc_reg__0\(23),
       O => \i__carry_i_7__0_n_0\
     );
 \i__carry_i_7__1\: unisim.vcomponents.LUT2
@@ -6190,7 +6134,7 @@ mixer_acc1_i_9: unisim.vcomponents.LUT6
     )
         port map (
       I0 => \in\(15),
-      I1 => mixer_acc_reg(19),
+      I1 => \mixer_acc_reg__0\(19),
       O => \mixer_acc[16]_i_2_n_0\
     );
 \mixer_acc[16]_i_3\: unisim.vcomponents.LUT2
@@ -6199,7 +6143,7 @@ mixer_acc1_i_9: unisim.vcomponents.LUT6
     )
         port map (
       I0 => \in\(15),
-      I1 => mixer_acc_reg(18),
+      I1 => \mixer_acc_reg__0\(18),
       O => \mixer_acc[16]_i_3_n_0\
     );
 \mixer_acc[16]_i_4\: unisim.vcomponents.LUT2
@@ -6208,7 +6152,7 @@ mixer_acc1_i_9: unisim.vcomponents.LUT6
     )
         port map (
       I0 => \in\(15),
-      I1 => mixer_acc_reg(17),
+      I1 => \mixer_acc_reg__0\(17),
       O => \mixer_acc[16]_i_4_n_0\
     );
 \mixer_acc[16]_i_5\: unisim.vcomponents.LUT2
@@ -6217,7 +6161,7 @@ mixer_acc1_i_9: unisim.vcomponents.LUT6
     )
         port map (
       I0 => \in\(15),
-      I1 => mixer_acc_reg(16),
+      I1 => \mixer_acc_reg__0\(16),
       O => \mixer_acc[16]_i_5_n_0\
     );
 \mixer_acc[20]_i_2\: unisim.vcomponents.LUT2
@@ -6226,7 +6170,7 @@ mixer_acc1_i_9: unisim.vcomponents.LUT6
     )
         port map (
       I0 => \in\(15),
-      I1 => mixer_acc_reg(23),
+      I1 => \mixer_acc_reg__0\(23),
       O => \mixer_acc[20]_i_2_n_0\
     );
 \mixer_acc[20]_i_3\: unisim.vcomponents.LUT2
@@ -6235,7 +6179,7 @@ mixer_acc1_i_9: unisim.vcomponents.LUT6
     )
         port map (
       I0 => \in\(15),
-      I1 => mixer_acc_reg(22),
+      I1 => \mixer_acc_reg__0\(22),
       O => \mixer_acc[20]_i_3_n_0\
     );
 \mixer_acc[20]_i_4\: unisim.vcomponents.LUT2
@@ -6244,7 +6188,7 @@ mixer_acc1_i_9: unisim.vcomponents.LUT6
     )
         port map (
       I0 => \in\(15),
-      I1 => mixer_acc_reg(21),
+      I1 => \mixer_acc_reg__0\(21),
       O => \mixer_acc[20]_i_4_n_0\
     );
 \mixer_acc[20]_i_5\: unisim.vcomponents.LUT2
@@ -6253,7 +6197,7 @@ mixer_acc1_i_9: unisim.vcomponents.LUT6
     )
         port map (
       I0 => \in\(15),
-      I1 => mixer_acc_reg(20),
+      I1 => \mixer_acc_reg__0\(20),
       O => \mixer_acc[20]_i_5_n_0\
     );
 \mixer_acc[24]_i_2\: unisim.vcomponents.LUT2
@@ -6297,8 +6241,8 @@ mixer_acc1_i_9: unisim.vcomponents.LUT6
       INIT => X"6"
     )
         port map (
-      I0 => \in\(15),
-      I1 => mixer_acc_reg(31),
+      I0 => mixer_acc_reg(31),
+      I1 => \in\(15),
       O => \mixer_acc[28]_i_2_n_0\
     );
 \mixer_acc[28]_i_3\: unisim.vcomponents.LUT2
@@ -6497,7 +6441,7 @@ mixer_acc1_i_9: unisim.vcomponents.LUT6
       C => axi_synth_engine_aclk,
       CE => p_0_in_0,
       D => \mixer_acc_reg[16]_i_1_n_7\,
-      Q => mixer_acc_reg(16),
+      Q => \mixer_acc_reg__0\(16),
       R => \mixer_acc[0]_i_1_n_0\
     );
 \mixer_acc_reg[16]_i_1\: unisim.vcomponents.CARRY4
@@ -6526,7 +6470,7 @@ mixer_acc1_i_9: unisim.vcomponents.LUT6
       C => axi_synth_engine_aclk,
       CE => p_0_in_0,
       D => \mixer_acc_reg[16]_i_1_n_6\,
-      Q => mixer_acc_reg(17),
+      Q => \mixer_acc_reg__0\(17),
       R => \mixer_acc[0]_i_1_n_0\
     );
 \mixer_acc_reg[18]\: unisim.vcomponents.FDRE
@@ -6534,7 +6478,7 @@ mixer_acc1_i_9: unisim.vcomponents.LUT6
       C => axi_synth_engine_aclk,
       CE => p_0_in_0,
       D => \mixer_acc_reg[16]_i_1_n_5\,
-      Q => mixer_acc_reg(18),
+      Q => \mixer_acc_reg__0\(18),
       R => \mixer_acc[0]_i_1_n_0\
     );
 \mixer_acc_reg[19]\: unisim.vcomponents.FDRE
@@ -6542,7 +6486,7 @@ mixer_acc1_i_9: unisim.vcomponents.LUT6
       C => axi_synth_engine_aclk,
       CE => p_0_in_0,
       D => \mixer_acc_reg[16]_i_1_n_4\,
-      Q => mixer_acc_reg(19),
+      Q => \mixer_acc_reg__0\(19),
       R => \mixer_acc[0]_i_1_n_0\
     );
 \mixer_acc_reg[1]\: unisim.vcomponents.FDRE
@@ -6558,7 +6502,7 @@ mixer_acc1_i_9: unisim.vcomponents.LUT6
       C => axi_synth_engine_aclk,
       CE => p_0_in_0,
       D => \mixer_acc_reg[20]_i_1_n_7\,
-      Q => mixer_acc_reg(20),
+      Q => \mixer_acc_reg__0\(20),
       R => \mixer_acc[0]_i_1_n_0\
     );
 \mixer_acc_reg[20]_i_1\: unisim.vcomponents.CARRY4
@@ -6587,7 +6531,7 @@ mixer_acc1_i_9: unisim.vcomponents.LUT6
       C => axi_synth_engine_aclk,
       CE => p_0_in_0,
       D => \mixer_acc_reg[20]_i_1_n_6\,
-      Q => mixer_acc_reg(21),
+      Q => \mixer_acc_reg__0\(21),
       R => \mixer_acc[0]_i_1_n_0\
     );
 \mixer_acc_reg[22]\: unisim.vcomponents.FDRE
@@ -6595,7 +6539,7 @@ mixer_acc1_i_9: unisim.vcomponents.LUT6
       C => axi_synth_engine_aclk,
       CE => p_0_in_0,
       D => \mixer_acc_reg[20]_i_1_n_5\,
-      Q => mixer_acc_reg(22),
+      Q => \mixer_acc_reg__0\(22),
       R => \mixer_acc[0]_i_1_n_0\
     );
 \mixer_acc_reg[23]\: unisim.vcomponents.FDRE
@@ -6603,7 +6547,7 @@ mixer_acc1_i_9: unisim.vcomponents.LUT6
       C => axi_synth_engine_aclk,
       CE => p_0_in_0,
       D => \mixer_acc_reg[20]_i_1_n_4\,
-      Q => mixer_acc_reg(23),
+      Q => \mixer_acc_reg__0\(23),
       R => \mixer_acc[0]_i_1_n_0\
     );
 \mixer_acc_reg[24]\: unisim.vcomponents.FDRE
@@ -6844,9 +6788,9 @@ mixer_acc1_i_9: unisim.vcomponents.LUT6
       O(1) => \next_env_vol0_inferred__0/i__carry__0_n_6\,
       O(0) => \next_env_vol0_inferred__0/i__carry__0_n_7\,
       S(3) => \i__carry__0_i_1__3_n_0\,
-      S(2) => \i__carry__0_i_2__3_n_0\,
-      S(1) => \i__carry__0_i_3__3_n_0\,
-      S(0) => \i__carry__0_i_4__3_n_0\
+      S(2) => \i__carry__0_i_2__2_n_0\,
+      S(1) => \i__carry__0_i_3__2_n_0\,
+      S(0) => \i__carry__0_i_4__2_n_0\
     );
 \next_env_vol0_inferred__0/i__carry__1\: unisim.vcomponents.CARRY4
      port map (
@@ -6861,7 +6805,7 @@ mixer_acc1_i_9: unisim.vcomponents.LUT6
       O(2) => \next_env_vol0_inferred__0/i__carry__1_n_5\,
       O(1) => \next_env_vol0_inferred__0/i__carry__1_n_6\,
       O(0) => \next_env_vol0_inferred__0/i__carry__1_n_7\,
-      S(3) => \i__carry__1_i_1__3_n_0\,
+      S(3) => \i__carry__1_i_1__2_n_0\,
       S(2) => \i__carry__1_i_2__2_n_0\,
       S(1) => \i__carry__1_i_3__2_n_0\,
       S(0) => \i__carry__1_i_4__2_n_0\
@@ -8324,9 +8268,9 @@ next_env_vol1_carry_i_9: unisim.vcomponents.MUXF7
       CO(0) => \next_env_vol1_inferred__0/i__carry__0_n_3\,
       CYINIT => '0',
       DI(3) => \i__carry__0_i_1__0_n_0\,
-      DI(2) => \i__carry__0_i_2__0_n_0\,
-      DI(1) => \i__carry__0_i_3__0_n_0\,
-      DI(0) => \i__carry__0_i_4__0_n_0\,
+      DI(2) => \i__carry__0_i_2_n_0\,
+      DI(1) => \i__carry__0_i_3_n_0\,
+      DI(0) => \i__carry__0_i_4_n_0\,
       O(3 downto 0) => \NLW_next_env_vol1_inferred__0/i__carry__0_O_UNCONNECTED\(3 downto 0),
       S(3) => \i__carry__0_i_5_n_0\,
       S(2) => \i__carry__0_i_6_n_0\,
@@ -8342,7 +8286,7 @@ next_env_vol1_carry_i_9: unisim.vcomponents.MUXF7
       CO(0) => \next_env_vol1_inferred__0/i__carry__1_n_3\,
       CYINIT => '0',
       DI(3) => '0',
-      DI(2) => \i__carry__1_i_1__0_n_0\,
+      DI(2) => \i__carry__1_i_1_n_0\,
       DI(1) => \i__carry__1_i_2_n_0\,
       DI(0) => \i__carry__1_i_3_n_0\,
       O(3 downto 0) => \NLW_next_env_vol1_inferred__0/i__carry__1_O_UNCONNECTED\(3 downto 0),
@@ -8378,9 +8322,9 @@ next_env_vol1_carry_i_9: unisim.vcomponents.MUXF7
       CO(0) => \next_env_vol1_inferred__1/i__carry__0_n_3\,
       CYINIT => '0',
       DI(3) => \i__carry__0_i_1__1_n_0\,
-      DI(2) => \i__carry__0_i_2__1_n_0\,
-      DI(1) => \i__carry__0_i_3__1_n_0\,
-      DI(0) => \i__carry__0_i_4__1_n_0\,
+      DI(2) => \i__carry__0_i_2__0_n_0\,
+      DI(1) => \i__carry__0_i_3__0_n_0\,
+      DI(0) => \i__carry__0_i_4__0_n_0\,
       O(3 downto 0) => \NLW_next_env_vol1_inferred__1/i__carry__0_O_UNCONNECTED\(3 downto 0),
       S(3) => \i__carry__0_i_5__0_n_0\,
       S(2) => \i__carry__0_i_6__0_n_0\,
@@ -8396,7 +8340,7 @@ next_env_vol1_carry_i_9: unisim.vcomponents.MUXF7
       CO(0) => \next_env_vol1_inferred__1/i__carry__1_n_3\,
       CYINIT => '0',
       DI(3) => '0',
-      DI(2) => \i__carry__1_i_1__1_n_0\,
+      DI(2) => \i__carry__1_i_1__0_n_0\,
       DI(1) => \i__carry__1_i_2__0_n_0\,
       DI(0) => \i__carry__1_i_3__0_n_0\,
       O(3 downto 0) => \NLW_next_env_vol1_inferred__1/i__carry__1_O_UNCONNECTED\(3 downto 0),
@@ -8432,9 +8376,9 @@ next_env_vol1_carry_i_9: unisim.vcomponents.MUXF7
       DI(3 downto 0) => sl_target(14 downto 11),
       O(3 downto 0) => next_env_vol2(14 downto 11),
       S(3) => \i__carry__0_i_1__2_n_0\,
-      S(2) => \i__carry__0_i_2__2_n_0\,
-      S(1) => \i__carry__0_i_3__2_n_0\,
-      S(0) => \i__carry__0_i_4__2_n_0\
+      S(2) => \i__carry__0_i_2__1_n_0\,
+      S(1) => \i__carry__0_i_3__1_n_0\,
+      S(0) => \i__carry__0_i_4__1_n_0\
     );
 \next_env_vol2_inferred__0/i__carry__1\: unisim.vcomponents.CARRY4
      port map (
@@ -8446,7 +8390,7 @@ next_env_vol1_carry_i_9: unisim.vcomponents.MUXF7
       CYINIT => '0',
       DI(3 downto 0) => sl_target(18 downto 15),
       O(3 downto 0) => next_env_vol2(18 downto 15),
-      S(3) => \i__carry__1_i_1__2_n_0\,
+      S(3) => \i__carry__1_i_1__1_n_0\,
       S(2) => \i__carry__1_i_2__1_n_0\,
       S(1) => \i__carry__1_i_3__1_n_0\,
       S(0) => \i__carry__1_i_4__1_n_0\
@@ -14406,7 +14350,7 @@ entity mb_block_umeboshi_0_2_umeboshi_slave_lite_v1_0_axi_synth_engine is
     axi_arready_reg_0 : out STD_LOGIC;
     axi_rvalid_reg_0 : out STD_LOGIC;
     bram0_addr_b : out STD_LOGIC_VECTOR ( 16 downto 0 );
-    audio_out : out STD_LOGIC_VECTOR ( 15 downto 0 );
+    audio_out : out STD_LOGIC_VECTOR ( 23 downto 0 );
     axi_synth_engine_wready : out STD_LOGIC;
     axi_synth_engine_bvalid : out STD_LOGIC;
     axi_synth_engine_awaddr : in STD_LOGIC_VECTOR ( 10 downto 0 );
@@ -14449,12 +14393,12 @@ architecture STRUCTURE of mb_block_umeboshi_0_2_umeboshi_slave_lite_v1_0_axi_syn
   attribute FSM_ENCODED_STATES of \FSM_sequential_state_read_reg[0]\ : label is "Idle:00,Rdata:10,Raddr:01";
   attribute FSM_ENCODED_STATES of \FSM_sequential_state_read_reg[1]\ : label is "Idle:00,Rdata:10,Raddr:01";
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \FSM_sequential_state_write[0]_i_1\ : label is "soft_lutpair37";
-  attribute SOFT_HLUTNM of \FSM_sequential_state_write[1]_i_1\ : label is "soft_lutpair37";
+  attribute SOFT_HLUTNM of \FSM_sequential_state_write[0]_i_1\ : label is "soft_lutpair41";
+  attribute SOFT_HLUTNM of \FSM_sequential_state_write[1]_i_1\ : label is "soft_lutpair41";
   attribute FSM_ENCODED_STATES of \FSM_sequential_state_write_reg[0]\ : label is "Idle:00,Wdata:10,Waddr:01";
   attribute FSM_ENCODED_STATES of \FSM_sequential_state_write_reg[1]\ : label is "Idle:00,Wdata:10,Waddr:01";
-  attribute SOFT_HLUTNM of axi_awready_i_1 : label is "soft_lutpair38";
-  attribute SOFT_HLUTNM of axi_bvalid_i_2 : label is "soft_lutpair38";
+  attribute SOFT_HLUTNM of axi_awready_i_1 : label is "soft_lutpair42";
+  attribute SOFT_HLUTNM of axi_bvalid_i_2 : label is "soft_lutpair42";
 begin
   SR(0) <= \^sr\(0);
   axi_arready_reg_0 <= \^axi_arready_reg_0\;
@@ -14656,7 +14600,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
     );
 synth_inst: entity work.mb_block_umeboshi_0_2_synth_256
      port map (
-      audio_out(15 downto 0) => audio_out(15 downto 0),
+      audio_out(23 downto 0) => audio_out(23 downto 0),
       audio_tick => audio_tick,
       axi_synth_engine_aclk => axi_synth_engine_aclk,
       axi_synth_engine_aresetn => axi_synth_engine_aresetn,
@@ -14683,7 +14627,7 @@ entity mb_block_umeboshi_0_2_umeboshi is
     axi_arready_reg : out STD_LOGIC;
     axi_rvalid_reg : out STD_LOGIC;
     bram0_addr_b : out STD_LOGIC_VECTOR ( 16 downto 0 );
-    audio_out : out STD_LOGIC_VECTOR ( 15 downto 0 );
+    audio_out : out STD_LOGIC_VECTOR ( 23 downto 0 );
     axi_synth_engine_wready : out STD_LOGIC;
     axi_synth_engine_bvalid : out STD_LOGIC;
     axi_synth_engine_awaddr : in STD_LOGIC_VECTOR ( 10 downto 0 );
@@ -14708,7 +14652,7 @@ begin
 umeboshi_slave_lite_v1_0_axi_synth_engine_inst: entity work.mb_block_umeboshi_0_2_umeboshi_slave_lite_v1_0_axi_synth_engine
      port map (
       SR(0) => axi_synth_engine_aresetn_0,
-      audio_out(15 downto 0) => audio_out(15 downto 0),
+      audio_out(23 downto 0) => audio_out(23 downto 0),
       audio_tick => audio_tick,
       axi_arready_reg_0 => axi_arready_reg,
       axi_awready_reg_0 => axi_awready_reg,
@@ -14735,7 +14679,7 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity mb_block_umeboshi_0_2 is
   port (
-    audio_out : out STD_LOGIC_VECTOR ( 15 downto 0 );
+    audio_out : out STD_LOGIC_VECTOR ( 23 downto 0 );
     audio_valid : out STD_LOGIC;
     audio_tick : in STD_LOGIC;
     bram0_clkb : out STD_LOGIC;
@@ -15008,7 +14952,7 @@ VCC: unisim.vcomponents.VCC
     );
 inst: entity work.mb_block_umeboshi_0_2_umeboshi
      port map (
-      audio_out(15 downto 0) => audio_out(15 downto 0),
+      audio_out(23 downto 0) => audio_out(23 downto 0),
       audio_tick => \^audio_tick\,
       axi_arready_reg => axi_synth_engine_arready,
       axi_awready_reg => axi_synth_engine_awready,

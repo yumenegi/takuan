@@ -74,16 +74,16 @@ COMPONENT mb_block
     FIXED_IO_ps_srstb : INOUT STD_LOGIC;
     FIXED_IO_ps_clk : INOUT STD_LOGIC;
     FIXED_IO_ps_porb : INOUT STD_LOGIC;
-    audio_out : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
-    audio_valid : OUT STD_LOGIC;
-    audio_tick_0 : IN STD_LOGIC;
-    FCLK_CLK1_0 : OUT STD_LOGIC;
     IIC_0_0_sda_i : IN STD_LOGIC;
     IIC_0_0_sda_o : OUT STD_LOGIC;
     IIC_0_0_sda_t : OUT STD_LOGIC;
     IIC_0_0_scl_i : IN STD_LOGIC;
     IIC_0_0_scl_o : OUT STD_LOGIC;
-    IIC_0_0_scl_t : OUT STD_LOGIC
+    IIC_0_0_scl_t : OUT STD_LOGIC;
+    audio_valid : OUT STD_LOGIC;
+    audio_tick_0 : IN STD_LOGIC;
+    FCLK_CLK1_0 : OUT STD_LOGIC;
+    audio_out : OUT STD_LOGIC_VECTOR(23 DOWNTO 0)
   );
 END COMPONENT;
 -- COMP_TAG_END ------  End cut for COMPONENT Declaration  ------
@@ -115,16 +115,16 @@ your_instance_name : mb_block
     FIXED_IO_ps_srstb => FIXED_IO_ps_srstb,
     FIXED_IO_ps_clk => FIXED_IO_ps_clk,
     FIXED_IO_ps_porb => FIXED_IO_ps_porb,
-    audio_out => audio_out,
-    audio_valid => audio_valid,
-    audio_tick_0 => audio_tick_0,
-    FCLK_CLK1_0 => FCLK_CLK1_0,
     IIC_0_0_sda_i => IIC_0_0_sda_i,
     IIC_0_0_sda_o => IIC_0_0_sda_o,
     IIC_0_0_sda_t => IIC_0_0_sda_t,
     IIC_0_0_scl_i => IIC_0_0_scl_i,
     IIC_0_0_scl_o => IIC_0_0_scl_o,
-    IIC_0_0_scl_t => IIC_0_0_scl_t
+    IIC_0_0_scl_t => IIC_0_0_scl_t,
+    audio_valid => audio_valid,
+    audio_tick_0 => audio_tick_0,
+    FCLK_CLK1_0 => FCLK_CLK1_0,
+    audio_out => audio_out
   );
 -- INST_TAG_END ------  End cut for INSTANTIATION Template  ------
 

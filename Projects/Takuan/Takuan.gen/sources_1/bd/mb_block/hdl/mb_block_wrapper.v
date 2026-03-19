@@ -2,7 +2,7 @@
 //Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
-//Date        : Sun Mar 15 18:19:24 2026
+//Date        : Wed Mar 18 17:41:39 2026
 //Host        : ponco2 running 64-bit major release  (build 9200)
 //Command     : generate_target mb_block_wrapper.bd
 //Design      : mb_block_wrapper
@@ -62,7 +62,7 @@ module mb_block_wrapper
   inout FIXED_IO_ps_srstb;
   inout IIC_0_0_scl_io;
   inout IIC_0_0_sda_io;
-  output [15:0]audio_out;
+  output [23:0]audio_out;
   input audio_tick_0;
   output audio_valid;
 
@@ -96,7 +96,7 @@ module mb_block_wrapper
   wire IIC_0_0_sda_io;
   wire IIC_0_0_sda_o;
   wire IIC_0_0_sda_t;
-  wire [15:0]audio_out;
+  wire [23:0]audio_out;
   wire audio_tick_0;
   wire audio_valid;
 

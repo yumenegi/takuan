@@ -2,7 +2,7 @@
 // Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
-// Date        : Sat Mar 14 18:52:28 2026
+// Date        : Wed Mar 18 17:36:13 2026
 // Host        : ponco2 running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
 //               c:/Users/hause/Documents/Vivado/Projects/Takuan/Takuan.gen/sources_1/bd/mb_block/ip/mb_block_umeboshi_0_2/mb_block_umeboshi_0_2_sim_netlist.v
@@ -54,7 +54,7 @@ module mb_block_umeboshi_0_2
     axi_synth_engine_rresp,
     axi_synth_engine_rvalid,
     axi_synth_engine_rready);
-  output [15:0]audio_out;
+  output [23:0]audio_out;
   output audio_valid;
   input audio_tick;
   (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 BRAM0 CLK" *) (* X_INTERFACE_MODE = "master" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME BRAM0, MASTER_TYPE BRAM_CTRL, MEM_SIZE 8192, MEM_WIDTH 32, MEM_ECC NONE, READ_LATENCY 1" *) output bram0_clkb;
@@ -95,7 +95,7 @@ module mb_block_umeboshi_0_2
 
   wire \<const0> ;
   wire \<const1> ;
-  wire [15:0]audio_out;
+  wire [23:0]audio_out;
   wire audio_tick;
   wire axi_synth_engine_aclk;
   wire axi_synth_engine_aresetn;
@@ -316,7 +316,7 @@ module mb_block_umeboshi_0_2_synth_256
     axi_synth_engine_aresetn);
   output axi_synth_engine_aresetn_0;
   output [16:0]bram0_addr_b;
-  output [15:0]audio_out;
+  output [23:0]audio_out;
   input axi_synth_engine_aclk;
   input [10:0]axi_synth_engine_awaddr;
   input axi_synth_engine_awvalid;
@@ -330,22 +330,10 @@ module mb_block_umeboshi_0_2_synth_256
   input axi_synth_engine_aresetn;
 
   wire [15:0]B;
-  wire [15:0]audio_out;
+  wire [23:0]audio_out;
   wire audio_out0_carry__0_i_1_n_0;
   wire audio_out0_carry__0_i_2_n_0;
-  wire audio_out0_carry__0_i_3_n_0;
-  wire audio_out0_carry__0_i_4_n_0;
-  wire audio_out0_carry__0_i_5_n_0;
-  wire audio_out0_carry__0_i_6_n_0;
-  wire audio_out0_carry__0_i_7_n_0;
-  wire audio_out0_carry__0_i_8_n_0;
-  wire audio_out0_carry__0_n_0;
-  wire audio_out0_carry__0_n_1;
-  wire audio_out0_carry__0_n_2;
   wire audio_out0_carry__0_n_3;
-  wire audio_out0_carry__1_i_1_n_0;
-  wire audio_out0_carry__1_i_2_n_0;
-  wire audio_out0_carry__1_n_3;
   wire audio_out0_carry_i_1_n_0;
   wire audio_out0_carry_i_2_n_0;
   wire audio_out0_carry_i_3_n_0;
@@ -358,11 +346,7 @@ module mb_block_umeboshi_0_2_synth_256
   wire audio_out0_carry_n_1;
   wire audio_out0_carry_n_2;
   wire audio_out0_carry_n_3;
-  wire \audio_out0_inferred__1/i__carry__0_n_0 ;
-  wire \audio_out0_inferred__1/i__carry__0_n_1 ;
-  wire \audio_out0_inferred__1/i__carry__0_n_2 ;
   wire \audio_out0_inferred__1/i__carry__0_n_3 ;
-  wire \audio_out0_inferred__1/i__carry__1_n_3 ;
   wire \audio_out0_inferred__1/i__carry_n_0 ;
   wire \audio_out0_inferred__1/i__carry_n_1 ;
   wire \audio_out0_inferred__1/i__carry_n_2 ;
@@ -374,9 +358,17 @@ module mb_block_umeboshi_0_2_synth_256
   wire \audio_out[13]_i_1_n_0 ;
   wire \audio_out[14]_i_1_n_0 ;
   wire \audio_out[15]_i_1_n_0 ;
-  wire \audio_out[15]_i_2_n_0 ;
-  wire \audio_out[15]_i_3_n_0 ;
+  wire \audio_out[16]_i_1_n_0 ;
+  wire \audio_out[17]_i_1_n_0 ;
+  wire \audio_out[18]_i_1_n_0 ;
+  wire \audio_out[19]_i_1_n_0 ;
   wire \audio_out[1]_i_1_n_0 ;
+  wire \audio_out[20]_i_1_n_0 ;
+  wire \audio_out[21]_i_1_n_0 ;
+  wire \audio_out[22]_i_1_n_0 ;
+  wire \audio_out[23]_i_1_n_0 ;
+  wire \audio_out[23]_i_2_n_0 ;
+  wire \audio_out[23]_i_3_n_0 ;
   wire \audio_out[2]_i_1_n_0 ;
   wire \audio_out[3]_i_1_n_0 ;
   wire \audio_out[4]_i_1_n_0 ;
@@ -449,24 +441,18 @@ module mb_block_umeboshi_0_2_synth_256
   wire i__carry__0_i_3__0_n_0;
   wire i__carry__0_i_3__1_n_0;
   wire i__carry__0_i_3__2_n_0;
-  wire i__carry__0_i_3__3_n_0;
   wire i__carry__0_i_3_n_0;
   wire i__carry__0_i_4__0_n_0;
   wire i__carry__0_i_4__1_n_0;
   wire i__carry__0_i_4__2_n_0;
-  wire i__carry__0_i_4__3_n_0;
   wire i__carry__0_i_4_n_0;
   wire i__carry__0_i_5__0_n_0;
-  wire i__carry__0_i_5__1_n_0;
   wire i__carry__0_i_5_n_0;
   wire i__carry__0_i_6__0_n_0;
-  wire i__carry__0_i_6__1_n_0;
   wire i__carry__0_i_6_n_0;
   wire i__carry__0_i_7__0_n_0;
-  wire i__carry__0_i_7__1_n_0;
   wire i__carry__0_i_7_n_0;
   wire i__carry__0_i_8__0_n_0;
-  wire i__carry__0_i_8__1_n_0;
   wire i__carry__0_i_8_n_0;
   wire i__carry__1_i_10_n_0;
   wire i__carry__1_i_11_n_0;
@@ -481,7 +467,6 @@ module mb_block_umeboshi_0_2_synth_256
   wire i__carry__1_i_1__0_n_0;
   wire i__carry__1_i_1__1_n_0;
   wire i__carry__1_i_1__2_n_0;
-  wire i__carry__1_i_1__3_n_0;
   wire i__carry__1_i_1_n_0;
   wire i__carry__1_i_20_n_0;
   wire i__carry__1_i_21_n_0;
@@ -496,7 +481,6 @@ module mb_block_umeboshi_0_2_synth_256
   wire i__carry__1_i_2__0_n_0;
   wire i__carry__1_i_2__1_n_0;
   wire i__carry__1_i_2__2_n_0;
-  wire i__carry__1_i_2__3_n_0;
   wire i__carry__1_i_2_n_0;
   wire i__carry__1_i_30_n_0;
   wire i__carry__1_i_3__0_n_0;
@@ -640,7 +624,7 @@ module mb_block_umeboshi_0_2_synth_256
   wire \mixer_acc[8]_i_3_n_0 ;
   wire \mixer_acc[8]_i_4_n_0 ;
   wire \mixer_acc[8]_i_5_n_0 ;
-  wire [31:16]mixer_acc_reg;
+  wire [31:24]mixer_acc_reg;
   wire \mixer_acc_reg[0]_i_2_n_0 ;
   wire \mixer_acc_reg[0]_i_2_n_1 ;
   wire \mixer_acc_reg[0]_i_2_n_2 ;
@@ -704,7 +688,7 @@ module mb_block_umeboshi_0_2_synth_256
   wire \mixer_acc_reg[8]_i_1_n_5 ;
   wire \mixer_acc_reg[8]_i_1_n_6 ;
   wire \mixer_acc_reg[8]_i_1_n_7 ;
-  wire [15:0]mixer_acc_reg__0;
+  wire [23:0]mixer_acc_reg__0;
   wire \next_env_vol0_inferred__0/i__carry__0_n_0 ;
   wire \next_env_vol0_inferred__0/i__carry__0_n_1 ;
   wire \next_env_vol0_inferred__0/i__carry__0_n_2 ;
@@ -1370,13 +1354,11 @@ module mb_block_umeboshi_0_2_synth_256
   wire synth_wr_adsr1;
   wire synth_wr_adsr2;
   wire [3:0]NLW_audio_out0_carry_O_UNCONNECTED;
+  wire [3:1]NLW_audio_out0_carry__0_CO_UNCONNECTED;
   wire [3:0]NLW_audio_out0_carry__0_O_UNCONNECTED;
-  wire [3:1]NLW_audio_out0_carry__1_CO_UNCONNECTED;
-  wire [3:0]NLW_audio_out0_carry__1_O_UNCONNECTED;
   wire [3:0]\NLW_audio_out0_inferred__1/i__carry_O_UNCONNECTED ;
+  wire [3:1]\NLW_audio_out0_inferred__1/i__carry__0_CO_UNCONNECTED ;
   wire [3:0]\NLW_audio_out0_inferred__1/i__carry__0_O_UNCONNECTED ;
-  wire [3:1]\NLW_audio_out0_inferred__1/i__carry__1_CO_UNCONNECTED ;
-  wire [3:0]\NLW_audio_out0_inferred__1/i__carry__1_O_UNCONNECTED ;
   wire [3:3]\NLW_bram1_addr_b[8]_INST_0_CO_UNCONNECTED ;
   wire [1:0]NLW_env_ar_mem_reg_0_7_0_5_DOD_UNCONNECTED;
   wire [1:0]NLW_env_ar_mem_reg_0_7_6_7_DOD_UNCONNECTED;
@@ -1496,371 +1478,411 @@ module mb_block_umeboshi_0_2_synth_256
   (* COMPARATOR_THRESHOLD = "11" *) 
   CARRY4 audio_out0_carry__0
        (.CI(audio_out0_carry_n_0),
-        .CO({audio_out0_carry__0_n_0,audio_out0_carry__0_n_1,audio_out0_carry__0_n_2,audio_out0_carry__0_n_3}),
+        .CO({NLW_audio_out0_carry__0_CO_UNCONNECTED[3:1],audio_out0_carry__0_n_3}),
         .CYINIT(1'b0),
-        .DI({audio_out0_carry__0_i_1_n_0,audio_out0_carry__0_i_2_n_0,audio_out0_carry__0_i_3_n_0,audio_out0_carry__0_i_4_n_0}),
+        .DI({1'b0,1'b0,1'b0,audio_out0_carry__0_i_1_n_0}),
         .O(NLW_audio_out0_carry__0_O_UNCONNECTED[3:0]),
-        .S({audio_out0_carry__0_i_5_n_0,audio_out0_carry__0_i_6_n_0,audio_out0_carry__0_i_7_n_0,audio_out0_carry__0_i_8_n_0}));
+        .S({1'b0,1'b0,1'b0,audio_out0_carry__0_i_2_n_0}));
   LUT2 #(
-    .INIT(4'h7)) 
+    .INIT(4'h2)) 
     audio_out0_carry__0_i_1
-       (.I0(mixer_acc_reg[28]),
-        .I1(mixer_acc_reg[29]),
+       (.I0(mixer_acc_reg[31]),
+        .I1(mixer_acc_reg[30]),
         .O(audio_out0_carry__0_i_1_n_0));
   LUT2 #(
-    .INIT(4'h7)) 
+    .INIT(4'h8)) 
     audio_out0_carry__0_i_2
-       (.I0(mixer_acc_reg[26]),
-        .I1(mixer_acc_reg[27]),
+       (.I0(mixer_acc_reg[30]),
+        .I1(mixer_acc_reg[31]),
         .O(audio_out0_carry__0_i_2_n_0));
   LUT2 #(
     .INIT(4'h7)) 
-    audio_out0_carry__0_i_3
-       (.I0(mixer_acc_reg[24]),
-        .I1(mixer_acc_reg[25]),
-        .O(audio_out0_carry__0_i_3_n_0));
-  LUT2 #(
-    .INIT(4'h7)) 
-    audio_out0_carry__0_i_4
-       (.I0(mixer_acc_reg[22]),
-        .I1(mixer_acc_reg[23]),
-        .O(audio_out0_carry__0_i_4_n_0));
-  LUT2 #(
-    .INIT(4'h8)) 
-    audio_out0_carry__0_i_5
-       (.I0(mixer_acc_reg[29]),
-        .I1(mixer_acc_reg[28]),
-        .O(audio_out0_carry__0_i_5_n_0));
-  LUT2 #(
-    .INIT(4'h8)) 
-    audio_out0_carry__0_i_6
-       (.I0(mixer_acc_reg[27]),
-        .I1(mixer_acc_reg[26]),
-        .O(audio_out0_carry__0_i_6_n_0));
-  LUT2 #(
-    .INIT(4'h8)) 
-    audio_out0_carry__0_i_7
-       (.I0(mixer_acc_reg[25]),
-        .I1(mixer_acc_reg[24]),
-        .O(audio_out0_carry__0_i_7_n_0));
-  LUT2 #(
-    .INIT(4'h8)) 
-    audio_out0_carry__0_i_8
-       (.I0(mixer_acc_reg[23]),
-        .I1(mixer_acc_reg[22]),
-        .O(audio_out0_carry__0_i_8_n_0));
-  (* COMPARATOR_THRESHOLD = "11" *) 
-  CARRY4 audio_out0_carry__1
-       (.CI(audio_out0_carry__0_n_0),
-        .CO({NLW_audio_out0_carry__1_CO_UNCONNECTED[3:1],audio_out0_carry__1_n_3}),
-        .CYINIT(1'b0),
-        .DI({1'b0,1'b0,1'b0,audio_out0_carry__1_i_1_n_0}),
-        .O(NLW_audio_out0_carry__1_O_UNCONNECTED[3:0]),
-        .S({1'b0,1'b0,1'b0,audio_out0_carry__1_i_2_n_0}));
-  LUT2 #(
-    .INIT(4'h2)) 
-    audio_out0_carry__1_i_1
-       (.I0(mixer_acc_reg[31]),
-        .I1(mixer_acc_reg[30]),
-        .O(audio_out0_carry__1_i_1_n_0));
-  LUT2 #(
-    .INIT(4'h8)) 
-    audio_out0_carry__1_i_2
-       (.I0(mixer_acc_reg[30]),
-        .I1(mixer_acc_reg[31]),
-        .O(audio_out0_carry__1_i_2_n_0));
-  LUT2 #(
-    .INIT(4'h7)) 
     audio_out0_carry_i_1
-       (.I0(mixer_acc_reg[20]),
-        .I1(mixer_acc_reg[21]),
+       (.I0(mixer_acc_reg[28]),
+        .I1(mixer_acc_reg[29]),
         .O(audio_out0_carry_i_1_n_0));
   LUT2 #(
     .INIT(4'h7)) 
     audio_out0_carry_i_2
-       (.I0(mixer_acc_reg[18]),
-        .I1(mixer_acc_reg[19]),
+       (.I0(mixer_acc_reg[26]),
+        .I1(mixer_acc_reg[27]),
         .O(audio_out0_carry_i_2_n_0));
   LUT2 #(
     .INIT(4'h7)) 
     audio_out0_carry_i_3
-       (.I0(mixer_acc_reg[17]),
-        .I1(mixer_acc_reg[16]),
+       (.I0(mixer_acc_reg[24]),
+        .I1(mixer_acc_reg[25]),
         .O(audio_out0_carry_i_3_n_0));
   LUT1 #(
     .INIT(2'h1)) 
     audio_out0_carry_i_4
-       (.I0(mixer_acc_reg__0[15]),
+       (.I0(mixer_acc_reg__0[23]),
         .O(audio_out0_carry_i_4_n_0));
   LUT2 #(
     .INIT(4'h8)) 
     audio_out0_carry_i_5
-       (.I0(mixer_acc_reg[21]),
-        .I1(mixer_acc_reg[20]),
+       (.I0(mixer_acc_reg[29]),
+        .I1(mixer_acc_reg[28]),
         .O(audio_out0_carry_i_5_n_0));
   LUT2 #(
     .INIT(4'h8)) 
     audio_out0_carry_i_6
-       (.I0(mixer_acc_reg[19]),
-        .I1(mixer_acc_reg[18]),
+       (.I0(mixer_acc_reg[27]),
+        .I1(mixer_acc_reg[26]),
         .O(audio_out0_carry_i_6_n_0));
   LUT2 #(
     .INIT(4'h8)) 
     audio_out0_carry_i_7
-       (.I0(mixer_acc_reg[16]),
-        .I1(mixer_acc_reg[17]),
+       (.I0(mixer_acc_reg[25]),
+        .I1(mixer_acc_reg[24]),
         .O(audio_out0_carry_i_7_n_0));
   LUT2 #(
     .INIT(4'h2)) 
     audio_out0_carry_i_8
-       (.I0(mixer_acc_reg__0[15]),
-        .I1(mixer_acc_reg__0[14]),
+       (.I0(mixer_acc_reg__0[23]),
+        .I1(mixer_acc_reg__0[22]),
         .O(audio_out0_carry_i_8_n_0));
   (* COMPARATOR_THRESHOLD = "11" *) 
   CARRY4 \audio_out0_inferred__1/i__carry 
        (.CI(1'b0),
         .CO({\audio_out0_inferred__1/i__carry_n_0 ,\audio_out0_inferred__1/i__carry_n_1 ,\audio_out0_inferred__1/i__carry_n_2 ,\audio_out0_inferred__1/i__carry_n_3 }),
         .CYINIT(1'b0),
-        .DI({i__carry_i_1_n_0,i__carry_i_2_n_0,i__carry_i_3_n_0,mixer_acc_reg__0[15]}),
+        .DI({i__carry_i_1_n_0,i__carry_i_2_n_0,i__carry_i_3_n_0,mixer_acc_reg__0[23]}),
         .O(\NLW_audio_out0_inferred__1/i__carry_O_UNCONNECTED [3:0]),
         .S({i__carry_i_4__3_n_0,i__carry_i_5__1_n_0,i__carry_i_6__1_n_0,i__carry_i_7__0_n_0}));
   (* COMPARATOR_THRESHOLD = "11" *) 
   CARRY4 \audio_out0_inferred__1/i__carry__0 
        (.CI(\audio_out0_inferred__1/i__carry_n_0 ),
-        .CO({\audio_out0_inferred__1/i__carry__0_n_0 ,\audio_out0_inferred__1/i__carry__0_n_1 ,\audio_out0_inferred__1/i__carry__0_n_2 ,\audio_out0_inferred__1/i__carry__0_n_3 }),
+        .CO({\NLW_audio_out0_inferred__1/i__carry__0_CO_UNCONNECTED [3:1],\audio_out0_inferred__1/i__carry__0_n_3 }),
         .CYINIT(1'b0),
-        .DI({i__carry__0_i_1_n_0,i__carry__0_i_2_n_0,i__carry__0_i_3_n_0,i__carry__0_i_4_n_0}),
+        .DI({1'b0,1'b0,1'b0,i__carry__0_i_1_n_0}),
         .O(\NLW_audio_out0_inferred__1/i__carry__0_O_UNCONNECTED [3:0]),
-        .S({i__carry__0_i_5__1_n_0,i__carry__0_i_6__1_n_0,i__carry__0_i_7__1_n_0,i__carry__0_i_8__1_n_0}));
-  (* COMPARATOR_THRESHOLD = "11" *) 
-  CARRY4 \audio_out0_inferred__1/i__carry__1 
-       (.CI(\audio_out0_inferred__1/i__carry__0_n_0 ),
-        .CO({\NLW_audio_out0_inferred__1/i__carry__1_CO_UNCONNECTED [3:1],\audio_out0_inferred__1/i__carry__1_n_3 }),
-        .CYINIT(1'b0),
-        .DI({1'b0,1'b0,1'b0,i__carry__1_i_1_n_0}),
-        .O(\NLW_audio_out0_inferred__1/i__carry__1_O_UNCONNECTED [3:0]),
-        .S({1'b0,1'b0,1'b0,i__carry__1_i_2__3_n_0}));
+        .S({1'b0,1'b0,1'b0,i__carry__0_i_2__3_n_0}));
   LUT2 #(
     .INIT(4'h2)) 
     \audio_out[0]_i_1 
        (.I0(mixer_acc_reg__0[0]),
-        .I1(audio_out0_carry__1_n_3),
+        .I1(audio_out0_carry__0_n_3),
         .O(\audio_out[0]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair32" *) 
+  (* SOFT_HLUTNM = "soft_lutpair36" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \audio_out[10]_i_1 
        (.I0(mixer_acc_reg__0[10]),
-        .I1(audio_out0_carry__1_n_3),
+        .I1(audio_out0_carry__0_n_3),
         .O(\audio_out[10]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair31" *) 
+  (* SOFT_HLUTNM = "soft_lutpair35" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \audio_out[11]_i_1 
        (.I0(mixer_acc_reg__0[11]),
-        .I1(audio_out0_carry__1_n_3),
+        .I1(audio_out0_carry__0_n_3),
         .O(\audio_out[11]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair31" *) 
+  (* SOFT_HLUTNM = "soft_lutpair35" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \audio_out[12]_i_1 
        (.I0(mixer_acc_reg__0[12]),
-        .I1(audio_out0_carry__1_n_3),
+        .I1(audio_out0_carry__0_n_3),
         .O(\audio_out[12]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair30" *) 
+  (* SOFT_HLUTNM = "soft_lutpair34" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \audio_out[13]_i_1 
        (.I0(mixer_acc_reg__0[13]),
-        .I1(audio_out0_carry__1_n_3),
+        .I1(audio_out0_carry__0_n_3),
         .O(\audio_out[13]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair30" *) 
+  (* SOFT_HLUTNM = "soft_lutpair34" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \audio_out[14]_i_1 
        (.I0(mixer_acc_reg__0[14]),
-        .I1(audio_out0_carry__1_n_3),
+        .I1(audio_out0_carry__0_n_3),
         .O(\audio_out[14]_i_1_n_0 ));
-  LUT4 #(
-    .INIT(16'h0800)) 
-    \audio_out[15]_i_1 
-       (.I0(axi_synth_engine_aresetn),
-        .I1(\pipe_valid_reg_n_0_[4] ),
-        .I2(\pipe_valid_reg_n_0_[3] ),
-        .I3(\audio_out0_inferred__1/i__carry__1_n_3 ),
-        .O(\audio_out[15]_i_1_n_0 ));
-  LUT3 #(
-    .INIT(8'h40)) 
-    \audio_out[15]_i_2 
-       (.I0(\pipe_valid_reg_n_0_[3] ),
-        .I1(\pipe_valid_reg_n_0_[4] ),
-        .I2(axi_synth_engine_aresetn),
-        .O(\audio_out[15]_i_2_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair33" *) 
   LUT2 #(
-    .INIT(4'hE)) 
-    \audio_out[15]_i_3 
+    .INIT(4'h2)) 
+    \audio_out[15]_i_1 
        (.I0(mixer_acc_reg__0[15]),
-        .I1(audio_out0_carry__1_n_3),
-        .O(\audio_out[15]_i_3_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair36" *) 
+        .I1(audio_out0_carry__0_n_3),
+        .O(\audio_out[15]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair33" *) 
+  LUT2 #(
+    .INIT(4'h2)) 
+    \audio_out[16]_i_1 
+       (.I0(mixer_acc_reg__0[16]),
+        .I1(audio_out0_carry__0_n_3),
+        .O(\audio_out[16]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair32" *) 
+  LUT2 #(
+    .INIT(4'h2)) 
+    \audio_out[17]_i_1 
+       (.I0(mixer_acc_reg__0[17]),
+        .I1(audio_out0_carry__0_n_3),
+        .O(\audio_out[17]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair32" *) 
+  LUT2 #(
+    .INIT(4'h2)) 
+    \audio_out[18]_i_1 
+       (.I0(mixer_acc_reg__0[18]),
+        .I1(audio_out0_carry__0_n_3),
+        .O(\audio_out[18]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair31" *) 
+  LUT2 #(
+    .INIT(4'h2)) 
+    \audio_out[19]_i_1 
+       (.I0(mixer_acc_reg__0[19]),
+        .I1(audio_out0_carry__0_n_3),
+        .O(\audio_out[19]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair40" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \audio_out[1]_i_1 
        (.I0(mixer_acc_reg__0[1]),
-        .I1(audio_out0_carry__1_n_3),
+        .I1(audio_out0_carry__0_n_3),
         .O(\audio_out[1]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair36" *) 
+  (* SOFT_HLUTNM = "soft_lutpair31" *) 
+  LUT2 #(
+    .INIT(4'h2)) 
+    \audio_out[20]_i_1 
+       (.I0(mixer_acc_reg__0[20]),
+        .I1(audio_out0_carry__0_n_3),
+        .O(\audio_out[20]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair30" *) 
+  LUT2 #(
+    .INIT(4'h2)) 
+    \audio_out[21]_i_1 
+       (.I0(mixer_acc_reg__0[21]),
+        .I1(audio_out0_carry__0_n_3),
+        .O(\audio_out[21]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair30" *) 
+  LUT2 #(
+    .INIT(4'h2)) 
+    \audio_out[22]_i_1 
+       (.I0(mixer_acc_reg__0[22]),
+        .I1(audio_out0_carry__0_n_3),
+        .O(\audio_out[22]_i_1_n_0 ));
+  LUT4 #(
+    .INIT(16'h0800)) 
+    \audio_out[23]_i_1 
+       (.I0(axi_synth_engine_aresetn),
+        .I1(\pipe_valid_reg_n_0_[4] ),
+        .I2(\pipe_valid_reg_n_0_[3] ),
+        .I3(\audio_out0_inferred__1/i__carry__0_n_3 ),
+        .O(\audio_out[23]_i_1_n_0 ));
+  LUT3 #(
+    .INIT(8'h40)) 
+    \audio_out[23]_i_2 
+       (.I0(\pipe_valid_reg_n_0_[3] ),
+        .I1(\pipe_valid_reg_n_0_[4] ),
+        .I2(axi_synth_engine_aresetn),
+        .O(\audio_out[23]_i_2_n_0 ));
+  LUT2 #(
+    .INIT(4'hE)) 
+    \audio_out[23]_i_3 
+       (.I0(mixer_acc_reg__0[23]),
+        .I1(audio_out0_carry__0_n_3),
+        .O(\audio_out[23]_i_3_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair40" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \audio_out[2]_i_1 
        (.I0(mixer_acc_reg__0[2]),
-        .I1(audio_out0_carry__1_n_3),
+        .I1(audio_out0_carry__0_n_3),
         .O(\audio_out[2]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair35" *) 
+  (* SOFT_HLUTNM = "soft_lutpair39" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \audio_out[3]_i_1 
        (.I0(mixer_acc_reg__0[3]),
-        .I1(audio_out0_carry__1_n_3),
+        .I1(audio_out0_carry__0_n_3),
         .O(\audio_out[3]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair35" *) 
+  (* SOFT_HLUTNM = "soft_lutpair39" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \audio_out[4]_i_1 
        (.I0(mixer_acc_reg__0[4]),
-        .I1(audio_out0_carry__1_n_3),
+        .I1(audio_out0_carry__0_n_3),
         .O(\audio_out[4]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair34" *) 
+  (* SOFT_HLUTNM = "soft_lutpair38" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \audio_out[5]_i_1 
        (.I0(mixer_acc_reg__0[5]),
-        .I1(audio_out0_carry__1_n_3),
+        .I1(audio_out0_carry__0_n_3),
         .O(\audio_out[5]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair34" *) 
+  (* SOFT_HLUTNM = "soft_lutpair38" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \audio_out[6]_i_1 
        (.I0(mixer_acc_reg__0[6]),
-        .I1(audio_out0_carry__1_n_3),
+        .I1(audio_out0_carry__0_n_3),
         .O(\audio_out[6]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair33" *) 
+  (* SOFT_HLUTNM = "soft_lutpair37" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \audio_out[7]_i_1 
        (.I0(mixer_acc_reg__0[7]),
-        .I1(audio_out0_carry__1_n_3),
+        .I1(audio_out0_carry__0_n_3),
         .O(\audio_out[7]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair33" *) 
+  (* SOFT_HLUTNM = "soft_lutpair37" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \audio_out[8]_i_1 
        (.I0(mixer_acc_reg__0[8]),
-        .I1(audio_out0_carry__1_n_3),
+        .I1(audio_out0_carry__0_n_3),
         .O(\audio_out[8]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair32" *) 
+  (* SOFT_HLUTNM = "soft_lutpair36" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \audio_out[9]_i_1 
        (.I0(mixer_acc_reg__0[9]),
-        .I1(audio_out0_carry__1_n_3),
+        .I1(audio_out0_carry__0_n_3),
         .O(\audio_out[9]_i_1_n_0 ));
   FDSE \audio_out_reg[0] 
        (.C(axi_synth_engine_aclk),
-        .CE(\audio_out[15]_i_2_n_0 ),
+        .CE(\audio_out[23]_i_2_n_0 ),
         .D(\audio_out[0]_i_1_n_0 ),
         .Q(audio_out[0]),
-        .S(\audio_out[15]_i_1_n_0 ));
+        .S(\audio_out[23]_i_1_n_0 ));
   FDSE \audio_out_reg[10] 
        (.C(axi_synth_engine_aclk),
-        .CE(\audio_out[15]_i_2_n_0 ),
+        .CE(\audio_out[23]_i_2_n_0 ),
         .D(\audio_out[10]_i_1_n_0 ),
         .Q(audio_out[10]),
-        .S(\audio_out[15]_i_1_n_0 ));
+        .S(\audio_out[23]_i_1_n_0 ));
   FDSE \audio_out_reg[11] 
        (.C(axi_synth_engine_aclk),
-        .CE(\audio_out[15]_i_2_n_0 ),
+        .CE(\audio_out[23]_i_2_n_0 ),
         .D(\audio_out[11]_i_1_n_0 ),
         .Q(audio_out[11]),
-        .S(\audio_out[15]_i_1_n_0 ));
+        .S(\audio_out[23]_i_1_n_0 ));
   FDSE \audio_out_reg[12] 
        (.C(axi_synth_engine_aclk),
-        .CE(\audio_out[15]_i_2_n_0 ),
+        .CE(\audio_out[23]_i_2_n_0 ),
         .D(\audio_out[12]_i_1_n_0 ),
         .Q(audio_out[12]),
-        .S(\audio_out[15]_i_1_n_0 ));
+        .S(\audio_out[23]_i_1_n_0 ));
   FDSE \audio_out_reg[13] 
        (.C(axi_synth_engine_aclk),
-        .CE(\audio_out[15]_i_2_n_0 ),
+        .CE(\audio_out[23]_i_2_n_0 ),
         .D(\audio_out[13]_i_1_n_0 ),
         .Q(audio_out[13]),
-        .S(\audio_out[15]_i_1_n_0 ));
+        .S(\audio_out[23]_i_1_n_0 ));
   FDSE \audio_out_reg[14] 
        (.C(axi_synth_engine_aclk),
-        .CE(\audio_out[15]_i_2_n_0 ),
+        .CE(\audio_out[23]_i_2_n_0 ),
         .D(\audio_out[14]_i_1_n_0 ),
         .Q(audio_out[14]),
-        .S(\audio_out[15]_i_1_n_0 ));
-  FDRE \audio_out_reg[15] 
+        .S(\audio_out[23]_i_1_n_0 ));
+  FDSE \audio_out_reg[15] 
        (.C(axi_synth_engine_aclk),
-        .CE(\audio_out[15]_i_2_n_0 ),
-        .D(\audio_out[15]_i_3_n_0 ),
+        .CE(\audio_out[23]_i_2_n_0 ),
+        .D(\audio_out[15]_i_1_n_0 ),
         .Q(audio_out[15]),
-        .R(\audio_out[15]_i_1_n_0 ));
+        .S(\audio_out[23]_i_1_n_0 ));
+  FDSE \audio_out_reg[16] 
+       (.C(axi_synth_engine_aclk),
+        .CE(\audio_out[23]_i_2_n_0 ),
+        .D(\audio_out[16]_i_1_n_0 ),
+        .Q(audio_out[16]),
+        .S(\audio_out[23]_i_1_n_0 ));
+  FDSE \audio_out_reg[17] 
+       (.C(axi_synth_engine_aclk),
+        .CE(\audio_out[23]_i_2_n_0 ),
+        .D(\audio_out[17]_i_1_n_0 ),
+        .Q(audio_out[17]),
+        .S(\audio_out[23]_i_1_n_0 ));
+  FDSE \audio_out_reg[18] 
+       (.C(axi_synth_engine_aclk),
+        .CE(\audio_out[23]_i_2_n_0 ),
+        .D(\audio_out[18]_i_1_n_0 ),
+        .Q(audio_out[18]),
+        .S(\audio_out[23]_i_1_n_0 ));
+  FDSE \audio_out_reg[19] 
+       (.C(axi_synth_engine_aclk),
+        .CE(\audio_out[23]_i_2_n_0 ),
+        .D(\audio_out[19]_i_1_n_0 ),
+        .Q(audio_out[19]),
+        .S(\audio_out[23]_i_1_n_0 ));
   FDSE \audio_out_reg[1] 
        (.C(axi_synth_engine_aclk),
-        .CE(\audio_out[15]_i_2_n_0 ),
+        .CE(\audio_out[23]_i_2_n_0 ),
         .D(\audio_out[1]_i_1_n_0 ),
         .Q(audio_out[1]),
-        .S(\audio_out[15]_i_1_n_0 ));
+        .S(\audio_out[23]_i_1_n_0 ));
+  FDSE \audio_out_reg[20] 
+       (.C(axi_synth_engine_aclk),
+        .CE(\audio_out[23]_i_2_n_0 ),
+        .D(\audio_out[20]_i_1_n_0 ),
+        .Q(audio_out[20]),
+        .S(\audio_out[23]_i_1_n_0 ));
+  FDSE \audio_out_reg[21] 
+       (.C(axi_synth_engine_aclk),
+        .CE(\audio_out[23]_i_2_n_0 ),
+        .D(\audio_out[21]_i_1_n_0 ),
+        .Q(audio_out[21]),
+        .S(\audio_out[23]_i_1_n_0 ));
+  FDSE \audio_out_reg[22] 
+       (.C(axi_synth_engine_aclk),
+        .CE(\audio_out[23]_i_2_n_0 ),
+        .D(\audio_out[22]_i_1_n_0 ),
+        .Q(audio_out[22]),
+        .S(\audio_out[23]_i_1_n_0 ));
+  FDRE \audio_out_reg[23] 
+       (.C(axi_synth_engine_aclk),
+        .CE(\audio_out[23]_i_2_n_0 ),
+        .D(\audio_out[23]_i_3_n_0 ),
+        .Q(audio_out[23]),
+        .R(\audio_out[23]_i_1_n_0 ));
   FDSE \audio_out_reg[2] 
        (.C(axi_synth_engine_aclk),
-        .CE(\audio_out[15]_i_2_n_0 ),
+        .CE(\audio_out[23]_i_2_n_0 ),
         .D(\audio_out[2]_i_1_n_0 ),
         .Q(audio_out[2]),
-        .S(\audio_out[15]_i_1_n_0 ));
+        .S(\audio_out[23]_i_1_n_0 ));
   FDSE \audio_out_reg[3] 
        (.C(axi_synth_engine_aclk),
-        .CE(\audio_out[15]_i_2_n_0 ),
+        .CE(\audio_out[23]_i_2_n_0 ),
         .D(\audio_out[3]_i_1_n_0 ),
         .Q(audio_out[3]),
-        .S(\audio_out[15]_i_1_n_0 ));
+        .S(\audio_out[23]_i_1_n_0 ));
   FDSE \audio_out_reg[4] 
        (.C(axi_synth_engine_aclk),
-        .CE(\audio_out[15]_i_2_n_0 ),
+        .CE(\audio_out[23]_i_2_n_0 ),
         .D(\audio_out[4]_i_1_n_0 ),
         .Q(audio_out[4]),
-        .S(\audio_out[15]_i_1_n_0 ));
+        .S(\audio_out[23]_i_1_n_0 ));
   FDSE \audio_out_reg[5] 
        (.C(axi_synth_engine_aclk),
-        .CE(\audio_out[15]_i_2_n_0 ),
+        .CE(\audio_out[23]_i_2_n_0 ),
         .D(\audio_out[5]_i_1_n_0 ),
         .Q(audio_out[5]),
-        .S(\audio_out[15]_i_1_n_0 ));
+        .S(\audio_out[23]_i_1_n_0 ));
   FDSE \audio_out_reg[6] 
        (.C(axi_synth_engine_aclk),
-        .CE(\audio_out[15]_i_2_n_0 ),
+        .CE(\audio_out[23]_i_2_n_0 ),
         .D(\audio_out[6]_i_1_n_0 ),
         .Q(audio_out[6]),
-        .S(\audio_out[15]_i_1_n_0 ));
+        .S(\audio_out[23]_i_1_n_0 ));
   FDSE \audio_out_reg[7] 
        (.C(axi_synth_engine_aclk),
-        .CE(\audio_out[15]_i_2_n_0 ),
+        .CE(\audio_out[23]_i_2_n_0 ),
         .D(\audio_out[7]_i_1_n_0 ),
         .Q(audio_out[7]),
-        .S(\audio_out[15]_i_1_n_0 ));
+        .S(\audio_out[23]_i_1_n_0 ));
   FDSE \audio_out_reg[8] 
        (.C(axi_synth_engine_aclk),
-        .CE(\audio_out[15]_i_2_n_0 ),
+        .CE(\audio_out[23]_i_2_n_0 ),
         .D(\audio_out[8]_i_1_n_0 ),
         .Q(audio_out[8]),
-        .S(\audio_out[15]_i_1_n_0 ));
+        .S(\audio_out[23]_i_1_n_0 ));
   FDSE \audio_out_reg[9] 
        (.C(axi_synth_engine_aclk),
-        .CE(\audio_out[15]_i_2_n_0 ),
+        .CE(\audio_out[23]_i_2_n_0 ),
         .D(\audio_out[9]_i_1_n_0 ),
         .Q(audio_out[9]),
-        .S(\audio_out[15]_i_1_n_0 ));
+        .S(\audio_out[23]_i_1_n_0 ));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
     \bram0_addr_b[12]_INST_0 
@@ -2518,10 +2540,10 @@ module mb_block_umeboshi_0_2_synth_256
         .WCLK(axi_synth_engine_aclk),
         .WE(synth_wr_adsr2));
   LUT2 #(
-    .INIT(4'hE)) 
+    .INIT(4'h2)) 
     i__carry__0_i_1
-       (.I0(mixer_acc_reg[28]),
-        .I1(mixer_acc_reg[29]),
+       (.I0(mixer_acc_reg[30]),
+        .I1(mixer_acc_reg[31]),
         .O(i__carry__0_i_1_n_0));
   LUT4 #(
     .INIT(16'h2F02)) 
@@ -2553,108 +2575,96 @@ module mb_block_umeboshi_0_2_synth_256
         .I2(r_env_state[0]),
         .I3(next_env_vol1_carry_i_12_n_0),
         .O(i__carry__0_i_1__3_n_0));
-  LUT2 #(
-    .INIT(4'hE)) 
-    i__carry__0_i_2
-       (.I0(mixer_acc_reg[26]),
-        .I1(mixer_acc_reg[27]),
-        .O(i__carry__0_i_2_n_0));
   LUT4 #(
     .INIT(16'h2F02)) 
-    i__carry__0_i_2__0
+    i__carry__0_i_2
        (.I0(next_env_vol2[14]),
         .I1(r_env_vol[14]),
         .I2(r_env_vol[15]),
         .I3(next_env_vol2[15]),
-        .O(i__carry__0_i_2__0_n_0));
+        .O(i__carry__0_i_2_n_0));
   LUT4 #(
     .INIT(16'h2F02)) 
-    i__carry__0_i_2__1
+    i__carry__0_i_2__0
        (.I0(increment[14]),
         .I1(r_env_vol[14]),
         .I2(r_env_vol[15]),
         .I3(increment[15]),
-        .O(i__carry__0_i_2__1_n_0));
+        .O(i__carry__0_i_2__0_n_0));
   LUT2 #(
     .INIT(4'h6)) 
-    i__carry__0_i_2__2
+    i__carry__0_i_2__1
        (.I0(sl_target[13]),
         .I1(increment[13]),
-        .O(i__carry__0_i_2__2_n_0));
+        .O(i__carry__0_i_2__1_n_0));
   LUT2 #(
     .INIT(4'h9)) 
-    i__carry__0_i_2__3
+    i__carry__0_i_2__2
        (.I0(r_env_vol[6]),
         .I1(increment__0[6]),
-        .O(i__carry__0_i_2__3_n_0));
+        .O(i__carry__0_i_2__2_n_0));
   LUT2 #(
-    .INIT(4'hE)) 
-    i__carry__0_i_3
-       (.I0(mixer_acc_reg[24]),
-        .I1(mixer_acc_reg[25]),
-        .O(i__carry__0_i_3_n_0));
+    .INIT(4'h1)) 
+    i__carry__0_i_2__3
+       (.I0(mixer_acc_reg[30]),
+        .I1(mixer_acc_reg[31]),
+        .O(i__carry__0_i_2__3_n_0));
   LUT4 #(
     .INIT(16'h2F02)) 
-    i__carry__0_i_3__0
+    i__carry__0_i_3
        (.I0(next_env_vol2[12]),
         .I1(r_env_vol[12]),
         .I2(r_env_vol[13]),
         .I3(next_env_vol2[13]),
-        .O(i__carry__0_i_3__0_n_0));
+        .O(i__carry__0_i_3_n_0));
   LUT4 #(
     .INIT(16'h2F02)) 
-    i__carry__0_i_3__1
+    i__carry__0_i_3__0
        (.I0(increment[12]),
         .I1(r_env_vol[12]),
         .I2(r_env_vol[13]),
         .I3(increment[13]),
-        .O(i__carry__0_i_3__1_n_0));
+        .O(i__carry__0_i_3__0_n_0));
   LUT2 #(
     .INIT(4'h6)) 
-    i__carry__0_i_3__2
+    i__carry__0_i_3__1
        (.I0(sl_target[12]),
         .I1(increment[12]),
-        .O(i__carry__0_i_3__2_n_0));
+        .O(i__carry__0_i_3__1_n_0));
   LUT2 #(
     .INIT(4'h9)) 
-    i__carry__0_i_3__3
+    i__carry__0_i_3__2
        (.I0(r_env_vol[5]),
         .I1(increment__0[5]),
-        .O(i__carry__0_i_3__3_n_0));
-  LUT2 #(
-    .INIT(4'hE)) 
-    i__carry__0_i_4
-       (.I0(mixer_acc_reg[22]),
-        .I1(mixer_acc_reg[23]),
-        .O(i__carry__0_i_4_n_0));
+        .O(i__carry__0_i_3__2_n_0));
   LUT4 #(
     .INIT(16'h2F02)) 
-    i__carry__0_i_4__0
+    i__carry__0_i_4
        (.I0(next_env_vol2[10]),
         .I1(r_env_vol[10]),
         .I2(r_env_vol[11]),
         .I3(next_env_vol2[11]),
-        .O(i__carry__0_i_4__0_n_0));
+        .O(i__carry__0_i_4_n_0));
   LUT4 #(
     .INIT(16'h2F02)) 
-    i__carry__0_i_4__1
+    i__carry__0_i_4__0
        (.I0(increment[10]),
         .I1(r_env_vol[10]),
         .I2(r_env_vol[11]),
         .I3(increment[11]),
-        .O(i__carry__0_i_4__1_n_0));
+        .O(i__carry__0_i_4__0_n_0));
   LUT2 #(
     .INIT(4'h6)) 
-    i__carry__0_i_4__2
+    i__carry__0_i_4__1
        (.I0(sl_target[11]),
         .I1(increment[11]),
-        .O(i__carry__0_i_4__2_n_0));
+        .O(i__carry__0_i_4__1_n_0));
   LUT2 #(
     .INIT(4'h9)) 
-    i__carry__0_i_4__3
+    i__carry__0_i_4__2
        (.I0(r_env_vol[4]),
         .I1(increment__0[4]),
-        .O(i__carry__0_i_4__3_n_0));
+        .O(i__carry__0_i_4__2_n_0));
   LUT4 #(
     .INIT(16'h9009)) 
     i__carry__0_i_5
@@ -2671,12 +2681,6 @@ module mb_block_umeboshi_0_2_synth_256
         .I2(increment[17]),
         .I3(r_env_vol[17]),
         .O(i__carry__0_i_5__0_n_0));
-  LUT2 #(
-    .INIT(4'h1)) 
-    i__carry__0_i_5__1
-       (.I0(mixer_acc_reg[29]),
-        .I1(mixer_acc_reg[28]),
-        .O(i__carry__0_i_5__1_n_0));
   LUT4 #(
     .INIT(16'h9009)) 
     i__carry__0_i_6
@@ -2692,12 +2696,6 @@ module mb_block_umeboshi_0_2_synth_256
         .I1(r_env_vol[14]),
         .I2(next_env_vol1_carry__0_i_17_n_0),
         .O(i__carry__0_i_6__0_n_0));
-  LUT2 #(
-    .INIT(4'h1)) 
-    i__carry__0_i_6__1
-       (.I0(mixer_acc_reg[27]),
-        .I1(mixer_acc_reg[26]),
-        .O(i__carry__0_i_6__1_n_0));
   LUT4 #(
     .INIT(16'h9009)) 
     i__carry__0_i_7
@@ -2714,12 +2712,6 @@ module mb_block_umeboshi_0_2_synth_256
         .I2(increment[13]),
         .I3(r_env_vol[13]),
         .O(i__carry__0_i_7__0_n_0));
-  LUT2 #(
-    .INIT(4'h1)) 
-    i__carry__0_i_7__1
-       (.I0(mixer_acc_reg[25]),
-        .I1(mixer_acc_reg[24]),
-        .O(i__carry__0_i_7__1_n_0));
   LUT4 #(
     .INIT(16'h9009)) 
     i__carry__0_i_8
@@ -2735,17 +2727,13 @@ module mb_block_umeboshi_0_2_synth_256
         .I1(r_env_vol[10]),
         .I2(next_env_vol1_carry__0_i_18_n_0),
         .O(i__carry__0_i_8__0_n_0));
-  LUT2 #(
-    .INIT(4'h1)) 
-    i__carry__0_i_8__1
-       (.I0(mixer_acc_reg[23]),
-        .I1(mixer_acc_reg[22]),
-        .O(i__carry__0_i_8__1_n_0));
-  LUT2 #(
-    .INIT(4'h2)) 
+  LUT4 #(
+    .INIT(16'h2F02)) 
     i__carry__1_i_1
-       (.I0(mixer_acc_reg[30]),
-        .I1(mixer_acc_reg[31]),
+       (.I0(next_env_vol2[22]),
+        .I1(r_env_vol[22]),
+        .I2(r_env_vol[23]),
+        .I3(next_env_vol2[23]),
         .O(i__carry__1_i_1_n_0));
   LUT6 #(
     .INIT(64'h0000000000005404)) 
@@ -2848,35 +2836,27 @@ module mb_block_umeboshi_0_2_synth_256
   LUT4 #(
     .INIT(16'h2F02)) 
     i__carry__1_i_1__0
-       (.I0(next_env_vol2[22]),
-        .I1(r_env_vol[22]),
-        .I2(r_env_vol[23]),
-        .I3(next_env_vol2[23]),
-        .O(i__carry__1_i_1__0_n_0));
-  LUT4 #(
-    .INIT(16'h2F02)) 
-    i__carry__1_i_1__1
        (.I0(increment[22]),
         .I1(r_env_vol[22]),
         .I2(r_env_vol[23]),
         .I3(increment__0[23]),
-        .O(i__carry__1_i_1__1_n_0));
+        .O(i__carry__1_i_1__0_n_0));
   LUT2 #(
     .INIT(4'h6)) 
-    i__carry__1_i_1__2
+    i__carry__1_i_1__1
        (.I0(sl_target[18]),
         .I1(increment[18]),
-        .O(i__carry__1_i_1__2_n_0));
+        .O(i__carry__1_i_1__1_n_0));
   LUT6 #(
     .INIT(64'hAAAAA9595555A959)) 
-    i__carry__1_i_1__3
+    i__carry__1_i_1__2
        (.I0(r_env_vol[11]),
         .I1(i__carry__1_i_5__1_n_0),
         .I2(r_env_state[1]),
         .I3(i__carry__1_i_6__1_n_0),
         .I4(r_env_state[0]),
         .I5(i__carry__1_i_7_n_0),
-        .O(i__carry__1_i_1__3_n_0));
+        .O(i__carry__1_i_1__2_n_0));
   LUT4 #(
     .INIT(16'h2F02)) 
     i__carry__1_i_2
@@ -3007,12 +2987,6 @@ module mb_block_umeboshi_0_2_synth_256
         .I4(r_env_state[0]),
         .I5(i__carry__1_i_10_n_0),
         .O(i__carry__1_i_2__2_n_0));
-  LUT2 #(
-    .INIT(4'h1)) 
-    i__carry__1_i_2__3
-       (.I0(mixer_acc_reg[30]),
-        .I1(mixer_acc_reg[31]),
-        .O(i__carry__1_i_2__3_n_0));
   LUT4 #(
     .INIT(16'h2F02)) 
     i__carry__1_i_3
@@ -3519,8 +3493,8 @@ module mb_block_umeboshi_0_2_synth_256
   LUT2 #(
     .INIT(4'hE)) 
     i__carry_i_1
-       (.I0(mixer_acc_reg[20]),
-        .I1(mixer_acc_reg[21]),
+       (.I0(mixer_acc_reg[28]),
+        .I1(mixer_acc_reg[29]),
         .O(i__carry_i_1_n_0));
   LUT4 #(
     .INIT(16'h2F02)) 
@@ -3550,8 +3524,8 @@ module mb_block_umeboshi_0_2_synth_256
   LUT2 #(
     .INIT(4'hE)) 
     i__carry_i_2
-       (.I0(mixer_acc_reg[18]),
-        .I1(mixer_acc_reg[19]),
+       (.I0(mixer_acc_reg[26]),
+        .I1(mixer_acc_reg[27]),
         .O(i__carry_i_2_n_0));
   LUT4 #(
     .INIT(16'h2F02)) 
@@ -3585,8 +3559,8 @@ module mb_block_umeboshi_0_2_synth_256
   LUT2 #(
     .INIT(4'hE)) 
     i__carry_i_3
-       (.I0(mixer_acc_reg[17]),
-        .I1(mixer_acc_reg[16]),
+       (.I0(mixer_acc_reg[24]),
+        .I1(mixer_acc_reg[25]),
         .O(i__carry_i_3_n_0));
   LUT4 #(
     .INIT(16'h2F02)) 
@@ -3649,8 +3623,8 @@ module mb_block_umeboshi_0_2_synth_256
   LUT2 #(
     .INIT(4'h1)) 
     i__carry_i_4__3
-       (.I0(mixer_acc_reg[21]),
-        .I1(mixer_acc_reg[20]),
+       (.I0(mixer_acc_reg[29]),
+        .I1(mixer_acc_reg[28]),
         .O(i__carry_i_4__3_n_0));
   LUT4 #(
     .INIT(16'h9009)) 
@@ -3673,8 +3647,8 @@ module mb_block_umeboshi_0_2_synth_256
   LUT2 #(
     .INIT(4'h1)) 
     i__carry_i_5__1
-       (.I0(mixer_acc_reg[19]),
-        .I1(mixer_acc_reg[18]),
+       (.I0(mixer_acc_reg[27]),
+        .I1(mixer_acc_reg[26]),
         .O(i__carry_i_5__1_n_0));
   (* SOFT_HLUTNM = "soft_lutpair20" *) 
   LUT2 #(
@@ -3702,8 +3676,8 @@ module mb_block_umeboshi_0_2_synth_256
   LUT2 #(
     .INIT(4'h1)) 
     i__carry_i_6__1
-       (.I0(mixer_acc_reg[16]),
-        .I1(mixer_acc_reg[17]),
+       (.I0(mixer_acc_reg[25]),
+        .I1(mixer_acc_reg[24]),
         .O(i__carry_i_6__1_n_0));
   LUT4 #(
     .INIT(16'h9009)) 
@@ -3716,8 +3690,8 @@ module mb_block_umeboshi_0_2_synth_256
   LUT2 #(
     .INIT(4'h2)) 
     i__carry_i_7__0
-       (.I0(mixer_acc_reg__0[14]),
-        .I1(mixer_acc_reg__0[15]),
+       (.I0(mixer_acc_reg__0[22]),
+        .I1(mixer_acc_reg__0[23]),
         .O(i__carry_i_7__0_n_0));
   LUT2 #(
     .INIT(4'h1)) 
@@ -4188,49 +4162,49 @@ module mb_block_umeboshi_0_2_synth_256
     .INIT(4'h6)) 
     \mixer_acc[16]_i_2 
        (.I0(in[15]),
-        .I1(mixer_acc_reg[19]),
+        .I1(mixer_acc_reg__0[19]),
         .O(\mixer_acc[16]_i_2_n_0 ));
   LUT2 #(
     .INIT(4'h6)) 
     \mixer_acc[16]_i_3 
        (.I0(in[15]),
-        .I1(mixer_acc_reg[18]),
+        .I1(mixer_acc_reg__0[18]),
         .O(\mixer_acc[16]_i_3_n_0 ));
   LUT2 #(
     .INIT(4'h6)) 
     \mixer_acc[16]_i_4 
        (.I0(in[15]),
-        .I1(mixer_acc_reg[17]),
+        .I1(mixer_acc_reg__0[17]),
         .O(\mixer_acc[16]_i_4_n_0 ));
   LUT2 #(
     .INIT(4'h6)) 
     \mixer_acc[16]_i_5 
        (.I0(in[15]),
-        .I1(mixer_acc_reg[16]),
+        .I1(mixer_acc_reg__0[16]),
         .O(\mixer_acc[16]_i_5_n_0 ));
   LUT2 #(
     .INIT(4'h6)) 
     \mixer_acc[20]_i_2 
        (.I0(in[15]),
-        .I1(mixer_acc_reg[23]),
+        .I1(mixer_acc_reg__0[23]),
         .O(\mixer_acc[20]_i_2_n_0 ));
   LUT2 #(
     .INIT(4'h6)) 
     \mixer_acc[20]_i_3 
        (.I0(in[15]),
-        .I1(mixer_acc_reg[22]),
+        .I1(mixer_acc_reg__0[22]),
         .O(\mixer_acc[20]_i_3_n_0 ));
   LUT2 #(
     .INIT(4'h6)) 
     \mixer_acc[20]_i_4 
        (.I0(in[15]),
-        .I1(mixer_acc_reg[21]),
+        .I1(mixer_acc_reg__0[21]),
         .O(\mixer_acc[20]_i_4_n_0 ));
   LUT2 #(
     .INIT(4'h6)) 
     \mixer_acc[20]_i_5 
        (.I0(in[15]),
-        .I1(mixer_acc_reg[20]),
+        .I1(mixer_acc_reg__0[20]),
         .O(\mixer_acc[20]_i_5_n_0 ));
   LUT2 #(
     .INIT(4'h6)) 
@@ -4259,8 +4233,8 @@ module mb_block_umeboshi_0_2_synth_256
   LUT2 #(
     .INIT(4'h6)) 
     \mixer_acc[28]_i_2 
-       (.I0(in[15]),
-        .I1(mixer_acc_reg[31]),
+       (.I0(mixer_acc_reg[31]),
+        .I1(in[15]),
         .O(\mixer_acc[28]_i_2_n_0 ));
   LUT2 #(
     .INIT(4'h6)) 
@@ -4390,7 +4364,7 @@ module mb_block_umeboshi_0_2_synth_256
        (.C(axi_synth_engine_aclk),
         .CE(p_0_in_0),
         .D(\mixer_acc_reg[16]_i_1_n_7 ),
-        .Q(mixer_acc_reg[16]),
+        .Q(mixer_acc_reg__0[16]),
         .R(\mixer_acc[0]_i_1_n_0 ));
   (* ADDER_THRESHOLD = "35" *) 
   CARRY4 \mixer_acc_reg[16]_i_1 
@@ -4404,19 +4378,19 @@ module mb_block_umeboshi_0_2_synth_256
        (.C(axi_synth_engine_aclk),
         .CE(p_0_in_0),
         .D(\mixer_acc_reg[16]_i_1_n_6 ),
-        .Q(mixer_acc_reg[17]),
+        .Q(mixer_acc_reg__0[17]),
         .R(\mixer_acc[0]_i_1_n_0 ));
   FDRE \mixer_acc_reg[18] 
        (.C(axi_synth_engine_aclk),
         .CE(p_0_in_0),
         .D(\mixer_acc_reg[16]_i_1_n_5 ),
-        .Q(mixer_acc_reg[18]),
+        .Q(mixer_acc_reg__0[18]),
         .R(\mixer_acc[0]_i_1_n_0 ));
   FDRE \mixer_acc_reg[19] 
        (.C(axi_synth_engine_aclk),
         .CE(p_0_in_0),
         .D(\mixer_acc_reg[16]_i_1_n_4 ),
-        .Q(mixer_acc_reg[19]),
+        .Q(mixer_acc_reg__0[19]),
         .R(\mixer_acc[0]_i_1_n_0 ));
   FDRE \mixer_acc_reg[1] 
        (.C(axi_synth_engine_aclk),
@@ -4428,7 +4402,7 @@ module mb_block_umeboshi_0_2_synth_256
        (.C(axi_synth_engine_aclk),
         .CE(p_0_in_0),
         .D(\mixer_acc_reg[20]_i_1_n_7 ),
-        .Q(mixer_acc_reg[20]),
+        .Q(mixer_acc_reg__0[20]),
         .R(\mixer_acc[0]_i_1_n_0 ));
   (* ADDER_THRESHOLD = "35" *) 
   CARRY4 \mixer_acc_reg[20]_i_1 
@@ -4442,19 +4416,19 @@ module mb_block_umeboshi_0_2_synth_256
        (.C(axi_synth_engine_aclk),
         .CE(p_0_in_0),
         .D(\mixer_acc_reg[20]_i_1_n_6 ),
-        .Q(mixer_acc_reg[21]),
+        .Q(mixer_acc_reg__0[21]),
         .R(\mixer_acc[0]_i_1_n_0 ));
   FDRE \mixer_acc_reg[22] 
        (.C(axi_synth_engine_aclk),
         .CE(p_0_in_0),
         .D(\mixer_acc_reg[20]_i_1_n_5 ),
-        .Q(mixer_acc_reg[22]),
+        .Q(mixer_acc_reg__0[22]),
         .R(\mixer_acc[0]_i_1_n_0 ));
   FDRE \mixer_acc_reg[23] 
        (.C(axi_synth_engine_aclk),
         .CE(p_0_in_0),
         .D(\mixer_acc_reg[20]_i_1_n_4 ),
-        .Q(mixer_acc_reg[23]),
+        .Q(mixer_acc_reg__0[23]),
         .R(\mixer_acc[0]_i_1_n_0 ));
   FDRE \mixer_acc_reg[24] 
        (.C(axi_synth_engine_aclk),
@@ -4599,7 +4573,7 @@ module mb_block_umeboshi_0_2_synth_256
         .CYINIT(1'b0),
         .DI(r_env_vol[7:4]),
         .O({\next_env_vol0_inferred__0/i__carry__0_n_4 ,\next_env_vol0_inferred__0/i__carry__0_n_5 ,\next_env_vol0_inferred__0/i__carry__0_n_6 ,\next_env_vol0_inferred__0/i__carry__0_n_7 }),
-        .S({i__carry__0_i_1__3_n_0,i__carry__0_i_2__3_n_0,i__carry__0_i_3__3_n_0,i__carry__0_i_4__3_n_0}));
+        .S({i__carry__0_i_1__3_n_0,i__carry__0_i_2__2_n_0,i__carry__0_i_3__2_n_0,i__carry__0_i_4__2_n_0}));
   (* ADDER_THRESHOLD = "35" *) 
   CARRY4 \next_env_vol0_inferred__0/i__carry__1 
        (.CI(\next_env_vol0_inferred__0/i__carry__0_n_0 ),
@@ -4607,7 +4581,7 @@ module mb_block_umeboshi_0_2_synth_256
         .CYINIT(1'b0),
         .DI(r_env_vol[11:8]),
         .O({\next_env_vol0_inferred__0/i__carry__1_n_4 ,\next_env_vol0_inferred__0/i__carry__1_n_5 ,\next_env_vol0_inferred__0/i__carry__1_n_6 ,\next_env_vol0_inferred__0/i__carry__1_n_7 }),
-        .S({i__carry__1_i_1__3_n_0,i__carry__1_i_2__2_n_0,i__carry__1_i_3__2_n_0,i__carry__1_i_4__2_n_0}));
+        .S({i__carry__1_i_1__2_n_0,i__carry__1_i_2__2_n_0,i__carry__1_i_3__2_n_0,i__carry__1_i_4__2_n_0}));
   (* ADDER_THRESHOLD = "35" *) 
   CARRY4 \next_env_vol0_inferred__0/i__carry__2 
        (.CI(\next_env_vol0_inferred__0/i__carry__1_n_0 ),
@@ -5679,7 +5653,7 @@ module mb_block_umeboshi_0_2_synth_256
        (.CI(\next_env_vol1_inferred__0/i__carry_n_0 ),
         .CO({\next_env_vol1_inferred__0/i__carry__0_n_0 ,\next_env_vol1_inferred__0/i__carry__0_n_1 ,\next_env_vol1_inferred__0/i__carry__0_n_2 ,\next_env_vol1_inferred__0/i__carry__0_n_3 }),
         .CYINIT(1'b0),
-        .DI({i__carry__0_i_1__0_n_0,i__carry__0_i_2__0_n_0,i__carry__0_i_3__0_n_0,i__carry__0_i_4__0_n_0}),
+        .DI({i__carry__0_i_1__0_n_0,i__carry__0_i_2_n_0,i__carry__0_i_3_n_0,i__carry__0_i_4_n_0}),
         .O(\NLW_next_env_vol1_inferred__0/i__carry__0_O_UNCONNECTED [3:0]),
         .S({i__carry__0_i_5_n_0,i__carry__0_i_6_n_0,i__carry__0_i_7_n_0,i__carry__0_i_8_n_0}));
   (* COMPARATOR_THRESHOLD = "11" *) 
@@ -5687,7 +5661,7 @@ module mb_block_umeboshi_0_2_synth_256
        (.CI(\next_env_vol1_inferred__0/i__carry__0_n_0 ),
         .CO({\NLW_next_env_vol1_inferred__0/i__carry__1_CO_UNCONNECTED [3],\next_env_vol1_inferred__0/i__carry__1_n_1 ,\next_env_vol1_inferred__0/i__carry__1_n_2 ,\next_env_vol1_inferred__0/i__carry__1_n_3 }),
         .CYINIT(1'b0),
-        .DI({1'b0,i__carry__1_i_1__0_n_0,i__carry__1_i_2_n_0,i__carry__1_i_3_n_0}),
+        .DI({1'b0,i__carry__1_i_1_n_0,i__carry__1_i_2_n_0,i__carry__1_i_3_n_0}),
         .O(\NLW_next_env_vol1_inferred__0/i__carry__1_O_UNCONNECTED [3:0]),
         .S({1'b0,i__carry__1_i_4_n_0,i__carry__1_i_5_n_0,i__carry__1_i_6_n_0}));
   (* COMPARATOR_THRESHOLD = "11" *) 
@@ -5703,7 +5677,7 @@ module mb_block_umeboshi_0_2_synth_256
        (.CI(\next_env_vol1_inferred__1/i__carry_n_0 ),
         .CO({\next_env_vol1_inferred__1/i__carry__0_n_0 ,\next_env_vol1_inferred__1/i__carry__0_n_1 ,\next_env_vol1_inferred__1/i__carry__0_n_2 ,\next_env_vol1_inferred__1/i__carry__0_n_3 }),
         .CYINIT(1'b0),
-        .DI({i__carry__0_i_1__1_n_0,i__carry__0_i_2__1_n_0,i__carry__0_i_3__1_n_0,i__carry__0_i_4__1_n_0}),
+        .DI({i__carry__0_i_1__1_n_0,i__carry__0_i_2__0_n_0,i__carry__0_i_3__0_n_0,i__carry__0_i_4__0_n_0}),
         .O(\NLW_next_env_vol1_inferred__1/i__carry__0_O_UNCONNECTED [3:0]),
         .S({i__carry__0_i_5__0_n_0,i__carry__0_i_6__0_n_0,i__carry__0_i_7__0_n_0,i__carry__0_i_8__0_n_0}));
   (* COMPARATOR_THRESHOLD = "11" *) 
@@ -5711,7 +5685,7 @@ module mb_block_umeboshi_0_2_synth_256
        (.CI(\next_env_vol1_inferred__1/i__carry__0_n_0 ),
         .CO({\NLW_next_env_vol1_inferred__1/i__carry__1_CO_UNCONNECTED [3],\next_env_vol1_inferred__1/i__carry__1_n_1 ,\next_env_vol1_inferred__1/i__carry__1_n_2 ,\next_env_vol1_inferred__1/i__carry__1_n_3 }),
         .CYINIT(1'b0),
-        .DI({1'b0,i__carry__1_i_1__1_n_0,i__carry__1_i_2__0_n_0,i__carry__1_i_3__0_n_0}),
+        .DI({1'b0,i__carry__1_i_1__0_n_0,i__carry__1_i_2__0_n_0,i__carry__1_i_3__0_n_0}),
         .O(\NLW_next_env_vol1_inferred__1/i__carry__1_O_UNCONNECTED [3:0]),
         .S({1'b0,i__carry__1_i_4__0_n_0,i__carry__1_i_5__0_n_0,i__carry__1_i_6__0_n_0}));
   (* ADDER_THRESHOLD = "35" *) 
@@ -5729,7 +5703,7 @@ module mb_block_umeboshi_0_2_synth_256
         .CYINIT(1'b0),
         .DI(sl_target[14:11]),
         .O(next_env_vol2[14:11]),
-        .S({i__carry__0_i_1__2_n_0,i__carry__0_i_2__2_n_0,i__carry__0_i_3__2_n_0,i__carry__0_i_4__2_n_0}));
+        .S({i__carry__0_i_1__2_n_0,i__carry__0_i_2__1_n_0,i__carry__0_i_3__1_n_0,i__carry__0_i_4__1_n_0}));
   (* ADDER_THRESHOLD = "35" *) 
   CARRY4 \next_env_vol2_inferred__0/i__carry__1 
        (.CI(\next_env_vol2_inferred__0/i__carry__0_n_0 ),
@@ -5737,7 +5711,7 @@ module mb_block_umeboshi_0_2_synth_256
         .CYINIT(1'b0),
         .DI(sl_target[18:15]),
         .O(next_env_vol2[18:15]),
-        .S({i__carry__1_i_1__2_n_0,i__carry__1_i_2__1_n_0,i__carry__1_i_3__1_n_0,i__carry__1_i_4__1_n_0}));
+        .S({i__carry__1_i_1__1_n_0,i__carry__1_i_2__1_n_0,i__carry__1_i_3__1_n_0,i__carry__1_i_4__1_n_0}));
   (* ADDER_THRESHOLD = "35" *) 
   CARRY4 \next_env_vol2_inferred__0/i__carry__2 
        (.CI(\next_env_vol2_inferred__0/i__carry__1_n_0 ),
@@ -10464,7 +10438,7 @@ module mb_block_umeboshi_0_2_umeboshi
   output axi_arready_reg;
   output axi_rvalid_reg;
   output [16:0]bram0_addr_b;
-  output [15:0]audio_out;
+  output [23:0]audio_out;
   output axi_synth_engine_wready;
   output axi_synth_engine_bvalid;
   input [10:0]axi_synth_engine_awaddr;
@@ -10480,7 +10454,7 @@ module mb_block_umeboshi_0_2_umeboshi
   input axi_synth_engine_aresetn;
   input axi_synth_engine_bready;
 
-  wire [15:0]audio_out;
+  wire [23:0]audio_out;
   wire audio_tick;
   wire axi_arready_reg;
   wire axi_awready_reg;
@@ -10551,7 +10525,7 @@ module mb_block_umeboshi_0_2_umeboshi_slave_lite_v1_0_axi_synth_engine
   output axi_arready_reg_0;
   output axi_rvalid_reg_0;
   output [16:0]bram0_addr_b;
-  output [15:0]audio_out;
+  output [23:0]audio_out;
   output axi_synth_engine_wready;
   output axi_synth_engine_bvalid;
   input [10:0]axi_synth_engine_awaddr;
@@ -10572,7 +10546,7 @@ module mb_block_umeboshi_0_2_umeboshi_slave_lite_v1_0_axi_synth_engine
   wire \FSM_sequential_state_write[0]_i_1_n_0 ;
   wire \FSM_sequential_state_write[1]_i_1_n_0 ;
   wire [0:0]SR;
-  wire [15:0]audio_out;
+  wire [23:0]audio_out;
   wire audio_tick;
   wire axi_arready_i_1_n_0;
   wire axi_arready_reg_0;
@@ -10634,7 +10608,7 @@ module mb_block_umeboshi_0_2_umeboshi_slave_lite_v1_0_axi_synth_engine
         .D(\FSM_sequential_state_read[1]_i_1_n_0 ),
         .Q(state_read[1]),
         .R(SR));
-  (* SOFT_HLUTNM = "soft_lutpair37" *) 
+  (* SOFT_HLUTNM = "soft_lutpair41" *) 
   LUT5 #(
     .INIT(32'hFFF0F7FF)) 
     \FSM_sequential_state_write[0]_i_1 
@@ -10644,7 +10618,7 @@ module mb_block_umeboshi_0_2_umeboshi_slave_lite_v1_0_axi_synth_engine
         .I3(state_write[0]),
         .I4(state_write[1]),
         .O(\FSM_sequential_state_write[0]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair37" *) 
+  (* SOFT_HLUTNM = "soft_lutpair41" *) 
   LUT5 #(
     .INIT(32'hFF0F0800)) 
     \FSM_sequential_state_write[1]_i_1 
@@ -10684,7 +10658,7 @@ module mb_block_umeboshi_0_2_umeboshi_slave_lite_v1_0_axi_synth_engine
         .D(axi_arready_i_1_n_0),
         .Q(axi_arready_reg_0),
         .R(SR));
-  (* SOFT_HLUTNM = "soft_lutpair38" *) 
+  (* SOFT_HLUTNM = "soft_lutpair42" *) 
   LUT5 #(
     .INIT(32'hAAA2FFAF)) 
     axi_awready_i_1
@@ -10710,7 +10684,7 @@ module mb_block_umeboshi_0_2_umeboshi_slave_lite_v1_0_axi_synth_engine
         .I4(axi_synth_engine_bready),
         .I5(axi_synth_engine_wvalid),
         .O(axi_bvalid_i_1_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair38" *) 
+  (* SOFT_HLUTNM = "soft_lutpair42" *) 
   LUT2 #(
     .INIT(4'h8)) 
     axi_bvalid_i_2

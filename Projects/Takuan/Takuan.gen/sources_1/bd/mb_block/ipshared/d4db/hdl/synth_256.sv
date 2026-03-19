@@ -29,7 +29,7 @@ module synth_256(
 
 
 
-    output logic [15:0] audio_out // mixed audio out
+    output logic [23:0] audio_out // 24-bit mixed audio out (256 × 16-bit voices fit in 24 bits)
     );
 
     ////////////////////////////////////////////////////////////////////////////
@@ -138,7 +138,7 @@ module synth_256(
         sync_chain <= {sync_chain[1:0], wr_strb};
     end
     
-    // negedge
+    // Rising edge detect on synchronized wr_strb
     assign tick = (sync_chain[1] == 1'b1) && (sync_chain[2] == 1'b0);
 
     ////////////////////////////////////////////////////////////////////////////
@@ -200,8 +200,8 @@ module synth_256(
         end
     end
 
-    logic signed [31:0] scaled_mix;
-    assign scaled_mix = mixer_acc; // divide by 2^5
+    // 24-bit saturation: 256 × 16-bit voices fit in 24 bits without scaling
+    // Max possible: 256 × 32767 = 8,388,352 < 2^23-1 = 8,388,607
     always_ff @(posedge clk) begin
         if (reset) begin
             op_idx <= 0; 
@@ -227,14 +227,14 @@ module synth_256(
                 mixer_acc <= mixer_acc + final_voice_sample; 
             end
             
-            // after all slices are processed, the audio becomes valid
+            // after all slices are processed, saturate to 24-bit and output
             if (pipe_valid[4] && !pipe_valid[3]) begin
-                if (scaled_mix > 32767) begin
-                    audio_out <= 32767;       // Clip to Max
-                end else if (scaled_mix < -32768) begin
-                    audio_out <= -32768;      // Clip to Min
+                if (mixer_acc > 8388607) begin
+                    audio_out <= 24'd8388607;         // Clip to +2^23-1
+                end else if (mixer_acc < -8388608) begin
+                    audio_out <= -24'sd8388608;        // Clip to -2^23
                 end else begin
-                    audio_out <= scaled_mix[15:0]; // Fits safely
+                    audio_out <= mixer_acc[23:0];      // Fits in 24 bits
                 end
             end
         end

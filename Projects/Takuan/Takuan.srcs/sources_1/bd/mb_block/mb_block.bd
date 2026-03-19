@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0xEFC7E27B5ED8E984",
+      "boundary_crc": "0xA2758811136A83EE",
       "device": "xc7z020clg400-1",
       "gen_directory": "../../../../Takuan.gen/sources_1/bd/mb_block",
       "name": "mb_block",
@@ -240,18 +240,6 @@
       }
     },
     "ports": {
-      "audio_out": {
-        "type": "data",
-        "direction": "O",
-        "left": "15",
-        "right": "0",
-        "parameters": {
-          "LAYERED_METADATA": {
-            "value": "undef",
-            "value_src": "default"
-          }
-        }
-      },
       "audio_valid": {
         "direction": "O"
       },
@@ -283,6 +271,11 @@
             "value_src": "default"
           }
         }
+      },
+      "audio_out": {
+        "direction": "O",
+        "left": "23",
+        "right": "0"
       }
     },
     "components": {
@@ -2043,7 +2036,7 @@
       },
       "umeboshi_0": {
         "vlnv": "xilinx.com:user:umeboshi:1.0",
-        "ip_revision": "17",
+        "ip_revision": "20",
         "xci_name": "mb_block_umeboshi_0_2",
         "xci_path": "ip\\mb_block_umeboshi_0_2\\mb_block_umeboshi_0_2.xci",
         "inst_hier_path": "umeboshi_0",

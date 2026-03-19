@@ -4,7 +4,7 @@
     "xci_name": "mb_block_umeboshi_0_2",
     "cell_name": "umeboshi_0",
     "component_reference": "xilinx.com:user:umeboshi:1.0",
-    "ip_revision": "17",
+    "ip_revision": "20",
     "gen_directory": "../../../../../../Takuan.gen/sources_1/bd/mb_block/ip/mb_block_umeboshi_0_2",
     "parameters": {
       "component_parameters": {
@@ -33,7 +33,7 @@
       },
       "runtime_parameters": {
         "IPCONTEXT": [ { "value": "IP_Integrator" } ],
-        "IPREVISION": [ { "value": "17" } ],
+        "IPREVISION": [ { "value": "20" } ],
         "MANAGED": [ { "value": "TRUE" } ],
         "OUTPUTDIR": [ { "value": "../../../../../../Takuan.gen/sources_1/bd/mb_block/ip/mb_block_umeboshi_0_2" } ],
         "SELECTEDSIMMODEL": [ { "value": "" } ],
@@ -44,7 +44,7 @@
     },
     "boundary": {
       "ports": {
-        "audio_out": [ { "direction": "out", "size_left": "15", "size_right": "0" } ],
+        "audio_out": [ { "direction": "out", "size_left": "23", "size_right": "0" } ],
         "audio_valid": [ { "direction": "out" } ],
         "audio_tick": [ { "direction": "in" } ],
         "bram0_clkb": [ { "direction": "out" } ],
@@ -187,7 +187,7 @@
             "MEM_ECC": [ { "value": "NONE", "value_permission": "bd", "resolve_type": "generated", "is_ips_inferred": true, "is_static_object": false } ],
             "READ_WRITE_MODE": [ { "value": "", "value_permission": "bd", "resolve_type": "generated", "is_ips_inferred": true, "is_static_object": false } ],
             "READ_LATENCY": [ { "value": "1", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
-            "MEM_ADDRESS_MODE": [ { "value": "", "value_src": "weak", "value_permission": "bd", "resolve_type": "generated", "is_ips_inferred": true, "is_static_object": false } ]
+            "MEM_ADDRESS_MODE": [ { "value": "", "value_src": "weak", "resolve_type": "generated", "is_ips_inferred": true, "is_static_object": false } ]
           },
           "port_maps": {
             "EN": [ { "physical_name": "bram0_enb" } ],
@@ -210,7 +210,7 @@
             "MEM_ECC": [ { "value": "NONE", "value_permission": "bd", "resolve_type": "generated", "is_ips_inferred": true, "is_static_object": false } ],
             "READ_WRITE_MODE": [ { "value": "", "value_permission": "bd", "resolve_type": "generated", "is_ips_inferred": true, "is_static_object": false } ],
             "READ_LATENCY": [ { "value": "1", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
-            "MEM_ADDRESS_MODE": [ { "value": "", "value_src": "weak", "value_permission": "bd", "resolve_type": "generated", "is_ips_inferred": true, "is_static_object": false } ]
+            "MEM_ADDRESS_MODE": [ { "value": "", "value_src": "weak", "resolve_type": "generated", "is_ips_inferred": true, "is_static_object": false } ]
           },
           "port_maps": {
             "EN": [ { "physical_name": "bram1_enb" } ],
@@ -270,5 +270,5 @@
       }
     }
   },
-  "checksum": "cee86553"
+  "checksum": "3ada753e"
 }

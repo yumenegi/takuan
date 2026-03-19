@@ -64,7 +64,7 @@ module top(
     // Intermediate signals
     wire clk_audio;
     wire tick;
-    wire [15:0] audio_out;
+    wire [23:0] audio_out;
     wire audio_valid;
     
     // Assign au_mclk_r directly from PS clock FCLK_CLK1_0

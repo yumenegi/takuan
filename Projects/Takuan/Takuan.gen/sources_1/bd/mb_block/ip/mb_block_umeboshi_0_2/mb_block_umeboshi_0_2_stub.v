@@ -2,7 +2,7 @@
 // Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
-// Date        : Sat Mar 14 18:52:28 2026
+// Date        : Wed Mar 18 17:36:13 2026
 // Host        : ponco2 running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode synth_stub
 //               c:/Users/hause/Documents/Vivado/Projects/Takuan/Takuan.gen/sources_1/bd/mb_block/ip/mb_block_umeboshi_0_2/mb_block_umeboshi_0_2_stub.v
@@ -14,7 +14,7 @@
 // This empty module with port declaration file causes synthesis tools to infer a black box for IP.
 // The synthesis directives are for Synopsys Synplify support to prevent IO buffer insertion.
 // Please paste the declaration into a Verilog source file or add the file as an additional source.
-(* CHECK_LICENSE_TYPE = "mb_block_umeboshi_0_2,umeboshi,{}" *) (* CORE_GENERATION_INFO = "mb_block_umeboshi_0_2,umeboshi,{x_ipProduct=Vivado 2025.2,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=umeboshi,x_ipVersion=1.0,x_ipCoreRevision=17,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_axi_synth_engine_DATA_WIDTH=32,C_axi_synth_engine_ADDR_WIDTH=13}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) 
+(* CHECK_LICENSE_TYPE = "mb_block_umeboshi_0_2,umeboshi,{}" *) (* CORE_GENERATION_INFO = "mb_block_umeboshi_0_2,umeboshi,{x_ipProduct=Vivado 2025.2,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=umeboshi,x_ipVersion=1.0,x_ipCoreRevision=20,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_axi_synth_engine_DATA_WIDTH=32,C_axi_synth_engine_ADDR_WIDTH=13}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) 
 (* X_CORE_INFO = "umeboshi,Vivado 2025.2" *) 
 module mb_block_umeboshi_0_2(audio_out, audio_valid, audio_tick, bram0_clkb, 
   bram0_enb, bram0_web, bram0_addr_b, bram0_din_b, bram0_data_b, bram0_rstb, bram1_clkb, 
@@ -26,11 +26,11 @@ module mb_block_umeboshi_0_2(audio_out, audio_valid, audio_tick, bram0_clkb,
   axi_synth_engine_bready, axi_synth_engine_araddr, axi_synth_engine_arprot, 
   axi_synth_engine_arvalid, axi_synth_engine_arready, axi_synth_engine_rdata, 
   axi_synth_engine_rresp, axi_synth_engine_rvalid, axi_synth_engine_rready)
-/* synthesis syn_black_box black_box_pad_pin="audio_out[15:0],audio_valid,audio_tick,bram0_enb,bram0_web[3:0],bram0_addr_b[31:0],bram0_din_b[31:0],bram0_data_b[31:0],bram0_rstb,bram1_enb,bram1_web[3:0],bram1_addr_b[31:0],bram1_din_b[31:0],bram1_data_b[31:0],bram1_rstb,axi_synth_engine_aresetn,axi_synth_engine_awaddr[12:0],axi_synth_engine_awprot[2:0],axi_synth_engine_awvalid,axi_synth_engine_awready,axi_synth_engine_wdata[31:0],axi_synth_engine_wstrb[3:0],axi_synth_engine_wvalid,axi_synth_engine_wready,axi_synth_engine_bresp[1:0],axi_synth_engine_bvalid,axi_synth_engine_bready,axi_synth_engine_araddr[12:0],axi_synth_engine_arprot[2:0],axi_synth_engine_arvalid,axi_synth_engine_arready,axi_synth_engine_rdata[31:0],axi_synth_engine_rresp[1:0],axi_synth_engine_rvalid,axi_synth_engine_rready" */
+/* synthesis syn_black_box black_box_pad_pin="audio_out[23:0],audio_valid,audio_tick,bram0_enb,bram0_web[3:0],bram0_addr_b[31:0],bram0_din_b[31:0],bram0_data_b[31:0],bram0_rstb,bram1_enb,bram1_web[3:0],bram1_addr_b[31:0],bram1_din_b[31:0],bram1_data_b[31:0],bram1_rstb,axi_synth_engine_aresetn,axi_synth_engine_awaddr[12:0],axi_synth_engine_awprot[2:0],axi_synth_engine_awvalid,axi_synth_engine_awready,axi_synth_engine_wdata[31:0],axi_synth_engine_wstrb[3:0],axi_synth_engine_wvalid,axi_synth_engine_wready,axi_synth_engine_bresp[1:0],axi_synth_engine_bvalid,axi_synth_engine_bready,axi_synth_engine_araddr[12:0],axi_synth_engine_arprot[2:0],axi_synth_engine_arvalid,axi_synth_engine_arready,axi_synth_engine_rdata[31:0],axi_synth_engine_rresp[1:0],axi_synth_engine_rvalid,axi_synth_engine_rready" */
 /* synthesis syn_force_seq_prim="bram0_clkb" */
 /* synthesis syn_force_seq_prim="bram1_clkb" */
 /* synthesis syn_force_seq_prim="axi_synth_engine_aclk" */;
-  output [15:0]audio_out;
+  output [23:0]audio_out;
   output audio_valid;
   input audio_tick;
   (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 BRAM0 CLK" *) (* X_INTERFACE_MODE = "master" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME BRAM0, MASTER_TYPE BRAM_CTRL, MEM_SIZE 8192, MEM_WIDTH 32, MEM_ECC NONE, READ_LATENCY 1" *) output bram0_clkb /* synthesis syn_isclock = 1 */;

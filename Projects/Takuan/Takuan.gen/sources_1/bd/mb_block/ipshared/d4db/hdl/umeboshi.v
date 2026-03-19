@@ -15,7 +15,7 @@
 	)
 	(
 		// Users to add ports here
-        output wire [15:0] audio_out,
+        output wire [23:0] audio_out,
         output wire audio_valid,
         input wire audio_tick,
 

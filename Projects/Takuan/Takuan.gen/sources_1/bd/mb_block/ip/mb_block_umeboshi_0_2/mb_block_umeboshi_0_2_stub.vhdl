@@ -2,7 +2,7 @@
 -- Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
--- Date        : Sat Mar 14 18:52:28 2026
+-- Date        : Wed Mar 18 17:36:13 2026
 -- Host        : ponco2 running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode synth_stub
 --               c:/Users/hause/Documents/Vivado/Projects/Takuan/Takuan.gen/sources_1/bd/mb_block/ip/mb_block_umeboshi_0_2/mb_block_umeboshi_0_2_stub.vhdl
@@ -15,7 +15,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity mb_block_umeboshi_0_2 is
   Port ( 
-    audio_out : out STD_LOGIC_VECTOR ( 15 downto 0 );
+    audio_out : out STD_LOGIC_VECTOR ( 23 downto 0 );
     audio_valid : out STD_LOGIC;
     audio_tick : in STD_LOGIC;
     bram0_clkb : out STD_LOGIC;
@@ -58,7 +58,7 @@ entity mb_block_umeboshi_0_2 is
   attribute CHECK_LICENSE_TYPE : string;
   attribute CHECK_LICENSE_TYPE of mb_block_umeboshi_0_2 : entity is "mb_block_umeboshi_0_2,umeboshi,{}";
   attribute CORE_GENERATION_INFO : string;
-  attribute CORE_GENERATION_INFO of mb_block_umeboshi_0_2 : entity is "mb_block_umeboshi_0_2,umeboshi,{x_ipProduct=Vivado 2025.2,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=umeboshi,x_ipVersion=1.0,x_ipCoreRevision=17,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_axi_synth_engine_DATA_WIDTH=32,C_axi_synth_engine_ADDR_WIDTH=13}";
+  attribute CORE_GENERATION_INFO of mb_block_umeboshi_0_2 : entity is "mb_block_umeboshi_0_2,umeboshi,{x_ipProduct=Vivado 2025.2,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=umeboshi,x_ipVersion=1.0,x_ipCoreRevision=20,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_axi_synth_engine_DATA_WIDTH=32,C_axi_synth_engine_ADDR_WIDTH=13}";
   attribute DowngradeIPIdentifiedWarnings : string;
   attribute DowngradeIPIdentifiedWarnings of mb_block_umeboshi_0_2 : entity is "yes";
 end mb_block_umeboshi_0_2;
@@ -67,7 +67,7 @@ architecture stub of mb_block_umeboshi_0_2 is
   attribute syn_black_box : boolean;
   attribute black_box_pad_pin : string;
   attribute syn_black_box of stub : architecture is true;
-  attribute black_box_pad_pin of stub : architecture is "audio_out[15:0],audio_valid,audio_tick,bram0_clkb,bram0_enb,bram0_web[3:0],bram0_addr_b[31:0],bram0_din_b[31:0],bram0_data_b[31:0],bram0_rstb,bram1_clkb,bram1_enb,bram1_web[3:0],bram1_addr_b[31:0],bram1_din_b[31:0],bram1_data_b[31:0],bram1_rstb,axi_synth_engine_aclk,axi_synth_engine_aresetn,axi_synth_engine_awaddr[12:0],axi_synth_engine_awprot[2:0],axi_synth_engine_awvalid,axi_synth_engine_awready,axi_synth_engine_wdata[31:0],axi_synth_engine_wstrb[3:0],axi_synth_engine_wvalid,axi_synth_engine_wready,axi_synth_engine_bresp[1:0],axi_synth_engine_bvalid,axi_synth_engine_bready,axi_synth_engine_araddr[12:0],axi_synth_engine_arprot[2:0],axi_synth_engine_arvalid,axi_synth_engine_arready,axi_synth_engine_rdata[31:0],axi_synth_engine_rresp[1:0],axi_synth_engine_rvalid,axi_synth_engine_rready";
+  attribute black_box_pad_pin of stub : architecture is "audio_out[23:0],audio_valid,audio_tick,bram0_clkb,bram0_enb,bram0_web[3:0],bram0_addr_b[31:0],bram0_din_b[31:0],bram0_data_b[31:0],bram0_rstb,bram1_clkb,bram1_enb,bram1_web[3:0],bram1_addr_b[31:0],bram1_din_b[31:0],bram1_data_b[31:0],bram1_rstb,axi_synth_engine_aclk,axi_synth_engine_aresetn,axi_synth_engine_awaddr[12:0],axi_synth_engine_awprot[2:0],axi_synth_engine_awvalid,axi_synth_engine_awready,axi_synth_engine_wdata[31:0],axi_synth_engine_wstrb[3:0],axi_synth_engine_wvalid,axi_synth_engine_wready,axi_synth_engine_bresp[1:0],axi_synth_engine_bvalid,axi_synth_engine_bready,axi_synth_engine_araddr[12:0],axi_synth_engine_arprot[2:0],axi_synth_engine_arvalid,axi_synth_engine_arready,axi_synth_engine_rdata[31:0],axi_synth_engine_rresp[1:0],axi_synth_engine_rvalid,axi_synth_engine_rready";
   attribute X_INTERFACE_INFO : string;
   attribute X_INTERFACE_INFO of bram0_clkb : signal is "xilinx.com:interface:bram:1.0 BRAM0 CLK";
   attribute X_INTERFACE_MODE : string;

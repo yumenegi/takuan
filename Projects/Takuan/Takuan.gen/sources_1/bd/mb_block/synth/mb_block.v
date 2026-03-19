@@ -2,7 +2,7 @@
 //Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
-//Date        : Sun Mar 15 18:19:24 2026
+//Date        : Wed Mar 18 17:41:39 2026
 //Host        : ponco2 running 64-bit major release  (build 9200)
 //Command     : generate_target mb_block.bd
 //Design      : mb_block
@@ -71,7 +71,7 @@ module mb_block
   (* X_INTERFACE_INFO = "xilinx.com:interface:iic:1.0 IIC_0_0 SDA_I" *) input IIC_0_0_sda_i;
   (* X_INTERFACE_INFO = "xilinx.com:interface:iic:1.0 IIC_0_0 SDA_O" *) output IIC_0_0_sda_o;
   (* X_INTERFACE_INFO = "xilinx.com:interface:iic:1.0 IIC_0_0 SDA_T" *) output IIC_0_0_sda_t;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 DATA.AUDIO_OUT DATA" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME DATA.AUDIO_OUT, LAYERED_METADATA undef" *) output [15:0]audio_out;
+  output [23:0]audio_out;
   input audio_tick_0;
   output audio_valid;
 
@@ -103,7 +103,7 @@ module mb_block
   wire IIC_0_0_sda_i;
   wire IIC_0_0_sda_o;
   wire IIC_0_0_sda_t;
-  wire [15:0]audio_out;
+  wire [23:0]audio_out;
   wire audio_tick_0;
   wire audio_valid;
   wire [18:0]axi_bram_ctrl_0_BRAM_PORTA_ADDR;

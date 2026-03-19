@@ -16,7 +16,7 @@
 	(
 		// Users to add ports here
         input wire audio_tick,
-        output wire [15:0] audio_out,
+        output wire [23:0] audio_out,
         output wire audio_valid,
         
         // BRAM Interface

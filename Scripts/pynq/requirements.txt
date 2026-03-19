@@ -1,0 +1,4 @@
+pynq
+mido
+numpy
+scipy

@@ -48,7 +48,7 @@
 
 
 // IP VLNV: xilinx.com:user:umeboshi:1.0
-// IP Revision: 17
+// IP Revision: 20
 
 `timescale 1ns/1ps
 
@@ -94,7 +94,7 @@ module mb_block_umeboshi_0_2 (
   axi_synth_engine_rready
 );
 
-output wire [15 : 0] audio_out;
+output wire [23 : 0] audio_out;
 output wire audio_valid;
 input wire audio_tick;
 (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 BRAM0 CLK" *)

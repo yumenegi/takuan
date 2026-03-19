@@ -96,14 +96,6 @@ module mb_block_sv (
   (* X_INTERFACE_IGNORE = "true" *)
   inout wire FIXED_IO_ps_porb,
   (* X_INTERFACE_IGNORE = "true" *)
-  output wire [15:0] audio_out,
-  (* X_INTERFACE_IGNORE = "true" *)
-  output wire audio_valid,
-  (* X_INTERFACE_IGNORE = "true" *)
-  input wire audio_tick_0,
-  (* X_INTERFACE_IGNORE = "true" *)
-  output wire FCLK_CLK1_0,
-  (* X_INTERFACE_IGNORE = "true" *)
   input wire IIC_0_0_sda_i,
   (* X_INTERFACE_IGNORE = "true" *)
   output wire IIC_0_0_sda_o,
@@ -114,7 +106,15 @@ module mb_block_sv (
   (* X_INTERFACE_IGNORE = "true" *)
   output wire IIC_0_0_scl_o,
   (* X_INTERFACE_IGNORE = "true" *)
-  output wire IIC_0_0_scl_t
+  output wire IIC_0_0_scl_t,
+  (* X_INTERFACE_IGNORE = "true" *)
+  output wire audio_valid,
+  (* X_INTERFACE_IGNORE = "true" *)
+  input wire audio_tick_0,
+  (* X_INTERFACE_IGNORE = "true" *)
+  output wire FCLK_CLK1_0,
+  (* X_INTERFACE_IGNORE = "true" *)
+  output wire [23:0] audio_out
 );
 
   mb_block inst (
@@ -139,16 +139,16 @@ module mb_block_sv (
     .FIXED_IO_ps_srstb(FIXED_IO_ps_srstb),
     .FIXED_IO_ps_clk(FIXED_IO_ps_clk),
     .FIXED_IO_ps_porb(FIXED_IO_ps_porb),
-    .audio_out(audio_out),
-    .audio_valid(audio_valid),
-    .audio_tick_0(audio_tick_0),
-    .FCLK_CLK1_0(FCLK_CLK1_0),
     .IIC_0_0_sda_i(IIC_0_0_sda_i),
     .IIC_0_0_sda_o(IIC_0_0_sda_o),
     .IIC_0_0_sda_t(IIC_0_0_sda_t),
     .IIC_0_0_scl_i(IIC_0_0_scl_i),
     .IIC_0_0_scl_o(IIC_0_0_scl_o),
-    .IIC_0_0_scl_t(IIC_0_0_scl_t)
+    .IIC_0_0_scl_t(IIC_0_0_scl_t),
+    .audio_valid(audio_valid),
+    .audio_tick_0(audio_tick_0),
+    .FCLK_CLK1_0(FCLK_CLK1_0),
+    .audio_out(audio_out)
   );
 
 endmodule

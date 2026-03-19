@@ -23,7 +23,7 @@
 module i2s(
     input  logic        clk,      // System clock, expecting 256 * fs (e.g. 12.288 MHz for 48kHz, 24.576 MHz for 96kHz)
     input  logic        reset_n,
-    input  logic [15:0] audio_in, // 16-bit audio from PL
+    input  logic [23:0] audio_in, // 24-bit audio from PL
     output logic        tick,     // 1-cycle pulse at 'clk' domain when new sample is needed
     
     // I2S interface to codec
@@ -66,9 +66,9 @@ module i2s(
             if (bclk_falling) begin
                 if (bit_cnt == 0 || bit_cnt == 32) begin
                     // Left (0) or Right (32) channel starts: load audio_in into shift_reg
-                    shift_reg <= {audio_in, 16'd0};
+                    shift_reg <= {audio_in, 8'd0};
                     sdata <= 0;
-                end else if ((bit_cnt >= 1 && bit_cnt <= 16) || (bit_cnt >= 33 && bit_cnt <= 48)) begin
+                end else if ((bit_cnt >= 1 && bit_cnt <= 24) || (bit_cnt >= 33 && bit_cnt <= 56)) begin
                     sdata <= shift_reg[31];
                     shift_reg <= {shift_reg[30:0], 1'b0};
                 end else begin
