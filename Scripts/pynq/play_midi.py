@@ -22,6 +22,10 @@ from engine import Engine, note_to_name, midi_to_freq, freq_to_stride, SAMPLING_
 WT_OSC_A = 0     # Frame 0 of BRAM0
 WT_OSC_B = 128   # Frame 0 of BRAM1
 
+# Real sampling rate of the oscillator
+SAMPLING_RATE = 95274.390625
+MAX_UINT_24 = 16777216
+
 # ==============================================================================
 # ADAU1761 Configuration (PYNQ-Z2 Audio Codec)
 # ==============================================================================
@@ -57,23 +61,43 @@ def pack_adsr1(ar, ar_rs, dr, dr_rs):
 def pack_adsr2(sl, rr, rr_rs):
     return (rr_rs << 24) | (rr << 16) | sl
 
+def adsr_gen(a, d, s, r):
+    # Increase by rate number at each audio tick
+    # When reach 2^24, proceed to next state
+    # 8 bits for rate
+    # 4 bits for shift
+    ar_raw  = int(MAX_UINT_24 / (SAMPLING_RATE * a))
+    ar_rs   = ar_raw.bit_length() - 8
+    ar      = ar_raw >> ar_rs
+
+    dr_raw  = int(MAX_UINT_24 / (SAMPLING_RATE * d))
+    dr_rs   = dr_raw.bit_length() - 8
+    dr      = dr_raw >> dr_rs
+    
+    rr_raw  = int(MAX_UINT_24 / (SAMPLING_RATE * r))
+    rr_rs   = rr_raw.bit_length() - 8
+    rr      = rr_raw >> rr_rs
+    adsr1 = pack_adsr1(ar, ar_rs, dr, dr_rs)
+    adsr2 = pack_adsr2(s, rr, rr_rs)
+    return (adsr1, adsr2)
+
 ENVELOPES = [
     # Env 0: Pad — medium attack, medium release
-    (pack_adsr1(0x40, 0x0, 0x20, 0x0), pack_adsr2(0xC000, 0x40, 0x0)),
+    adsr_gen(0.1, 0.01, 0xE000, 0.3),
     # Env 1: Perc — instant attack, no sustain, fast decay
-    (pack_adsr1(0xFF, 0x2, 0xFF, 0x2), pack_adsr2(0x0000, 0xFF, 0x2)),
+    adsr_gen(0.01, 0.01, 0xE000, 0.1),
     # Env 2: Pluck — fast attack, fast decay, low sustain
-    (pack_adsr1(0xFF, 0x1, 0x80, 0x0), pack_adsr2(0x2000, 0x60, 0x0)),
+    adsr_gen(0.01, 0.1, 0x6000, 0.1),
     # Env 3: Organ — instant attack, full sustain, instant release
-    (pack_adsr1(0xFF, 0x2, 0x00, 0x0), pack_adsr2(0xFFFF, 0xFF, 0x2)),
+    adsr_gen(0.01, 0.01, 0xE000, 0.1),
     # Env 4: Strings — slow attack, full sustain, slow release
     (pack_adsr1(0x10, 0x0, 0x10, 0x0), pack_adsr2(0xE000, 0x10, 0x0)),
     # Env 5: Brass — medium-fast attack, high sustain
     (pack_adsr1(0x80, 0x0, 0x20, 0x0), pack_adsr2(0xA000, 0x40, 0x0)),
     # Env 6: Lead — fast attack, high sustain, medium release
     (pack_adsr1(0xC0, 0x0, 0x10, 0x0), pack_adsr2(0xC000, 0x30, 0x0)),
-    # Env 7: SFX — medium everything
-    (pack_adsr1(0x40, 0x0, 0x40, 0x0), pack_adsr2(0x8000, 0x40, 0x0)),
+    # Env 7: Drum — fast attack, long release
+    (pack_adsr1(0xC0, 0x0, 0x10, 0x0), pack_adsr2(0xC000, 0x10, 0x0)),
 ]
 
 # ==============================================================================
@@ -198,7 +222,7 @@ def main():
 
     # Load overlay
     print("Loading overlay...")
-    overlay = pynq.Overlay("takuan.bit")
+    overlay = pynq.Overlay("/home/xilinx/hw/ver1/takuan.bit")
 
     # Init codec
     print("Initializing ADAU1761 codec...")
@@ -228,34 +252,51 @@ def main():
     # Patch Definitions
     # -------------------------------------------------------------------------
     default_patch = Patch("default", [0], 0)
-    pad      = Patch("pad", [1], 0, True, 3, 15)
+    pad      = Patch("pad", [2], 0, True, 3, 15)
     pluck    = Patch("pluck", [2], 2)
     organ    = Patch("organ", [3], 3)
-    lead     = Patch("lead", [4], 6)       # osc_b
-    brass    = Patch("brass", [5], 5)      # osc_b
-    strings  = Patch("strings", [3], 4, True, 5, 10)
-    perc     = Patch("perc", [WT_OSC_B], 1)       # osc_b
+    brass    = Patch("brass", [6], 5)      # osc_b
+    strings  = Patch("strings", [1], 4, True, 5, 30)
+    perc     = Patch("perc", [WT_OSC_B], 1, True, 10, 10)       # osc_b
+
+    # Using Serum Basic Waves
+    # 0: Sine
+    # 1: Saw
+    # 2: Triangle
+    # 3: Square
+    # 4: Offset Square
+    # 5: Super Offset Square
+    # 6: Funny Saw
+    bass        = Patch("bass", [0, 2], 2)              # saw
+    lead        = Patch("lead", [1], 6, True, 5, 20)    # saw lead
+    square      = Patch("square", [3], 6)               # square wave
+    guitar      = Patch("bass", [6], 2, True, 3, 15)    # guitar like sound?
+    piano       = Patch("bass", [0, 1], 2)              # piano
+
+
+
+
 
     # -------------------------------------------------------------------------
     # Channel setup — 16 MIDI channels, 16 voices each
     # -------------------------------------------------------------------------
     patch_map = {
-        0: default_patch,
-        1: pad,
-        2: pluck,
+        0: lead,
+        1: bass,
+        2: piano,
         3: lead,
-        4: organ,
-        5: brass,
-        6: strings,
-        7: lead,
-        8: pluck,
+        4: lead,
+        5: lead,
+        6: brass,
+        7: piano,
+        8: square,
         9: perc,       # GM drum channel
-        10: default_patch,
-        11: default_patch,
-        12: default_patch,
-        13: default_patch,
+        10: perc,
+        11: perc,
+        12: perc,
+        13: piano,
         14: default_patch,
-        15: default_patch,
+        15: strings,
     }
 
     channels = []
@@ -309,45 +350,54 @@ def play_midi(audio_engine, channels, midi_path):
 
 def play_demo(audio_engine, channels, synth):
     """Play a Bb major scale and Bbmaj7 chord as a demo."""
-    print("\n--- Demo: Bb Major Scale ---")
+    print("\n--- Demo: Bb ---")
 
-    bb_scale = [
-        ("Bb4", 466.16), ("C5", 523.25), ("D5", 587.33), ("Eb5", 622.25),
-        ("F5", 698.46), ("G5", 783.99), ("A5", 880.00), ("Bb5", 932.33),
-    ]
+    # bb_scale = [
+    #     ("Bb4", 466.16), ("C5", 523.25), ("D5", 587.33), ("Eb5", 622.25),
+    #     ("F5", 698.46), ("G5", 783.99), ("A5", 880.00), ("Bb5", 932.33),
+    # ]
 
-    ch = channels[0]
-    for name, freq in bb_scale:
-        stride = freq_to_stride(freq)
-        print(f"  {name:>3s}: {freq:7.2f} Hz")
-        synth.write(0x000, stride)
-        synth.write(0x400, 0)
-        synth.write(0x800, 0)
-        synth.write(0x1000, 1)
-        time.sleep(1.0)
-        synth.write(0x1000, 0)
-        time.sleep(0.15)
 
-    print("\n--- Demo: Bbmaj7 Chord ---")
-    chord = [("Bb4", 466.16), ("D5", 587.33), ("F5", 698.46), ("A5", 880.00)]
+    ch = channels[15]
+    print("  Playing note...")
+    audio_engine.play_note(ch, 82, 1)
+    time.sleep(5.0)
+    audio_engine.play_note(ch, 82, 0)
+    print("  Released...")
+    time.sleep(10.0)
 
-    for v, (name, freq) in enumerate(chord):
-        stride = freq_to_stride(freq)
-        print(f"  Voice {v} → {name}: {freq:.2f} Hz")
-        synth.write(0x000 + v * 4, stride)
-        synth.write(0x400 + v * 4, 0)
-        synth.write(0x800 + v * 4, 0)
 
-    for v in range(4):
-        synth.write(0x1000 + v * 4, 1)
+    # for name, freq in bb_scale:
+    #     stride = freq_to_stride(freq)
+    #     print(f"  {name:>3s}: {freq:7.2f} Hz")
+    #     synth.write(0x000, stride)
+    #     synth.write(0x400, 0)
+    #     synth.write(0x800, 0)
+    #     synth.write(0x1000, 1)
+    #     time.sleep(1.0)
+    #     synth.write(0x1000, 0)
+    #     time.sleep(0.15)
 
-    print("  Playing chord...")
-    time.sleep(3.0)
+    # print("\n--- Demo: Bbmaj7 Chord ---")
+    # chord = [("Bb4", 466.16), ("D5", 587.33), ("F5", 698.46), ("A5", 880.00)]
 
-    for v in range(4):
-        synth.write(0x1000 + v * 4, 0)
-    print("  Released.")
-    time.sleep(1.0)
+    # for v, (name, freq) in enumerate(chord):
+    #     stride = freq_to_stride(freq)
+    #     print(f"  Voice {v} → {name}: {freq:.2f} Hz")
+    #     synth.write(0x000 + v * 4, stride)
+    #     synth.write(0x400 + v * 4, 0)
+    #     synth.write(0x800 + v * 4, 0)
+
+    # for v in range(4):
+    #     synth.write(0x1000 + v * 4, 1)
+
+    # print("  Playing chord...")
+    # time.sleep(3.0)
+
+    # for v in range(4):
+    #     synth.write(0x1000 + v * 4, 0)
+    # print("  Released.")
+    # time.sleep(1.0)
 
 
 if __name__ == "__main__":
