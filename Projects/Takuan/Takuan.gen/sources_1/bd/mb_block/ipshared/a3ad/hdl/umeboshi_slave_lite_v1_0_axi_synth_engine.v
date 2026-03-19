@@ -275,7 +275,7 @@
     // Synth Signals
     // Synth Signals
     reg [31:0] synth_wdata;
-    reg [7:0]  synth_addr;
+    reg [8:0]  synth_addr;
     reg         synth_wr_stride;
     reg         synth_wr_key_on;
     reg         synth_wr_gain_env;
@@ -284,6 +284,7 @@
     reg         synth_wr_lfo;
     reg         synth_wr_adsr1;
     reg         synth_wr_adsr2;
+    reg         synth_wr_lfo_shape;
 
     synth_256 synth_inst (
         .clk(S_AXI_ACLK),
@@ -300,6 +301,7 @@
         .mm_wr_lfo(synth_wr_lfo),
         .mm_wr_adsr1(synth_wr_adsr1),
         .mm_wr_adsr2(synth_wr_adsr2),
+        .mm_wr_lfo_shape(synth_wr_lfo_shape),
         
 
         
@@ -328,7 +330,8 @@
         synth_wr_lfo      = 0;
         synth_wr_adsr1    = 0;
         synth_wr_adsr2    = 0;
-        synth_addr      = wr_addr[9:2]; // byte addr to word index
+        synth_wr_lfo_shape = 0;
+        synth_addr      = wr_addr[10:2]; // Need 9 bits for 512 entries (0x1800-0x1FFF)
         synth_wdata     = S_AXI_WDATA;
 
 		// AXI is byte addressed, but synth is word addressed
@@ -370,6 +373,12 @@
             // Address: 0b0001010010000 to 0b0001010010111
             else if (wr_addr[12:5] == {7'b1010001, 1'b0}) begin // 0x1440 - 0x145F (ADSR2)
                synth_wr_adsr2 = 1;
+            end
+            
+            // LFO Shape Memory (512 words = 2048 bytes)
+            // Address: 0b1100000000000 to 0b1111111111111
+            else if (wr_addr[12:11] == 2'b11) begin // 0x1800 - 0x1FFF
+               synth_wr_lfo_shape = 1;
             end
         end
     end

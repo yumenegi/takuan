@@ -48,11 +48,11 @@
 
 
 // IP VLNV: xilinx.com:user:umeboshi:1.0
-// IP Revision: 20
+// IP Revision: 21
 
 (* X_CORE_INFO = "umeboshi,Vivado 2025.2" *)
 (* CHECK_LICENSE_TYPE = "mb_block_umeboshi_0_2,umeboshi,{}" *)
-(* CORE_GENERATION_INFO = "mb_block_umeboshi_0_2,umeboshi,{x_ipProduct=Vivado 2025.2,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=umeboshi,x_ipVersion=1.0,x_ipCoreRevision=20,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_axi_synth_engine_DATA_WIDTH=32,C_axi_synth_engine_ADDR_WIDTH=13}" *)
+(* CORE_GENERATION_INFO = "mb_block_umeboshi_0_2,umeboshi,{x_ipProduct=Vivado 2025.2,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=umeboshi,x_ipVersion=1.0,x_ipCoreRevision=21,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_axi_synth_engine_DATA_WIDTH=32,C_axi_synth_engine_ADDR_WIDTH=13}" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module mb_block_umeboshi_0_2 (
   audio_out,

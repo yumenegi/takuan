@@ -42,15 +42,33 @@ class Engine:
         0x1400 - 0x141F: LFO Stride  (8 envelopes)
         0x1420 - 0x143F: ADSR 1      (8 envelopes)
         0x1440 - 0x145F: ADSR 2      (8 envelopes)
+        0x1800 - 0x1FFF: LFO Shape   (4 LFOs × 128 words)
     """
     def __init__(self, synth_mmio):
         self.synth = synth_mmio
 
-    def _write_voice(self, hw_index, stride, wt_id, envelope, key_on):
+    def _write_voice(self, hw_index, stride, wt_id, envelope, key_on, lfo_ctrl=0):
         self.synth.write(0x000 + hw_index * 4, stride)
         self.synth.write(0x400 + hw_index * 4, wt_id)
         self.synth.write(0x800 + hw_index * 4, envelope)
+        self.synth.write(0xC00 + hw_index * 4, lfo_ctrl)
         self.synth.write(0x1000 + hw_index * 4, int(key_on))
+
+    def write_lfo_stride(self, lfo_id, stride):
+        self.synth.write(0x1400 + lfo_id * 4, stride)
+
+    def write_lfo_shape(self, lfo_id, samples):
+        """Write a 512-sample LFO shape (8-bit) into LUTRAM memory."""
+        import numpy as np
+        # 4 LFO shapes starting at 0x1800, each is 128 words (512 bytes)
+        base = 0x1800 + lfo_id * 0x200
+        
+        # Force raw bit pattern view without clipping (safely handles int8 or uint8)
+        samples_8 = samples.astype(np.uint8)
+        words = samples_8.view(np.uint32)
+        
+        for i, word in enumerate(words):
+            self.synth.write(base + i * 4, int(word))
 
     def key_off(self, hw_index):
         self.synth.write(0x1000 + hw_index * 4, 0)
@@ -75,14 +93,15 @@ class Engine:
         unison = patch.isUnison()
         envelope = patch.getEnvelope()
         freq = midi_to_freq(note)
+        lfo_ctrl = patch.getLfoCtrl()
 
         if not unison:
             stride = freq_to_stride(freq)
             for index, wave in zip(hw_indices, waves):
-                self._write_voice(index, stride, wave, envelope, key_on)
+                self._write_voice(index, stride, wave, envelope, key_on, lfo_ctrl)
         else:
             detune = patch.getDetune()
             voices = patch.getVoices()
             strides = calculate_unison_strides(freq, detune, voices)
             for index, s in zip(hw_indices, strides):
-                self._write_voice(index, s, waves[0], envelope, key_on)
+                self._write_voice(index, s, waves[0], envelope, key_on, lfo_ctrl)

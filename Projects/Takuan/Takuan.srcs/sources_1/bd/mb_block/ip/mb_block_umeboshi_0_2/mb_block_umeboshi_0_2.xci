@@ -4,7 +4,7 @@
     "xci_name": "mb_block_umeboshi_0_2",
     "cell_name": "umeboshi_0",
     "component_reference": "xilinx.com:user:umeboshi:1.0",
-    "ip_revision": "20",
+    "ip_revision": "21",
     "gen_directory": "../../../../../../Takuan.gen/sources_1/bd/mb_block/ip/mb_block_umeboshi_0_2",
     "parameters": {
       "component_parameters": {
@@ -33,7 +33,7 @@
       },
       "runtime_parameters": {
         "IPCONTEXT": [ { "value": "IP_Integrator" } ],
-        "IPREVISION": [ { "value": "20" } ],
+        "IPREVISION": [ { "value": "21" } ],
         "MANAGED": [ { "value": "TRUE" } ],
         "OUTPUTDIR": [ { "value": "../../../../../../Takuan.gen/sources_1/bd/mb_block/ip/mb_block_umeboshi_0_2" } ],
         "SELECTEDSIMMODEL": [ { "value": "" } ],
@@ -270,5 +270,5 @@
       }
     }
   },
-  "checksum": "3ada753e"
+  "checksum": "cffa9935"
 }

@@ -8,7 +8,7 @@
   **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
   **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
   **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-  **** Start of session at: Wed Mar 18 17:35:47 2026
+  **** Start of session at: Thu Mar 19 16:08:59 2026
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 
@@ -23,28 +23,32 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020
 INFO: [Device 21-403] Loading part xc7z020clg400-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 27952
+INFO: [Synth 8-7075] Helper process launched with PID 21272
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1318.051 ; gain = 541.648
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1314.984 ; gain = 538.953
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-11241] undeclared symbol 'tick', assumed default net type 'wire' [c:/Users/hause/Documents/Vivado/Projects/Takuan/Takuan.gen/sources_1/bd/mb_block/ipshared/d4db/hdl/synth_256.sv:142]
+INFO: [Synth 8-11241] undeclared symbol 'tick', assumed default net type 'wire' [c:/Users/hause/Documents/Vivado/Projects/Takuan/Takuan.gen/sources_1/bd/mb_block/ipshared/a3ad/hdl/synth_256.sv:156]
 INFO: [Synth 8-6157] synthesizing module 'mb_block_umeboshi_0_2' [c:/Users/hause/Documents/Vivado/Projects/Takuan/Takuan.gen/sources_1/bd/mb_block/ip/mb_block_umeboshi_0_2/synth/mb_block_umeboshi_0_2.v:53]
-INFO: [Synth 8-6157] synthesizing module 'umeboshi' [c:/Users/hause/Documents/Vivado/Projects/Takuan/Takuan.gen/sources_1/bd/mb_block/ipshared/d4db/hdl/umeboshi.v:4]
-INFO: [Synth 8-6157] synthesizing module 'umeboshi_slave_lite_v1_0_axi_synth_engine' [c:/Users/hause/Documents/Vivado/Projects/Takuan/Takuan.gen/sources_1/bd/mb_block/ipshared/d4db/hdl/umeboshi_slave_lite_v1_0_axi_synth_engine.v:4]
-INFO: [Synth 8-155] case statement is not full and has no default [c:/Users/hause/Documents/Vivado/Projects/Takuan/Takuan.gen/sources_1/bd/mb_block/ipshared/d4db/hdl/umeboshi_slave_lite_v1_0_axi_synth_engine.v:146]
-INFO: [Synth 8-155] case statement is not full and has no default [c:/Users/hause/Documents/Vivado/Projects/Takuan/Takuan.gen/sources_1/bd/mb_block/ipshared/d4db/hdl/umeboshi_slave_lite_v1_0_axi_synth_engine.v:222]
-INFO: [Synth 8-6157] synthesizing module 'synth_256' [c:/Users/hause/Documents/Vivado/Projects/Takuan/Takuan.gen/sources_1/bd/mb_block/ipshared/d4db/hdl/synth_256.sv:3]
-INFO: [Synth 8-226] default block is never used [c:/Users/hause/Documents/Vivado/Projects/Takuan/Takuan.gen/sources_1/bd/mb_block/ipshared/d4db/hdl/synth_256.sv:414]
-INFO: [Synth 8-6155] done synthesizing module 'synth_256' (0#1) [c:/Users/hause/Documents/Vivado/Projects/Takuan/Takuan.gen/sources_1/bd/mb_block/ipshared/d4db/hdl/synth_256.sv:3]
-INFO: [Synth 8-6155] done synthesizing module 'umeboshi_slave_lite_v1_0_axi_synth_engine' (0#1) [c:/Users/hause/Documents/Vivado/Projects/Takuan/Takuan.gen/sources_1/bd/mb_block/ipshared/d4db/hdl/umeboshi_slave_lite_v1_0_axi_synth_engine.v:4]
-INFO: [Synth 8-6155] done synthesizing module 'umeboshi' (0#1) [c:/Users/hause/Documents/Vivado/Projects/Takuan/Takuan.gen/sources_1/bd/mb_block/ipshared/d4db/hdl/umeboshi.v:4]
+INFO: [Synth 8-6157] synthesizing module 'umeboshi' [c:/Users/hause/Documents/Vivado/Projects/Takuan/Takuan.gen/sources_1/bd/mb_block/ipshared/a3ad/hdl/umeboshi.v:4]
+INFO: [Synth 8-6157] synthesizing module 'umeboshi_slave_lite_v1_0_axi_synth_engine' [c:/Users/hause/Documents/Vivado/Projects/Takuan/Takuan.gen/sources_1/bd/mb_block/ipshared/a3ad/hdl/umeboshi_slave_lite_v1_0_axi_synth_engine.v:4]
+INFO: [Synth 8-155] case statement is not full and has no default [c:/Users/hause/Documents/Vivado/Projects/Takuan/Takuan.gen/sources_1/bd/mb_block/ipshared/a3ad/hdl/umeboshi_slave_lite_v1_0_axi_synth_engine.v:146]
+INFO: [Synth 8-155] case statement is not full and has no default [c:/Users/hause/Documents/Vivado/Projects/Takuan/Takuan.gen/sources_1/bd/mb_block/ipshared/a3ad/hdl/umeboshi_slave_lite_v1_0_axi_synth_engine.v:222]
+INFO: [Synth 8-6157] synthesizing module 'synth_256' [c:/Users/hause/Documents/Vivado/Projects/Takuan/Takuan.gen/sources_1/bd/mb_block/ipshared/a3ad/hdl/synth_256.sv:3]
+INFO: [Synth 8-226] default block is never used [c:/Users/hause/Documents/Vivado/Projects/Takuan/Takuan.gen/sources_1/bd/mb_block/ipshared/a3ad/hdl/synth_256.sv:508]
+INFO: [Synth 8-6155] done synthesizing module 'synth_256' (0#1) [c:/Users/hause/Documents/Vivado/Projects/Takuan/Takuan.gen/sources_1/bd/mb_block/ipshared/a3ad/hdl/synth_256.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'umeboshi_slave_lite_v1_0_axi_synth_engine' (0#1) [c:/Users/hause/Documents/Vivado/Projects/Takuan/Takuan.gen/sources_1/bd/mb_block/ipshared/a3ad/hdl/umeboshi_slave_lite_v1_0_axi_synth_engine.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'umeboshi' (0#1) [c:/Users/hause/Documents/Vivado/Projects/Takuan/Takuan.gen/sources_1/bd/mb_block/ipshared/a3ad/hdl/umeboshi.v:4]
 INFO: [Synth 8-6155] done synthesizing module 'mb_block_umeboshi_0_2' (0#1) [c:/Users/hause/Documents/Vivado/Projects/Takuan/Takuan.gen/sources_1/bd/mb_block/ip/mb_block_umeboshi_0_2/synth/mb_block_umeboshi_0_2.v:53]
-WARNING: [Synth 8-6014] Unused sequential element op_wt_lfo_id_mem_reg was removed. 
-WARNING: [Synth 8-6014] Unused sequential element lfo_stride_mem_reg was removed. 
-WARNING: [Synth 8-6014] Unused sequential element axi_awaddr_reg was removed.  [c:/Users/hause/Documents/Vivado/Projects/Takuan/Takuan.gen/sources_1/bd/mb_block/ipshared/d4db/hdl/umeboshi_slave_lite_v1_0_axi_synth_engine.v:141]
-WARNING: [Synth 8-6014] Unused sequential element axi_araddr_reg was removed.  [c:/Users/hause/Documents/Vivado/Projects/Takuan/Takuan.gen/sources_1/bd/mb_block/ipshared/d4db/hdl/umeboshi_slave_lite_v1_0_axi_synth_engine.v:237]
-INFO: [Synth 8-7129] Port mm_wr_lfo_id in module synth_256 is either unconnected or has no load
-INFO: [Synth 8-7129] Port mm_wr_lfo in module synth_256 is either unconnected or has no load
+WARNING: [Synth 8-6014] Unused sequential element lfo_stride_mem_reg[4] was removed.  [c:/Users/hause/Documents/Vivado/Projects/Takuan/Takuan.gen/sources_1/bd/mb_block/ipshared/a3ad/hdl/synth_256.sv:102]
+WARNING: [Synth 8-6014] Unused sequential element lfo_stride_mem_reg[5] was removed.  [c:/Users/hause/Documents/Vivado/Projects/Takuan/Takuan.gen/sources_1/bd/mb_block/ipshared/a3ad/hdl/synth_256.sv:102]
+WARNING: [Synth 8-6014] Unused sequential element lfo_stride_mem_reg[6] was removed.  [c:/Users/hause/Documents/Vivado/Projects/Takuan/Takuan.gen/sources_1/bd/mb_block/ipshared/a3ad/hdl/synth_256.sv:102]
+WARNING: [Synth 8-6014] Unused sequential element lfo_stride_mem_reg[7] was removed.  [c:/Users/hause/Documents/Vivado/Projects/Takuan/Takuan.gen/sources_1/bd/mb_block/ipshared/a3ad/hdl/synth_256.sv:102]
+WARNING: [Synth 8-6014] Unused sequential element lfo_phase_reg[4] was removed.  [c:/Users/hause/Documents/Vivado/Projects/Takuan/Takuan.gen/sources_1/bd/mb_block/ipshared/a3ad/hdl/synth_256.sv:150]
+WARNING: [Synth 8-6014] Unused sequential element lfo_phase_reg[5] was removed.  [c:/Users/hause/Documents/Vivado/Projects/Takuan/Takuan.gen/sources_1/bd/mb_block/ipshared/a3ad/hdl/synth_256.sv:150]
+WARNING: [Synth 8-6014] Unused sequential element lfo_phase_reg[6] was removed.  [c:/Users/hause/Documents/Vivado/Projects/Takuan/Takuan.gen/sources_1/bd/mb_block/ipshared/a3ad/hdl/synth_256.sv:150]
+WARNING: [Synth 8-6014] Unused sequential element lfo_phase_reg[7] was removed.  [c:/Users/hause/Documents/Vivado/Projects/Takuan/Takuan.gen/sources_1/bd/mb_block/ipshared/a3ad/hdl/synth_256.sv:150]
+WARNING: [Synth 8-6014] Unused sequential element axi_awaddr_reg was removed.  [c:/Users/hause/Documents/Vivado/Projects/Takuan/Takuan.gen/sources_1/bd/mb_block/ipshared/a3ad/hdl/umeboshi_slave_lite_v1_0_axi_synth_engine.v:141]
+WARNING: [Synth 8-6014] Unused sequential element axi_araddr_reg was removed.  [c:/Users/hause/Documents/Vivado/Projects/Takuan/Takuan.gen/sources_1/bd/mb_block/ipshared/a3ad/hdl/umeboshi_slave_lite_v1_0_axi_synth_engine.v:237]
 INFO: [Synth 8-7129] Port S_AXI_AWADDR[1] in module umeboshi_slave_lite_v1_0_axi_synth_engine is either unconnected or has no load
 INFO: [Synth 8-7129] Port S_AXI_AWADDR[0] in module umeboshi_slave_lite_v1_0_axi_synth_engine is either unconnected or has no load
 INFO: [Synth 8-7129] Port S_AXI_AWPROT[2] in module umeboshi_slave_lite_v1_0_axi_synth_engine is either unconnected or has no load
@@ -71,47 +75,47 @@ INFO: [Synth 8-7129] Port S_AXI_ARPROT[2] in module umeboshi_slave_lite_v1_0_axi
 INFO: [Synth 8-7129] Port S_AXI_ARPROT[1] in module umeboshi_slave_lite_v1_0_axi_synth_engine is either unconnected or has no load
 INFO: [Synth 8-7129] Port S_AXI_ARPROT[0] in module umeboshi_slave_lite_v1_0_axi_synth_engine is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 1446.070 ; gain = 669.668
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 1446.012 ; gain = 669.980
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 1446.070 ; gain = 669.668
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 1446.012 ; gain = 669.980
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 1446.070 ; gain = 669.668
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 1446.012 ; gain = 669.980
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 1446.070 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 1446.012 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1520.973 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1526.578 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.036 . Memory (MB): peak = 1520.973 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.052 . Memory (MB): peak = 1526.578 ; gain = 0.000
 INFO: [Designutils 20-5008] Incremental synthesis strategy off
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 1520.973 ; gain = 744.570
+Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 1526.578 ; gain = 750.547
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 1520.973 ; gain = 744.570
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 1526.578 ; gain = 750.547
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 1520.973 ; gain = 744.570
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 1526.578 ; gain = 750.547
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-6014] Unused sequential element next_env_vol2_reg was removed.  [c:/Users/hause/Documents/Vivado/Projects/Takuan/Takuan.gen/sources_1/bd/mb_block/ipshared/d4db/hdl/synth_256.sv:293]
+WARNING: [Synth 8-6014] Unused sequential element next_env_vol2_reg was removed.  [c:/Users/hause/Documents/Vivado/Projects/Takuan/Takuan.gen/sources_1/bd/mb_block/ipshared/a3ad/hdl/synth_256.sv:335]
 INFO: [Synth 8-802] inferred FSM for state register 'state_write_reg' in module 'umeboshi_slave_lite_v1_0_axi_synth_engine'
 INFO: [Synth 8-802] inferred FSM for state register 'state_read_reg' in module 'umeboshi_slave_lite_v1_0_axi_synth_engine'
 ---------------------------------------------------------------------------------------------------
@@ -131,7 +135,7 @@ INFO: [Synth 8-3354] encoded FSM with state register 'state_write_reg' using enc
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_read_reg' using encoding 'sequential' in module 'umeboshi_slave_lite_v1_0_axi_synth_engine'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1520.973 ; gain = 744.570
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 1526.578 ; gain = 750.547
 ---------------------------------------------------------------------------------
 No constraint files found.
 ---------------------------------------------------------------------------------
@@ -139,32 +143,44 @@ Start RTL Component Statistics
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input   32 Bit       Adders := 1     
+	   3 Input   32 Bit       Adders := 1     
+	   2 Input   32 Bit       Adders := 2     
 	   2 Input   24 Bit       Adders := 3     
 	   3 Input   24 Bit       Adders := 1     
 	   2 Input    9 Bit       Adders := 1     
+	   2 Input    8 Bit       Adders := 1     
 +---Registers : 
+	               32 Bit    Registers := 4     
 	               24 Bit    Registers := 1     
 	               17 Bit    Registers := 1     
 	                7 Bit    Registers := 1     
 	                3 Bit    Registers := 1     
 	                2 Bit    Registers := 1     
 	                1 Bit    Registers := 8     
++---Multipliers : 
+	               8x32  Multipliers := 1     
 +---RAMs : 
+	               8K Bit	(256 X 32 bit)          RAMs := 1     
 	               6K Bit	(256 X 24 bit)          RAMs := 1     
 	              768 Bit	(256 X 3 bit)          RAMs := 1     
 +---Muxes : 
+	   2 Input   39 Bit        Muxes := 1     
+	   4 Input   32 Bit        Muxes := 1     
+	   2 Input   32 Bit        Muxes := 2     
 	   4 Input   24 Bit        Muxes := 1     
 	   2 Input   24 Bit        Muxes := 2     
 	   6 Input   24 Bit        Muxes := 2     
 	   2 Input   16 Bit        Muxes := 3     
+	   2 Input    8 Bit        Muxes := 1     
+	   4 Input    8 Bit        Muxes := 2     
+	   2 Input    7 Bit        Muxes := 1     
 	   8 Input    3 Bit        Muxes := 1     
 	   3 Input    2 Bit        Muxes := 2     
 	   2 Input    2 Bit        Muxes := 5     
-	   2 Input    1 Bit        Muxes := 12    
-	   6 Input    1 Bit        Muxes := 2     
+	   2 Input    1 Bit        Muxes := 18    
+	   6 Input    1 Bit        Muxes := 3     
 	   3 Input    1 Bit        Muxes := 11    
-	   4 Input    1 Bit        Muxes := 2     
+	   4 Input    1 Bit        Muxes := 3     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -181,9 +197,15 @@ No constraint files found.
 ---------------------------------------------------------------------------------
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
-DSP Report: Generating DSP inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/mixer_acc1, operation Mode is: A2*B.
-DSP Report: register inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/mixer_acc1 is absorbed into DSP inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/mixer_acc1.
-DSP Report: operator inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/mixer_acc1 is absorbed into DSP inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/mixer_acc1.
+DSP Report: Generating DSP s2_wt_lsb2, operation Mode is: A*B.
+DSP Report: operator s2_wt_lsb2 is absorbed into DSP s2_wt_lsb2.
+DSP Report: operator s2_wt_lsb2 is absorbed into DSP s2_wt_lsb2.
+DSP Report: Generating DSP s2_wt_lsb2, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator s2_wt_lsb2 is absorbed into DSP s2_wt_lsb2.
+DSP Report: operator s2_wt_lsb2 is absorbed into DSP s2_wt_lsb2.
+DSP Report: Generating DSP mixer_acc1, operation Mode is: A2*B.
+DSP Report: register mixer_acc1 is absorbed into DSP mixer_acc1.
+DSP Report: operator mixer_acc1 is absorbed into DSP mixer_acc1.
 INFO: [Synth 8-3917] design mb_block_umeboshi_0_2 has port bram0_enb driven by constant 1
 INFO: [Synth 8-3917] design mb_block_umeboshi_0_2 has port bram0_web[3] driven by constant 0
 INFO: [Synth 8-3917] design mb_block_umeboshi_0_2 has port bram0_web[2] driven by constant 0
@@ -285,8 +307,6 @@ INFO: [Synth 8-3917] design mb_block_umeboshi_0_2 has port bram1_din_b[13] drive
 INFO: [Synth 8-3917] design mb_block_umeboshi_0_2 has port bram1_din_b[12] driven by constant 0
 INFO: [Synth 8-3917] design mb_block_umeboshi_0_2 has port bram1_din_b[11] driven by constant 0
 INFO: [Common 17-14] Message 'Synth 8-3917' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-INFO: [Synth 8-7129] Port axi_synth_engine_awaddr[1] in module mb_block_umeboshi_0_2 is either unconnected or has no load
-INFO: [Synth 8-7129] Port axi_synth_engine_awaddr[0] in module mb_block_umeboshi_0_2 is either unconnected or has no load
 INFO: [Synth 8-7129] Port axi_synth_engine_awprot[2] in module mb_block_umeboshi_0_2 is either unconnected or has no load
 INFO: [Synth 8-7129] Port axi_synth_engine_awprot[1] in module mb_block_umeboshi_0_2 is either unconnected or has no load
 INFO: [Synth 8-7129] Port axi_synth_engine_awprot[0] in module mb_block_umeboshi_0_2 is either unconnected or has no load
@@ -311,9 +331,11 @@ INFO: [Synth 8-7129] Port axi_synth_engine_arprot[2] in module mb_block_umeboshi
 INFO: [Synth 8-7129] Port axi_synth_engine_arprot[1] in module mb_block_umeboshi_0_2 is either unconnected or has no load
 INFO: [Synth 8-7129] Port axi_synth_engine_arprot[0] in module mb_block_umeboshi_0_2 is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1537.258 ; gain = 760.855
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1542.770 ; gain = 766.738
 ---------------------------------------------------------------------------------
- Sort Area is  inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/mixer_acc1_0 : 0 0 : 2051 2051 : Used 1 time 0
+ Sort Area is  s2_wt_lsb2_0 : 0 0 : 1623 3199 : Used 1 time 0
+ Sort Area is  s2_wt_lsb2_0 : 0 1 : 1576 3199 : Used 1 time 0
+ Sort Area is  mixer_acc1_3 : 0 0 : 2051 2051 : Used 1 time 0
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
 ---------------------------------------------------------------------------------
@@ -322,11 +344,14 @@ Distributed RAM: Preliminary Mapping Report (see note below)
 +----------------------+------------------------------------------------------------------------------------------+-----------+----------------------+-----------------+
 |Module Name           | RTL Object                                                                               | Inference | Size (Depth x Width) | Primitives      | 
 +----------------------+------------------------------------------------------------------------------------------+-----------+----------------------+-----------------+
-|mb_block_umeboshi_0_2 | inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/op_stride_mem_reg         | Implied   | 256 x 32             | RAM64M x 44     | 
-|mb_block_umeboshi_0_2 | inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/phase_mem_reg             | Implied   | 256 x 32             | RAM256X1S x 32  | 
-|mb_block_umeboshi_0_2 | inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/op_wt_id_mem_reg          | Implied   | 256 x 8              | RAM64M x 12     | 
 |mb_block_umeboshi_0_2 | inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/op_key_on_mem_reg         | Implied   | 256 x 1              | RAM128X1D x 2   | 
 |mb_block_umeboshi_0_2 | inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/op_prev_key_on_mem_reg    | Implied   | 256 x 1              | RAM256X1S x 1   | 
+|mb_block_umeboshi_0_2 | inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/op_wt_lfo_id_mem_reg      | Implied   | 256 x 6              | RAM64M x 8      | 
+|mb_block_umeboshi_0_2 | inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/op_lfo_offset_mem_reg     | Implied   | 256 x 32             | RAM256X1S x 32  | 
+|mb_block_umeboshi_0_2 | inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/lfo_shape_mem_reg         | Implied   | 512 x 32             | RAM64M x 176    | 
+|mb_block_umeboshi_0_2 | inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/op_wt_id_mem_reg          | Implied   | 256 x 8              | RAM64M x 12     | 
+|mb_block_umeboshi_0_2 | inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/op_stride_mem_reg         | Implied   | 256 x 32             | RAM64M x 44     | 
+|mb_block_umeboshi_0_2 | inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/phase_mem_reg             | Implied   | 256 x 32             | RAM256X1S x 32  | 
 |mb_block_umeboshi_0_2 | inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/op_env_gain_state_reg     | Implied   | 256 x 3              | RAM256X1S x 3   | 
 |mb_block_umeboshi_0_2 | inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/op_wt_gain_env_id_mem_reg | Implied   | 256 x 3              | RAM64M x 4      | 
 |mb_block_umeboshi_0_2 | inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/env_rr_rs_mem_reg         | Implied   | 8 x 4                | RAM32M x 1      | 
@@ -342,11 +367,13 @@ Distributed RAM: Preliminary Mapping Report (see note below)
 Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
 
 DSP: Preliminary Mapping Report (see note below. The ' indicates corresponding REG is set)
-+----------------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
-|Module Name           | DSP Mapping | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
-+----------------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
-|mb_block_umeboshi_0_2 | A2*B        | 17     | 16     | -      | -      | 33     | 1    | 0    | -    | -    | -     | 0    | 0    | 
-+----------------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping    | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|synth_256   | A*B            | 18     | 9      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|synth_256   | (PCIN>>17)+A*B | 16     | 9      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|synth_256   | A2*B           | 17     | 16     | -      | -      | 33     | 1    | 0    | -    | -    | -     | 0    | 0    | 
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
 
 Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
 ---------------------------------------------------------------------------------
@@ -357,7 +384,7 @@ No constraint files found.
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1537.258 ; gain = 760.855
+Finished Timing Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1542.770 ; gain = 766.738
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -367,11 +394,14 @@ Distributed RAM: Final Mapping Report
 +----------------------+------------------------------------------------------------------------------------------+-----------+----------------------+-----------------+
 |Module Name           | RTL Object                                                                               | Inference | Size (Depth x Width) | Primitives      | 
 +----------------------+------------------------------------------------------------------------------------------+-----------+----------------------+-----------------+
-|mb_block_umeboshi_0_2 | inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/op_stride_mem_reg         | Implied   | 256 x 32             | RAM64M x 44     | 
-|mb_block_umeboshi_0_2 | inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/phase_mem_reg             | Implied   | 256 x 32             | RAM256X1S x 32  | 
-|mb_block_umeboshi_0_2 | inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/op_wt_id_mem_reg          | Implied   | 256 x 8              | RAM64M x 12     | 
 |mb_block_umeboshi_0_2 | inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/op_key_on_mem_reg         | Implied   | 256 x 1              | RAM128X1D x 2   | 
 |mb_block_umeboshi_0_2 | inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/op_prev_key_on_mem_reg    | Implied   | 256 x 1              | RAM256X1S x 1   | 
+|mb_block_umeboshi_0_2 | inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/op_wt_lfo_id_mem_reg      | Implied   | 256 x 6              | RAM64M x 8      | 
+|mb_block_umeboshi_0_2 | inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/op_lfo_offset_mem_reg     | Implied   | 256 x 32             | RAM256X1S x 32  | 
+|mb_block_umeboshi_0_2 | inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/lfo_shape_mem_reg         | Implied   | 512 x 32             | RAM64M x 176    | 
+|mb_block_umeboshi_0_2 | inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/op_wt_id_mem_reg          | Implied   | 256 x 8              | RAM64M x 12     | 
+|mb_block_umeboshi_0_2 | inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/op_stride_mem_reg         | Implied   | 256 x 32             | RAM64M x 44     | 
+|mb_block_umeboshi_0_2 | inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/phase_mem_reg             | Implied   | 256 x 32             | RAM256X1S x 32  | 
 |mb_block_umeboshi_0_2 | inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/op_env_gain_state_reg     | Implied   | 256 x 3              | RAM256X1S x 3   | 
 |mb_block_umeboshi_0_2 | inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/op_wt_gain_env_id_mem_reg | Implied   | 256 x 3              | RAM64M x 4      | 
 |mb_block_umeboshi_0_2 | inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/env_rr_rs_mem_reg         | Implied   | 8 x 4                | RAM32M x 1      | 
@@ -391,7 +421,7 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1537.258 ; gain = 760.855
+Finished Technology Mapping : Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 1542.770 ; gain = 766.738
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -409,48 +439,50 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 1765.242 ; gain = 988.840
+Finished IO Insertion : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 1776.773 ; gain = 1000.742
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 1765.242 ; gain = 988.840
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 1776.773 ; gain = 1000.742
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 1765.242 ; gain = 988.840
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1776.773 ; gain = 1000.742
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 1765.242 ; gain = 988.840
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1776.773 ; gain = 1000.742
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 1765.242 ; gain = 988.840
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1776.773 ; gain = 1000.742
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 1765.242 ; gain = 988.840
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1776.773 ; gain = 1000.742
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
 ---------------------------------------------------------------------------------
 
 DSP Final Report (the ' indicates corresponding REG is set)
-+----------------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
-|Module Name           | DSP Mapping | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
-+----------------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
-|mb_block_umeboshi_0_2 | A'*B        | 16     | 18     | -      | -      | 33     | 1    | 0    | -    | -    | -     | 0    | 0    | 
-+----------------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
++------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping  | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|synth_256   | A*B          | 17     | 8      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|synth_256   | PCIN>>17+A*B | 15     | 0      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|synth_256   | A'*B         | 16     | 18     | -      | -      | 33     | 1    | 0    | -    | -    | -     | 0    | 0    | 
++------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
 
 
 Report BlackBoxes: 
@@ -463,52 +495,53 @@ Report Cell Usage:
 +------+----------+------+
 |      |Cell      |Count |
 +------+----------+------+
-|1     |CARRY4    |    45|
-|2     |DSP48E1   |     1|
-|3     |LUT1      |    13|
-|4     |LUT2      |   165|
-|5     |LUT3      |    47|
-|6     |LUT4      |   118|
-|7     |LUT5      |    44|
-|8     |LUT6      |   196|
-|9     |MUXF7     |    28|
+|1     |CARRY4    |    95|
+|2     |DSP48E1   |     3|
+|3     |LUT1      |     6|
+|4     |LUT2      |   338|
+|5     |LUT3      |    61|
+|6     |LUT4      |   134|
+|7     |LUT5      |   168|
+|8     |LUT6      |   340|
+|9     |MUXF7     |    63|
 |10    |RAM128X1D |     2|
-|11    |RAM256X1S |    60|
+|11    |RAM256X1S |    92|
 |12    |RAM32M    |     9|
-|13    |RAM64M    |    60|
-|14    |FDRE      |    81|
+|13    |RAM64M    |   244|
+|14    |FDRE      |   325|
 |15    |FDSE      |    23|
 +------+----------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 1765.242 ; gain = 988.840
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1776.773 ; gain = 1000.742
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:08 ; elapsed = 00:00:15 . Memory (MB): peak = 1765.242 ; gain = 913.938
-Synthesis Optimization Complete : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 1765.242 ; gain = 988.840
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:10 ; elapsed = 00:00:16 . Memory (MB): peak = 1776.773 ; gain = 920.176
+Synthesis Optimization Complete : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1776.773 ; gain = 1000.742
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1778.301 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 205 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.014 . Memory (MB): peak = 1789.832 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 508 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+WARNING: [Netlist 29-101] Netlist 'mb_block_umeboshi_0_2' is not ideal for floorplanning, since the cellview 'synth_256' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1881.164 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1888.566 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 131 instances were transformed.
+  A total of 347 instances were transformed.
   RAM128X1D => RAM128X1D (MUXF7(x2), RAMD64E(x4)): 2 instances
-  RAM256X1S => RAM256X1S (MUXF7(x2), MUXF8, RAMS64E(x4)): 60 instances
+  RAM256X1S => RAM256X1S (MUXF7(x2), MUXF8, RAMS64E(x4)): 92 instances
   RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 9 instances
-  RAM64M => RAM64M (RAMD64E(x4)): 60 instances
+  RAM64M => RAM64M (RAMD64E(x4)): 244 instances
 
-Synth Design complete | Checksum: 2fa23e80
+Synth Design complete | Checksum: ee9d39d8
 INFO: [Common 17-83] Releasing license: Synthesis
-187 Infos, 5 Warnings, 0 Critical Warnings and 0 Errors encountered.
+183 Infos, 12 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 1881.164 ; gain = 1329.785
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1881.164 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:18 ; elapsed = 00:00:22 . Memory (MB): peak = 1888.566 ; gain = 1339.266
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 1888.566 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/Users/hause/Documents/Vivado/Projects/Takuan/Takuan.runs/mb_block_umeboshi_0_2_synth_1/mb_block_umeboshi_0_2.dcp' has been generated.
-INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP mb_block_umeboshi_0_2, cache-ID = cb81e582a692fc8d
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP mb_block_umeboshi_0_2, cache-ID = 0c9c4cb025be5029
 INFO: [Coretcl 2-1174] Renamed 3 cell refs.
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1881.164 ; gain = 0.000
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1888.566 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/Users/hause/Documents/Vivado/Projects/Takuan/Takuan.runs/mb_block_umeboshi_0_2_synth_1/mb_block_umeboshi_0_2.dcp' has been generated.
 INFO: [Vivado 12-24828] Executing command : report_utilization -file mb_block_umeboshi_0_2_utilization_synth.rpt -pb mb_block_umeboshi_0_2_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Wed Mar 18 17:36:13 2026...
+INFO: [Common 17-206] Exiting Vivado at Thu Mar 19 16:09:27 2026...

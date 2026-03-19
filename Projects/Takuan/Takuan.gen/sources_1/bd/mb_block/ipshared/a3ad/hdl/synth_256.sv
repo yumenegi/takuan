@@ -7,7 +7,7 @@ module synth_256(
 
     // Memory Mapped Interface
     input   logic [31:0]    mm_wdata,       // Write Data
-    input   logic [7:0]     mm_addr,        // Write Address (Index)
+    input   logic [8:0]     mm_addr,        // Write Address (Index)
     
     // Write Enables
     input   logic           mm_wr_stride,   // Write Voice Stride
@@ -18,6 +18,7 @@ module synth_256(
     input   logic           mm_wr_lfo,      // Write LFO Stride
     input   logic           mm_wr_adsr1,    // Write ADSR Config 1 (AR, DR)
     input   logic           mm_wr_adsr2,    // Write ADSR Config 2 (SL, RR)
+    input   logic           mm_wr_lfo_shape,// Write LUTRAM LFO Shape
 
 
 
@@ -38,8 +39,8 @@ module synth_256(
     // setting mem
     logic [31:0] op_stride_mem [256];           // stride
     logic [7:0] op_wt_id_mem [256];             // wt settings, id, slice, lfo
-    logic [2:0] op_wt_lfo_id_mem [256];         // which lfo?
-                                                // unused right now
+    logic [5:0] op_wt_lfo_id_mem [256];         // which lfo and routing?
+    logic [31:0] op_lfo_offset_mem [256];       // captured lfo phase at key on
     logic [2:0] op_wt_gain_env_id_mem [256];    // which gain env?
     logic op_key_on_mem [256];               // which op to turn on?
 
@@ -52,6 +53,8 @@ module synth_256(
     
     // lfo settings
     logic [31:0] lfo_stride_mem [8];
+    logic [31:0] lfo_phase [8];                 // free-running accumulators
+    logic [31:0] lfo_shape_mem [0:511];         // 4 LFO shapes × 128 words = 512 words
 
     // adsr setting
     logic [7:0] env_ar_mem [8];         // attack rate
@@ -82,7 +85,7 @@ module synth_256(
         end
 
         if (mm_wr_lfo_id) begin
-            op_wt_lfo_id_mem[mm_addr] <= mm_wdata[2:0];
+            op_wt_lfo_id_mem[mm_addr] <= mm_wdata[5:0];
         end
 
         if (mm_wr_wt_id) begin
@@ -97,6 +100,10 @@ module synth_256(
 
         if (mm_wr_lfo) begin
             lfo_stride_mem[mm_addr[2:0]] <= mm_wdata;
+        end
+
+        if (mm_wr_lfo_shape) begin
+            lfo_shape_mem[mm_addr] <= mm_wdata; // Fits 512 entries with 9-bit address
         end
 
         if (mm_wr_adsr1) begin
@@ -136,6 +143,13 @@ module synth_256(
         // sync_chain[1] = synchronized input 
         // sync_chain[2] = history (for edge detection)
         sync_chain <= {sync_chain[1:0], wr_strb};
+        
+        // update free running lfo phases on audio tick
+        if ((sync_chain[1] == 1'b1) && (sync_chain[2] == 1'b0)) begin
+            for (integer i = 0; i < 8; i++) begin
+                lfo_phase[i] <= lfo_phase[i] + lfo_stride_mem[i];
+            end
+        end
     end
     
     // Rising edge detect on synchronized wr_strb
@@ -197,6 +211,7 @@ module synth_256(
             op_env_gain_state[i] = 0;
             op_key_on_mem[i] = 0;            
             op_prev_key_on_mem[i] = 0;    
+            op_lfo_offset_mem[i] = 0;
         end
     end
 
@@ -266,13 +281,37 @@ module synth_256(
     logic [31:0] r_stride;
     logic [31:0] r_phase;
     logic [7:0]  r_wt_id;
+    logic [5:0]  r_lfo_ctrl;
+    logic [31:0] r_lfo_offset;
     logic [23:0] r_env_vol;
     logic [2:0]  r_env_state;
     logic        r_key_on;
     logic        r_prev_key_on;
 
+    // LFO combinational read
+    logic [1:0]  r_lfo_idx;
+    logic        r_pitch_en;
+    logic        r_wt_en;
+    logic        r_pitch_trig;
+    logic        r_wt_trig;
+
+    logic [31:0] phase_continuous;
+    logic [31:0] phase_triggered;
+    logic [31:0] pitch_lfo_phase;
+    logic [31:0] wt_lfo_phase;
+
+    logic [8:0]  pitch_lfo_addr;
+    logic [31:0] pitch_lfo_raw;
+    logic signed [7:0] pitch_lfo_val;
+
+    logic [8:0]  wt_lfo_addr;
+    logic [31:0] wt_lfo_raw;
+    logic [7:0]  wt_lfo_val;
+    logic [7:0]  active_wt_lfo;
+
     // first stage variable to next state
     logic [31:0] next_phase;
+    logic [31:0] next_lfo_offset;
     logic [23:0] next_env_vol;
     logic [2:0]  next_env_state;
     logic        next_prev_key_on;
@@ -286,17 +325,62 @@ module synth_256(
 
     // stage 0 of pipeline
     // set rate depending on state
+    logic signed [47:0] pitch_mod;
     always_comb begin
         r_stride        = op_stride_mem[op_idx];
         r_phase         = phase_mem[op_idx];
         r_wt_id         = op_wt_id_mem[op_idx];
+        r_lfo_ctrl      = op_wt_lfo_id_mem[op_idx];
+        r_lfo_offset    = op_lfo_offset_mem[op_idx];
         r_env_vol       = op_env_gain_vol[op_idx];
         r_env_state     = op_env_gain_state[op_idx];
         r_key_on        = op_key_on_mem[op_idx];
         r_prev_key_on   = op_prev_key_on_mem[op_idx];
         
+        // --- LFO Control Extraction ---
+        r_lfo_idx       = r_lfo_ctrl[1:0];
+        r_pitch_en      = r_lfo_ctrl[2];
+        r_wt_en         = r_lfo_ctrl[3];
+        r_pitch_trig    = r_lfo_ctrl[4];
+        r_wt_trig       = r_lfo_ctrl[5];
+
+        phase_continuous = lfo_phase[r_lfo_idx];
+        phase_triggered  = phase_continuous - r_lfo_offset;
+        
+        if (r_key_on && !r_prev_key_on) begin
+            next_lfo_offset = phase_continuous;
+        end else begin
+            next_lfo_offset = r_lfo_offset;
+        end
+
+        pitch_lfo_phase = r_pitch_trig ? phase_triggered : phase_continuous;
+        wt_lfo_phase    = r_wt_trig    ? phase_triggered : phase_continuous;
+
+        // --- LFO Pitch Read ---
+        pitch_lfo_addr  = {r_lfo_idx, pitch_lfo_phase[31:25]};
+        pitch_lfo_raw   = lfo_shape_mem[pitch_lfo_addr];
+        case (pitch_lfo_phase[24:23])
+            2'b00: pitch_lfo_val = pitch_lfo_raw[7:0];
+            2'b01: pitch_lfo_val = pitch_lfo_raw[15:8];
+            2'b10: pitch_lfo_val = pitch_lfo_raw[23:16];
+            2'b11: pitch_lfo_val = pitch_lfo_raw[31:24];
+        endcase
+
+        // --- LFO WT Read ---
+        wt_lfo_addr     = {r_lfo_idx, wt_lfo_phase[31:25]};
+        wt_lfo_raw      = lfo_shape_mem[wt_lfo_addr];
+        case (wt_lfo_phase[24:23])
+            2'b00: wt_lfo_val = wt_lfo_raw[7:0];
+            2'b01: wt_lfo_val = wt_lfo_raw[15:8];
+            2'b10: wt_lfo_val = wt_lfo_raw[23:16];
+            2'b11: wt_lfo_val = wt_lfo_raw[31:24];
+        endcase
+
+        active_wt_lfo = r_wt_en ? wt_lfo_val : 8'd0;
+
         // next phase
-        next_phase      = r_phase + r_stride;
+        pitch_mod = r_pitch_en ? ($signed({1'b0, r_stride}) * pitch_lfo_val) : 48'd0;
+        next_phase = r_phase + r_stride + pitch_mod[38:10]; // +/- 12.5% pitch bend
 
         // default
         next_env_vol        = r_env_vol;
@@ -383,6 +467,10 @@ module synth_256(
             // phase calculation
             phase_mem[op_idx] <= next_phase; // phase calculation, will be 
                                                 // combined with the id
+            
+            // LFO offset logic
+            op_lfo_offset_mem[op_idx] <= next_lfo_offset;
+
             // previous key on update
             op_prev_key_on_mem[op_idx] <= next_prev_key_on;
 
@@ -401,9 +489,15 @@ module synth_256(
 
     // BRAM address calculation
     logic [16:0] calc_addr_b;
+    logic [8:0] mod_frame;
+    logic [6:0] final_frame;
+
+    assign mod_frame = {2'b00, r_wt_id[6:0]} + (active_wt_lfo >> 1); // LFO 0..255 gives 0..127 frames
+    assign final_frame = (mod_frame > 127) ? 7'd127 : mod_frame[6:0];
+
     // Bank bit [7] used for mux, frame bits [6:0] used here
     // Bit 21 is used for upper or lower half of the register
-    assign calc_addr_b = {r_wt_id[6:0], next_phase[31:22]};
+    assign calc_addr_b = {final_frame, next_phase[31:22]};
 
     // write logic
     assign bram_addr_b = calc_addr_b;

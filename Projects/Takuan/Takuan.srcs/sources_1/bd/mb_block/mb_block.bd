@@ -2036,7 +2036,7 @@
       },
       "umeboshi_0": {
         "vlnv": "xilinx.com:user:umeboshi:1.0",
-        "ip_revision": "20",
+        "ip_revision": "21",
         "xci_name": "mb_block_umeboshi_0_2",
         "xci_path": "ip\\mb_block_umeboshi_0_2\\mb_block_umeboshi_0_2.xci",
         "inst_hier_path": "umeboshi_0",

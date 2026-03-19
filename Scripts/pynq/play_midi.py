@@ -142,6 +142,36 @@ def init_envelopes(synth):
         synth.write(0x1420 + i * 4, adsr1)
         synth.write(0x1440 + i * 4, adsr2)
 
+def init_lfos(engine):
+    """Initialize the 4 LFO shapes and write default strides."""
+    import numpy as np
+    t = np.linspace(0, 2*np.pi, 512, endpoint=False)
+    
+    # LFO 0: Flat line (0 baseline for WT offsets)
+    flat = np.zeros(512, dtype=np.uint8)
+    engine.write_lfo_shape(0, flat)
+    
+    # LFO 1: Sine wave (Vibrato)
+    sine = (np.sin(t) * 127).astype(np.int8)
+    engine.write_lfo_shape(1, sine)
+    
+    # LFO 2: Ramp up (Wavetable Scan)
+    ramp_up = np.linspace(0, 255, 512, dtype=np.uint8)
+    engine.write_lfo_shape(2, ramp_up)
+    
+    # LFO 3: Ramp down
+    ramp_dn = np.linspace(255, 0, 512, dtype=np.uint8)
+    engine.write_lfo_shape(3, ramp_dn)
+    
+    # Default slow strides (5 Hz at 96kHz ~ 223696 for 32-bit phase)
+    # Stride = (freq * 2^32) / 96000
+    for i in range(8):
+        engine.write_lfo_stride(i, int((5.0 * 4294967296) / 96000))
+
+    # Set LFO 2 (Ramp Up) to be slower for WT scanning, e.g. 0.5 Hz
+    engine.write_lfo_stride(2, int((0.5 * 4294967296) / 96000))
+
+
 def load_wavetable(bram, wav_path=None, num_slices=128, samples_per_slice=2048, fallback='sawtooth'):
     """
     Load a wavetable into BRAM.
@@ -248,34 +278,26 @@ def main():
     init_envelopes(synth)
     print("  Envelopes loaded!")
 
+    # Init LFOs
+    init_lfos(audio_engine)
+    print("  LFOs loaded!")
+
     # -------------------------------------------------------------------------
     # Patch Definitions
     # -------------------------------------------------------------------------
-    default_patch = Patch("default", [0], 0)
-    pad      = Patch("pad", [2], 0, True, 3, 15)
-    pluck    = Patch("pluck", [2], 2)
-    organ    = Patch("organ", [3], 3)
-    brass    = Patch("brass", [6], 5)      # osc_b
-    strings  = Patch("strings", [1], 4, True, 5, 30)
-    perc     = Patch("perc", [WT_OSC_B], 1, True, 10, 10)       # osc_b
-
-    # Using Serum Basic Waves
-    # 0: Sine
-    # 1: Saw
-    # 2: Triangle
-    # 3: Square
-    # 4: Offset Square
-    # 5: Super Offset Square
-    # 6: Funny Saw
-    bass        = Patch("bass", [0, 2], 2)              # saw
-    lead        = Patch("lead", [1], 6, True, 5, 20)    # saw lead
-    square      = Patch("square", [3], 6)               # square wave
-    guitar      = Patch("bass", [6], 2, True, 3, 15)    # guitar like sound?
-    piano       = Patch("bass", [0, 1], 2)              # piano
-
-
-
-
+    # Patch(name, waveforms, envelope, unison, numUnison, detune, lfo_idx, pitch_en, wt_en, pitch_trig, wt_trig)
+    default_patch = Patch("default", [WT_OSC_A], 0)
+    pad      = Patch("pad", [WT_OSC_A], 0, True, 3, 15, lfo_idx=1, pitch_en=True)       # Free Vibrato
+    pluck    = Patch("pluck", [WT_OSC_A], 2)
+    organ    = Patch("organ", [WT_OSC_A], 3)
+    lead     = Patch("lead", [WT_OSC_B], 6, True, 5, 20, lfo_idx=1, pitch_en=True, pitch_trig=True)  # Triggered Vibrato
+    brass    = Patch("brass", [WT_OSC_B], 5, lfo_idx=2, wt_en=True, wt_trig=True)       # Triggered WT Sweep
+    strings  = Patch("strings", [WT_OSC_A], 4, True, 5, 10, lfo_idx=1, pitch_en=True)   # Free Vibrato
+    perc     = Patch("perc", [WT_OSC_B], 1)
+    bass     = Patch("bass", [0, 2], 2)
+    square   = Patch("square", [3], 6)
+    guitar   = Patch("guitar", [6], 2, True, 3, 15)
+    piano    = Patch("piano", [0, 1], 2)
 
     # -------------------------------------------------------------------------
     # Channel setup — 16 MIDI channels, 16 voices each
