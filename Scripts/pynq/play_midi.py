@@ -1,11 +1,6 @@
 """
 Takuan Synth MIDI Player — PYNQ-Z2 Test Script
 Plays a MIDI file through the umeboshi synth engine with round-robin voice management.
-
-Usage: Copy this file + engine.py + patch.py + a .mid file to the PYNQ board.
-       Then:  python3 play_midi.py <filename.mid>
-
-Requires: mido (pip install mido)
 """
 import pynq
 import pynq.lib
@@ -25,6 +20,7 @@ WT_OSC_B = 128   # Frame 0 of BRAM1
 # Real sampling rate of the oscillator
 SAMPLING_RATE = 95274.390625
 MAX_UINT_24 = 16777216
+SCALING_RATE = 1524390.25
 
 # ==============================================================================
 # ADAU1761 Configuration (PYNQ-Z2 Audio Codec)
@@ -66,16 +62,16 @@ def adsr_gen(a, d, s, r):
     # When reach 2^24, proceed to next state
     # 8 bits for rate
     # 4 bits for shift
-    ar_raw  = int(MAX_UINT_24 / (SAMPLING_RATE * a))
-    ar_rs   = ar_raw.bit_length() - 8
+    ar_raw  = int(MAX_UINT_24 / (SCALING_RATE * a))
+    ar_rs   = max(0, ar_raw.bit_length() - 8)
     ar      = ar_raw >> ar_rs
 
-    dr_raw  = int(MAX_UINT_24 / (SAMPLING_RATE * d))
-    dr_rs   = dr_raw.bit_length() - 8
+    dr_raw  = int(MAX_UINT_24 / (SCALING_RATE * d))
+    dr_rs   = max(0, dr_raw.bit_length() - 8)
     dr      = dr_raw >> dr_rs
     
-    rr_raw  = int(MAX_UINT_24 / (SAMPLING_RATE * r))
-    rr_rs   = rr_raw.bit_length() - 8
+    rr_raw  = int(MAX_UINT_24 / (SCALING_RATE * r))
+    rr_rs   = max(0, rr_raw.bit_length() - 8)
     rr      = rr_raw >> rr_rs
     adsr1 = pack_adsr1(ar, ar_rs, dr, dr_rs)
     adsr2 = pack_adsr2(s, rr, rr_rs)
@@ -91,13 +87,13 @@ ENVELOPES = [
     # Env 3: Organ — instant attack, full sustain, instant release
     adsr_gen(0.01, 0.01, 0xE000, 0.1),
     # Env 4: Strings — slow attack, full sustain, slow release
-    (pack_adsr1(0x10, 0x0, 0x10, 0x0), pack_adsr2(0xE000, 0x10, 0x0)),
+    adsr_gen(0.5, 0.01, 0xE000, 0.5),
     # Env 5: Brass — medium-fast attack, high sustain
-    (pack_adsr1(0x80, 0x0, 0x20, 0x0), pack_adsr2(0xA000, 0x40, 0x0)),
+    adsr_gen(0.3, 0.01, 0xE000, 0.5),
     # Env 6: Lead — fast attack, high sustain, medium release
-    (pack_adsr1(0xC0, 0x0, 0x10, 0x0), pack_adsr2(0xC000, 0x30, 0x0)),
+    adsr_gen(0.1, 0.01, 0xE000, 0.1),
     # Env 7: Drum — fast attack, long release
-    (pack_adsr1(0xC0, 0x0, 0x10, 0x0), pack_adsr2(0xC000, 0x10, 0x0)),
+    adsr_gen(0.01, 0.01, 0xE000, 0.35),
 ]
 
 # ==============================================================================
@@ -152,12 +148,15 @@ def init_lfos(engine):
     engine.write_lfo_shape(0, flat)
     
     # LFO 1: Sine wave (Vibrato)
-    sine = (np.sin(t) * 127).astype(np.int8)
+    sine = (np.sin(t) * 10).astype(np.int8)
     engine.write_lfo_shape(1, sine)
-    
-    # LFO 2: Ramp up (Wavetable Scan)
-    ramp_up = np.linspace(0, 255, 512, dtype=np.uint8)
-    engine.write_lfo_shape(2, ramp_up)
+
+    # LFO 2: Triangle (Smooth Wavetable Sweep)
+    triangle = np.concatenate([
+        np.linspace(0, 255, 256, dtype=np.uint8),
+        np.linspace(255, 0, 256, dtype=np.uint8)
+    ])
+    engine.write_lfo_shape(2, triangle)
     
     # LFO 3: Ramp down
     ramp_dn = np.linspace(255, 0, 512, dtype=np.uint8)
@@ -168,7 +167,7 @@ def init_lfos(engine):
     for i in range(8):
         engine.write_lfo_stride(i, int((5.0 * 4294967296) / 96000))
 
-    # Set LFO 2 (Ramp Up) to be slower for WT scanning, e.g. 0.5 Hz
+    # Set LFO 2 (Triangle) to be slower for WT scanning, e.g. 0.5 Hz
     engine.write_lfo_stride(2, int((0.5 * 4294967296) / 96000))
 
 
@@ -204,10 +203,19 @@ def load_wavetable(bram, wav_path=None, num_slices=128, samples_per_slice=2048, 
         elif data.dtype != np.int16:
             data = data.astype(np.int16)
 
-        # Pad or truncate to target size
-        if len(data) < target_total:
+        actual_frames = len(data) // samples_per_slice
+        if actual_frames > num_slices:
+            # Downsample frames by skipping intermediate frames so we don't truncate the morph!
+            print(f"  Downsampling {actual_frames} frames to {num_slices} frames to fit BRAM")
+            indices = np.linspace(0, actual_frames - 1, num_slices).astype(int)
+            new_data = np.zeros(target_total, dtype=data.dtype)
+            for i, fi in enumerate(indices):
+                start = fi * samples_per_slice
+                new_data[i * samples_per_slice : (i + 1) * samples_per_slice] = data[start : start + samples_per_slice]
+            data = new_data
+        elif len(data) < target_total:
             data = np.pad(data, (0, target_total - len(data)), 'constant')
-        elif len(data) > target_total:
+        else:
             data = data[:target_total]
 
         print(f"  Loaded {num_slices} slices × {samples_per_slice} samples ({len(data)} total)")
@@ -252,7 +260,7 @@ def main():
 
     # Load overlay
     print("Loading overlay...")
-    overlay = pynq.Overlay("/home/xilinx/hw/ver1/takuan.bit")
+    overlay = pynq.Overlay("/home/xilinx/hw/kai_san/takuan.bit")
 
     # Init codec
     print("Initializing ADAU1761 codec...")
@@ -286,22 +294,55 @@ def main():
     # Patch Definitions
     # -------------------------------------------------------------------------
     # Patch(name, waveforms, envelope, unison, numUnison, detune, lfo_idx, pitch_en, wt_en, pitch_trig, wt_trig)
-    default_patch = Patch("default", [WT_OSC_A], 0)
-    pad      = Patch("pad", [WT_OSC_A], 0, True, 3, 15, lfo_idx=1, pitch_en=True)       # Free Vibrato
-    pluck    = Patch("pluck", [WT_OSC_A], 2)
-    organ    = Patch("organ", [WT_OSC_A], 3)
-    lead     = Patch("lead", [WT_OSC_B], 6, True, 5, 20, lfo_idx=1, pitch_en=True, pitch_trig=True)  # Triggered Vibrato
-    brass    = Patch("brass", [WT_OSC_B], 5, lfo_idx=2, wt_en=True, wt_trig=True)       # Triggered WT Sweep
-    strings  = Patch("strings", [WT_OSC_A], 4, True, 5, 10, lfo_idx=1, pitch_en=True)   # Free Vibrato
-    perc     = Patch("perc", [WT_OSC_B], 1)
-    bass     = Patch("bass", [0, 2], 2)
-    square   = Patch("square", [3], 6)
-    guitar   = Patch("guitar", [6], 2, True, 3, 15)
-    piano    = Patch("piano", [0, 1], 2)
+    default_patch = Patch("default", [0], 0)
+    pad      = Patch("pad", [2], 0, True, 3, 15)
+    pluck    = Patch("pluck", [2], 2)
+    organ    = Patch("organ", [3], 3)
+    brass    = Patch("brass", [6], 5)      # osc_b
+    strings  = Patch("strings", [1], 4, True, 8, 70)
+    perc     = Patch("perc", [WT_OSC_B], 1, True, 10, 10)       # osc_b
+
+    # Using Serum Basic Waves
+    # 0: Sine
+    # 1: Saw
+    # 2: Triangle
+    # 3: Square
+    # 4: Offset Square
+    # 5: Super Offset Square
+    # 6: Funny Saw
+    bass        = Patch("bass", [0, 2], 2)              # saw
+    lead        = Patch("lead", [1], 6, True, 3, 20, pitch_lfo_idx=1, pitch_en=True, pitch_trig=True)    # saw lead
+    lead2        = Patch("lead2", [1], 6, True, 7, 20, pitch_lfo_idx=1, pitch_en=True, pitch_trig=True)    # saw lead
+    square      = Patch("square", [3], 6)               # square wave
+    guitar      = Patch("guitar", [6], 2, True, 3, 15)    # guitar like sound?
+    piano       = Patch("piano", [0, 1], 2)              # piano
+    zaquva      = Patch("zaquva", [0], 1, True, 5, 30, )
+
+
+
 
     # -------------------------------------------------------------------------
     # Channel setup — 16 MIDI channels, 16 voices each
     # -------------------------------------------------------------------------
+    # patch_map = {
+    #     0: lead,
+    #     1: bass,
+    #     2: piano,
+    #     3: lead,
+    #     4: lead,
+    #     5: lead,
+    #     6: brass,
+    #     7: piano,
+    #     8: square,
+    #     9: perc,       # GM drum channel
+    #     10: perc,
+    #     11: perc,
+    #     12: perc,
+    #     13: piano,
+    #     14: default_patch,
+    #     15: strings,
+    # }
+
     patch_map = {
         0: lead,
         1: bass,
@@ -309,7 +350,7 @@ def main():
         3: lead,
         4: lead,
         5: lead,
-        6: brass,
+        6: lead2,
         7: piano,
         8: square,
         9: perc,       # GM drum channel
@@ -380,10 +421,10 @@ def play_demo(audio_engine, channels, synth):
     # ]
 
 
-    ch = channels[15]
+    ch = channels[0]
     print("  Playing note...")
     audio_engine.play_note(ch, 82, 1)
-    time.sleep(5.0)
+    time.sleep(10.0)
     audio_engine.play_note(ch, 82, 0)
     print("  Released...")
     time.sleep(10.0)

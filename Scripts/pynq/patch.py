@@ -5,11 +5,12 @@ class Patch:
     # Waveforms list can only be at most 4 long
     def __init__(self, name: str, waveforms: list, envelope: int, 
                  unison = False, numUnison = 3, detune = 30, 
-                 lfo_idx = 0, pitch_en = False, wt_en = False, pitch_trig = False, wt_trig = False):
+                 pitch_lfo_idx = 0, wt_lfo_idx = 0, pitch_en = False, wt_en = False, pitch_trig = False, wt_trig = False):
         self.name = name
         self.envelope = max(0, min(7, envelope))
         
-        self.lfo_idx = max(0, min(3, lfo_idx))
+        self.pitch_lfo_idx = max(0, min(3, pitch_lfo_idx))
+        self.wt_lfo_idx = max(0, min(3, wt_lfo_idx))
         self.pitch_en = bool(pitch_en)
         self.wt_en = bool(wt_en)
         self.pitch_trig = bool(pitch_trig)
@@ -45,11 +46,11 @@ class Patch:
         return self.detune
 
     def getLfoCtrl(self) -> int:
-        ctrl = self.lfo_idx & 0x03
-        if self.pitch_en:   ctrl |= 0x04
-        if self.wt_en:      ctrl |= 0x08
-        if self.pitch_trig: ctrl |= 0x10
-        if self.wt_trig:    ctrl |= 0x20
+        ctrl = (self.pitch_lfo_idx & 0x03) | ((self.wt_lfo_idx & 0x03) << 2)
+        if self.pitch_en:   ctrl |= 0x10
+        if self.wt_en:      ctrl |= 0x20
+        if self.pitch_trig: ctrl |= 0x40
+        if self.wt_trig:    ctrl |= 0x80
         return ctrl
 
 

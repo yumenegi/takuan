@@ -3,8 +3,8 @@
 # SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
 # IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
 # SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-# Start of session at: Thu Mar 19 16:10:15 2026
-# Process ID         : 19184
+# Start of session at: Thu Mar 19 18:58:36 2026
+# Process ID         : 3592
 # Current directory  : C:/Users/hause/Documents/Vivado/Projects/Takuan/Takuan.runs/impl_1
 # Command line       : vivado.exe -log top.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source top.tcl -notrace
 # Log file           : C:/Users/hause/Documents/Vivado/Projects/Takuan/Takuan.runs/impl_1/top.vdi
@@ -19,10 +19,9 @@
 # Host memory        : 33811 MB
 # Swap memory        : 2147 MB
 # Total Virtual      : 35958 MB
-# Available Virtual  : 14798 MB
+# Available Virtual  : 9103 MB
 #-----------------------------------------------------------
 source top.tcl -notrace
-create_project: Time (s): cpu = 00:00:10 ; elapsed = 00:00:07 . Memory (MB): peak = 530.969 ; gain = 219.738
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/hause/Documents/Vivado/IP'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/AMDDesignTools/2025.2/Vivado/data/ip'.
@@ -39,9 +38,9 @@ INFO: [Project 1-454] Reading design checkpoint 'c:/Users/hause/Documents/Vivado
 INFO: [Project 1-454] Reading design checkpoint 'c:/Users/hause/Documents/Vivado/Projects/Takuan/Takuan.gen/sources_1/bd/mb_block/ip/mb_block_processing_system7_0_3/mb_block_processing_system7_0_3.dcp' for cell 'mb_block_i/inst/processing_system7_0'
 INFO: [Project 1-454] Reading design checkpoint 'c:/Users/hause/Documents/Vivado/Projects/Takuan/Takuan.gen/sources_1/bd/mb_block/ip/mb_block_rst_ps7_0_100M_1/mb_block_rst_ps7_0_100M_1.dcp' for cell 'mb_block_i/inst/rst_ps7_0_100M'
 INFO: [Project 1-454] Reading design checkpoint 'c:/Users/hause/Documents/Vivado/Projects/Takuan/Takuan.gen/sources_1/bd/mb_block/ip/mb_block_umeboshi_0_2/mb_block_umeboshi_0_2.dcp' for cell 'mb_block_i/inst/umeboshi_0'
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.508 . Memory (MB): peak = 886.855 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 823 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.251 . Memory (MB): peak = 890.570 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 837 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-479] Netlist was created with Vivado 2025.2
 INFO: [Project 1-570] Preparing netlist for logic optimization
 Parsing XDC File [c:/Users/hause/Documents/Vivado/Projects/Takuan/Takuan.gen/sources_1/bd/mb_block/ip/mb_block_processing_system7_0_3/mb_block_processing_system7_0_3.xdc] for cell 'mb_block_i/inst/processing_system7_0/inst'
@@ -361,19 +360,19 @@ Finished Parsing XDC File [C:/Users/hause/Documents/Vivado/Projects/Takuan/Takua
 INFO: [Project 1-1714] 73 XPM XDC files have been applied to the design.
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 Generating merged BMM file for the design top 'top'...
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 1613.254 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 1619.391 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 493 instances were transformed.
+  A total of 529 instances were transformed.
   IOBUF => IOBUF (IBUF, OBUFT): 2 instances
   RAM128X1D => RAM128X1D (MUXF7(x2), RAMD64E(x4)): 2 instances
-  RAM256X1S => RAM256X1S (MUXF7(x2), MUXF8, RAMS64E(x4)): 92 instances
+  RAM256X1S => RAM256X1S (MUXF7(x2), MUXF8, RAMS64E(x4)): 124 instances
   RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 142 instances
   RAM32X1D => RAM32X1D (RAMD32(x2)): 11 instances
-  RAM64M => RAM64M (RAMD64E(x4)): 244 instances
+  RAM64M => RAM64M (RAMD64E(x4)): 248 instances
 
 22 Infos, 100 Warnings, 101 Critical Warnings and 0 Errors encountered.
 link_design completed successfully
-link_design: Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 1613.254 ; gain = 1034.141
+link_design: Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1619.391 ; gain = 1036.160
 Command: opt_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
@@ -384,50 +383,50 @@ INFO: [DRC 23-27] Running DRC with 2 threads
 INFO: [Project 1-461] DRC finished with 0 Errors
 INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1613.254 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.429 . Memory (MB): peak = 1619.391 ; gain = 0.000
 
 Starting Cache Timing Information Task
 INFO: [Timing 38-35] Done setting XDC timing constraints.
-Ending Cache Timing Information Task | Checksum: 1ca3b7ee0
+Ending Cache Timing Information Task | Checksum: e684338c
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.933 . Memory (MB): peak = 1613.254 ; gain = 0.000
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.494 . Memory (MB): peak = 1619.391 ; gain = 0.000
 
 Starting Logic Optimization Task
 
 Phase 1 Initialization
 
 Phase 1.1 Core Generation And Design Setup
-Phase 1.1 Core Generation And Design Setup | Checksum: 1ca3b7ee0
+Phase 1.1 Core Generation And Design Setup | Checksum: e684338c
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.040 . Memory (MB): peak = 2051.965 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.014 . Memory (MB): peak = 2057.918 ; gain = 0.000
 
 Phase 1.2 Setup Constraints And Sort Netlist
-Phase 1.2 Setup Constraints And Sort Netlist | Checksum: 1ca3b7ee0
+Phase 1.2 Setup Constraints And Sort Netlist | Checksum: e684338c
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.058 . Memory (MB): peak = 2051.965 ; gain = 0.000
-Phase 1 Initialization | Checksum: 1ca3b7ee0
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.024 . Memory (MB): peak = 2057.918 ; gain = 0.000
+Phase 1 Initialization | Checksum: e684338c
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.060 . Memory (MB): peak = 2051.965 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.026 . Memory (MB): peak = 2057.918 ; gain = 0.000
 
 Phase 2 Timer Update And Timing Data Collection
 
 Phase 2.1 Detect if minReqCache needed
-Phase 2.1 Detect if minReqCache needed | Checksum: 1ca3b7ee0
+Phase 2.1 Detect if minReqCache needed | Checksum: e684338c
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.102 . Memory (MB): peak = 2051.984 ; gain = 0.020
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.051 . Memory (MB): peak = 2058.902 ; gain = 0.984
 
 Phase 2.2 Timer Update
-Phase 2.2 Timer Update | Checksum: 1ca3b7ee0
+Phase 2.2 Timer Update | Checksum: e684338c
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.520 . Memory (MB): peak = 2051.984 ; gain = 0.020
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.263 . Memory (MB): peak = 2058.902 ; gain = 0.984
 
 Phase 2.3 Timing Data Collection
-Phase 2.3 Timing Data Collection | Checksum: 1ca3b7ee0
+Phase 2.3 Timing Data Collection | Checksum: e684338c
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.547 . Memory (MB): peak = 2051.984 ; gain = 0.020
-Phase 2 Timer Update And Timing Data Collection | Checksum: 1ca3b7ee0
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.283 . Memory (MB): peak = 2058.902 ; gain = 0.984
+Phase 2 Timer Update And Timing Data Collection | Checksum: e684338c
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.551 . Memory (MB): peak = 2051.984 ; gain = 0.020
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.286 . Memory (MB): peak = 2058.902 ; gain = 0.984
 
 Phase 3 Retarget
 INFO: [Opt 31-1851] Number of loadless carry chains removed were: 0
@@ -435,75 +434,75 @@ INFO: [Opt 31-1834] Total Chains To Be Transformed Were: 0 AND Number of Transfo
 INFO: [Opt 31-1566] Pulled 1 inverters resulting in an inversion of 7 pins
 INFO: [Opt 31-138] Pushed 32 inverter(s) to 177 load pin(s).
 INFO: [Opt 31-49] Retargeted 0 cell(s).
-Phase 3 Retarget | Checksum: 1069616e9
+Phase 3 Retarget | Checksum: 87ff4f86
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 2051.984 ; gain = 0.020
-Retarget | Checksum: 1069616e9
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.521 . Memory (MB): peak = 2058.902 ; gain = 0.984
+Retarget | Checksum: 87ff4f86
 INFO: [Opt 31-389] Phase Retarget created 67 cells and removed 123 cells
 INFO: [Opt 31-1021] In phase Retarget, 81 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
 
 Phase 4 Constant propagation
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Phase 4 Constant propagation | Checksum: 155d79688
+Phase 4 Constant propagation | Checksum: 12d4c42fb
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 2051.984 ; gain = 0.020
-Constant propagation | Checksum: 155d79688
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.649 . Memory (MB): peak = 2058.902 ; gain = 0.984
+Constant propagation | Checksum: 12d4c42fb
 INFO: [Opt 31-389] Phase Constant propagation created 96 cells and removed 408 cells
 INFO: [Opt 31-1021] In phase Constant propagation, 80 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
 
 Phase 5 Sweep
 INFO: [Constraints 18-11670] Building netlist checker database with flags, 0x8
-Done building netlist checker database: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.030 . Memory (MB): peak = 2051.984 ; gain = 0.000
+Done building netlist checker database: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 2058.902 ; gain = 0.000
 INFO: [Constraints 18-11670] Building netlist checker database with flags, 0x8
-Done building netlist checker database: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 2051.984 ; gain = 0.000
-Phase 5 Sweep | Checksum: f43c39b7
+Done building netlist checker database: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.011 . Memory (MB): peak = 2058.902 ; gain = 0.000
+Phase 5 Sweep | Checksum: 7d440705
 
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2051.984 ; gain = 0.020
-Sweep | Checksum: f43c39b7
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 2058.902 ; gain = 0.984
+Sweep | Checksum: 7d440705
 INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 1201 cells
 INFO: [Opt 31-1021] In phase Sweep, 100 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
 
 Phase 6 BUFG optimization
-Phase 6 BUFG optimization | Checksum: f43c39b7
+Phase 6 BUFG optimization | Checksum: 7d440705
 
-Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 2051.984 ; gain = 0.020
-BUFG optimization | Checksum: f43c39b7
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 2058.902 ; gain = 0.984
+BUFG optimization | Checksum: 7d440705
 INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
 
 Phase 7 Shift Register Optimization
 INFO: [Opt 31-1064] SRL Remap converted 0 SRLs to 0 registers and converted 0 registers of register chains to 0 SRLs
-Phase 7 Shift Register Optimization | Checksum: f43c39b7
+Phase 7 Shift Register Optimization | Checksum: 7d440705
 
-Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 2051.984 ; gain = 0.020
-Shift Register Optimization | Checksum: f43c39b7
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2058.902 ; gain = 0.984
+Shift Register Optimization | Checksum: 7d440705
 INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
 
 Phase 8 Post Processing Netlist
-Phase 8 Post Processing Netlist | Checksum: 16f48e460
+Phase 8 Post Processing Netlist | Checksum: 10033bc5c
 
-Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2051.984 ; gain = 0.020
-Post Processing Netlist | Checksum: 16f48e460
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2058.902 ; gain = 0.984
+Post Processing Netlist | Checksum: 10033bc5c
 INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
 INFO: [Opt 31-1021] In phase Post Processing Netlist, 80 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
 
 Phase 9 Finalization
 
 Phase 9.1 Finalizing Design Cores and Updating Shapes
-Phase 9.1 Finalizing Design Cores and Updating Shapes | Checksum: 14df96f4a
+Phase 9.1 Finalizing Design Cores and Updating Shapes | Checksum: 12b5518b5
 
-Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2051.984 ; gain = 0.020
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2058.902 ; gain = 0.984
 
 Phase 9.2 Verifying Netlist Connectivity
 
 Starting Connectivity Check Task
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.030 . Memory (MB): peak = 2051.984 ; gain = 0.000
-Phase 9.2 Verifying Netlist Connectivity | Checksum: 14df96f4a
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.016 . Memory (MB): peak = 2058.902 ; gain = 0.000
+Phase 9.2 Verifying Netlist Connectivity | Checksum: 12b5518b5
 
-Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2051.984 ; gain = 0.020
-Phase 9 Finalization | Checksum: 14df96f4a
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2058.902 ; gain = 0.984
+Phase 9 Finalization | Checksum: 12b5518b5
 
-Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2051.984 ; gain = 0.020
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2058.902 ; gain = 0.984
 Opt_design Change Summary
 =========================
 
@@ -520,9 +519,9 @@ Opt_design Change Summary
 -------------------------------------------------------------------------------------------------------------------------
 
 
-Ending Logic Optimization Task | Checksum: 14df96f4a
+Ending Logic Optimization Task | Checksum: 12b5518b5
 
-Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2051.984 ; gain = 0.020
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2058.902 ; gain = 0.984
 
 Starting Power Optimization Task
 INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
@@ -537,31 +536,31 @@ INFO: [Pwropt 34-10] Applying ODC optimizations ...
 Starting PowerOpt Patch Enables Task
 INFO: [Pwropt 34-162] WRITE_MODE attribute of 0 BRAM(s) out of a total of 130 has been updated to save power. Run report_power_opt to get a complete listing of the BRAMs updated.
 INFO: [Pwropt 34-201] Structural ODC has moved 0 WE to EN ports
-Number of BRAM Ports augmented: 128 newly gated: 0 Total Ports: 260
+Number of BRAM Ports augmented: 64 newly gated: 0 Total Ports: 260
 Number of Flops added for Enable Generation: 6
 
-Ending PowerOpt Patch Enables Task | Checksum: 11225f738
+Ending PowerOpt Patch Enables Task | Checksum: 1a6cc6faf
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.416 . Memory (MB): peak = 2194.430 ; gain = 0.000
-Ending Power Optimization Task | Checksum: 11225f738
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.349 . Memory (MB): peak = 2207.523 ; gain = 0.000
+Ending Power Optimization Task | Checksum: 1a6cc6faf
 
-Time (s): cpu = 00:00:23 ; elapsed = 00:00:21 . Memory (MB): peak = 2194.430 ; gain = 142.445
+Time (s): cpu = 00:00:13 ; elapsed = 00:00:12 . Memory (MB): peak = 2207.523 ; gain = 148.621
 
 Starting Final Cleanup Task
 
 Starting Logic Optimization Task
 INFO: [Timing 38-35] Done setting XDC timing constraints.
-Ending Logic Optimization Task | Checksum: 9c057d48
+Ending Logic Optimization Task | Checksum: 18a7b44aa
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 2194.430 ; gain = 0.000
-Ending Final Cleanup Task | Checksum: 9c057d48
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 2207.523 ; gain = 0.000
+Ending Final Cleanup Task | Checksum: 18a7b44aa
 
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2194.430 ; gain = 0.000
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 2194.430 ; gain = 0.000
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2207.523 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 2207.523 ; gain = 0.000
 INFO: [Common 17-83] Releasing license: Implementation
 54 Infos, 100 Warnings, 101 Critical Warnings and 0 Errors encountered.
 opt_design completed successfully
-opt_design: Time (s): cpu = 00:00:36 ; elapsed = 00:00:35 . Memory (MB): peak = 2194.430 ; gain = 581.176
+opt_design: Time (s): cpu = 00:00:22 ; elapsed = 00:00:21 . Memory (MB): peak = 2207.523 ; gain = 588.133
 INFO: [Vivado 12-24828] Executing command : report_drc -file top_drc_opted.rpt -pb top_drc_opted.pb -rpx top_drc_opted.rpx
 Command: report_drc -file top_drc_opted.rpt -pb top_drc_opted.pb -rpx top_drc_opted.rpx
 INFO: [IP_Flow 19-1839] IP Catalog is up to date.
@@ -569,17 +568,17 @@ INFO: [DRC 23-27] Running DRC with 2 threads
 INFO: [Vivado_Tcl 2-168] The results of DRC are in file C:/Users/hause/Documents/Vivado/Projects/Takuan/Takuan.runs/impl_1/top_drc_opted.rpt.
 report_drc completed successfully
 INFO: [Timing 38-480] Writing timing data to binary archive.
-Wrote PlaceDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2194.430 ; gain = 0.000
-Wrote PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2194.430 ; gain = 0.000
+Wrote PlaceDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2207.523 ; gain = 0.000
+Wrote PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2207.523 ; gain = 0.000
 Writing XDEF routing.
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.028 . Memory (MB): peak = 2194.430 ; gain = 0.000
 Writing XDEF routing logical nets.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.025 . Memory (MB): peak = 2207.523 ; gain = 0.000
 Writing XDEF routing special nets.
-Wrote RouteStorage: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.038 . Memory (MB): peak = 2194.430 ; gain = 0.000
-Wrote PlaceStorage: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 2194.430 ; gain = 0.000
-Wrote Netlist Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 2194.430 ; gain = 0.000
-Wrote Device Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 2194.430 ; gain = 0.000
-Write Physdb Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.069 . Memory (MB): peak = 2194.430 ; gain = 0.000
+Wrote RouteStorage: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.033 . Memory (MB): peak = 2207.523 ; gain = 0.000
+Wrote PlaceStorage: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 2207.523 ; gain = 0.000
+Wrote Netlist Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2207.523 ; gain = 0.000
+Wrote Device Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 2207.523 ; gain = 0.000
+Write Physdb Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.064 . Memory (MB): peak = 2207.523 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/Users/hause/Documents/Vivado/Projects/Takuan/Takuan.runs/impl_1/top_opt.dcp' has been generated.
 Command: place_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
@@ -600,69 +599,69 @@ Starting Placer Task
 Phase 1 Placer Initialization
 
 Phase 1.1 Placer Initialization Netlist Sorting
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 2194.430 ; gain = 0.000
-Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 85c72014
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 2207.523 ; gain = 0.000
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 115fc0a0b
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.014 . Memory (MB): peak = 2194.430 ; gain = 0.000
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 2194.430 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 2207.523 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 2207.523 ; gain = 0.000
 
 Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
-Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 16f70971d
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 1e5082ef7
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.876 . Memory (MB): peak = 2194.430 ; gain = 0.000
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.916 . Memory (MB): peak = 2207.523 ; gain = 0.000
 
 Phase 1.3 Build Placer Netlist Model
-Phase 1.3 Build Placer Netlist Model | Checksum: 14a559da8
+Phase 1.3 Build Placer Netlist Model | Checksum: 1faac3a29
 
-Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 2194.430 ; gain = 0.000
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 2207.523 ; gain = 0.000
 
 Phase 1.4 Constrain Clocks/Macros
-Phase 1.4 Constrain Clocks/Macros | Checksum: 14a559da8
+Phase 1.4 Constrain Clocks/Macros | Checksum: 1faac3a29
 
-Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 2194.430 ; gain = 0.000
-Phase 1 Placer Initialization | Checksum: 14a559da8
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 2207.523 ; gain = 0.000
+Phase 1 Placer Initialization | Checksum: 1faac3a29
 
-Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 2194.430 ; gain = 0.000
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 2207.523 ; gain = 0.000
 
 Phase 2 Global Placement
 
 Phase 2.1 Floorplanning
-Phase 2.1 Floorplanning | Checksum: 114b38fe8
+Phase 2.1 Floorplanning | Checksum: 2a3b663f1
 
-Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 2194.430 ; gain = 0.000
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 2207.523 ; gain = 0.000
 
 Phase 2.2 Update Timing before SLR Path Opt
-Phase 2.2 Update Timing before SLR Path Opt | Checksum: 1bd783b7b
+Phase 2.2 Update Timing before SLR Path Opt | Checksum: 209c835d5
 
-Time (s): cpu = 00:00:08 ; elapsed = 00:00:06 . Memory (MB): peak = 2194.430 ; gain = 0.000
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:06 . Memory (MB): peak = 2207.523 ; gain = 0.000
 
 Phase 2.3 Post-Processing in Floorplanning
-Phase 2.3 Post-Processing in Floorplanning | Checksum: 1bd783b7b
+Phase 2.3 Post-Processing in Floorplanning | Checksum: 209c835d5
 
-Time (s): cpu = 00:00:08 ; elapsed = 00:00:06 . Memory (MB): peak = 2194.430 ; gain = 0.000
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:06 . Memory (MB): peak = 2207.523 ; gain = 0.000
 
 Phase 2.4 Global Place Phase1
-Phase 2.4 Global Place Phase1 | Checksum: de68334d
+Phase 2.4 Global Place Phase1 | Checksum: 21535a381
 
-Time (s): cpu = 00:00:22 ; elapsed = 00:00:15 . Memory (MB): peak = 2194.430 ; gain = 0.000
+Time (s): cpu = 00:00:26 ; elapsed = 00:00:17 . Memory (MB): peak = 2207.523 ; gain = 0.000
 
 Phase 2.5 Global Place Phase2
 
 Phase 2.5.1 UpdateTiming Before Physical Synthesis
-Phase 2.5.1 UpdateTiming Before Physical Synthesis | Checksum: 11625d808
+Phase 2.5.1 UpdateTiming Before Physical Synthesis | Checksum: 2b25addfc
 
-Time (s): cpu = 00:00:24 ; elapsed = 00:00:16 . Memory (MB): peak = 2194.430 ; gain = 0.000
+Time (s): cpu = 00:00:28 ; elapsed = 00:00:18 . Memory (MB): peak = 2207.523 ; gain = 0.000
 
 Phase 2.5.2 Physical Synthesis In Placer
-INFO: [Physopt 32-1035] Found 37 LUTNM shape to break, 531 LUT instances to create LUTNM shape
-INFO: [Physopt 32-1044] Break lutnm for timing: one critical 1, two critical 36, total 37, new lutff created 0
-INFO: [Physopt 32-1138] End 1 Pass. Optimized 255 nets or LUTs. Breaked 37 LUTs, combined 218 existing LUTs and moved 0 existing LUT
-INFO: [Physopt 32-1132] Very high fanout net 'mb_block_i/inst/axi_smc/inst/m00_exit_pipeline/m00_exit/inst/aw_reg/Q[2]' is not considered as a candidate in VHFN optimization. The fanout considered for this optimization is changed from 1308 to 260 due to a timing constraint or macro primitives that prevent optimization on all of the loads. To force replication, set the FORCE_MAX_FANOUT property on the net to a number less than 260.
-INFO: [Physopt 32-1132] Very high fanout net 'mb_block_i/inst/axi_smc/inst/m00_exit_pipeline/m00_exit/inst/aw_reg/Q[3]' is not considered as a candidate in VHFN optimization. The fanout considered for this optimization is changed from 1308 to 260 due to a timing constraint or macro primitives that prevent optimization on all of the loads. To force replication, set the FORCE_MAX_FANOUT property on the net to a number less than 260.
-INFO: [Physopt 32-1132] Very high fanout net 'mb_block_i/inst/axi_smc/inst/m00_exit_pipeline/m00_exit/inst/aw_reg/Q[4]' is not considered as a candidate in VHFN optimization. The fanout considered for this optimization is changed from 1308 to 260 due to a timing constraint or macro primitives that prevent optimization on all of the loads. To force replication, set the FORCE_MAX_FANOUT property on the net to a number less than 260.
-INFO: [Physopt 32-1132] Very high fanout net 'mb_block_i/inst/axi_smc/inst/m00_exit_pipeline/m00_exit/inst/aw_reg/Q[5]' is not considered as a candidate in VHFN optimization. The fanout considered for this optimization is changed from 1235 to 250 due to a timing constraint or macro primitives that prevent optimization on all of the loads. To force replication, set the FORCE_MAX_FANOUT property on the net to a number less than 250.
-INFO: [Physopt 32-1132] Very high fanout net 'mb_block_i/inst/axi_smc/inst/m00_exit_pipeline/m00_exit/inst/aw_reg/Q[6]' is not considered as a candidate in VHFN optimization. The fanout considered for this optimization is changed from 1235 to 250 due to a timing constraint or macro primitives that prevent optimization on all of the loads. To force replication, set the FORCE_MAX_FANOUT property on the net to a number less than 250.
-INFO: [Physopt 32-1132] Very high fanout net 'mb_block_i/inst/axi_smc/inst/m00_exit_pipeline/m00_exit/inst/aw_reg/Q[7]' is not considered as a candidate in VHFN optimization. The fanout considered for this optimization is changed from 1233 to 248 due to a timing constraint or macro primitives that prevent optimization on all of the loads. To force replication, set the FORCE_MAX_FANOUT property on the net to a number less than 248.
+INFO: [Physopt 32-1035] Found 35 LUTNM shape to break, 552 LUT instances to create LUTNM shape
+INFO: [Physopt 32-1044] Break lutnm for timing: one critical 2, two critical 33, total 35, new lutff created 0
+INFO: [Physopt 32-1138] End 1 Pass. Optimized 268 nets or LUTs. Breaked 35 LUTs, combined 233 existing LUTs and moved 0 existing LUT
+INFO: [Physopt 32-1132] Very high fanout net 'mb_block_i/inst/axi_smc/inst/m00_exit_pipeline/m00_exit/inst/aw_reg/Q[2]' is not considered as a candidate in VHFN optimization. The fanout considered for this optimization is changed from 1328 to 264 due to a timing constraint or macro primitives that prevent optimization on all of the loads. To force replication, set the FORCE_MAX_FANOUT property on the net to a number less than 264.
+INFO: [Physopt 32-1132] Very high fanout net 'mb_block_i/inst/axi_smc/inst/m00_exit_pipeline/m00_exit/inst/aw_reg/Q[3]' is not considered as a candidate in VHFN optimization. The fanout considered for this optimization is changed from 1328 to 264 due to a timing constraint or macro primitives that prevent optimization on all of the loads. To force replication, set the FORCE_MAX_FANOUT property on the net to a number less than 264.
+INFO: [Physopt 32-1132] Very high fanout net 'mb_block_i/inst/axi_smc/inst/m00_exit_pipeline/m00_exit/inst/aw_reg/Q[4]' is not considered as a candidate in VHFN optimization. The fanout considered for this optimization is changed from 1328 to 264 due to a timing constraint or macro primitives that prevent optimization on all of the loads. To force replication, set the FORCE_MAX_FANOUT property on the net to a number less than 264.
+INFO: [Physopt 32-1132] Very high fanout net 'mb_block_i/inst/axi_smc/inst/m00_exit_pipeline/m00_exit/inst/aw_reg/Q[5]' is not considered as a candidate in VHFN optimization. The fanout considered for this optimization is changed from 1255 to 254 due to a timing constraint or macro primitives that prevent optimization on all of the loads. To force replication, set the FORCE_MAX_FANOUT property on the net to a number less than 254.
+INFO: [Physopt 32-1132] Very high fanout net 'mb_block_i/inst/axi_smc/inst/m00_exit_pipeline/m00_exit/inst/aw_reg/Q[6]' is not considered as a candidate in VHFN optimization. The fanout considered for this optimization is changed from 1255 to 254 due to a timing constraint or macro primitives that prevent optimization on all of the loads. To force replication, set the FORCE_MAX_FANOUT property on the net to a number less than 254.
+INFO: [Physopt 32-1132] Very high fanout net 'mb_block_i/inst/axi_smc/inst/m00_exit_pipeline/m00_exit/inst/aw_reg/Q[7]' is not considered as a candidate in VHFN optimization. The fanout considered for this optimization is changed from 1253 to 252 due to a timing constraint or macro primitives that prevent optimization on all of the loads. To force replication, set the FORCE_MAX_FANOUT property on the net to a number less than 252.
 INFO: [Physopt 32-65] No nets found for high-fanout optimization.
 INFO: [Physopt 32-232] Optimized 0 net. Created 0 new instance.
 INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
@@ -681,7 +680,7 @@ INFO: [Physopt 32-846] No candidate cells for URAM register optimization found i
 INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
 INFO: [Physopt 32-949] No candidate nets found for dynamic/static region interface net replication
 INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 2194.430 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 2207.523 ; gain = 0.000
 
 Summary of Physical Synthesis Optimizations
 ============================================
@@ -690,7 +689,7 @@ Summary of Physical Synthesis Optimizations
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 |  Optimization                                     |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
-|  LUT Combining                                    |           37  |            218  |                   255  |           0  |           1  |  00:00:00  |
+|  LUT Combining                                    |           35  |            233  |                   268  |           0  |           1  |  00:00:00  |
 |  Retime                                           |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
 |  Very High Fanout                                 |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
 |  DSP Register                                     |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
@@ -699,69 +698,69 @@ Summary of Physical Synthesis Optimizations
 |  BRAM Register                                    |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
 |  URAM Register                                    |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
 |  Dynamic/Static Region Interface Net Replication  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
-|  Total                                            |           37  |            218  |                   255  |           0  |           9  |  00:00:00  |
+|  Total                                            |           35  |            233  |                   268  |           0  |           9  |  00:00:00  |
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
-Phase 2.5.2 Physical Synthesis In Placer | Checksum: 199b0fffa
+Phase 2.5.2 Physical Synthesis In Placer | Checksum: 271de9d65
 
-Time (s): cpu = 00:00:27 ; elapsed = 00:00:19 . Memory (MB): peak = 2194.430 ; gain = 0.000
-Phase 2.5 Global Place Phase2 | Checksum: 1daaca562
+Time (s): cpu = 00:00:30 ; elapsed = 00:00:20 . Memory (MB): peak = 2207.523 ; gain = 0.000
+Phase 2.5 Global Place Phase2 | Checksum: 257bcea68
 
-Time (s): cpu = 00:00:27 ; elapsed = 00:00:19 . Memory (MB): peak = 2194.430 ; gain = 0.000
-Phase 2 Global Placement | Checksum: 1daaca562
+Time (s): cpu = 00:00:31 ; elapsed = 00:00:20 . Memory (MB): peak = 2207.523 ; gain = 0.000
+Phase 2 Global Placement | Checksum: 257bcea68
 
-Time (s): cpu = 00:00:27 ; elapsed = 00:00:19 . Memory (MB): peak = 2194.430 ; gain = 0.000
+Time (s): cpu = 00:00:31 ; elapsed = 00:00:20 . Memory (MB): peak = 2207.523 ; gain = 0.000
 
 Phase 3 Detail Placement
 
 Phase 3.1 Commit Multi Column Macros
-Phase 3.1 Commit Multi Column Macros | Checksum: 1cf07c767
+Phase 3.1 Commit Multi Column Macros | Checksum: 27431b645
 
-Time (s): cpu = 00:00:29 ; elapsed = 00:00:20 . Memory (MB): peak = 2194.430 ; gain = 0.000
+Time (s): cpu = 00:00:33 ; elapsed = 00:00:21 . Memory (MB): peak = 2207.523 ; gain = 0.000
 
 Phase 3.2 Commit Most Macros & LUTRAMs
-Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 299fa19f6
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 1bd638bfe
 
-Time (s): cpu = 00:00:32 ; elapsed = 00:00:22 . Memory (MB): peak = 2194.430 ; gain = 0.000
+Time (s): cpu = 00:00:36 ; elapsed = 00:00:23 . Memory (MB): peak = 2207.523 ; gain = 0.000
 
 Phase 3.3 Area Swap Optimization
-Phase 3.3 Area Swap Optimization | Checksum: 1fdb8c7a3
+Phase 3.3 Area Swap Optimization | Checksum: 209e1f59f
 
-Time (s): cpu = 00:00:32 ; elapsed = 00:00:23 . Memory (MB): peak = 2194.430 ; gain = 0.000
+Time (s): cpu = 00:00:36 ; elapsed = 00:00:24 . Memory (MB): peak = 2207.523 ; gain = 0.000
 
 Phase 3.4 Pipeline Register Optimization
-Phase 3.4 Pipeline Register Optimization | Checksum: 28a415a71
+Phase 3.4 Pipeline Register Optimization | Checksum: 1db5685ec
 
-Time (s): cpu = 00:00:32 ; elapsed = 00:00:23 . Memory (MB): peak = 2194.430 ; gain = 0.000
+Time (s): cpu = 00:00:36 ; elapsed = 00:00:24 . Memory (MB): peak = 2207.523 ; gain = 0.000
 
 Phase 3.5 Fast Optimization
-Phase 3.5 Fast Optimization | Checksum: 215a7a992
+Phase 3.5 Fast Optimization | Checksum: 1bdbd92e1
 
-Time (s): cpu = 00:00:38 ; elapsed = 00:00:27 . Memory (MB): peak = 2194.430 ; gain = 0.000
+Time (s): cpu = 00:00:41 ; elapsed = 00:00:27 . Memory (MB): peak = 2207.523 ; gain = 0.000
 
 Phase 3.6 Small Shape Detail Placement
-Phase 3.6 Small Shape Detail Placement | Checksum: 191a6e908
+Phase 3.6 Small Shape Detail Placement | Checksum: 1a59ae2bc
 
-Time (s): cpu = 00:00:41 ; elapsed = 00:00:30 . Memory (MB): peak = 2194.430 ; gain = 0.000
+Time (s): cpu = 00:00:43 ; elapsed = 00:00:30 . Memory (MB): peak = 2207.523 ; gain = 0.000
 
 Phase 3.7 Re-assign LUT pins
-Phase 3.7 Re-assign LUT pins | Checksum: 1e8f85c5b
+Phase 3.7 Re-assign LUT pins | Checksum: 1978f5822
 
-Time (s): cpu = 00:00:43 ; elapsed = 00:00:32 . Memory (MB): peak = 2194.430 ; gain = 0.000
+Time (s): cpu = 00:00:44 ; elapsed = 00:00:30 . Memory (MB): peak = 2207.523 ; gain = 0.000
 
 Phase 3.8 Pipeline Register Optimization
-Phase 3.8 Pipeline Register Optimization | Checksum: 20f4ebbdb
+Phase 3.8 Pipeline Register Optimization | Checksum: 15d045b62
 
-Time (s): cpu = 00:00:43 ; elapsed = 00:00:32 . Memory (MB): peak = 2194.430 ; gain = 0.000
+Time (s): cpu = 00:00:44 ; elapsed = 00:00:30 . Memory (MB): peak = 2207.523 ; gain = 0.000
 
 Phase 3.9 Fast Optimization
-Phase 3.9 Fast Optimization | Checksum: 1c7065522
+Phase 3.9 Fast Optimization | Checksum: 1e38fa7d2
 
-Time (s): cpu = 00:01:04 ; elapsed = 00:00:50 . Memory (MB): peak = 2194.430 ; gain = 0.000
-Phase 3 Detail Placement | Checksum: 1c7065522
+Time (s): cpu = 00:00:53 ; elapsed = 00:00:37 . Memory (MB): peak = 2207.523 ; gain = 0.000
+Phase 3 Detail Placement | Checksum: 1e38fa7d2
 
-Time (s): cpu = 00:01:04 ; elapsed = 00:00:50 . Memory (MB): peak = 2194.430 ; gain = 0.000
+Time (s): cpu = 00:00:53 ; elapsed = 00:00:37 . Memory (MB): peak = 2207.523 ; gain = 0.000
 
 Phase 4 Post Placement Optimization and Clean-Up
 
@@ -769,7 +768,7 @@ Phase 4.1 Post Commit Optimization
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 
 Phase 4.1.1 Post Placement Optimization
-Post Placement Optimization Initialization | Checksum: 1617b84c9
+Post Placement Optimization Initialization | Checksum: 255f4698c
 
 Phase 4.1.1.1 BUFG Insertion
 
@@ -777,33 +776,33 @@ Starting Physical Synthesis Task
 
 Phase 1 Physical Synthesis Initialization
 INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 2 CPUs
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-14.271 | TNS=-24641.204 |
-Phase 1 Physical Synthesis Initialization | Checksum: 121fd2cbc
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-14.184 | TNS=-24759.232 |
+Phase 1 Physical Synthesis Initialization | Checksum: 1bc655dbe
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.173 . Memory (MB): peak = 2194.430 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.180 . Memory (MB): peak = 2207.523 ; gain = 0.000
 INFO: [Place 46-56] BUFG insertion identified 0 candidate nets. Inserted BUFG: 0, Replicated BUFG Driver: 0, Skipped due to Placement/Routing Conflicts: 0, Skipped due to Timing Degradation: 0, Skipped due to netlist editing failed: 0.
-Ending Physical Synthesis Task | Checksum: 129a04728
+Ending Physical Synthesis Task | Checksum: 1fa5b8785
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.260 . Memory (MB): peak = 2194.430 ; gain = 0.000
-Phase 4.1.1.1 BUFG Insertion | Checksum: 1617b84c9
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.265 . Memory (MB): peak = 2207.523 ; gain = 0.000
+Phase 4.1.1.1 BUFG Insertion | Checksum: 255f4698c
 
-Time (s): cpu = 00:01:11 ; elapsed = 00:00:55 . Memory (MB): peak = 2194.430 ; gain = 0.000
+Time (s): cpu = 00:00:57 ; elapsed = 00:00:40 . Memory (MB): peak = 2207.523 ; gain = 0.000
 
 Phase 4.1.1.2 Post Placement Timing Optimization
-INFO: [Place 30-746] Post Placement Timing Summary WNS=-13.818. For the most accurate timing information please run report_timing.
-Phase 4.1.1.2 Post Placement Timing Optimization | Checksum: 18e3b2c56
+INFO: [Place 30-746] Post Placement Timing Summary WNS=-13.672. For the most accurate timing information please run report_timing.
+Phase 4.1.1.2 Post Placement Timing Optimization | Checksum: 1757222f8
 
-Time (s): cpu = 00:01:50 ; elapsed = 00:01:37 . Memory (MB): peak = 2194.430 ; gain = 0.000
+Time (s): cpu = 00:01:34 ; elapsed = 00:01:16 . Memory (MB): peak = 2207.523 ; gain = 0.000
 
-Time (s): cpu = 00:01:50 ; elapsed = 00:01:37 . Memory (MB): peak = 2194.430 ; gain = 0.000
-Phase 4.1 Post Commit Optimization | Checksum: 18e3b2c56
+Time (s): cpu = 00:01:34 ; elapsed = 00:01:16 . Memory (MB): peak = 2207.523 ; gain = 0.000
+Phase 4.1 Post Commit Optimization | Checksum: 1757222f8
 
-Time (s): cpu = 00:01:50 ; elapsed = 00:01:37 . Memory (MB): peak = 2194.430 ; gain = 0.000
+Time (s): cpu = 00:01:34 ; elapsed = 00:01:16 . Memory (MB): peak = 2207.523 ; gain = 0.000
 
 Phase 4.2 Post Placement Cleanup
-Phase 4.2 Post Placement Cleanup | Checksum: 18e3b2c56
+Phase 4.2 Post Placement Cleanup | Checksum: 1757222f8
 
-Time (s): cpu = 00:01:50 ; elapsed = 00:01:37 . Memory (MB): peak = 2194.430 ; gain = 0.000
+Time (s): cpu = 00:01:35 ; elapsed = 00:01:17 . Memory (MB): peak = 2207.523 ; gain = 0.000
 
 Phase 4.3 Placer Reporting
 
@@ -815,52 +814,52 @@ INFO: [Place 30-612] Post-Placement Estimated Congestion
 |___________|___________________|___________________|
 |      North|                1x1|                2x2|
 |___________|___________________|___________________|
-|      South|                1x1|                4x4|
+|      South|                1x1|                1x1|
 |___________|___________________|___________________|
 |       East|                1x1|                1x1|
 |___________|___________________|___________________|
 |       West|                1x1|                1x1|
 |___________|___________________|___________________|
 
-Phase 4.3.1 Print Estimated Congestion | Checksum: 18e3b2c56
+Phase 4.3.1 Print Estimated Congestion | Checksum: 1757222f8
 
-Time (s): cpu = 00:01:50 ; elapsed = 00:01:37 . Memory (MB): peak = 2194.430 ; gain = 0.000
-Phase 4.3 Placer Reporting | Checksum: 18e3b2c56
+Time (s): cpu = 00:01:35 ; elapsed = 00:01:17 . Memory (MB): peak = 2207.523 ; gain = 0.000
+Phase 4.3 Placer Reporting | Checksum: 1757222f8
 
-Time (s): cpu = 00:01:50 ; elapsed = 00:01:37 . Memory (MB): peak = 2194.430 ; gain = 0.000
+Time (s): cpu = 00:01:35 ; elapsed = 00:01:17 . Memory (MB): peak = 2207.523 ; gain = 0.000
 
 Phase 4.4 Final Placement Cleanup
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 2194.430 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 2207.523 ; gain = 0.000
 
-Time (s): cpu = 00:01:50 ; elapsed = 00:01:37 . Memory (MB): peak = 2194.430 ; gain = 0.000
-Phase 4 Post Placement Optimization and Clean-Up | Checksum: 2222be7bb
+Time (s): cpu = 00:01:35 ; elapsed = 00:01:17 . Memory (MB): peak = 2207.523 ; gain = 0.000
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 12e9e8297
 
-Time (s): cpu = 00:01:50 ; elapsed = 00:01:37 . Memory (MB): peak = 2194.430 ; gain = 0.000
-Ending Placer Task | Checksum: 1cb75913c
+Time (s): cpu = 00:01:35 ; elapsed = 00:01:17 . Memory (MB): peak = 2207.523 ; gain = 0.000
+Ending Placer Task | Checksum: 109321468
 
-Time (s): cpu = 00:01:50 ; elapsed = 00:01:38 . Memory (MB): peak = 2194.430 ; gain = 0.000
+Time (s): cpu = 00:01:35 ; elapsed = 00:01:17 . Memory (MB): peak = 2207.523 ; gain = 0.000
 103 Infos, 100 Warnings, 101 Critical Warnings and 0 Errors encountered.
 place_design completed successfully
-place_design: Time (s): cpu = 00:01:52 ; elapsed = 00:01:40 . Memory (MB): peak = 2194.430 ; gain = 0.000
+place_design: Time (s): cpu = 00:01:37 ; elapsed = 00:01:19 . Memory (MB): peak = 2207.523 ; gain = 0.000
 INFO: [Vivado 12-24838] Running report commands "report_control_sets, report_io, report_utilization" in parallel.
 Running report generation with 2 threads.
 INFO: [Vivado 12-24828] Executing command : report_io -file top_io_placed.rpt
-report_io: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.065 . Memory (MB): peak = 2194.430 ; gain = 0.000
+report_io: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.061 . Memory (MB): peak = 2207.523 ; gain = 0.000
 INFO: [Vivado 12-24828] Executing command : report_utilization -file top_utilization_placed.rpt -pb top_utilization_placed.pb
 INFO: [Vivado 12-24828] Executing command : report_control_sets -verbose -file top_control_sets_placed.rpt
-report_control_sets: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.043 . Memory (MB): peak = 2194.430 ; gain = 0.000
+report_control_sets: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.045 . Memory (MB): peak = 2207.523 ; gain = 0.000
 INFO: [Timing 38-480] Writing timing data to binary archive.
-Wrote PlaceDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2194.430 ; gain = 0.000
-Wrote PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2194.430 ; gain = 0.000
+Wrote PlaceDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2207.523 ; gain = 0.000
+Wrote PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2207.523 ; gain = 0.000
 Writing XDEF routing.
 Writing XDEF routing logical nets.
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.030 . Memory (MB): peak = 2194.430 ; gain = 0.000
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.032 . Memory (MB): peak = 2207.523 ; gain = 0.000
 Writing XDEF routing special nets.
-Wrote RouteStorage: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.032 . Memory (MB): peak = 2194.430 ; gain = 0.000
-Wrote PlaceStorage: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.368 . Memory (MB): peak = 2194.430 ; gain = 0.000
-Wrote Netlist Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 2194.430 ; gain = 0.000
-Wrote Device Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 2194.430 ; gain = 0.000
-Write Physdb Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.434 . Memory (MB): peak = 2194.430 ; gain = 0.000
+Wrote RouteStorage: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.030 . Memory (MB): peak = 2207.523 ; gain = 0.000
+Wrote PlaceStorage: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.354 . Memory (MB): peak = 2207.523 ; gain = 0.000
+Wrote Netlist Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 2207.523 ; gain = 0.000
+Wrote Device Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 2207.523 ; gain = 0.000
+Write Physdb Complete: Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.419 . Memory (MB): peak = 2207.523 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/Users/hause/Documents/Vivado/Projects/Takuan/Takuan.runs/impl_1/top_placed.dcp' has been generated.
 Command: phys_opt_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
@@ -868,403 +867,285 @@ INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc
 
 Starting Initial Update Timing Task
 
-Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 2194.430 ; gain = 0.000
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 2207.523 ; gain = 0.000
 INFO: [Vivado_Tcl 4-1435] PhysOpt_Tcl_Interface Runtime Before Starting Physical Synthesis Task | CPU: 4.00s |  WALL: 1.94s
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 2194.430 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 2207.523 ; gain = 0.000
 
 Starting Physical Synthesis Task
 
 Phase 1 Physical Synthesis Initialization
 INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 2 CPUs
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-13.818 | TNS=-23735.563 |
-Phase 1 Physical Synthesis Initialization | Checksum: 580dda42
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-13.672 | TNS=-23944.913 |
+Phase 1 Physical Synthesis Initialization | Checksum: 1e3b29824
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 2194.430 ; gain = 0.000
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-13.818 | TNS=-23735.563 |
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2207.523 ; gain = 0.000
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-13.672 | TNS=-23944.913 |
 
 Phase 2 DSP Register Optimization
 INFO: [Physopt 32-456] No candidate cells for DSP register optimization found in the design.
 INFO: [Physopt 32-775] End 2 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
-Phase 2 DSP Register Optimization | Checksum: 580dda42
+Phase 2 DSP Register Optimization | Checksum: 1e3b29824
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 2194.430 ; gain = 0.000
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2207.523 ; gain = 0.000
 
 Phase 3 Critical Path Optimization
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-13.818 | TNS=-23735.563 |
-INFO: [Physopt 32-702] Processed net mb_block_i/inst/axi_bram_ctrl_0_bram_osc_a/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[46].ram.r/prim_noinit.ram/DOUTB[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-13.672 | TNS=-23944.913 |
+INFO: [Physopt 32-702] Processed net mb_block_i/inst/axi_bram_ctrl_0_bram_osc_a/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[42].ram.r/prim_noinit.ram/DOUTB[0]. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net mb_block_i/inst/processing_system7_0/inst/FCLK_CLK_unbuffered[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/s2_wt_lsb0__93_carry__5_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/s2_wt_lsb0__93_carry__4_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/s2_wt_lsb0__93_carry__3_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/s2_wt_lsb0__93_carry__2_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/s2_wt_lsb0__93_carry__1_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-608] Optimized 1 net.  Swapped 14 pins.
 INFO: [Physopt 32-735] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/s2_wt_lsb0__93_carry__1_i_3_n_0. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-13.805 | TNS=-23717.383 |
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-13.560 | TNS=-23789.711 |
 INFO: [Physopt 32-608] Optimized 1 net.  Swapped 14 pins.
 INFO: [Physopt 32-735] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/s2_wt_lsb0__93_carry__1_i_4_n_0. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-13.798 | TNS=-23707.471 |
-INFO: [Physopt 32-608] Optimized 1 net.  Swapped 14 pins.
-INFO: [Physopt 32-735] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/s2_wt_lsb0__93_carry__1_i_2_n_0. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-13.704 | TNS=-23576.906 |
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-13.558 | TNS=-23786.472 |
 INFO: [Physopt 32-608] Optimized 1 net.  Swapped 14 pins.
 INFO: [Physopt 32-735] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/s2_wt_lsb0__93_carry__2_i_3_n_0. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-13.691 | TNS=-23559.161 |
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-13.528 | TNS=-23745.519 |
 INFO: [Physopt 32-608] Optimized 1 net.  Swapped 14 pins.
-INFO: [Physopt 32-735] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/s2_wt_lsb0__93_carry__2_i_4_n_0. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-13.684 | TNS=-23549.606 |
-INFO: [Physopt 32-608] Optimized 1 net.  Swapped 14 pins.
-INFO: [Physopt 32-735] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/s2_wt_lsb0__93_carry__2_i_2_n_0. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-13.657 | TNS=-23512.750 |
+INFO: [Physopt 32-735] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/s2_wt_lsb0__93_carry__1_i_2_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-13.504 | TNS=-23712.373 |
 INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/s2_wt_lsb0__93_carry__0_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-608] Optimized 1 net.  Swapped 14 pins.
 INFO: [Physopt 32-735] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/s2_wt_lsb0__93_carry__0_i_1_n_0. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-13.590 | TNS=-23415.296 |
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-13.446 | TNS=-23625.855 |
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 14 pins.
+INFO: [Physopt 32-735] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/s2_wt_lsb0__93_carry__2_i_4_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-13.444 | TNS=-23622.646 |
 INFO: [Physopt 32-608] Optimized 1 net.  Swapped 14 pins.
 INFO: [Physopt 32-735] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/s2_wt_lsb0__93_carry__3_i_3_n_0. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-13.577 | TNS=-23397.761 |
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-13.414 | TNS=-23582.174 |
 INFO: [Physopt 32-608] Optimized 1 net.  Swapped 14 pins.
-INFO: [Physopt 32-735] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/s2_wt_lsb0__93_carry__3_i_4_n_0. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-13.570 | TNS=-23388.317 |
+INFO: [Physopt 32-735] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/s2_wt_lsb0__93_carry__2_i_2_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-13.390 | TNS=-23549.412 |
 INFO: [Physopt 32-608] Optimized 1 net.  Swapped 14 pins.
-INFO: [Physopt 32-735] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/s2_wt_lsb0__93_carry__3_i_2_n_0. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-13.551 | TNS=-23362.685 |
-INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/s2_wt_lsb0__93_carry__1_i_3_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/bram0_addr_b[3]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/s2_wt_lsb2__0_n_103. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-608] Optimized 1 net.  Swapped 12 pins.
-INFO: [Physopt 32-735] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/pitch_lfo_val[7]. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-13.542 | TNS=-23349.827 |
-INFO: [Physopt 32-608] Optimized 1 net.  Swapped 18 pins.
-INFO: [Physopt 32-735] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/pitch_lfo_val[4]. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-13.512 | TNS=-23306.951 |
-INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/pitch_lfo_val[2]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/pitch_lfo_raw[2]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-608] Optimized 1 net.  Swapped 18 pins.
-INFO: [Physopt 32-735] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/s2_wt_lsb2_i_102_n_0. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-13.510 | TNS=-23304.096 |
-INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/pitch_lfo_val[7]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/pitch_lfo_raw[15]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-735] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/s2_wt_lsb0__93_carry__1_i_1_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-13.373 | TNS=-23525.938 |
+INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/s2_wt_lsb0__93_carry__1_i_4_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/bram0_addr_b[7]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/pitch_mod1__0_n_104. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-608] Optimized 1 net.  Swapped 24 pins.
-INFO: [Physopt 32-735] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/s2_wt_lsb2_i_60_n_0. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-13.478 | TNS=-23258.366 |
-INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/pitch_lfo_raw[10]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-735] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/pitch_lfo_val[7]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-13.359 | TNS=-23505.932 |
+INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/pitch_lfo_val[7]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/pitch_lfo_raw[23]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 24 pins.
+INFO: [Physopt 32-735] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/pitch_mod1_i_60_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-13.358 | TNS=-23504.504 |
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 24 pins.
+INFO: [Physopt 32-735] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/pitch_mod1_i_61_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-13.311 | TNS=-23437.340 |
+INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/pitch_lfo_raw[15]. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-608] Optimized 1 net.  Swapped 12 pins.
-INFO: [Physopt 32-735] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/s2_wt_lsb2_i_100_n_0. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-13.475 | TNS=-23254.082 |
-INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/pitch_lfo_raw[31]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-735] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/pitch_mod1_i_59_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-13.291 | TNS=-23408.760 |
 INFO: [Physopt 32-608] Optimized 1 net.  Swapped 12 pins.
-INFO: [Physopt 32-735] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/s2_wt_lsb2_i_64_n_0. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-13.475 | TNS=-23254.082 |
-INFO: [Physopt 32-608] Optimized 1 net.  Swapped 12 pins.
-INFO: [Physopt 32-735] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/pitch_lfo_val[5]. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-13.452 | TNS=-23221.215 |
-INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/pitch_lfo_val[0]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/pitch_lfo_raw[8]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-608] Optimized 1 net.  Swapped 12 pins.
-INFO: [Physopt 32-735] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/s2_wt_lsb2_i_117_n_0. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-13.451 | TNS=-23219.784 |
-INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/pitch_lfo_val[4]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/pitch_lfo_raw[20]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-608] Optimized 1 net.  Swapped 12 pins.
-INFO: [Physopt 32-735] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/s2_wt_lsb2_i_90_n_0. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-13.446 | TNS=-23212.640 |
-INFO: [Physopt 32-608] Optimized 1 net.  Swapped 12 pins.
-INFO: [Physopt 32-735] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/s2_wt_lsb2_i_116_n_0. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-13.439 | TNS=-23202.636 |
+INFO: [Physopt 32-735] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/pitch_mod1_i_58_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-13.209 | TNS=-23291.583 |
 INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/pitch_lfo_raw[7]. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-608] Optimized 1 net.  Swapped 12 pins.
-INFO: [Physopt 32-735] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/s2_wt_lsb2_i_62_n_0. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-13.436 | TNS=-23198.349 |
+INFO: [Physopt 32-735] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/pitch_mod1_i_62_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-13.182 | TNS=-23252.998 |
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 18 pins.
+INFO: [Physopt 32-735] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/pitch_lfo_val[4]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-13.173 | TNS=-23240.138 |
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 12 pins.
+INFO: [Physopt 32-735] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/pitch_mod1_i_63_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-13.136 | TNS=-23187.265 |
+INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/pitch_lfo_raw[31]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 12 pins.
+INFO: [Physopt 32-735] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/pitch_mod1_i_64_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-13.125 | TNS=-23171.546 |
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 12 pins.
+INFO: [Physopt 32-735] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/pitch_mod1_i_65_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-13.116 | TNS=-23158.689 |
+INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/pitch_lfo_val[0]. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/pitch_lfo_raw[0]. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-608] Optimized 1 net.  Swapped 12 pins.
-INFO: [Physopt 32-735] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/s2_wt_lsb2_i_118_n_0. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-13.431 | TNS=-23191.205 |
-INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/pitch_lfo_val[5]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/pitch_lfo_raw[29]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-735] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/pitch_mod1_i_115_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-13.111 | TNS=-23151.542 |
+INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/pitch_lfo_raw[8]. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-608] Optimized 1 net.  Swapped 12 pins.
-INFO: [Physopt 32-735] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/s2_wt_lsb2_i_81_n_0. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-13.428 | TNS=-23186.918 |
-INFO: [Physopt 32-608] Optimized 1 net.  Swapped 12 pins.
-INFO: [Physopt 32-735] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/s2_wt_lsb2_i_63_n_0. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-13.421 | TNS=-23176.914 |
-INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/pitch_lfo_raw[28]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-608] Optimized 1 net.  Swapped 24 pins.
-INFO: [Physopt 32-735] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/s2_wt_lsb2_i_89_n_0. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-13.411 | TNS=-23162.625 |
-INFO: [Physopt 32-608] Optimized 1 net.  Swapped 12 pins.
-INFO: [Physopt 32-735] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/s2_wt_lsb2_i_91_n_0. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-13.410 | TNS=-23161.196 |
-INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/pitch_lfo_val[3]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/pitch_lfo_raw[11]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-608] Optimized 1 net.  Swapped 12 pins.
-INFO: [Physopt 32-735] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/s2_wt_lsb2_i_92_n_0. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-13.410 | TNS=-23161.196 |
-INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/pitch_lfo_val[1]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/pitch_lfo_raw[9]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-608] Optimized 1 net.  Swapped 15 pins.
-INFO: [Physopt 32-735] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/s2_wt_lsb2_i_108_n_0. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-13.404 | TNS=-23152.619 |
-INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/pitch_lfo_raw[13]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-608] Optimized 1 net.  Swapped 24 pins.
-INFO: [Physopt 32-735] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/s2_wt_lsb2_i_76_n_0. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-13.403 | TNS=-23151.193 |
-INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/pitch_lfo_raw[3]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-608] Optimized 1 net.  Swapped 18 pins.
-INFO: [Physopt 32-735] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/s2_wt_lsb2_i_95_n_0. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-13.401 | TNS=-23148.334 |
-INFO: [Physopt 32-608] Optimized 1 net.  Swapped 12 pins.
-INFO: [Physopt 32-735] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/s2_wt_lsb2_i_119_n_0. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-13.399 | TNS=-23145.476 |
-INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/pitch_lfo_raw[1]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-608] Optimized 1 net.  Swapped 12 pins.
-INFO: [Physopt 32-735] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/s2_wt_lsb2_i_110_n_0. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-13.396 | TNS=-23141.189 |
-INFO: [Physopt 32-608] Optimized 1 net.  Swapped 24 pins.
-INFO: [Physopt 32-735] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/s2_wt_lsb2_i_77_n_0. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-13.392 | TNS=-23135.472 |
-INFO: [Physopt 32-608] Optimized 1 net.  Swapped 18 pins.
-INFO: [Physopt 32-735] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/s2_wt_lsb2_i_94_n_0. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-13.385 | TNS=-23125.471 |
-INFO: [Physopt 32-608] Optimized 1 net.  Swapped 24 pins.
-INFO: [Physopt 32-735] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/s2_wt_lsb2_i_61_n_0. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-13.384 | TNS=-23124.041 |
-INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/pitch_lfo_raw[26]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-608] Optimized 1 net.  Swapped 12 pins.
-INFO: [Physopt 32-735] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/s2_wt_lsb2_i_104_n_0. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-13.381 | TNS=-23119.757 |
-INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/pitch_lfo_val[6]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/pitch_lfo_raw[6]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-608] Optimized 1 net.  Swapped 14 pins.
-INFO: [Physopt 32-735] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/s2_wt_lsb2_i_71_n_0. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-13.375 | TNS=-23111.183 |
-INFO: [Physopt 32-608] Optimized 1 net.  Swapped 14 pins.
-INFO: [Physopt 32-735] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/s2_wt_lsb2_i_70_n_0. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-13.374 | TNS=-23109.753 |
-INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/pitch_lfo_raw[12]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-608] Optimized 1 net.  Swapped 18 pins.
-INFO: [Physopt 32-735] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/s2_wt_lsb2_i_85_n_0. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-13.374 | TNS=-23109.753 |
-INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/pitch_lfo_raw[17]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-608] Optimized 1 net.  Swapped 18 pins.
-INFO: [Physopt 32-735] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/s2_wt_lsb2_i_115_n_0. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-13.369 | TNS=-23102.608 |
-INFO: [Physopt 32-608] Optimized 1 net.  Swapped 24 pins.
-INFO: [Physopt 32-735] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/s2_wt_lsb2_i_88_n_0. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-13.365 | TNS=-23096.891 |
-INFO: [Physopt 32-608] Optimized 1 net.  Swapped 12 pins.
-INFO: [Physopt 32-735] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/s2_wt_lsb2_i_93_n_0. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-13.362 | TNS=-23092.603 |
-INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/pitch_lfo_raw[16]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-608] Optimized 1 net.  Swapped 12 pins.
-INFO: [Physopt 32-735] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/s2_wt_lsb2_i_122_n_0. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-13.360 | TNS=-23089.746 |
-INFO: [Physopt 32-608] Optimized 1 net.  Swapped 18 pins.
-INFO: [Physopt 32-735] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/s2_wt_lsb2_i_114_n_0. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-13.352 | TNS=-23078.315 |
-INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/pitch_lfo_raw[4]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-608] Optimized 1 net.  Swapped 24 pins.
-INFO: [Physopt 32-735] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/s2_wt_lsb2_i_87_n_0. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-13.333 | TNS=-23051.163 |
-INFO: [Physopt 32-608] Optimized 1 net.  Swapped 12 pins.
-INFO: [Physopt 32-735] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/s2_wt_lsb2_i_65_n_0. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-13.326 | TNS=-23041.161 |
-INFO: [Physopt 32-608] Optimized 1 net.  Swapped 15 pins.
-INFO: [Physopt 32-735] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/s2_wt_lsb2_i_109_n_0. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-13.322 | TNS=-23035.444 |
-INFO: [Physopt 32-608] Optimized 1 net.  Swapped 12 pins.
-INFO: [Physopt 32-735] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/s2_wt_lsb2_i_101_n_0. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-13.321 | TNS=-23034.014 |
-INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/s2_wt_lsb2_i_118_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/s2_wt_lsb2_n_106. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/lfo_shape_mem_reg_r1_0_63_0_2_i_7_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/pitch_lfo_val2[25]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-735] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/pitch_mod1_i_116_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-13.105 | TNS=-23142.968 |
+INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/pitch_mod1_i_60_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/pitch_mod1_n_106. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/pitch_lfo_addr[0]. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/pitch_lfo_val2_carry__4_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/pitch_lfo_val2_carry__3_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/pitch_lfo_val2_carry__2_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-608] Optimized 1 net.  Swapped 13 pins.
-INFO: [Physopt 32-735] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/pitch_lfo_val2_carry__2_i_3_n_0. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-13.292 | TNS=-22966.562 |
-INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/pitch_lfo_val2_carry__2_i_3_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-663] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/phase_continuous[13].  Re-placed instance mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/op_lfo_offset_mem_reg_0_255_13_13_i_1
-INFO: [Physopt 32-735] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/phase_continuous[13]. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-13.284 | TNS=-22947.954 |
 INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/pitch_lfo_val2_carry__1_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/pitch_lfo_val2_carry__0_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-608] Optimized 1 net.  Swapped 12 pins.
+INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/pitch_lfo_val2_carry_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 18 pins.
+INFO: [Physopt 32-735] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/pitch_lfo_val2_carry_i_4_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-13.104 | TNS=-23141.538 |
+INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/pitch_lfo_val2_carry_i_5_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/pitch_phase_continuous[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 24 pins.
+INFO: [Physopt 32-735] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/pitch_lfo_addr[7]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-13.007 | TNS=-23002.925 |
+INFO: [Physopt 32-81] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/pitch_lfo_addr[7]. Replicated 1 times.
+INFO: [Physopt 32-735] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/pitch_lfo_addr[7]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-13.003 | TNS=-22997.210 |
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 17 pins.
 INFO: [Physopt 32-735] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/pitch_lfo_val2_carry__0_i_4_n_0. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-13.267 | TNS=-22908.411 |
-INFO: [Physopt 32-608] Optimized 1 net.  Swapped 14 pins.
-INFO: [Physopt 32-735] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/pitch_lfo_val2_carry__1_i_3_n_0. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-13.261 | TNS=-22894.454 |
-INFO: [Physopt 32-608] Optimized 1 net.  Swapped 14 pins.
-INFO: [Physopt 32-735] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/pitch_lfo_val2_carry__1_i_4_n_0. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-13.256 | TNS=-22882.827 |
-INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/pitch_lfo_val2_carry__0_i_4_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-663] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/phase_continuous[4].  Re-placed instance mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/op_lfo_offset_mem_reg_0_255_4_4_i_1
-INFO: [Physopt 32-735] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/phase_continuous[4]. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-13.254 | TNS=-22878.176 |
-INFO: [Physopt 32-710] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/pitch_lfo_val2_carry__2_i_3_n_0. Critical path length was reduced through logic transformation on cell mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/pitch_lfo_val2_carry__2_i_3_comp.
-INFO: [Physopt 32-735] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/phase_continuous[13]. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-13.247 | TNS=-22861.892 |
-INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/phase_continuous[4]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-608] Optimized 1 net.  Swapped 12 pins.
-INFO: [Physopt 32-735] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/r_lfo_ctrl[1]. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-13.228 | TNS=-22817.698 |
-INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/pitch_lfo_val2_carry__1_i_2_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/phase_continuous[10]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-608] Optimized 1 net.  Swapped 9 pins.
-INFO: [Physopt 32-735] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/r_lfo_ctrl[0]. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-13.203 | TNS=-22759.546 |
-INFO: [Physopt 32-608] Optimized 1 net.  Swapped 12 pins.
-INFO: [Physopt 32-735] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/r_lfo_ctrl[1]. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-13.138 | TNS=-22608.356 |
-INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/r_lfo_ctrl[1]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/lfo_shape_mem_reg_r1_0_63_0_2/DOA. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/op_wt_lfo_id_mem_reg_0_63_0_2/DOB. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-81] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/op_idx_reg_n_0_[1]. Replicated 10 times.
-INFO: [Physopt 32-735] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/op_idx_reg_n_0_[1]. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-13.063 | TNS=-22433.907 |
-INFO: [Physopt 32-81] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/op_idx_reg[0]_rep_n_0. Replicated 8 times.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-12.952 | TNS=-22924.889 |
+INFO: [Physopt 32-81] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/pitch_lfo_addr[7]_repN. Replicated 1 times.
+INFO: [Physopt 32-735] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/pitch_lfo_addr[7]_repN. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-12.951 | TNS=-22923.739 |
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 18 pins.
+INFO: [Physopt 32-735] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/pitch_lfo_val2_carry_i_3_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-12.946 | TNS=-22917.995 |
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 24 pins.
+INFO: [Physopt 32-735] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/pitch_lfo_addr[7]_repN. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-12.935 | TNS=-22905.357 |
+INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/pitch_lfo_val2_carry_i_4_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/pitch_phase_continuous[1]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/pitch_lfo_addr[8]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/lfo_shape_mem_reg_r1_192_255_21_23/DOC. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/op_wt_lfo_id_mem_reg_64_127_0_2/DOB. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-81] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/op_idx_reg[1]_rep__3_n_0. Replicated 7 times.
+INFO: [Physopt 32-735] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/op_idx_reg[1]_rep__3_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-12.889 | TNS=-22809.130 |
+INFO: [Physopt 32-81] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/op_idx_reg[0]_rep_n_0. Replicated 6 times.
 INFO: [Physopt 32-735] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/op_idx_reg[0]_rep_n_0. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-13.034 | TNS=-22366.450 |
-INFO: [Physopt 32-81] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/op_idx_reg[0]_rep_n_0. Replicated 2 times.
-INFO: [Physopt 32-735] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/op_idx_reg[0]_rep_n_0. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-13.023 | TNS=-22340.866 |
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-12.852 | TNS=-22662.551 |
+INFO: [Physopt 32-81] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/__13/pitch_lfo_val2_carry_i_1_n_0. Replicated 1 times.
+INFO: [Physopt 32-735] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/__13/pitch_lfo_val2_carry_i_1_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-12.841 | TNS=-22622.771 |
 INFO: [Physopt 32-81] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/op_idx_reg[0]_rep_n_0. Replicated 1 times.
 INFO: [Physopt 32-735] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/op_idx_reg[0]_rep_n_0. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-13.021 | TNS=-22336.213 |
-INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/op_wt_lfo_id_mem_reg_192_255_0_2/DOB. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/op_idx_reg_n_0_[1]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net i2s_i/shift_reg_reg_n_0_[30]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net i2s_i/shift_reg[30]_i_1_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-663] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/audio_out[22].  Re-placed instance mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/audio_out_reg[22]
-INFO: [Physopt 32-735] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/audio_out[22]. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-13.021 | TNS=-22336.066 |
-INFO: [Physopt 32-702] Processed net i2s_i/shift_reg_reg_n_0_[22]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net i2s_i/shift_reg[22]_i_1_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-663] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/audio_out[14].  Re-placed instance mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/audio_out_reg[14]
-INFO: [Physopt 32-735] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/audio_out[14]. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-13.021 | TNS=-22335.922 |
-INFO: [Physopt 32-702] Processed net i2s_i/shift_reg_reg_n_0_[28]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net i2s_i/shift_reg[28]_i_1_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-663] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/audio_out[20].  Re-placed instance mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/audio_out_reg[20]
-INFO: [Physopt 32-735] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/audio_out[20]. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-13.021 | TNS=-22335.780 |
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-12.836 | TNS=-22616.185 |
+INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/op_idx_reg[0]_rep_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net i2s_i/shift_reg_reg_n_0_[12]. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net i2s_i/shift_reg[12]_i_1_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-663] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/audio_out[4].  Re-placed instance mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/audio_out_reg[4]
 INFO: [Physopt 32-735] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/audio_out[4]. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-13.021 | TNS=-22335.647 |
-INFO: [Physopt 32-702] Processed net i2s_i/shift_reg_reg_n_0_[24]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net i2s_i/shift_reg[24]_i_1_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-663] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/audio_out[16].  Re-placed instance mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/audio_out_reg[16]
-INFO: [Physopt 32-735] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/audio_out[16]. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-13.021 | TNS=-22335.515 |
-INFO: [Physopt 32-702] Processed net i2s_i/shift_reg_reg_n_0_[14]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net i2s_i/shift_reg[14]_i_1_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-663] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/audio_out[6].  Re-placed instance mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/audio_out_reg[6]
-INFO: [Physopt 32-735] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/audio_out[6]. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-13.021 | TNS=-22335.382 |
-INFO: [Physopt 32-702] Processed net i2s_i/shift_reg_reg_n_0_[8]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net i2s_i/shift_reg[8]_i_1_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-663] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/audio_out[0].  Re-placed instance mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/audio_out_reg[0]
-INFO: [Physopt 32-735] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/audio_out[0]. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-13.021 | TNS=-22335.191 |
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-12.836 | TNS=-22616.043 |
+INFO: [Physopt 32-702] Processed net i2s_i/shift_reg_reg_n_0_[30]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net i2s_i/shift_reg[30]_i_1_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/audio_out[22].  Re-placed instance mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/audio_out_reg[22]
+INFO: [Physopt 32-735] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/audio_out[22]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-12.836 | TNS=-22615.894 |
+INFO: [Physopt 32-702] Processed net i2s_i/shift_reg_reg_n_0_[22]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net i2s_i/shift_reg[22]_i_1_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/audio_out[14].  Re-placed instance mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/audio_out_reg[14]
+INFO: [Physopt 32-735] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/audio_out[14]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-12.836 | TNS=-22615.759 |
+INFO: [Physopt 32-702] Processed net i2s_i/shift_reg_reg_n_0_[20]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net i2s_i/shift_reg[20]_i_1_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/audio_out[12].  Re-placed instance mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/audio_out_reg[12]
+INFO: [Physopt 32-735] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/audio_out[12]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-12.836 | TNS=-22615.617 |
 INFO: [Physopt 32-702] Processed net i2s_i/shift_reg_reg_n_0_[26]. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net i2s_i/shift_reg[26]_i_1_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-663] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/audio_out[18].  Re-placed instance mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/audio_out_reg[18]
 INFO: [Physopt 32-735] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/audio_out[18]. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-13.021 | TNS=-22335.134 |
-INFO: [Physopt 32-702] Processed net i2s_i/shift_reg_reg_n_0_[18]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net i2s_i/shift_reg[18]_i_1_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-663] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/audio_out[10].  Re-placed instance mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/audio_out_reg[10]
-INFO: [Physopt 32-735] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/audio_out[10]. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-13.021 | TNS=-22335.131 |
-INFO: [Physopt 32-702] Processed net i2s_i/shift_reg_reg_n_0_[20]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net i2s_i/shift_reg[20]_i_1_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/audio_out[12]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net mb_block_i/inst/axi_bram_ctrl_0_bram_osc_a/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[46].ram.r/prim_noinit.ram/DOUTB[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-12.836 | TNS=-22615.483 |
+INFO: [Physopt 32-702] Processed net i2s_i/shift_reg_reg_n_0_[24]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net i2s_i/shift_reg[24]_i_1_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/audio_out[16].  Re-placed instance mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/audio_out_reg[16]
+INFO: [Physopt 32-735] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/audio_out[16]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-12.836 | TNS=-22615.350 |
+INFO: [Physopt 32-702] Processed net i2s_i/shift_reg_reg_n_0_[14]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net i2s_i/shift_reg[14]_i_1_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/audio_out[6].  Re-placed instance mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/audio_out_reg[6]
+INFO: [Physopt 32-735] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/audio_out[6]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-12.836 | TNS=-22615.211 |
+INFO: [Physopt 32-702] Processed net i2s_i/shift_reg_reg_n_0_[28]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net i2s_i/shift_reg[28]_i_1_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/audio_out[20].  Re-placed instance mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/audio_out_reg[20]
+INFO: [Physopt 32-735] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/audio_out[20]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-12.836 | TNS=-22615.073 |
+INFO: [Physopt 32-702] Processed net i2s_i/shift_reg_reg_n_0_[8]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net i2s_i/shift_reg[8]_i_1_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/audio_out[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net mb_block_i/inst/axi_bram_ctrl_0_bram_osc_a/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[42].ram.r/prim_noinit.ram/DOUTB[0]. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net mb_block_i/inst/processing_system7_0/inst/FCLK_CLK_unbuffered[0]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/s2_wt_lsb0__93_carry__1_i_3_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/bram0_addr_b[3]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/s2_wt_lsb2__0_n_103. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/pitch_lfo_val[0]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/pitch_lfo_raw[0]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/s2_wt_lsb2_i_118_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/lfo_shape_mem_reg_r1_0_63_0_2_i_7_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/pitch_lfo_val2[25]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/pitch_lfo_val2_carry__0_i_4_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/phase_continuous[4]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/r_lfo_ctrl[1]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/lfo_shape_mem_reg_r1_0_63_0_2/DOA. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/op_wt_lfo_id_mem_reg_192_255_0_2/DOB. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/op_idx_reg_n_0_[1]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net i2s_i/shift_reg_reg_n_0_[20]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net i2s_i/shift_reg[20]_i_1_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/audio_out[12]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-13.021 | TNS=-22335.131 |
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.016 . Memory (MB): peak = 2194.430 ; gain = 0.000
-Phase 3 Critical Path Optimization | Checksum: 580dda42
+INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/s2_wt_lsb0__93_carry__1_i_4_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/bram0_addr_b[7]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/pitch_mod1__0_n_104. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/pitch_lfo_val[7]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/pitch_lfo_raw[23]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/pitch_mod1_i_60_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/pitch_lfo_addr[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/pitch_lfo_val2_carry_i_4_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/pitch_phase_continuous[1]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/pitch_lfo_addr[8]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/lfo_shape_mem_reg_r1_192_255_21_23/DOC. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/op_wt_lfo_id_mem_reg_64_127_0_2/DOB. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/op_idx_reg[0]_rep_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net i2s_i/shift_reg_reg_n_0_[8]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net i2s_i/shift_reg[8]_i_1_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/audio_out[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-12.836 | TNS=-22615.073 |
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.016 . Memory (MB): peak = 2207.523 ; gain = 0.000
+Phase 3 Critical Path Optimization | Checksum: 1e3b29824
 
-Time (s): cpu = 00:00:22 ; elapsed = 00:00:16 . Memory (MB): peak = 2194.430 ; gain = 0.000
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:11 . Memory (MB): peak = 2207.523 ; gain = 0.000
 
 Phase 4 Critical Path Optimization
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-13.021 | TNS=-22335.131 |
-INFO: [Physopt 32-702] Processed net mb_block_i/inst/axi_bram_ctrl_0_bram_osc_a/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[46].ram.r/prim_noinit.ram/DOUTB[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-12.836 | TNS=-22615.073 |
+INFO: [Physopt 32-702] Processed net mb_block_i/inst/axi_bram_ctrl_0_bram_osc_a/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[42].ram.r/prim_noinit.ram/DOUTB[0]. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net mb_block_i/inst/processing_system7_0/inst/FCLK_CLK_unbuffered[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/s2_wt_lsb0__93_carry__5_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/s2_wt_lsb0__93_carry__4_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/s2_wt_lsb0__93_carry__3_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/s2_wt_lsb0__93_carry__2_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/s2_wt_lsb0__93_carry__1_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/s2_wt_lsb0__93_carry__1_i_3_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/bram0_addr_b[3]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/s2_wt_lsb2__0_n_103. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/pitch_lfo_val[0]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/pitch_lfo_raw[0]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/s2_wt_lsb2_i_118_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/s2_wt_lsb2_n_106. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/lfo_shape_mem_reg_r1_0_63_0_2_i_7_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/pitch_lfo_val2[25]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/s2_wt_lsb0__93_carry__1_i_4_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/bram0_addr_b[7]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/pitch_mod1__0_n_104. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/pitch_lfo_val[7]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/pitch_lfo_raw[23]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/pitch_mod1_i_60_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/pitch_mod1_n_106. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/pitch_lfo_addr[0]. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/pitch_lfo_val2_carry__4_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/pitch_lfo_val2_carry__3_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/pitch_lfo_val2_carry__2_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/pitch_lfo_val2_carry__1_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/pitch_lfo_val2_carry__0_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/pitch_lfo_val2_carry__0_i_4_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/phase_continuous[4]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/r_lfo_ctrl[1]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/lfo_shape_mem_reg_r1_0_63_0_2/DOA. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/op_wt_lfo_id_mem_reg_192_255_0_2/DOB. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/op_idx_reg_n_0_[1]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net i2s_i/shift_reg_reg_n_0_[20]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net i2s_i/shift_reg[20]_i_1_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/audio_out[12]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net mb_block_i/inst/axi_bram_ctrl_0_bram_osc_a/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[46].ram.r/prim_noinit.ram/DOUTB[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/pitch_lfo_val2_carry_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/pitch_lfo_val2_carry_i_4_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/pitch_phase_continuous[1]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/pitch_lfo_addr[8]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/lfo_shape_mem_reg_r1_192_255_21_23/DOC. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/op_wt_lfo_id_mem_reg_64_127_0_2/DOB. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/op_idx_reg[0]_rep_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net i2s_i/shift_reg_reg_n_0_[8]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net i2s_i/shift_reg[8]_i_1_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/audio_out[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net mb_block_i/inst/axi_bram_ctrl_0_bram_osc_a/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[42].ram.r/prim_noinit.ram/DOUTB[0]. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net mb_block_i/inst/processing_system7_0/inst/FCLK_CLK_unbuffered[0]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/s2_wt_lsb0__93_carry__1_i_3_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/bram0_addr_b[3]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/s2_wt_lsb2__0_n_103. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/pitch_lfo_val[0]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/pitch_lfo_raw[0]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/s2_wt_lsb2_i_118_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/lfo_shape_mem_reg_r1_0_63_0_2_i_7_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/pitch_lfo_val2[25]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/pitch_lfo_val2_carry__0_i_4_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/phase_continuous[4]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/r_lfo_ctrl[1]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/lfo_shape_mem_reg_r1_0_63_0_2/DOA. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/op_wt_lfo_id_mem_reg_192_255_0_2/DOB. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/op_idx_reg_n_0_[1]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net i2s_i/shift_reg_reg_n_0_[20]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net i2s_i/shift_reg[20]_i_1_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/audio_out[12]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-13.021 | TNS=-22335.131 |
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.011 . Memory (MB): peak = 2194.430 ; gain = 0.000
-Phase 4 Critical Path Optimization | Checksum: 580dda42
+INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/s2_wt_lsb0__93_carry__1_i_4_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/bram0_addr_b[7]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/pitch_mod1__0_n_104. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/pitch_lfo_val[7]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/pitch_lfo_raw[23]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/pitch_mod1_i_60_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/pitch_lfo_addr[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/pitch_lfo_val2_carry_i_4_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/pitch_phase_continuous[1]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/pitch_lfo_addr[8]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/lfo_shape_mem_reg_r1_192_255_21_23/DOC. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/op_wt_lfo_id_mem_reg_64_127_0_2/DOB. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/op_idx_reg[0]_rep_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net i2s_i/shift_reg_reg_n_0_[8]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net i2s_i/shift_reg[8]_i_1_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/audio_out[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-12.836 | TNS=-22615.073 |
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 2207.523 ; gain = 0.000
+Phase 4 Critical Path Optimization | Checksum: 1e3b29824
 
-Time (s): cpu = 00:00:26 ; elapsed = 00:00:18 . Memory (MB): peak = 2194.430 ; gain = 0.000
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 2194.430 ; gain = 0.000
-INFO: [Physopt 32-603] Post Physical Optimization Timing Summary | WNS=-13.021 | TNS=-22335.131 |
+Time (s): cpu = 00:00:21 ; elapsed = 00:00:13 . Memory (MB): peak = 2207.523 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 2207.523 ; gain = 0.000
+INFO: [Physopt 32-603] Post Physical Optimization Timing Summary | WNS=-12.836 | TNS=-22615.073 |
 
 Summary of Physical Synthesis Optimizations
 ============================================
@@ -1274,31 +1155,31 @@ Summary of Physical Synthesis Optimizations
 |  Optimization   |  WNS Gain (ns)  |  TNS Gain (ns)  |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
 |  DSP Register   |          0.000  |          0.000  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
-|  Critical Path  |          0.797  |       1400.433  |           21  |              0  |                    71  |           0  |           2  |  00:00:17  |
-|  Total          |          0.797  |       1400.433  |           21  |              0  |                    71  |           0  |           3  |  00:00:17  |
+|  Critical Path  |          0.836  |       1329.839  |           17  |              0  |                    40  |           0  |           2  |  00:00:11  |
+|  Total          |          0.836  |       1329.839  |           17  |              0  |                    40  |           0  |           3  |  00:00:11  |
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 2194.430 ; gain = 0.000
-Ending Physical Synthesis Task | Checksum: 1baf42752
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 2207.523 ; gain = 0.000
+Ending Physical Synthesis Task | Checksum: 145d04b87
 
-Time (s): cpu = 00:00:26 ; elapsed = 00:00:18 . Memory (MB): peak = 2194.430 ; gain = 0.000
+Time (s): cpu = 00:00:21 ; elapsed = 00:00:13 . Memory (MB): peak = 2207.523 ; gain = 0.000
 INFO: [Common 17-83] Releasing license: Implementation
-481 Infos, 100 Warnings, 101 Critical Warnings and 0 Errors encountered.
+363 Infos, 100 Warnings, 101 Critical Warnings and 0 Errors encountered.
 phys_opt_design completed successfully
-phys_opt_design: Time (s): cpu = 00:00:30 ; elapsed = 00:00:20 . Memory (MB): peak = 2194.430 ; gain = 0.000
+phys_opt_design: Time (s): cpu = 00:00:24 ; elapsed = 00:00:15 . Memory (MB): peak = 2207.523 ; gain = 0.000
 INFO: [Timing 38-480] Writing timing data to binary archive.
-Wrote PlaceDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2194.430 ; gain = 0.000
-Wrote PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2194.430 ; gain = 0.000
+Wrote PlaceDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2207.523 ; gain = 0.000
+Wrote PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2207.523 ; gain = 0.000
 Writing XDEF routing.
 Writing XDEF routing logical nets.
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.029 . Memory (MB): peak = 2194.430 ; gain = 0.000
+Write ShapeDB Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.028 . Memory (MB): peak = 2207.523 ; gain = 0.000
 Writing XDEF routing special nets.
-Wrote RouteStorage: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.030 . Memory (MB): peak = 2194.430 ; gain = 0.000
-Wrote PlaceStorage: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.362 . Memory (MB): peak = 2194.430 ; gain = 0.000
-Wrote Netlist Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.011 . Memory (MB): peak = 2194.430 ; gain = 0.000
-Wrote Device Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.011 . Memory (MB): peak = 2194.430 ; gain = 0.000
-Write Physdb Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.425 . Memory (MB): peak = 2194.430 ; gain = 0.000
+Wrote RouteStorage: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.029 . Memory (MB): peak = 2207.523 ; gain = 0.000
+Wrote PlaceStorage: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.353 . Memory (MB): peak = 2207.523 ; gain = 0.000
+Wrote Netlist Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.014 . Memory (MB): peak = 2207.523 ; gain = 0.000
+Wrote Device Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 2207.523 ; gain = 0.000
+Write Physdb Complete: Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.417 . Memory (MB): peak = 2207.523 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/Users/hause/Documents/Vivado/Projects/Takuan/Takuan.runs/impl_1/top_physopt.dcp' has been generated.
 Command: route_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
@@ -1312,36 +1193,36 @@ Starting Routing Task
 INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 2 CPUs
 
 Phase 1 Build RT Design
-Checksum: PlaceDB: e3017b1d ConstDB: 0 ShapeSum: ed63a18 RouteDB: 15f972f0
-Post Restoration Checksum: NetGraph: 4ed8a189 | NumContArr: 4f09ad64 | Constraints: c2a8fa9d | Timing: c2a8fa9d
-Phase 1 Build RT Design | Checksum: 223344427
+Checksum: PlaceDB: 86a8f212 ConstDB: 0 ShapeSum: 29e7398 RouteDB: 15f972f0
+Post Restoration Checksum: NetGraph: d33e099e | NumContArr: 4989bdfe | Constraints: c2a8fa9d | Timing: c2a8fa9d
+Phase 1 Build RT Design | Checksum: 2a219bcd6
 
-Time (s): cpu = 00:00:18 ; elapsed = 00:00:16 . Memory (MB): peak = 2194.430 ; gain = 0.000
+Time (s): cpu = 00:00:19 ; elapsed = 00:00:15 . Memory (MB): peak = 2207.523 ; gain = 0.000
 
 Phase 2 Router Initialization
 
 Phase 2.1 Fix Topology Constraints
-Phase 2.1 Fix Topology Constraints | Checksum: 223344427
+Phase 2.1 Fix Topology Constraints | Checksum: 2a219bcd6
 
-Time (s): cpu = 00:00:18 ; elapsed = 00:00:16 . Memory (MB): peak = 2194.430 ; gain = 0.000
+Time (s): cpu = 00:00:19 ; elapsed = 00:00:15 . Memory (MB): peak = 2207.523 ; gain = 0.000
 
 Phase 2.2 Pre Route Cleanup
-Phase 2.2 Pre Route Cleanup | Checksum: 223344427
+Phase 2.2 Pre Route Cleanup | Checksum: 2a219bcd6
 
-Time (s): cpu = 00:00:18 ; elapsed = 00:00:16 . Memory (MB): peak = 2194.430 ; gain = 0.000
+Time (s): cpu = 00:00:19 ; elapsed = 00:00:15 . Memory (MB): peak = 2207.523 ; gain = 0.000
  Number of Nodes with overlaps = 0
 
 Phase 2.3 Update Timing
-Phase 2.3 Update Timing | Checksum: 1c1aec26b
+Phase 2.3 Update Timing | Checksum: 27a9db600
 
-Time (s): cpu = 00:00:24 ; elapsed = 00:00:20 . Memory (MB): peak = 2194.430 ; gain = 0.000
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=-12.600| TNS=-30454.159| WHS=-0.742 | THS=-404.068|
+Time (s): cpu = 00:00:25 ; elapsed = 00:00:19 . Memory (MB): peak = 2207.523 ; gain = 0.000
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-12.438| TNS=-34804.186| WHS=-0.739 | THS=-410.291|
 
 
 Phase 2.4 Soft Constraint Pins - Fast Budgeting
-Phase 2.4 Soft Constraint Pins - Fast Budgeting | Checksum: 229b7e61a
+Phase 2.4 Soft Constraint Pins - Fast Budgeting | Checksum: 31f70e756
 
-Time (s): cpu = 00:00:25 ; elapsed = 00:00:21 . Memory (MB): peak = 2194.430 ; gain = 0.000
+Time (s): cpu = 00:00:26 ; elapsed = 00:00:20 . Memory (MB): peak = 2207.523 ; gain = 0.000
 
 Router Utilization Summary
   Global Vertical Routing Utilization    = 0 %
@@ -1349,43 +1230,43 @@ Router Utilization Summary
   Routable Net Status*
   *Does not include unroutable nets such as driverless and loadless.
   Run report_route_status for detailed report.
-  Number of Failed Nets               = 9793
+  Number of Failed Nets               = 9823
     (Failed Nets is the sum of unrouted and partially routed nets)
-  Number of Unrouted Nets             = 9793
+  Number of Unrouted Nets             = 9823
   Number of Partially Routed Nets     = 0
   Number of Node Overlaps             = 0
 
-Phase 2 Router Initialization | Checksum: 229dacb99
+Phase 2 Router Initialization | Checksum: 317e4966b
 
-Time (s): cpu = 00:00:25 ; elapsed = 00:00:21 . Memory (MB): peak = 2194.430 ; gain = 0.000
+Time (s): cpu = 00:00:27 ; elapsed = 00:00:20 . Memory (MB): peak = 2207.523 ; gain = 0.000
 
 Phase 3 Global Routing
-Phase 3 Global Routing | Checksum: 229dacb99
+Phase 3 Global Routing | Checksum: 317e4966b
 
-Time (s): cpu = 00:00:25 ; elapsed = 00:00:21 . Memory (MB): peak = 2194.430 ; gain = 0.000
+Time (s): cpu = 00:00:27 ; elapsed = 00:00:20 . Memory (MB): peak = 2207.523 ; gain = 0.000
 
 Phase 4 Initial Routing
 
 Phase 4.1 Initial Net Routing Pass
-Phase 4.1 Initial Net Routing Pass | Checksum: 260328416
+Phase 4.1 Initial Net Routing Pass | Checksum: 2d6b98d18
 
-Time (s): cpu = 00:01:45 ; elapsed = 00:01:06 . Memory (MB): peak = 2530.562 ; gain = 336.133
-Phase 4 Initial Routing | Checksum: 260328416
+Time (s): cpu = 00:01:45 ; elapsed = 00:01:05 . Memory (MB): peak = 2460.508 ; gain = 252.984
+Phase 4 Initial Routing | Checksum: 2d6b98d18
 
-Time (s): cpu = 00:01:45 ; elapsed = 00:01:06 . Memory (MB): peak = 2530.562 ; gain = 336.133
-INFO: [Route 35-580] Design has 786 pins with tight setup and hold constraints.
+Time (s): cpu = 00:01:45 ; elapsed = 00:01:05 . Memory (MB): peak = 2460.508 ; gain = 252.984
+INFO: [Route 35-580] Design has 989 pins with tight setup and hold constraints.
 
 The top 5 pins with tight setup and hold constraints:
 
-+====================+===================+============================================================================================================================================+
-| Launch Setup Clock | Launch Hold Clock | Pin                                                                                                                                        |
-+====================+===================+============================================================================================================================================+
-| clk_fpga_0         | clk_fpga_0        | mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/op_lfo_offset_mem_reg_0_255_13_13/RAMS64E_A/ADR0 |
-| clk_fpga_0         | clk_fpga_0        | mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/op_lfo_offset_mem_reg_0_255_13_13/RAMS64E_B/ADR0 |
-| clk_fpga_0         | clk_fpga_0        | mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/op_lfo_offset_mem_reg_0_255_9_9/RAMS64E_A/ADR0   |
-| clk_fpga_0         | clk_fpga_0        | mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/op_lfo_offset_mem_reg_0_255_4_4/RAMS64E_A/ADR0   |
-| clk_fpga_0         | clk_fpga_0        | mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/op_lfo_offset_mem_reg_0_255_9_9/RAMS64E_B/ADR0   |
-+--------------------+-------------------+--------------------------------------------------------------------------------------------------------------------------------------------+
++====================+===================+================================================================================================================================================+
+| Launch Setup Clock | Launch Hold Clock | Pin                                                                                                                                            |
++====================+===================+================================================================================================================================================+
+| clk_fpga_0         | clk_fpga_0        | mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/op_pitch_lfo_offset_mem_reg_0_255_4_4/RAMS64E_B/ADR1 |
+| clk_fpga_0         | clk_fpga_0        | mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/op_pitch_lfo_offset_mem_reg_0_255_4_4/RAMS64E_A/ADR1 |
+| clk_fpga_0         | clk_fpga_0        | mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/op_pitch_lfo_offset_mem_reg_0_255_4_4/RAMS64E_A/ADR0 |
+| clk_fpga_0         | clk_fpga_0        | mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/op_pitch_lfo_offset_mem_reg_0_255_4_4/RAMS64E_B/ADR0 |
+| clk_fpga_0         | clk_fpga_0        | mb_block_i/inst/umeboshi_0/inst/umeboshi_slave_lite_v1_0_axi_synth_engine_inst/synth_inst/op_pitch_lfo_offset_mem_reg_0_255_1_1/RAMS64E_A/ADR0 |
++--------------------+-------------------+------------------------------------------------------------------------------------------------------------------------------------------------+
 
 File with complete list of pins: tight_setup_hold_pins.txt
 
@@ -1393,82 +1274,79 @@ File with complete list of pins: tight_setup_hold_pins.txt
 Phase 5 Rip-up And Reroute
 
 Phase 5.1 Global Iteration 0
- Number of Nodes with overlaps = 952
- Number of Nodes with overlaps = 97
- Number of Nodes with overlaps = 41
- Number of Nodes with overlaps = 13
- Number of Nodes with overlaps = 3
- Number of Nodes with overlaps = 0
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=-14.149| TNS=-38739.095| WHS=N/A    | THS=N/A    |
-
-Phase 5.1 Global Iteration 0 | Checksum: 2b2ab64d6
-
-Time (s): cpu = 00:03:05 ; elapsed = 00:02:30 . Memory (MB): peak = 2530.562 ; gain = 336.133
-
-Phase 5.2 Global Iteration 1
- Number of Nodes with overlaps = 79
- Number of Nodes with overlaps = 8
- Number of Nodes with overlaps = 4
- Number of Nodes with overlaps = 2
- Number of Nodes with overlaps = 3
- Number of Nodes with overlaps = 3
+ Number of Nodes with overlaps = 1007
+ Number of Nodes with overlaps = 144
+ Number of Nodes with overlaps = 42
+ Number of Nodes with overlaps = 14
+ Number of Nodes with overlaps = 1
  Number of Nodes with overlaps = 1
  Number of Nodes with overlaps = 0
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=-14.037| TNS=-38574.805| WHS=N/A    | THS=N/A    |
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-13.835| TNS=-44271.150| WHS=N/A    | THS=N/A    |
 
-Phase 5.2 Global Iteration 1 | Checksum: 25939e508
+Phase 5.1 Global Iteration 0 | Checksum: 24fe81b83
 
-Time (s): cpu = 00:04:00 ; elapsed = 00:03:29 . Memory (MB): peak = 2530.562 ; gain = 336.133
+Time (s): cpu = 00:02:47 ; elapsed = 00:02:04 . Memory (MB): peak = 2460.508 ; gain = 252.984
 
-Phase 5.3 Global Iteration 2
- Number of Nodes with overlaps = 66
-Phase 5.3 Global Iteration 2 | Checksum: d58c53b5
+Phase 5.2 Global Iteration 1
+ Number of Nodes with overlaps = 290
+ Number of Nodes with overlaps = 93
+ Number of Nodes with overlaps = 86
+ Number of Nodes with overlaps = 32
+ Number of Nodes with overlaps = 28
+ Number of Nodes with overlaps = 4
+ Number of Nodes with overlaps = 12
+ Number of Nodes with overlaps = 11
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-13.780| TNS=-44158.629| WHS=N/A    | THS=N/A    |
 
-Time (s): cpu = 00:04:15 ; elapsed = 00:03:46 . Memory (MB): peak = 2530.562 ; gain = 336.133
-Phase 5 Rip-up And Reroute | Checksum: d58c53b5
+Phase 5.2 Global Iteration 1 | Checksum: 19397fc61
 
-Time (s): cpu = 00:04:15 ; elapsed = 00:03:46 . Memory (MB): peak = 2530.562 ; gain = 336.133
+Time (s): cpu = 00:04:17 ; elapsed = 00:03:33 . Memory (MB): peak = 2460.508 ; gain = 252.984
+Phase 5 Rip-up And Reroute | Checksum: 19397fc61
+
+Time (s): cpu = 00:04:17 ; elapsed = 00:03:33 . Memory (MB): peak = 2460.508 ; gain = 252.984
 
 Phase 6 Delay and Skew Optimization
 
 Phase 6.1 Delay CleanUp
 
 Phase 6.1.1 Update Timing
-Phase 6.1.1 Update Timing | Checksum: 103f4b1dc
+Phase 6.1.1 Update Timing | Checksum: 1d9bb725b
 
-Time (s): cpu = 00:04:15 ; elapsed = 00:03:46 . Memory (MB): peak = 2530.562 ; gain = 336.133
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=-14.037| TNS=-38485.181| WHS=N/A    | THS=N/A    |
+Time (s): cpu = 00:04:17 ; elapsed = 00:03:34 . Memory (MB): peak = 2460.508 ; gain = 252.984
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-13.780| TNS=-44082.460| WHS=N/A    | THS=N/A    |
 
  Number of Nodes with overlaps = 0
-Phase 6.1 Delay CleanUp | Checksum: 15d020489
+Phase 6.1 Delay CleanUp | Checksum: 2065e6a4a
 
-Time (s): cpu = 00:04:16 ; elapsed = 00:03:46 . Memory (MB): peak = 2530.562 ; gain = 336.133
+Time (s): cpu = 00:04:17 ; elapsed = 00:03:34 . Memory (MB): peak = 2460.508 ; gain = 252.984
 
 Phase 6.2 Clock Skew Optimization
-Phase 6.2 Clock Skew Optimization | Checksum: 15d020489
+Phase 6.2 Clock Skew Optimization | Checksum: 2065e6a4a
 
-Time (s): cpu = 00:04:16 ; elapsed = 00:03:46 . Memory (MB): peak = 2530.562 ; gain = 336.133
-Phase 6 Delay and Skew Optimization | Checksum: 15d020489
+Time (s): cpu = 00:04:17 ; elapsed = 00:03:34 . Memory (MB): peak = 2460.508 ; gain = 252.984
+Phase 6 Delay and Skew Optimization | Checksum: 2065e6a4a
 
-Time (s): cpu = 00:04:16 ; elapsed = 00:03:46 . Memory (MB): peak = 2530.562 ; gain = 336.133
+Time (s): cpu = 00:04:17 ; elapsed = 00:03:34 . Memory (MB): peak = 2460.508 ; gain = 252.984
 
 Phase 7 Post Hold Fix
 
 Phase 7.1 Hold Fix Iter
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=-14.020| TNS=-38445.640| WHS=0.024  | THS=0.000  |
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-13.772| TNS=-44065.214| WHS=0.022  | THS=0.000  |
 
-Phase 7.1 Hold Fix Iter | Checksum: 159c8c865
+Phase 7.1 Hold Fix Iter | Checksum: 257b3bf40
 
-Time (s): cpu = 00:04:16 ; elapsed = 00:03:47 . Memory (MB): peak = 2530.562 ; gain = 336.133
-Phase 7 Post Hold Fix | Checksum: 159c8c865
+Time (s): cpu = 00:04:18 ; elapsed = 00:03:34 . Memory (MB): peak = 2460.508 ; gain = 252.984
+Phase 7 Post Hold Fix | Checksum: 257b3bf40
 
-Time (s): cpu = 00:04:16 ; elapsed = 00:03:47 . Memory (MB): peak = 2530.562 ; gain = 336.133
+Time (s): cpu = 00:04:18 ; elapsed = 00:03:34 . Memory (MB): peak = 2460.508 ; gain = 252.984
 
 Phase 8 Route finalize
 
 Router Utilization Summary
-  Global Vertical Routing Utilization    = 5.70446 %
-  Global Horizontal Routing Utilization  = 5.15602 %
+  Global Vertical Routing Utilization    = 5.73589 %
+  Global Horizontal Routing Utilization  = 5.33038 %
   Routable Net Status*
   *Does not include unroutable nets such as driverless and loadless.
   Run report_route_status for detailed report.
@@ -1482,10 +1360,11 @@ Router Utilization Summary
 --GLOBAL Congestion:
 Utilization threshold used for congestion level computation: 0.85
 Congestion Report
-North Dir 1x1 Area, Max Cong = 61.2613%, No Congested Regions.
-South Dir 1x1 Area, Max Cong = 78.3784%, No Congested Regions.
-East Dir 1x1 Area, Max Cong = 69.1176%, No Congested Regions.
-West Dir 1x1 Area, Max Cong = 70.5882%, No Congested Regions.
+North Dir 1x1 Area, Max Cong = 64.8649%, No Congested Regions.
+South Dir 1x1 Area, Max Cong = 74.7748%, No Congested Regions.
+East Dir 1x1 Area, Max Cong = 70.5882%, No Congested Regions.
+West Dir 1x1 Area, Max Cong = 86.7647%, Congestion bounded by tiles (Lower Left Tile -> Upper Right Tile):
+   INT_R_X27Y23 -> INT_R_X27Y23
 
 ------------------------------
 Reporting congestion hotspots
@@ -1505,53 +1384,53 @@ Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
 Direction: West
 ----------------
 Congested clusters found at Level 0
-Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
+Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 1
 
-Phase 8 Route finalize | Checksum: 159c8c865
+Phase 8 Route finalize | Checksum: 257b3bf40
 
-Time (s): cpu = 00:04:16 ; elapsed = 00:03:47 . Memory (MB): peak = 2530.562 ; gain = 336.133
+Time (s): cpu = 00:04:18 ; elapsed = 00:03:34 . Memory (MB): peak = 2460.508 ; gain = 252.984
 
 Phase 9 Verifying routed nets
 
  Verification completed successfully
-Phase 9 Verifying routed nets | Checksum: 159c8c865
+Phase 9 Verifying routed nets | Checksum: 257b3bf40
 
-Time (s): cpu = 00:04:16 ; elapsed = 00:03:47 . Memory (MB): peak = 2530.562 ; gain = 336.133
+Time (s): cpu = 00:04:18 ; elapsed = 00:03:34 . Memory (MB): peak = 2460.508 ; gain = 252.984
 
 Phase 10 Depositing Routes
-Phase 10 Depositing Routes | Checksum: 1ba3c1c23
+Phase 10 Depositing Routes | Checksum: 1d61a8da3
 
-Time (s): cpu = 00:04:18 ; elapsed = 00:03:48 . Memory (MB): peak = 2530.562 ; gain = 336.133
+Time (s): cpu = 00:04:19 ; elapsed = 00:03:35 . Memory (MB): peak = 2460.508 ; gain = 252.984
 
 Phase 11 Post Process Routing
-Phase 11 Post Process Routing | Checksum: 1ba3c1c23
+Phase 11 Post Process Routing | Checksum: 1d61a8da3
 
-Time (s): cpu = 00:04:18 ; elapsed = 00:03:48 . Memory (MB): peak = 2530.562 ; gain = 336.133
+Time (s): cpu = 00:04:19 ; elapsed = 00:03:35 . Memory (MB): peak = 2460.508 ; gain = 252.984
 
 Phase 12 Post Router Timing
-INFO: [Route 35-57] Estimated Timing Summary | WNS=-14.020| TNS=-38445.640| WHS=0.024  | THS=0.000  |
+INFO: [Route 35-57] Estimated Timing Summary | WNS=-13.772| TNS=-44065.214| WHS=0.022  | THS=0.000  |
 
 WARNING: [Route 35-328] Router estimated timing not met.
 Resolution: For a complete and accurate timing signoff, report_timing_summary must be run after route_design. Alternatively, route_design can be run with the -timing_summary option to enable a complete timing signoff at the end of route_design.
-Phase 12 Post Router Timing | Checksum: 1ba3c1c23
+Phase 12 Post Router Timing | Checksum: 1d61a8da3
 
-Time (s): cpu = 00:04:18 ; elapsed = 00:03:48 . Memory (MB): peak = 2530.562 ; gain = 336.133
-Total Elapsed time in route_design: 227.89 secs
+Time (s): cpu = 00:04:19 ; elapsed = 00:03:36 . Memory (MB): peak = 2460.508 ; gain = 252.984
+Total Elapsed time in route_design: 215.491 secs
 
 Phase 13 Post-Route Event Processing
-Phase 13 Post-Route Event Processing | Checksum: 4ebbae32
+Phase 13 Post-Route Event Processing | Checksum: 152518127
 
-Time (s): cpu = 00:04:18 ; elapsed = 00:03:48 . Memory (MB): peak = 2530.562 ; gain = 336.133
+Time (s): cpu = 00:04:19 ; elapsed = 00:03:36 . Memory (MB): peak = 2460.508 ; gain = 252.984
 INFO: [Route 35-16] Router Completed Successfully
-Ending Routing Task | Checksum: 4ebbae32
+Ending Routing Task | Checksum: 152518127
 
-Time (s): cpu = 00:04:18 ; elapsed = 00:03:48 . Memory (MB): peak = 2530.562 ; gain = 336.133
+Time (s): cpu = 00:04:20 ; elapsed = 00:03:36 . Memory (MB): peak = 2460.508 ; gain = 252.984
 
 Routing Is Done.
 INFO: [Common 17-83] Releasing license: Implementation
-497 Infos, 101 Warnings, 101 Critical Warnings and 0 Errors encountered.
+379 Infos, 101 Warnings, 101 Critical Warnings and 0 Errors encountered.
 route_design completed successfully
-route_design: Time (s): cpu = 00:04:18 ; elapsed = 00:03:48 . Memory (MB): peak = 2530.562 ; gain = 336.133
+route_design: Time (s): cpu = 00:04:20 ; elapsed = 00:03:36 . Memory (MB): peak = 2460.508 ; gain = 252.984
 INFO: [Vivado 12-24828] Executing command : report_drc -file top_drc_routed.rpt -pb top_drc_routed.pb -rpx top_drc_routed.rpx
 Command: report_drc -file top_drc_routed.rpt -pb top_drc_routed.pb -rpx top_drc_routed.rpx
 INFO: [IP_Flow 19-1839] IP Catalog is up to date.
@@ -1579,25 +1458,25 @@ Command: report_power -file top_power_routed.rpt -pb top_power_summary_routed.pb
 Running Vector-less Activity Propagation...
 
 Finished Running Vector-less Activity Propagation
-514 Infos, 101 Warnings, 102 Critical Warnings and 0 Errors encountered.
+396 Infos, 101 Warnings, 102 Critical Warnings and 0 Errors encountered.
 report_power completed successfully
 INFO: [Vivado 12-24828] Executing command : report_clock_utilization -file top_clock_utilization_routed.rpt
 INFO: [Vivado 12-24828] Executing command : report_bus_skew -warn_on_violation -file top_bus_skew_routed.rpt -pb top_bus_skew_routed.pb -rpx top_bus_skew_routed.rpx
 INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
 INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
-generate_parallel_reports: Time (s): cpu = 00:00:15 ; elapsed = 00:00:11 . Memory (MB): peak = 2530.562 ; gain = 0.000
+generate_parallel_reports: Time (s): cpu = 00:00:17 ; elapsed = 00:00:12 . Memory (MB): peak = 2460.508 ; gain = 0.000
 INFO: [Timing 38-480] Writing timing data to binary archive.
-Wrote PlaceDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2530.562 ; gain = 0.000
-Wrote PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2530.562 ; gain = 0.000
+Wrote PlaceDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2460.508 ; gain = 0.000
+Wrote PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2460.508 ; gain = 0.000
 Writing XDEF routing.
 Writing XDEF routing logical nets.
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.030 . Memory (MB): peak = 2530.562 ; gain = 0.000
+Write ShapeDB Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.030 . Memory (MB): peak = 2460.508 ; gain = 0.000
 Writing XDEF routing special nets.
-Wrote RouteStorage: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.143 . Memory (MB): peak = 2530.562 ; gain = 0.000
-Wrote PlaceStorage: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.335 . Memory (MB): peak = 2530.562 ; gain = 0.000
-Wrote Netlist Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 2530.562 ; gain = 0.000
-Wrote Device Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 2530.562 ; gain = 0.000
-Write Physdb Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.506 . Memory (MB): peak = 2530.562 ; gain = 0.000
+Wrote RouteStorage: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.138 . Memory (MB): peak = 2460.508 ; gain = 0.000
+Wrote PlaceStorage: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.419 . Memory (MB): peak = 2460.508 ; gain = 0.000
+Wrote Netlist Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.013 . Memory (MB): peak = 2460.508 ; gain = 0.000
+Wrote Device Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 2460.508 ; gain = 0.000
+Write Physdb Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.590 . Memory (MB): peak = 2460.508 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/Users/hause/Documents/Vivado/Projects/Takuan/Takuan.runs/impl_1/top_routed.dcp' has been generated.
 INFO: [Memdata 28-167] Found XPM memory block mb_block_i/inst/axi_smc/inst/s00_nodes/s00_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst with a P_MEMORY_PRIMITIVE property set to distributed. A value of block is required. You will not be able to use the updatemem program to update the bitstream with new data for the mb_block_i/inst/axi_smc/inst/s00_nodes/s00_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst block.
 INFO: [Memdata 28-167] Found XPM memory block mb_block_i/inst/axi_smc/inst/s00_nodes/s00_w_node/inst/inst_mi_handler/gen_normal_area.gen_fifo_req.inst_fifo_req/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst with a P_MEMORY_PRIMITIVE property set to distributed. A value of block is required. You will not be able to use the updatemem program to update the bitstream with new data for the mb_block_i/inst/axi_smc/inst/s00_nodes/s00_w_node/inst/inst_mi_handler/gen_normal_area.gen_fifo_req.inst_fifo_req/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst block.
@@ -1641,7 +1520,7 @@ Creating bitstream...
 Writing bitstream ./top.bit...
 INFO: [Vivado 12-1842] Bitgen Completed Successfully.
 INFO: [Common 17-83] Releasing license: Implementation
-551 Infos, 101 Warnings, 102 Critical Warnings and 0 Errors encountered.
+433 Infos, 101 Warnings, 102 Critical Warnings and 0 Errors encountered.
 write_bitstream completed successfully
-write_bitstream: Time (s): cpu = 00:00:19 ; elapsed = 00:00:14 . Memory (MB): peak = 2538.867 ; gain = 8.305
-INFO: [Common 17-206] Exiting Vivado at Thu Mar 19 16:17:56 2026...
+write_bitstream: Time (s): cpu = 00:00:21 ; elapsed = 00:00:14 . Memory (MB): peak = 2545.699 ; gain = 85.191
+INFO: [Common 17-206] Exiting Vivado at Thu Mar 19 19:05:03 2026...

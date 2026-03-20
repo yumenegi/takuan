@@ -39,8 +39,9 @@ module synth_256(
     // setting mem
     logic [31:0] op_stride_mem [256];           // stride
     logic [7:0] op_wt_id_mem [256];             // wt settings, id, slice, lfo
-    logic [5:0] op_wt_lfo_id_mem [256];         // which lfo and routing?
-    logic [31:0] op_lfo_offset_mem [256];       // captured lfo phase at key on
+    logic [7:0] op_wt_lfo_id_mem [256];         // which lfo and routing?
+    logic [31:0] op_pitch_lfo_offset_mem [256]; // captured pitch lfo phase at key on
+    logic [31:0] op_wt_lfo_offset_mem [256];    // captured wt lfo phase at key on
     logic [2:0] op_wt_gain_env_id_mem [256];    // which gain env?
     logic op_key_on_mem [256];               // which op to turn on?
 
@@ -85,7 +86,7 @@ module synth_256(
         end
 
         if (mm_wr_lfo_id) begin
-            op_wt_lfo_id_mem[mm_addr] <= mm_wdata[5:0];
+            op_wt_lfo_id_mem[mm_addr] <= mm_wdata[7:0];
         end
 
         if (mm_wr_wt_id) begin
@@ -211,7 +212,8 @@ module synth_256(
             op_env_gain_state[i] = 0;
             op_key_on_mem[i] = 0;            
             op_prev_key_on_mem[i] = 0;    
-            op_lfo_offset_mem[i] = 0;
+            op_pitch_lfo_offset_mem[i] = 0;
+            op_wt_lfo_offset_mem[i] = 0;
         end
     end
 
@@ -281,22 +283,26 @@ module synth_256(
     logic [31:0] r_stride;
     logic [31:0] r_phase;
     logic [7:0]  r_wt_id;
-    logic [5:0]  r_lfo_ctrl;
-    logic [31:0] r_lfo_offset;
+    logic [7:0]  r_lfo_ctrl;
+    logic [31:0] r_pitch_lfo_offset;
+    logic [31:0] r_wt_lfo_offset;
     logic [23:0] r_env_vol;
     logic [2:0]  r_env_state;
     logic        r_key_on;
     logic        r_prev_key_on;
 
     // LFO combinational read
-    logic [1:0]  r_lfo_idx;
+    logic [1:0]  r_pitch_lfo_idx;
+    logic [1:0]  r_wt_lfo_idx;
     logic        r_pitch_en;
     logic        r_wt_en;
     logic        r_pitch_trig;
     logic        r_wt_trig;
 
-    logic [31:0] phase_continuous;
-    logic [31:0] phase_triggered;
+    logic [31:0] pitch_phase_continuous;
+    logic [31:0] wt_phase_continuous;
+    logic [31:0] pitch_phase_triggered;
+    logic [31:0] wt_phase_triggered;
     logic [31:0] pitch_lfo_phase;
     logic [31:0] wt_lfo_phase;
 
@@ -311,7 +317,8 @@ module synth_256(
 
     // first stage variable to next state
     logic [31:0] next_phase;
-    logic [31:0] next_lfo_offset;
+    logic [31:0] next_pitch_lfo_offset;
+    logic [31:0] next_wt_lfo_offset;
     logic [23:0] next_env_vol;
     logic [2:0]  next_env_state;
     logic        next_prev_key_on;
@@ -331,33 +338,39 @@ module synth_256(
         r_phase         = phase_mem[op_idx];
         r_wt_id         = op_wt_id_mem[op_idx];
         r_lfo_ctrl      = op_wt_lfo_id_mem[op_idx];
-        r_lfo_offset    = op_lfo_offset_mem[op_idx];
+        r_pitch_lfo_offset = op_pitch_lfo_offset_mem[op_idx];
+        r_wt_lfo_offset    = op_wt_lfo_offset_mem[op_idx];
         r_env_vol       = op_env_gain_vol[op_idx];
         r_env_state     = op_env_gain_state[op_idx];
         r_key_on        = op_key_on_mem[op_idx];
         r_prev_key_on   = op_prev_key_on_mem[op_idx];
         
         // --- LFO Control Extraction ---
-        r_lfo_idx       = r_lfo_ctrl[1:0];
-        r_pitch_en      = r_lfo_ctrl[2];
-        r_wt_en         = r_lfo_ctrl[3];
-        r_pitch_trig    = r_lfo_ctrl[4];
-        r_wt_trig       = r_lfo_ctrl[5];
+        r_pitch_lfo_idx = r_lfo_ctrl[1:0];
+        r_wt_lfo_idx    = r_lfo_ctrl[3:2];
+        r_pitch_en      = r_lfo_ctrl[4];
+        r_wt_en         = r_lfo_ctrl[5];
+        r_pitch_trig    = r_lfo_ctrl[6];
+        r_wt_trig       = r_lfo_ctrl[7];
 
-        phase_continuous = lfo_phase[r_lfo_idx];
-        phase_triggered  = phase_continuous - r_lfo_offset;
+        pitch_phase_continuous = lfo_phase[r_pitch_lfo_idx];
+        wt_phase_continuous    = lfo_phase[r_wt_lfo_idx];
+        pitch_phase_triggered  = pitch_phase_continuous - r_pitch_lfo_offset;
+        wt_phase_triggered     = wt_phase_continuous - r_wt_lfo_offset;
         
         if (r_key_on && !r_prev_key_on) begin
-            next_lfo_offset = phase_continuous;
+            next_pitch_lfo_offset = pitch_phase_continuous;
+            next_wt_lfo_offset    = wt_phase_continuous;
         end else begin
-            next_lfo_offset = r_lfo_offset;
+            next_pitch_lfo_offset = r_pitch_lfo_offset;
+            next_wt_lfo_offset    = r_wt_lfo_offset;
         end
 
-        pitch_lfo_phase = r_pitch_trig ? phase_triggered : phase_continuous;
-        wt_lfo_phase    = r_wt_trig    ? phase_triggered : phase_continuous;
+        pitch_lfo_phase = r_pitch_trig ? pitch_phase_triggered : pitch_phase_continuous;
+        wt_lfo_phase    = r_wt_trig    ? wt_phase_triggered : wt_phase_continuous;
 
         // --- LFO Pitch Read ---
-        pitch_lfo_addr  = {r_lfo_idx, pitch_lfo_phase[31:25]};
+        pitch_lfo_addr  = {r_pitch_lfo_idx, pitch_lfo_phase[31:25]};
         pitch_lfo_raw   = lfo_shape_mem[pitch_lfo_addr];
         case (pitch_lfo_phase[24:23])
             2'b00: pitch_lfo_val = pitch_lfo_raw[7:0];
@@ -367,7 +380,7 @@ module synth_256(
         endcase
 
         // --- LFO WT Read ---
-        wt_lfo_addr     = {r_lfo_idx, wt_lfo_phase[31:25]};
+        wt_lfo_addr     = {r_wt_lfo_idx, wt_lfo_phase[31:25]};
         wt_lfo_raw      = lfo_shape_mem[wt_lfo_addr];
         case (wt_lfo_phase[24:23])
             2'b00: wt_lfo_val = wt_lfo_raw[7:0];
@@ -379,8 +392,10 @@ module synth_256(
         active_wt_lfo = r_wt_en ? wt_lfo_val : 8'd0;
 
         // next phase
-        pitch_mod = r_pitch_en ? ($signed({1'b0, r_stride}) * pitch_lfo_val) : 48'd0;
-        next_phase = r_phase + r_stride + pitch_mod[38:10]; // +/- 12.5% pitch bend
+        // Use 48'sd0 (signed zero) so the ternary operator doesn't cast the product to unsigned!
+        pitch_mod = r_pitch_en ? ($signed({1'b0, r_stride}) * pitch_lfo_val) : 48'sd0;
+        // Arithmetic right shift preserves sign correctly, avoiding the unsigned slice bug
+        next_phase = r_phase + r_stride + (pitch_mod >>> 10); // +/- 12.5% pitch bend
 
         // default
         next_env_vol        = r_env_vol;
@@ -469,7 +484,8 @@ module synth_256(
                                                 // combined with the id
             
             // LFO offset logic
-            op_lfo_offset_mem[op_idx] <= next_lfo_offset;
+            op_pitch_lfo_offset_mem[op_idx] <= next_pitch_lfo_offset;
+            op_wt_lfo_offset_mem[op_idx] <= next_wt_lfo_offset;
 
             // previous key on update
             op_prev_key_on_mem[op_idx] <= next_prev_key_on;

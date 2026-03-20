@@ -48,7 +48,7 @@
 
 
 // IP VLNV: xilinx.com:user:umeboshi:1.0
-// IP Revision: 21
+// IP Revision: 23
 
 `timescale 1ns/1ps
 

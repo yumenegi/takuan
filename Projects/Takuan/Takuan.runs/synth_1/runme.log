@@ -8,7 +8,7 @@
   **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
   **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
   **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-  **** Start of session at: Thu Mar 19 16:09:29 2026
+  **** Start of session at: Thu Mar 19 18:57:54 2026
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 
@@ -28,50 +28,50 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 16100
+INFO: [Synth 8-7075] Helper process launched with PID 19320
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1351.562 ; gain = 542.125
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1351.098 ; gain = 541.516
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'top' [C:/Users/hause/Documents/Vivado/Projects/Takuan/Takuan.srcs/sources_1/new/top.sv:23]
 INFO: [Synth 8-6157] synthesizing module 'IOBUF' [C:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp.v:87566]
 INFO: [Synth 8-6155] done synthesizing module 'IOBUF' (0#1) [C:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp.v:87566]
 INFO: [Synth 8-6157] synthesizing module 'mb_block_sv' [C:/Users/hause/Documents/Vivado/Projects/Takuan/Takuan.srcs/sources_1/imports/mb_block/mb_block_sv.sv:55]
 INFO: [Synth 8-6157] synthesizing module 'mb_block' [c:/Users/hause/Documents/Vivado/Projects/Takuan/Takuan.gen/sources_1/bd/mb_block/synth/mb_block.v:13]
-INFO: [Synth 8-6157] synthesizing module 'mb_block_axi_bram_ctrl_0_2' [C:/Users/hause/Documents/Vivado/Projects/Takuan/Takuan.runs/synth_1/.Xil/Vivado-24116-ponco2/realtime/mb_block_axi_bram_ctrl_0_2_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'mb_block_axi_bram_ctrl_0_2' (0#1) [C:/Users/hause/Documents/Vivado/Projects/Takuan/Takuan.runs/synth_1/.Xil/Vivado-24116-ponco2/realtime/mb_block_axi_bram_ctrl_0_2_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'mb_block_axi_bram_ctrl_0_bram_1' [C:/Users/hause/Documents/Vivado/Projects/Takuan/Takuan.runs/synth_1/.Xil/Vivado-24116-ponco2/realtime/mb_block_axi_bram_ctrl_0_bram_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'mb_block_axi_bram_ctrl_0_bram_1' (0#1) [C:/Users/hause/Documents/Vivado/Projects/Takuan/Takuan.runs/synth_1/.Xil/Vivado-24116-ponco2/realtime/mb_block_axi_bram_ctrl_0_bram_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'mb_block_axi_bram_ctrl_0_2' [C:/Users/hause/Documents/Vivado/Projects/Takuan/Takuan.runs/synth_1/.Xil/Vivado-25244-ponco2/realtime/mb_block_axi_bram_ctrl_0_2_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'mb_block_axi_bram_ctrl_0_2' (0#1) [C:/Users/hause/Documents/Vivado/Projects/Takuan/Takuan.runs/synth_1/.Xil/Vivado-25244-ponco2/realtime/mb_block_axi_bram_ctrl_0_2_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'mb_block_axi_bram_ctrl_0_bram_1' [C:/Users/hause/Documents/Vivado/Projects/Takuan/Takuan.runs/synth_1/.Xil/Vivado-25244-ponco2/realtime/mb_block_axi_bram_ctrl_0_bram_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'mb_block_axi_bram_ctrl_0_bram_1' (0#1) [C:/Users/hause/Documents/Vivado/Projects/Takuan/Takuan.runs/synth_1/.Xil/Vivado-25244-ponco2/realtime/mb_block_axi_bram_ctrl_0_bram_1_stub.v:6]
 WARNING: [Synth 8-7071] port 'rsta_busy' of module 'mb_block_axi_bram_ctrl_0_bram_1' is unconnected for instance 'axi_bram_ctrl_0_bram_osc_a' [c:/Users/hause/Documents/Vivado/Projects/Takuan/Takuan.gen/sources_1/bd/mb_block/synth/mb_block.v:303]
 WARNING: [Synth 8-7071] port 'rstb_busy' of module 'mb_block_axi_bram_ctrl_0_bram_1' is unconnected for instance 'axi_bram_ctrl_0_bram_osc_a' [c:/Users/hause/Documents/Vivado/Projects/Takuan/Takuan.gen/sources_1/bd/mb_block/synth/mb_block.v:303]
 WARNING: [Synth 8-7023] instance 'axi_bram_ctrl_0_bram_osc_a' of module 'mb_block_axi_bram_ctrl_0_bram_1' has 16 connections declared, but only 14 given [c:/Users/hause/Documents/Vivado/Projects/Takuan/Takuan.gen/sources_1/bd/mb_block/synth/mb_block.v:303]
-INFO: [Synth 8-6157] synthesizing module 'mb_block_axi_bram_ctrl_1_1' [C:/Users/hause/Documents/Vivado/Projects/Takuan/Takuan.runs/synth_1/.Xil/Vivado-24116-ponco2/realtime/mb_block_axi_bram_ctrl_1_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'mb_block_axi_bram_ctrl_1_1' (0#1) [C:/Users/hause/Documents/Vivado/Projects/Takuan/Takuan.runs/synth_1/.Xil/Vivado-24116-ponco2/realtime/mb_block_axi_bram_ctrl_1_1_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'mb_block_axi_bram_ctrl_1_bram_0' [C:/Users/hause/Documents/Vivado/Projects/Takuan/Takuan.runs/synth_1/.Xil/Vivado-24116-ponco2/realtime/mb_block_axi_bram_ctrl_1_bram_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'mb_block_axi_bram_ctrl_1_bram_0' (0#1) [C:/Users/hause/Documents/Vivado/Projects/Takuan/Takuan.runs/synth_1/.Xil/Vivado-24116-ponco2/realtime/mb_block_axi_bram_ctrl_1_bram_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'mb_block_axi_bram_ctrl_1_1' [C:/Users/hause/Documents/Vivado/Projects/Takuan/Takuan.runs/synth_1/.Xil/Vivado-25244-ponco2/realtime/mb_block_axi_bram_ctrl_1_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'mb_block_axi_bram_ctrl_1_1' (0#1) [C:/Users/hause/Documents/Vivado/Projects/Takuan/Takuan.runs/synth_1/.Xil/Vivado-25244-ponco2/realtime/mb_block_axi_bram_ctrl_1_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'mb_block_axi_bram_ctrl_1_bram_0' [C:/Users/hause/Documents/Vivado/Projects/Takuan/Takuan.runs/synth_1/.Xil/Vivado-25244-ponco2/realtime/mb_block_axi_bram_ctrl_1_bram_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'mb_block_axi_bram_ctrl_1_bram_0' (0#1) [C:/Users/hause/Documents/Vivado/Projects/Takuan/Takuan.runs/synth_1/.Xil/Vivado-25244-ponco2/realtime/mb_block_axi_bram_ctrl_1_bram_0_stub.v:6]
 WARNING: [Synth 8-7071] port 'rsta_busy' of module 'mb_block_axi_bram_ctrl_1_bram_0' is unconnected for instance 'axi_bram_ctrl_1_bram_osc_b' [c:/Users/hause/Documents/Vivado/Projects/Takuan/Takuan.gen/sources_1/bd/mb_block/synth/mb_block.v:361]
 WARNING: [Synth 8-7071] port 'rstb_busy' of module 'mb_block_axi_bram_ctrl_1_bram_0' is unconnected for instance 'axi_bram_ctrl_1_bram_osc_b' [c:/Users/hause/Documents/Vivado/Projects/Takuan/Takuan.gen/sources_1/bd/mb_block/synth/mb_block.v:361]
 WARNING: [Synth 8-7023] instance 'axi_bram_ctrl_1_bram_osc_b' of module 'mb_block_axi_bram_ctrl_1_bram_0' has 16 connections declared, but only 14 given [c:/Users/hause/Documents/Vivado/Projects/Takuan/Takuan.gen/sources_1/bd/mb_block/synth/mb_block.v:361]
-INFO: [Synth 8-6157] synthesizing module 'mb_block_axi_smc_2' [C:/Users/hause/Documents/Vivado/Projects/Takuan/Takuan.runs/synth_1/.Xil/Vivado-24116-ponco2/realtime/mb_block_axi_smc_2_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'mb_block_axi_smc_2' (0#1) [C:/Users/hause/Documents/Vivado/Projects/Takuan/Takuan.runs/synth_1/.Xil/Vivado-24116-ponco2/realtime/mb_block_axi_smc_2_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'mb_block_axi_smc_2' [C:/Users/hause/Documents/Vivado/Projects/Takuan/Takuan.runs/synth_1/.Xil/Vivado-25244-ponco2/realtime/mb_block_axi_smc_2_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'mb_block_axi_smc_2' (0#1) [C:/Users/hause/Documents/Vivado/Projects/Takuan/Takuan.runs/synth_1/.Xil/Vivado-25244-ponco2/realtime/mb_block_axi_smc_2_stub.v:6]
 WARNING: [Synth 8-7071] port 'M01_AXI_awqos' of module 'mb_block_axi_smc_2' is unconnected for instance 'axi_smc' [c:/Users/hause/Documents/Vivado/Projects/Takuan/Takuan.gen/sources_1/bd/mb_block/synth/mb_block.v:376]
 WARNING: [Synth 8-7071] port 'M01_AXI_arqos' of module 'mb_block_axi_smc_2' is unconnected for instance 'axi_smc' [c:/Users/hause/Documents/Vivado/Projects/Takuan/Takuan.gen/sources_1/bd/mb_block/synth/mb_block.v:376]
 WARNING: [Synth 8-7071] port 'M02_AXI_awqos' of module 'mb_block_axi_smc_2' is unconnected for instance 'axi_smc' [c:/Users/hause/Documents/Vivado/Projects/Takuan/Takuan.gen/sources_1/bd/mb_block/synth/mb_block.v:376]
 WARNING: [Synth 8-7071] port 'M02_AXI_arqos' of module 'mb_block_axi_smc_2' is unconnected for instance 'axi_smc' [c:/Users/hause/Documents/Vivado/Projects/Takuan/Takuan.gen/sources_1/bd/mb_block/synth/mb_block.v:376]
 WARNING: [Synth 8-7023] instance 'axi_smc' of module 'mb_block_axi_smc_2' has 125 connections declared, but only 121 given [c:/Users/hause/Documents/Vivado/Projects/Takuan/Takuan.gen/sources_1/bd/mb_block/synth/mb_block.v:376]
-INFO: [Synth 8-6157] synthesizing module 'mb_block_processing_system7_0_3' [C:/Users/hause/Documents/Vivado/Projects/Takuan/Takuan.runs/synth_1/.Xil/Vivado-24116-ponco2/realtime/mb_block_processing_system7_0_3_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'mb_block_processing_system7_0_3' (0#1) [C:/Users/hause/Documents/Vivado/Projects/Takuan/Takuan.runs/synth_1/.Xil/Vivado-24116-ponco2/realtime/mb_block_processing_system7_0_3_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'mb_block_processing_system7_0_3' [C:/Users/hause/Documents/Vivado/Projects/Takuan/Takuan.runs/synth_1/.Xil/Vivado-25244-ponco2/realtime/mb_block_processing_system7_0_3_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'mb_block_processing_system7_0_3' (0#1) [C:/Users/hause/Documents/Vivado/Projects/Takuan/Takuan.runs/synth_1/.Xil/Vivado-25244-ponco2/realtime/mb_block_processing_system7_0_3_stub.v:6]
 WARNING: [Synth 8-7071] port 'USB0_PORT_INDCTL' of module 'mb_block_processing_system7_0_3' is unconnected for instance 'processing_system7_0' [c:/Users/hause/Documents/Vivado/Projects/Takuan/Takuan.gen/sources_1/bd/mb_block/synth/mb_block.v:500]
 WARNING: [Synth 8-7071] port 'USB0_VBUS_PWRSELECT' of module 'mb_block_processing_system7_0_3' is unconnected for instance 'processing_system7_0' [c:/Users/hause/Documents/Vivado/Projects/Takuan/Takuan.gen/sources_1/bd/mb_block/synth/mb_block.v:500]
 WARNING: [Synth 8-7023] instance 'processing_system7_0' of module 'mb_block_processing_system7_0_3' has 72 connections declared, but only 70 given [c:/Users/hause/Documents/Vivado/Projects/Takuan/Takuan.gen/sources_1/bd/mb_block/synth/mb_block.v:500]
-INFO: [Synth 8-6157] synthesizing module 'mb_block_rst_ps7_0_100M_1' [C:/Users/hause/Documents/Vivado/Projects/Takuan/Takuan.runs/synth_1/.Xil/Vivado-24116-ponco2/realtime/mb_block_rst_ps7_0_100M_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'mb_block_rst_ps7_0_100M_1' (0#1) [C:/Users/hause/Documents/Vivado/Projects/Takuan/Takuan.runs/synth_1/.Xil/Vivado-24116-ponco2/realtime/mb_block_rst_ps7_0_100M_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'mb_block_rst_ps7_0_100M_1' [C:/Users/hause/Documents/Vivado/Projects/Takuan/Takuan.runs/synth_1/.Xil/Vivado-25244-ponco2/realtime/mb_block_rst_ps7_0_100M_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'mb_block_rst_ps7_0_100M_1' (0#1) [C:/Users/hause/Documents/Vivado/Projects/Takuan/Takuan.runs/synth_1/.Xil/Vivado-25244-ponco2/realtime/mb_block_rst_ps7_0_100M_1_stub.v:6]
 WARNING: [Synth 8-7071] port 'mb_reset' of module 'mb_block_rst_ps7_0_100M_1' is unconnected for instance 'rst_ps7_0_100M' [c:/Users/hause/Documents/Vivado/Projects/Takuan/Takuan.gen/sources_1/bd/mb_block/synth/mb_block.v:571]
 WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'mb_block_rst_ps7_0_100M_1' is unconnected for instance 'rst_ps7_0_100M' [c:/Users/hause/Documents/Vivado/Projects/Takuan/Takuan.gen/sources_1/bd/mb_block/synth/mb_block.v:571]
 WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'mb_block_rst_ps7_0_100M_1' is unconnected for instance 'rst_ps7_0_100M' [c:/Users/hause/Documents/Vivado/Projects/Takuan/Takuan.gen/sources_1/bd/mb_block/synth/mb_block.v:571]
 WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'mb_block_rst_ps7_0_100M_1' is unconnected for instance 'rst_ps7_0_100M' [c:/Users/hause/Documents/Vivado/Projects/Takuan/Takuan.gen/sources_1/bd/mb_block/synth/mb_block.v:571]
 WARNING: [Synth 8-7023] instance 'rst_ps7_0_100M' of module 'mb_block_rst_ps7_0_100M_1' has 10 connections declared, but only 6 given [c:/Users/hause/Documents/Vivado/Projects/Takuan/Takuan.gen/sources_1/bd/mb_block/synth/mb_block.v:571]
-INFO: [Synth 8-6157] synthesizing module 'mb_block_umeboshi_0_2' [C:/Users/hause/Documents/Vivado/Projects/Takuan/Takuan.runs/synth_1/.Xil/Vivado-24116-ponco2/realtime/mb_block_umeboshi_0_2_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'mb_block_umeboshi_0_2' (0#1) [C:/Users/hause/Documents/Vivado/Projects/Takuan/Takuan.runs/synth_1/.Xil/Vivado-24116-ponco2/realtime/mb_block_umeboshi_0_2_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'mb_block_umeboshi_0_2' [C:/Users/hause/Documents/Vivado/Projects/Takuan/Takuan.runs/synth_1/.Xil/Vivado-25244-ponco2/realtime/mb_block_umeboshi_0_2_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'mb_block_umeboshi_0_2' (0#1) [C:/Users/hause/Documents/Vivado/Projects/Takuan/Takuan.runs/synth_1/.Xil/Vivado-25244-ponco2/realtime/mb_block_umeboshi_0_2_stub.v:6]
 INFO: [Synth 8-6155] done synthesizing module 'mb_block' (0#1) [c:/Users/hause/Documents/Vivado/Projects/Takuan/Takuan.gen/sources_1/bd/mb_block/synth/mb_block.v:13]
 INFO: [Synth 8-6155] done synthesizing module 'mb_block_sv' (0#1) [C:/Users/hause/Documents/Vivado/Projects/Takuan/Takuan.srcs/sources_1/imports/mb_block/mb_block_sv.sv:55]
 INFO: [Synth 8-6157] synthesizing module 'i2s' [C:/Users/hause/Documents/Vivado/Projects/Takuan/Takuan.srcs/sources_1/new/i2s.sv:23]
@@ -81,18 +81,18 @@ WARNING: [Synth 8-3917] design top has port adr0 driven by constant 1
 WARNING: [Synth 8-3917] design top has port adr1 driven by constant 1
 WARNING: [Synth 8-7129] Port au_dout_r in module top is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1479.965 ; gain = 670.527
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1480.523 ; gain = 670.941
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1479.965 ; gain = 670.527
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1480.523 ; gain = 670.941
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1479.965 ; gain = 670.527
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1480.523 ; gain = 670.941
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 1479.965 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 1480.523 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -225,34 +225,34 @@ Parsing XDC File [C:/Users/hause/Documents/Vivado/Projects/Takuan/Takuan.runs/sy
 Finished Parsing XDC File [C:/Users/hause/Documents/Vivado/Projects/Takuan/Takuan.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1489.504 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1480.523 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 2 instances were transformed.
   IOBUF => IOBUF (IBUF, OBUFT): 2 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.011 . Memory (MB): peak = 1489.504 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 1480.523 ; gain = 0.000
 WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'mb_block_i/inst/axi_bram_ctrl_0_bram_osc_a' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
 WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'mb_block_i/inst/axi_bram_ctrl_1_bram_osc_b' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1492.738 ; gain = 683.301
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1484.621 ; gain = 675.039
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1492.738 ; gain = 683.301
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1484.621 ; gain = 675.039
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 1492.738 ; gain = 683.301
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1484.621 ; gain = 675.039
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 1492.738 ; gain = 683.301
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1484.621 ; gain = 675.039
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -288,25 +288,25 @@ WARNING: [Synth 8-3917] design top has port adr0 driven by constant 1
 WARNING: [Synth 8-3917] design top has port adr1 driven by constant 1
 WARNING: [Synth 8-7129] Port au_dout_r in module top is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1516.508 ; gain = 707.070
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1521.324 ; gain = 711.742
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1674.465 ; gain = 865.027
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 1679.020 ; gain = 869.438
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1694.980 ; gain = 885.543
+Finished Timing Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 1699.676 ; gain = 890.094
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1696.254 ; gain = 886.816
+Finished Technology Mapping : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1700.512 ; gain = 890.930
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -324,37 +324,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 1935.078 ; gain = 1125.641
+Finished IO Insertion : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1939.336 ; gain = 1129.754
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 1935.078 ; gain = 1125.641
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1939.336 ; gain = 1129.754
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 1935.078 ; gain = 1125.641
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1939.336 ; gain = 1129.754
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 1935.078 ; gain = 1125.641
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1939.336 ; gain = 1129.754
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 1935.078 ; gain = 1125.641
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1939.336 ; gain = 1129.754
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 1935.078 ; gain = 1125.641
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1939.336 ; gain = 1129.754
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -397,18 +397,18 @@ Report Cell Usage:
 |17    |OBUF                          |     6|
 +------+------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 1935.078 ; gain = 1125.641
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1939.336 ; gain = 1129.754
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 3 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:00:21 . Memory (MB): peak = 1935.078 ; gain = 1112.867
-Synthesis Optimization Complete : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 1935.078 ; gain = 1125.641
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:12 ; elapsed = 00:00:19 . Memory (MB): peak = 1939.336 ; gain = 1125.656
+Synthesis Optimization Complete : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1939.336 ; gain = 1129.754
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.017 . Memory (MB): peak = 1935.078 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1939.336 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1947.883 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1952.121 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 2 instances were transformed.
   IOBUF => IOBUF (IBUF, OBUFT): 2 instances
@@ -417,8 +417,8 @@ Synth Design complete | Checksum: 5441c556
 INFO: [Common 17-83] Releasing license: Synthesis
 53 Infos, 128 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:24 ; elapsed = 00:00:30 . Memory (MB): peak = 1947.883 ; gain = 1369.406
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1947.883 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:22 ; elapsed = 00:00:26 . Memory (MB): peak = 1952.121 ; gain = 1374.113
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1952.121 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/Users/hause/Documents/Vivado/Projects/Takuan/Takuan.runs/synth_1/top.dcp' has been generated.
 INFO: [Vivado 12-24828] Executing command : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Thu Mar 19 16:10:07 2026...
+INFO: [Common 17-206] Exiting Vivado at Thu Mar 19 18:58:29 2026...
