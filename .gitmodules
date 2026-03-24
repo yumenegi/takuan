@@ -1,3 +1,6 @@
 [submodule "IP"]
 	path = IP
 	url = https://github.com/yumenegi/umeboshi
+[submodule "tsukemonoya"]
+	path = tsukemonoya
+	url = https://github.com/yumenegi/tsukemonoya.git
